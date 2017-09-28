@@ -1,6 +1,7 @@
 package com.zzp.YiYang.Controller.visitor;
 
-import com.zzp.YiYang.Dao.IndexDao;
+import com.zzp.YiYang.Dao.ClothesDao;
+import com.zzp.YiYang.Dao.IconDao;
 import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Icon;
 import org.springframework.stereotype.Controller;
@@ -18,17 +19,23 @@ import java.util.List;
  */
 @Controller
 public class IndexController {
-    private IndexDao indexDao;
+    private ClothesDao clothesDao;
+    private IconDao iconDao;
 
     @Resource
-    public void setIndexDao(IndexDao indexDao) {
-        this.indexDao = indexDao;
+    public void setClothesDao(ClothesDao clothesDao) {
+        this.clothesDao = clothesDao;
+    }
+
+    @Resource
+    public void setIconDao(IconDao iconDao) {
+        this.iconDao = iconDao;
     }
 
     @RequestMapping("/index")
     public String index(ModelMap model) {
-        List<Clothes> clothesList = indexDao.getRecommendClothes();
-        List<Icon> iconList = indexDao.getRecommendIcon();
+        List<Clothes> clothesList = clothesDao.getRecommendClothes();
+        List<Icon> iconList = iconDao.getRecommendIcon();
         model.addAttribute("clothesList", clothesList);
         model.addAttribute("iconList", iconList);
         return "/index";

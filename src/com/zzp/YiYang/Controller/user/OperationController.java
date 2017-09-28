@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
 
@@ -30,5 +31,18 @@ public class OperationController {
         String result = operationDao.addToCar(goodsId, imgAddress);
         return result;
     }
-    
+
+    @RequestMapping(value = "/addToCollect", method = RequestMethod.POST)
+    @ResponseBody
+    public String addToCollect(int iconId) {
+        String result = operationDao.AddToCollect(iconId);
+        return result;
+    }
+
+    @RequestMapping(value = "addNewToCar", method = RequestMethod.POST)
+    @ResponseBody
+    public String addNewToCar(int goodsId, CommonsMultipartFile file) {
+        String result = operationDao.addNewToCar(goodsId, file);
+        return result;
+    }
 }

@@ -1,7 +1,7 @@
 package com.zzp.YiYang.Controller.visitor;
 
 import com.zzp.YiYang.DTO.UserDTO;
-import com.zzp.YiYang.Dao.LoginDao;
+import com.zzp.YiYang.Dao.UserDao;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,8 +23,13 @@ import java.util.Map;
  */
 @Controller
 public class LoginController {
-    private LoginDao loginDao;
+    private UserDao userDao;
     private Map<String, String> returnMessage;
+
+    @Resource
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Resource
     public void setReturnMessage(Map<String, String> returnMessage) {
@@ -39,7 +44,7 @@ public class LoginController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
     public String registerPost(@ModelAttribute UserDTO userDTO) {
-        return loginDao.registerC(userDTO);
+        return userDao.registerC(userDTO);
     }
 
     @RequestMapping("/success")
@@ -60,10 +65,5 @@ public class LoginController {
         }
         model.addAttribute("msg", returnMessage.get("LOGIN_ERROR"));
         return "login";
-    }
-
-    @Resource
-    public void setLoginDao(LoginDao loginDao) {
-        this.loginDao = loginDao;
     }
 }
