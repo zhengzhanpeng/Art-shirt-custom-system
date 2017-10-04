@@ -2,6 +2,7 @@ package com.zzp.YiYang.mapper;
 
 
 import com.zzp.YiYang.DTO.UserDTO;
+import com.zzp.YiYang.pojo.User;
 
 /**
  * @author ho
@@ -10,7 +11,5 @@ import com.zzp.YiYang.DTO.UserDTO;
 public interface UserMapper {
     int addUser(UserDTO userDTO);
 
-    int deleteUser(UserDTO userDTO);
-
-    int setUser(UserDTO userDTO);
+    User getUser(String userName);
 }

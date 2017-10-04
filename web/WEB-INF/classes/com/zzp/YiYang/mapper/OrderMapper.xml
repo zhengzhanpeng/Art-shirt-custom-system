@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.YiYang.mapper.OrderMapper">
+    <resultMap id="orderDTOMap" type="OrderDTO">
+        <id column="order_id" property="id"/>
+        <result column="send_time" property="sendTime"/>
+        <result column="invoice" property="invoice"/>
+        <collection property="sendAddresses" ofType="sendAddress">
+            <id column="send_address_id" property="id"/>
+            <result column="receive_name" property="receiveName"/>
+            <result column="phone" property="phone"/>
+            <result column="province" property="province"/>
+            <result column="city" property="city"/>
+            <result column="district" property="district"/>
+            <result column="address" property="address"/>
+            <result column="postal_code" property="postalCode"/>
+            <result column="address_label" property="addressLabel"/>
+            <result column="default_address" property="defaultAddress"/>
+        </collection>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
+    <select id="getOrderDTO" parameterType="int" resultMap="orderDTOMap">
+        SELECT
+        o.id AS order_id,
+        o.send_time,
+        o.invoice,
+        s.id AS send_address_id,
+        s.receive_name,
+        s.phone,
+        s.province,
+        s.city,
+        s.district,
+        s.address,
+        s.postal_code,
+        s.address_label,
+        s.default_address,
+        b.id AS bought_item_id,
+        b.img_address,
+        b.number,
+        g.size,
+        c.name,
+        c.type,
+        b.reality_price
+        FROM order o
+        LEFT OUTER JOIN send_address s ON o.username = s.username
+        LEFT OUTER JOIN bought_item b ON b.order_id = o.id
+        LEFT OUTER JOIN goods g ON g.id = b.goods_id
+        LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        WHERE o.id = #{orderId};
+    </select>
+    <update id="set" parameterType="Order">
+        UPDATE order
+        <set>
+            <if test="sendAddress != 0 ">
+                send_address_id = #{sendAddress},
+            </if>
+            <if test="realityPrice != 0">
+                reality_price = #{realityPrice},
+            </if>
+            <if test="desc != null and desc != ''">
+                desc = #{desc},
+            </if>
+            <if test="state != 0">
+                state = #{state},
+            </if>
+            <if test="buyTime != null">
+                buy_time = #{buyTime},
+            </if>
+            <if test="sendTime != 0">
+                send_time = #{sendTime},
+            </if>
+            <if test="invoice != 0">
+                invoice = #{invoice}
+            </if>
+        </set>
+        WHERE id = #{id};
+    </update>
+    <select id="getOrder" parameterType="Str" resultType="Order">
+        SELECT  FROM  WHERE ;
+    </select>
+</mapper>

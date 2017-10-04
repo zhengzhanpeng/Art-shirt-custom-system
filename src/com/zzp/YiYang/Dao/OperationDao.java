@@ -1,5 +1,6 @@
 package com.zzp.YiYang.Dao;
 
+import com.zzp.YiYang.DTO.CartDTO;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 /**
@@ -9,17 +10,16 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
  * @create 2017-09-27 9:29
  */
 public interface OperationDao {
-    String addToCar(int goodsId, String imgAddress);
-
-    boolean uploadImg(CommonsMultipartFile file);
+    String addToCart(CartDTO cartDTO);
 
     /**
-     * 自定义的商品添加购物车方式。
-     * @param goodsId
+     * 若保存图片成功则返回图片地址，否则返回null；
      * @param file
      * @return
      */
-    String addNewToCar(int goodsId, CommonsMultipartFile file);
+    String uploadImg(CommonsMultipartFile file);
+
+
 
     /**
      * 每收藏一个收藏数+1；需判断是否存在num属性

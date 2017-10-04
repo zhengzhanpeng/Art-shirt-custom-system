@@ -1,13 +1,14 @@
 package com.zzp.YiYang.Controller.user;
 
+import com.zzp.YiYang.DTO.BuyAtOnceDTO;
+import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.OperationDao;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用于存放用户的基本操作
@@ -25,10 +26,10 @@ public class OperationController {
         this.operationDao = operationDao;
     }
 
-    @RequestMapping(value = "/addToCar", method = RequestMethod.POST)
+    @RequestMapping(value = "/addToCart", method = RequestMethod.POST)
     @ResponseBody
-    public String addToCar(int goodsId, String imgAddress) {
-        String result = operationDao.addToCar(goodsId, imgAddress);
+    public String addToCar(@ModelAttribute CartDTO cartDTO) {
+        String result = operationDao.addToCart(cartDTO);
         return result;
     }
 
@@ -39,10 +40,14 @@ public class OperationController {
         return result;
     }
 
-    @RequestMapping(value = "addNewToCar", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadImg")
     @ResponseBody
-    public String addNewToCar(int goodsId, CommonsMultipartFile file) {
-        String result = operationDao.addNewToCar(goodsId, file);
-        return result;
+    public String uploadImg(CommonsMultipartFile file) {
+        String imgAddress = operationDao.uploadImg(file);
+        return imgAddress;
     }
+
+
+    
+
 }

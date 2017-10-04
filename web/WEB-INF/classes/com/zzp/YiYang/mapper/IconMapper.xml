@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.YiYang.mapper.IconMapper" >
+    <select id="getInfoId" resultType="Integer">
+        SELECT COUNT(*) FROM icon_property_info
+        WHERE icon_id = #{iconId, jdbcType=INTEGER} AND property_id = #{propertyId, jdbcType=INTEGER}
+        limit 1;
+    </select>
+    <insert id="insertCollectNumber" >
+        INSERT INTO icon_property_info
+        VALUES (null, #{iconId, jdbcType=INTEGER}, #{propertyId, jdbcType=INTEGER}, 0);
+    </insert>
+    <update id="addCollectNumber">
+        UPDATE icon_property_info SET value = #{newValue}
+        WHERE icon_id = #{iconId, jdbcType=INTEGER}
+        AND property_id = #{propertyId, jdbcType=INTEGER}
+        AND value = #{value};
+    </update>
+    <select id="getCollectNumber" resultType="String">
+        SELECT value FROM icon_property_info WHERE icon_id = #{iconId, jdbcType=INTEGER}
+        property_id = #{propertyId, jdbcType};
+    </select>
+</mapper>

@@ -35,7 +35,7 @@ public class IndexController {
     @RequestMapping("/index")
     public String index(ModelMap model) {
         List<Clothes> clothesList = clothesDao.getRecommendClothes();
-        List<Icon> iconList = iconDao.getRecommendIcon();
+        List<Icon> iconList = iconDao.getRecommendIcon(0, 0);
         model.addAttribute("clothesList", clothesList);
         model.addAttribute("iconList", iconList);
         return "/index";
