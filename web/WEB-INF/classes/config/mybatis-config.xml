@@ -3,8 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
     <typeAliases>
-        <package name="con.zzp.YiYang.pojo"/>
-        <package name="con.zzp.YiYang.DTO"/>
+        <package name="com.zzp.YiYang.pojo"/>
+        <package name="com.zzp.YiYang.DTO"/>
     </typeAliases>
 </configuration>

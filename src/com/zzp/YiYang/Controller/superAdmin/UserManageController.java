@@ -4,7 +4,6 @@ import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.DTO.UserMessageDTO;
 import com.zzp.YiYang.Dao.UserManageDao;
 import com.zzp.YiYang.util.MainUtil;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +15,7 @@ import java.util.List;
  * @author ho
  * @create 2017-10-04 19:20
  */
-@Controller
+//@Controller
 @RequestMapping("/superAdmin")
 public class UserManageController {
     private UserManageDao userManageDao;

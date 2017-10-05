@@ -28,8 +28,8 @@
           <!--class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
         <!--<property name="dataSource" ref="dataSource" />-->
     <!--</bean>-->
-    <!--<bean id="userDetailsService"-->
-          <!--class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
+    <bean id="userDetailsService"
+          class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 </beans>

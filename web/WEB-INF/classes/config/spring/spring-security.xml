@@ -11,18 +11,19 @@
 
     <http pattern="/login*" security="none"/>
     <http auto-config="true">
-        <intercept-url pattern="/userDTO/*" access="ROLE_USER" />
-        <intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
+        <intercept-url pattern="/user/*" access="ROLE_USER"/>
+        <intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/superAdmin/*" access="ROLE_SUPER_ADMIN"/>
         <form-login
                 login-page="/login"
-                default-target-url="/index"
-                authentication-failure-url="/index"/>
-        <logout logout-success-url="/index" />
+                default-target-url="/success"
+                authentication-failure-url="/login/1"/>
+        <logout logout-success-url="/index"/>
         <!-- enable csrf protection -->
     </http>
     <beans:bean name="BCryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <authentication-manager>
-        <authentication-provider userDTO-service-ref="userDetailsService">
+        <authentication-provider user-service-ref="userDetailsService">
             <password-encoder ref="BCryptEncoder"/>
         </authentication-provider>
     </authentication-manager>

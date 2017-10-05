@@ -19,6 +19,6 @@
     </update>
     <select id="getCollectNumber" resultType="String">
         SELECT value FROM icon_property_info WHERE icon_id = #{iconId, jdbcType=INTEGER}
-        property_id = #{propertyId, jdbcType};
+        property_id = #{propertyId, jdbcType=INTEGER};
     </select>
 </mapper>

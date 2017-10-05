@@ -4,7 +4,6 @@ import com.zzp.YiYang.DTO.OrderDTO;
 import com.zzp.YiYang.Dao.OrderDao;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ import javax.annotation.Resource;
  * @author ho
  * @create 2017-09-29 20:04
  */
-@Controller
+//@Controller
 @RequestMapping("/user")
 public class OrderController {
     private OrderDao orderDao;

@@ -1,7 +1,6 @@
 package com.zzp.YiYang.Controller.user;
 
 import com.zzp.YiYang.Dao.CartDao;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +14,7 @@ import java.util.List;
  * @author ho
  * @create 2017-09-29 16:11
  */
-@Controller
+//@Controller
 @RequestMapping("/user")
 public class CartController {
     private CartDao cartDao;

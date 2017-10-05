@@ -7,10 +7,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Collection;
@@ -36,6 +33,18 @@ public class LoginController {
         this.returnMessage = returnMessage;
     }
 
+    @RequestMapping("/login")
+    public String login() {
+        return "/login";
+    }
+    @RequestMapping(value = "/login/{msg}")
+    public String login(@PathVariable("msg") int msg, ModelMap model) {
+        System.out.println(111);
+        if (msg == 1) {
+            model.addAttribute("msg", returnMessage.get("USER_NAME_OR_PASSWORD_WRONG"));
+        }
+        return "login";
+    }
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String registerGet() {
         return "/register";
@@ -61,6 +70,8 @@ public class LoginController {
                 return "redirect:/admin/index";
             } else if (authority.equals("ROLE_USER")) {
                 return "redirect:/index";
+            } else if (authority.equals("ROLE_SUPER_ADMIN")) {
+                return "redirect:/superAdmin/index";
             }
         }
         model.addAttribute("msg", returnMessage.get("LOGIN_ERROR"));

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzp.YiYang.mapper.OrderMapper">
-    <resultMap id="orderDTOMap" type="OrderDTO">
+    <resultMap id="orderDTOMap" type="orderDTO">
         <id column="order_id" property="id"/>
         <result column="send_time" property="sendTime"/>
         <result column="invoice" property="invoice"/>
@@ -57,7 +57,7 @@
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
         WHERE o.id = #{orderId};
     </select>
-    <update id="set" parameterType="Order">
+    <update id="set" parameterType="order">
         UPDATE order
         <set>
             <if test="sendAddress != 0 ">
@@ -84,7 +84,7 @@
         </set>
         WHERE id = #{id};
     </update>
-    <select id="getOrder" parameterType="Str" resultType="Order">
+    <select id="getOrder" parameterType="String" resultType="order">
         SELECT  FROM  WHERE ;
     </select>
 </mapper>

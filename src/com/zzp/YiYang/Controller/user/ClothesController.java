@@ -4,7 +4,6 @@ import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.ClothesDao;
 import com.zzp.YiYang.Dao.IconDao;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,15 +14,13 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.annotation.Resource;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.L;
-
 /**
  * 制作个性衣服界面
  *
  * @author ho
  * @create 2017-09-27 16:47
  */
-@Controller
+//@Controller
 @RequestMapping("/user")
 public class ClothesController {
     private ClothesDao clothesDao;

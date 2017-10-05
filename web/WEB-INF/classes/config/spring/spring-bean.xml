@@ -29,12 +29,14 @@
     <bean id="indexPro" class="java.util.HashMap">
         <constructor-arg>
             <map key-type="java.lang.String" value-type="java.lang.Integer">
-
-
                 <!--ICON表的额外属性-->
                 <entry key="iconCollect" value="1"/>
             </map>
         </constructor-arg>
     </bean>
-
+    <bean id="iconDao" class="com.zzp.YiYang.DaoImpl.IconDaoImpl"/>
+    <bean id="myOrderDao" class="com.zzp.YiYang.DaoImpl.MyOrderDaoImpl"/>
+    <bean id="operationDao" class="com.zzp.YiYang.DaoImpl.OperationDaoImpl"/>
+    <bean id="orderDao" class="com.zzp.YiYang.DaoImpl.OrderDaoImpl"/>
+    <bean id="userDao" class="com.zzp.YiYang.DaoImpl.UserDaoImpl"/>
 </beans>
