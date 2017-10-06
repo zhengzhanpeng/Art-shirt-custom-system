@@ -1,11 +1,11 @@
 var navs = [{
-	"title": "基本设置",
+	"title": "商城管理",
 	"icon": "fa-cubes",
 	"spread": true,
 	"children": [{
-		"title": "售出订单录入",
+		"title": "图标管理",
 		"icon": "&#xe613;",
-		"href": "sell/storeInput"
+		"href": "admin/iconManage"
 	}, {
 		"title": "损坏商品录入",
 		"icon": "&#xe606;",

@@ -35,7 +35,7 @@
         <div class="layui-main">
             <div class="admin-login-box">
                 <a class="logo" style="left: 0;" href="#"> <span
-                        style="font-size: 22px;"><img src="images/logo.png"  style="width:40px;height:40px;margin:0 5px 5px 0">库存管理系统</span>
+                        style="font-size: 22px;"><img src="images/logo.png"  style="width:40px;height:40px;margin:0 5px 5px 0">艺扬服饰商城</span>
                 </a>
                 <div class="admin-side-toggle">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -47,7 +47,7 @@
 
                 <li class="layui-nav-item"><a href="javascript:;">浏览网站</a></li>
                 <li class="layui-nav-item"><a href="javascript:;"
-                                              class="admin-header-user"> <img src="images/0.jpg" /> <span>超级管理员</span>
+                                              class="admin-header-user"> <img src="images/0.jpg" /> <span>管理员：${user.name}&nbsp;</span>
                 </a>
                     <dl class="layui-nav-child">
                         <dd>
@@ -126,7 +126,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.tabledit.min.js"></script>
     <script type="text/javascript" src="plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="datas/nav_super_admin.js"></script>
+    <script type="text/javascript" src="datas/nav_admin.js"></script>
 
     <script type="text/javascript" src="js/index_admin.js"></script>
     <script>

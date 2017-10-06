@@ -29,12 +29,17 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public String registerC(UserDTO userDTO) {
+        return addUser(userDTO, userMapper, returnMessage);
+    }
+
+    public static String addUser(UserDTO userDTO, UserMapper userMapper, Map<String, String> returnMessage) {
         String password = BCrypt.hashpw(userDTO.getPassword(), BCrypt.gensalt());
         userDTO.setPassword(password);
         User user = userMapper.getUser(userDTO.getUserName());
         int result = 0;
         if (user == null) {
-            synchronized (this) {
+            synchronized (userMapper) {
+                user = userMapper.getUser(userDTO.getUserName());
                 if (user == null) {
                     result = userMapper.addUser(userDTO);
                 }

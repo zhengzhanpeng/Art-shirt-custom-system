@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
- "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zzp.YiYang.mapper.UserMapper" >
-    <insert id="addUser" parameterType="userDTO" >
-        INSERT INTO users VALUES (#{userName}, #{password}, 0 );
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.YiYang.mapper.UserMapper">
+    <insert id="addUser" parameterType="userDTO">
+        INSERT INTO users VALUES (#{userName}, #{password}, 1);
         INSERT INTO user_info VALUES(#{userName}, #{name}, #{phone});
         INSERT INTO authorities VALUES (#{userName}, #{authority});
     </insert>
+    <select id="getUser1" parameterType="String" resultType="String">
+        SELECT password FROM users WHERE username = 'admin';
+    </select>
+    <select id="getUsers" resultType="UserMessageDTO">
+        SELECT u.username, name, phone, authority FROM users u
+        LEFT OUTER JOIN user_info i ON u.username = i.username
+        LEFT OUTER JOIN authorities a ON u.username = a.username;
+    </select>
+    <delete id="delete" parameterType="String">
+        DELETE FROM users WHERE username = #{userName} limit 1;
+    </delete>
+    <update id="setPassword" parameterType="User">
+        UPDATE users SET password = #{password}
+        WHERE username = #{userName} limit 1;
+    </update>
+    <update id="setUser" parameterType="UserDTO">
+        UPDATE user_info SET name = #{name}, phone = #{phone} WHERE username = #{userName} limit 1;
+        UPDATE authorities SET authority = #{authority} WHERE username = #{userName} limit 1;
+    </update>
+    <select id="getUser" parameterType="String" resultType="User">
+        SELECT * FROM users WHERE username = #{userName};
+    </select>
+    <select id="getUserDTO" parameterType="String" resultType="UserDTO">
+        SELECT name, phone FROM user_info WHERE username = #{userName};
+    </select>
 </mapper>

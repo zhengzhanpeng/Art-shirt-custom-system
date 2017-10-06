@@ -20,18 +20,18 @@
 <body>
 
 <div class="login-container">
-    <h1>ShareLink</h1>
+    <h1>艺扬服饰商城</h1>
 
     <div class="connect">
-        <p>Link the world. Share to world.</p>
+        <p>在这里，订做属于你的个性服装.</p>
     </div>
 
     <form action="j_spring_security_check" method="post" id="loginForm">
         <div>
-            <input type="text" name="username" class="username" placeholder="用户名" autocomplete="off"/>
+            <input type="text" name="j_username" class="username" placeholder="用户名" autocomplete="off"/>
         </div>
         <div>
-            <input type="password" name="password" class="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
+            <input type="password" name="j_password" class="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
         </div>
         <button id="submit" type="submit">登 陆</button>
     </form>
@@ -39,7 +39,8 @@
     <a href="/register">
         <button type="button" class="register-tis">还有没有账号？</button>
     </a>
-    <h2 align="center">${msg}sdfsdf</h2>
+    <br>
+    <h2 align="center">${msg}</h2>
 </div>
 
 </body>

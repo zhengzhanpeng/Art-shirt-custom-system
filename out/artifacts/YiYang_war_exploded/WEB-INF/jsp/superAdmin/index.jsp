@@ -93,7 +93,7 @@
             <div class="layui-tab-content"
                  style="min-height: 150px; padding: 5px 0 0 0;">
                 <div class="layui-tab-item layui-show">
-                    <iframe src="main"></iframe>
+                    <iframe src="main.jsp"></iframe>
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.tabledit.min.js"></script>
     <script type="text/javascript" src="plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="datas/nav_admin.js"></script>
+    <script type="text/javascript" src="datas/nav_super_admin.js"></script>
 
     <script type="text/javascript" src="js/index_admin.js"></script>
     <script>

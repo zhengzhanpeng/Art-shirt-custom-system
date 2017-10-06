@@ -15,7 +15,7 @@
 <head>
     <base href=" <%=basePath%>">
     <base src=" <%=basePath%>">
-    <title>用户信息</title>
+    <title>图标管理</title>
     <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="css/query.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.edittable.css">
@@ -25,9 +25,9 @@
 <div style="margin: 15px">
     <blockquote class="layui-elem-quote">
         <h2 style="font-size: 20px" class="layui-inline">
-            <i class="layui-icon" style="font-size: 30px">&#xe629;</i> 用户信息</h2>
+            <i class="layui-icon" style="font-size: 30px">&#xe629;</i> 图标管理</h2>
     </blockquote>
-    <button id="addRow" class="layui-btn">添加用户</button>
+    <button id="addRow" class="layui-btn">添加图标</button>
     <fieldset class="layui-elem-field">
         <legend>数据列表</legend>
         <div class="layui-field-box">
@@ -39,19 +39,19 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="/js/layer.js"></script>
-<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
-<script type="text/javascript" charset="utf8" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
 
 <script type="text/javascript">
     var table = $('#layui-table').DataTable({
         "ajax": {
-            "url": "superAdmin/getUsers",
+            "url": "admin/getIcons",
             "dataSrc": "data",//默认为data
             "type": "post",
             "error": function () {
@@ -59,14 +59,15 @@
             }
         },
         "columns": [
-            {"data": "name", "title": "姓名", "defaultContent": ""},
-            {"data": "userName", "title": "用户名", "defaultContent": ""},
-            {"data": "authority", "title": "权限", "defaultContent": ""},
-            {"data": "phone", "title": "联系电话", "defaultContent": ""},
+            {"data": "id", "title": "编号", "defaultContent": ""},
+            {"data": "imgAddress", "title": "图标", "defaultContent": ""},
+            {"data": "name", "title": "名称", "defaultContent": ""},
+            {"data": "desc", "title": "介绍", "defaultContent": ""},
+            {"data": "type", "title": "分类", "defaultContent": ""},
             {
                 "data": null,
                 "title": "操作",
-                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='resave-btn layui-btn layui-btn-normal' type='button'>重置密码</button>  <button class='layui-btn layui-btn-warm' type='button'>删除</button>"
+                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='layui-btn layui-btn-warm' type='button'>删除</button>"
             }
         ],
         "language": {
@@ -93,8 +94,6 @@
                 "sSortDescending": ": 以降序排列此列"
             }
         }
-
-
     });
     function editTds(tds, thisBtn) {
         <%--var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +--%>

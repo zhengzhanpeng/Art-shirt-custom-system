@@ -15,9 +15,10 @@ public class UserTest {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:config/spring/spring-applicationContext.xml");
         addUser(beanFactory);
     }
+
     public static void addUser(BeanFactory beanFactory) {
         UserDTO userDTO = new UserDTO();
-        userDTO.setUserName("superadmin");
+        userDTO.setUserName("admin");
         userDTO.setPassword(MainUtil.hashpw("dengni"));
         userDTO.setAuthority("ROLE_SUPER_ADMIN");
         userDTO.setName("郑占鹏");
@@ -25,4 +26,5 @@ public class UserTest {
         UserMapper userMapper = (UserMapper) beanFactory.getBean("userMapper");
         userMapper.addUser(userDTO);
     }
+
 }

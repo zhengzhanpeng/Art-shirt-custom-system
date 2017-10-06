@@ -39,14 +39,14 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/layer.js"></script>
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-<script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/js/layer.js"></script>
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+<script type="text/javascript" charset="utf8" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/plugins/layui/layui.js"></script>
 
 <script type="text/javascript">
     var table = $('#layui-table').DataTable({
@@ -97,26 +97,26 @@
 
     });
     function editTds(tds, thisBtn) {
-        var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +
-                <c:forEach items="${list}" var="deprtment">
-                "<option value='${deprtment.department}'>${deprtment.department}</option>" +
-                </c:forEach>
-                "</select>"
+        <%--var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +--%>
+                <%--<c:forEach items="${list}" var="deprtment">--%>
+                <%--"<option value='${deprtment.department}'>${deprtment.department}</option>" +--%>
+                <%--</c:forEach>--%>
+                <%--"</select>"--%>
         $.each(tds, function (i, val) {
             var jqob = $(val);
             if (i < 0 || jqob.has('button').length) {
                 return true;
             }//跳过第1项 序号,按钮
-            if (i == 1) {
+//            if (i == 1) {
+//                var txt = jqob.text();
+//                var put = $(str);
+//                jqob.html(put);
+//                put.val(txt);
+//                return true;
+//            }
+            if (i == 2) {
                 var txt = jqob.text();
-                var put = $(str);
-                jqob.html(put);
-                put.val(txt);
-                return true;
-            }
-            if (i == 3) {
-                var txt = jqob.text();
-                var put = $("<select id='authority' style='height: 30px' name='modules' lay-verify='required' lay-search=''><option value='ROLE_SELL'>ROLE_SELL</option><option value='ROLE_STOCK'>ROLE_STOCK</option><option value='ROLE_ADMIN'>ROLE_ADMIN</option></select>");
+                var put = $("<select id='authority' style='height: 30px' name='modules' lay-verify='required' lay-search=''><option value='ROLE_USER'>ROLE_USER</option><option value='ROLE_ADMIN'>ROLE_ADMIN</option><option value='ROLE_SUPER_ADMIN'>ROLE_SUPER_ADMIN</option></select>");
                 jqob.html(put);
                 put.val(txt);
                 return true;
@@ -136,6 +136,8 @@
         var tds = $(this).parents("tr").children();
         editTds(tds, $(this));
     });
+
+    //保存
     $("#layui-table tbody").on("click", ".save-btn", function () {
         var row = table.row($(this).parents("tr"));
         var thisObj = $(this);
@@ -145,7 +147,7 @@
             //把input变为字符串
             if (!jqob.has('button').length) {
                 var txt;
-                if (i == 1 || i == 3) {
+                if (i == 2) {
                     txt = jqob.children("select").val();
                 } else {
                     txt = jqob.children("input").val();
@@ -158,7 +160,7 @@
         thisObj.toggleClass("edit-btn layui-btn layui-btn-normal");
         thisObj.toggleClass("save-btn layui-btn ");
         $.ajax({
-            "url": "admin/setUser",
+            "url": "superAdmin/setUser",
             "data": data,
             "type": "post",
             "error": function () {
@@ -275,7 +277,7 @@
             , id: 'LAY_layuipro' //设定一个id，防止重复弹出
             , btn: ['确定', '取消']
             , moveType: 1 //拖拽模式，0或者1
-            , content: ['admin/addUserModel', 'no']
+            , content: ['superAdmin/addUserModel', 'no']
             //,content:'<div  style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><form class="layui-form" action=""><select name="modules" lay-verify="required" lay-search=""><option value="">直接选择或搜索选择</option><option value="1">layer</option><option value="2">form</option><option value="3">layim</option><option value="4">element</option><option value="5">laytpl</option><option value="6">upload</option><option value="7">laydate</option><option value="8">laypage</option><option value="9">flow</option><option value="10">util</option><option value="11">code</option><option value="12">tree</option><option value="13">layedit</option><option value="14">nav</option><option value="15">tab</option><option value="16">table</option><option value="17">select</option><option value="18">checkbox</option><option value="19">switch</option><option value="20">radio</option></select></form></div>'
             , success: function (layero) {
                 var btn = layero.find('.layui-layer-btn');
@@ -285,10 +287,9 @@
                 var authority = layer.getChildFrame("#authority").val();
                 var password = layer.getChildFrame("#password").val();
                 var phone = layer.getChildFrame("#phone").val();
-                var department = layer.getChildFrame("#department").val();
                 var name = layer.getChildFrame("#name").val();
                 $.ajax({
-                    "url": "admin/addUser",
+                    "url": "superAdmin/addUser",
                     "data": {
                         "userName": userName, "name": name, "password": password
                         , "phone": phone, "authority": authority
@@ -303,7 +304,6 @@
                             layer.msg('添加成功', {icon: 6, time: 700});
                             var temp = table.row.add({
                                 "name": name,
-                                "department": department,
                                 "userName": userName,
                                 "authority": authority,
                                 "phone": phone

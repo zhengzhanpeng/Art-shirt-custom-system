@@ -49,19 +49,9 @@
             <label class="layui-form-label">所属权限</label>
             <div class="layui-input-block">
                 <select id="authority" name="modules" lay-verify="required" lay-search="">
-                    <option value="ROLE_SELL">ROLE_SELL</option>
-                    <option value="ROLE_STOCK">ROLE_STOCK</option>
+                    <option value="ROLE_USER">ROLE_USER</option>
                     <option value="ROLE_ADMIN">ROLE_ADMIN</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">所属部门</label>
-            <div class="layui-input-block">
-                <select id="department" name="modules" lay-verify="required" lay-search="">
-                    <c:forEach items="${list}" var="department">
-                    <option value="${department.department}">${department.department}</option>
-                    </c:forEach>
+                    <option value="ROLE_SUPER_ADMIN">ROLE_SUPER_ADMIN</option>
                 </select>
             </div>
         </div>

@@ -17,4 +17,6 @@ public interface UserManageDao {
     String setUserPassword(String userName, String password);
 
     String addUser(UserDTO userDTO);
+
+    String setUser(UserDTO userDTO);
 }

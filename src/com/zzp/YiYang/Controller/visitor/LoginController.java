@@ -39,7 +39,6 @@ public class LoginController {
     }
     @RequestMapping(value = "/login/{msg}")
     public String login(@PathVariable("msg") int msg, ModelMap model) {
-        System.out.println(111);
         if (msg == 1) {
             model.addAttribute("msg", returnMessage.get("USER_NAME_OR_PASSWORD_WRONG"));
         }

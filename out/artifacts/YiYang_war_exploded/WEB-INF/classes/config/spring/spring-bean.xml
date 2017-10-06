@@ -17,6 +17,7 @@
                 <entry key="AUTHORITY_NOT_NULL" value="用户权限不能为空"/>
                 <entry key="PHONE_NOT_NULL" value="手机号不能为空"/>
                 <entry key="USER_NAME_EXIST" value="用户名已存在"/>
+                <entry key="USER_NOT_EXIST" value="用户不存在"/>
                 <!--图片的存放路径-->
                 <entry key="USER_CLOTHES_DIR" value="/img/user/clothes/"/>
                 <entry key="ICON_DIR" value="/img/icon/"/>
@@ -39,4 +40,5 @@
     <bean id="operationDao" class="com.zzp.YiYang.DaoImpl.OperationDaoImpl"/>
     <bean id="orderDao" class="com.zzp.YiYang.DaoImpl.OrderDaoImpl"/>
     <bean id="userDao" class="com.zzp.YiYang.DaoImpl.UserDaoImpl"/>
+    <bean id="userManageDao" class="com.zzp.YiYang.DaoImpl.UserManageDaoImpl"/>
 </beans>
