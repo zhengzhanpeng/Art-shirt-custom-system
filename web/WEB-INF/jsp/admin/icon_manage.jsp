@@ -49,52 +49,52 @@
 <script type="text/javascript" src="plugins/layui/layui.js"></script>
 
 <script type="text/javascript">
-    var table = $('#layui-table').DataTable({
-        "ajax": {
-            "url": "admin/getIcons",
-            "dataSrc": "data",//默认为data
-            "type": "post",
-            "error": function () {
-                layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
-            }
-        },
-        "columns": [
-            {"data": "id", "title": "编号", "defaultContent": ""},
-            {"data": "imgAddress", "title": "图标", "defaultContent": ""},
-            {"data": "name", "title": "名称", "defaultContent": ""},
-            {"data": "desc", "title": "介绍", "defaultContent": ""},
-            {"data": "type", "title": "分类", "defaultContent": ""},
-            {
-                "data": null,
-                "title": "操作",
-                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='layui-btn layui-btn-warm' type='button'>删除</button>"
-            }
-        ],
-        "language": {
-            "sProcessing": "处理中...",
-            "sLengthMenu": "显示 _MENU_ 项结果",
-            "sZeroRecords": "没有匹配结果",
-            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
-            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-            "sInfoPostFix": "",
-            "sSearch": "搜索:",
-            "sUrl": "",
-            "sEmptyTable": "表中数据为空",
-            "sLoadingRecords": "载入中...",
-            "sInfoThousands": ",",
-            "oPaginate": {
-                "sFirst": "首页",
-                "sPrevious": "上页",
-                "sNext": "下页",
-                "sLast": "末页"
-            },
-            "oAria": {
-                "sSortAscending": ": 以升序排列此列",
-                "sSortDescending": ": 以降序排列此列"
-            }
-        }
-    });
+//    var table = $('#layui-table').DataTable({
+//        "ajax": {
+//            "url": "admin/getIcons",
+//            "dataSrc": "data",//默认为data
+//            "type": "post",
+//            "error": function () {
+//                layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
+//            }
+//        },
+//        "columns": [
+//            {"data": "id", "title": "编号", "defaultContent": ""},
+//            {"data": "imgAddress", "title": "图标", "defaultContent": ""},
+//            {"data": "name", "title": "名称", "defaultContent": ""},
+//            {"data": "desc", "title": "介绍", "defaultContent": ""},
+//            {"data": "type", "title": "分类", "defaultContent": ""},
+//            {
+//                "data": null,
+//                "title": "操作",
+//                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='layui-btn layui-btn-warm' type='button'>删除</button>"
+//            }
+//        ],
+//        "language": {
+//            "sProcessing": "处理中...",
+//            "sLengthMenu": "显示 _MENU_ 项结果",
+//            "sZeroRecords": "没有匹配结果",
+//            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+//            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+//            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+//            "sInfoPostFix": "",
+//            "sSearch": "搜索:",
+//            "sUrl": "",
+//            "sEmptyTable": "表中数据为空",
+//            "sLoadingRecords": "载入中...",
+//            "sInfoThousands": ",",
+//            "oPaginate": {
+//                "sFirst": "首页",
+//                "sPrevious": "上页",
+//                "sNext": "下页",
+//                "sLast": "末页"
+//            },
+//            "oAria": {
+//                "sSortAscending": ": 以升序排列此列",
+//                "sSortDescending": ": 以降序排列此列"
+//            }
+//        }
+//    });
     function editTds(tds, thisBtn) {
         <%--var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +--%>
                 <%--<c:forEach items="${list}" var="deprtment">--%>
@@ -269,14 +269,14 @@
 
         layer.open({
             type: 2
-            , title: ['添加用户', 'padding:none !important ;text-align:center'] //不显示标题栏
-            , closeBtn: false
+            , title: ['添加用户'] //不显示标题栏
             , area: ['500px', '450px']
             , shade: 0.8
+            , maxmin: true
             , id: 'LAY_layuipro' //设定一个id，防止重复弹出
             , btn: ['确定', '取消']
             , moveType: 1 //拖拽模式，0或者1
-            , content: ['superAdmin/addUserModel', 'no']
+            , content: ['admin/addIconModel']
             //,content:'<div  style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><form class="layui-form" action=""><select name="modules" lay-verify="required" lay-search=""><option value="">直接选择或搜索选择</option><option value="1">layer</option><option value="2">form</option><option value="3">layim</option><option value="4">element</option><option value="5">laytpl</option><option value="6">upload</option><option value="7">laydate</option><option value="8">laypage</option><option value="9">flow</option><option value="10">util</option><option value="11">code</option><option value="12">tree</option><option value="13">layedit</option><option value="14">nav</option><option value="15">tab</option><option value="16">table</option><option value="17">select</option><option value="18">checkbox</option><option value="19">switch</option><option value="20">radio</option></select></form></div>'
             , success: function (layero) {
                 var btn = layero.find('.layui-layer-btn');
@@ -321,7 +321,5 @@
         });
     });
 </script>
-
-
 </body>
 </html>

@@ -7,9 +7,9 @@ var navs = [{
 		"icon": "&#xe613;",
 		"href": "admin/iconManage"
 	}, {
-		"title": "损坏商品录入",
+		"title": "图标属性管理",
 		"icon": "&#xe606;",
-		"href": "user/badInput"
+		"href": "admin/iconProperty"
 	}, {
 		"title": "库存信息",
 		"icon": "&#xe61d;",

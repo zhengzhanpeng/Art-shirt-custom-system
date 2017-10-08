@@ -4,6 +4,7 @@ import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.Dao.UserDao;
 import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.User;
+import com.zzp.YiYang.util.MessageUtil;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import javax.annotation.Resource;
@@ -15,12 +16,6 @@ import java.util.Map;
  */
 public class UserDaoImpl implements UserDao {
     private UserMapper userMapper;
-    private Map<String, String> returnMessage;
-
-    @Resource
-    public void setReturnMessage(Map<String, String> returnMessage) {
-        this.returnMessage = returnMessage;
-    }
 
     @Resource
     public void setUserMapper(UserMapper userMapper) {
@@ -29,10 +24,10 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public String registerC(UserDTO userDTO) {
-        return addUser(userDTO, userMapper, returnMessage);
+        return addUser(userDTO, userMapper);
     }
 
-    public static String addUser(UserDTO userDTO, UserMapper userMapper, Map<String, String> returnMessage) {
+    public static String addUser(UserDTO userDTO, UserMapper userMapper) {
         String password = BCrypt.hashpw(userDTO.getPassword(), BCrypt.gensalt());
         userDTO.setPassword(password);
         User user = userMapper.getUser(userDTO.getUserName());
@@ -46,7 +41,7 @@ public class UserDaoImpl implements UserDao {
             }
         }
         if (result == 0) {
-            return returnMessage.get("USER_NAME_EXIST");
+            return MessageUtil.USER_NAME_EXIST;
         }
         return "1";
     }

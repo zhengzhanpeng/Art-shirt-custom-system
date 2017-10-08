@@ -43,7 +43,7 @@ public class OperationController {
     @RequestMapping(value = "/uploadImg")
     @ResponseBody
     public String uploadImg(CommonsMultipartFile file) {
-        String imgAddress = operationDao.uploadImg(file);
+        String imgAddress = operationDao.uploadImg(file, "user");
         return imgAddress;
     }
 

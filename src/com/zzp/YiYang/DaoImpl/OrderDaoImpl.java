@@ -6,6 +6,7 @@ import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.mapper.SendAddressMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
+import com.zzp.YiYang.util.MessageUtil;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -17,17 +18,11 @@ import java.util.Map;
 public class OrderDaoImpl implements OrderDao {
 
     private OrderMapper orderMapper;
-    private Map<String, String> returnMessage;
     private SendAddressMapper sendAddressMapper;
 
     @Resource
     public void setSendAddressMapper(SendAddressMapper sendAddressMapper) {
         this.sendAddressMapper = sendAddressMapper;
-    }
-
-    @Resource
-    public void setReturnMessage(Map<String, String> returnMessage) {
-        this.returnMessage = returnMessage;
     }
 
     @Resource
@@ -45,7 +40,7 @@ public class OrderDaoImpl implements OrderDao {
     public String saveOrder(Order saveOrder) {
         int result = orderMapper.set(saveOrder);
         if (result == 0) {
-            return returnMessage.get("SYSTEM_ERROR");
+            return MessageUtil.SYSTEM_ERROR;
         }
         return "1";
     }
@@ -54,7 +49,7 @@ public class OrderDaoImpl implements OrderDao {
     public String saveSendAddress(SendAddress sendAddress) {
         int result = sendAddressMapper.insert(sendAddress);
         if (result == 0) {
-            return returnMessage.get("SYSTEM_ERROR");
+            return MessageUtil.SYSTEM_ERROR;
         }
         return "1";
     }

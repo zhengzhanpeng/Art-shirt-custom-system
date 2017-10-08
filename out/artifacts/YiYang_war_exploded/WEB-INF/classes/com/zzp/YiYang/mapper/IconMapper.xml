@@ -12,13 +12,27 @@
         VALUES (null, #{iconId, jdbcType=INTEGER}, #{propertyId, jdbcType=INTEGER}, 0);
     </insert>
     <update id="addCollectNumber">
-        UPDATE icon_property_info SET value = #{newValue}
+        UPDATE icon SET value = #{value} + 1
         WHERE icon_id = #{iconId, jdbcType=INTEGER}
-        AND property_id = #{propertyId, jdbcType=INTEGER}
-        AND value = #{value};
+        AND value = #{value, jdbcType=INTEGER};
     </update>
     <select id="getCollectNumber" resultType="String">
-        SELECT value FROM icon_property_info WHERE icon_id = #{iconId, jdbcType=INTEGER}
-        property_id = #{propertyId, jdbcType=INTEGER};
+        SELECT collect_number FROM icon WHERE icon_id = #{iconId} limit 1;
     </select>
+    <select id="getIconPro" resultType="IconProperty">
+        SELECT id, value FROM icon_property;
+    </select>
+    <insert id="addPro" useGeneratedKeys="true" keyProperty="id" parameterType="IconProperty" >
+        INSERT INTO icon_property VALUES (null, #{value});
+    </insert>
+    <delete id="deleteIconPro" parameterType="Integer">
+        DELETE FROM icon_property WHERE id = #{iconProId} limit 1;
+    </delete>
+    <select id="getIconPro" parameterType="Integer" resultType="IconProperty">
+        SELECT id, value FROM icon_property WHERE id = #{iconProId};
+    </select>
+    <update id="setIconPro" parameterType="IconProperty">
+        UPDATE icon_property SET value = #{value}
+        WHERE id = #{id};
+    </update>
 </mapper>

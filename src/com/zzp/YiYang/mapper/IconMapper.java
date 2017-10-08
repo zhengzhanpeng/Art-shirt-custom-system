@@ -1,6 +1,7 @@
 package com.zzp.YiYang.mapper;
 
 import com.zzp.YiYang.pojo.Icon;
+import com.zzp.YiYang.pojo.IconProperty;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -22,9 +23,17 @@ public interface IconMapper {
 
     int getInfoId(@Param("iconId") int iconId, @Param("propertyId") int propertyId);
 
-    int addCollectNumber(@Param("iconId") int iconId, @Param("propertyId") int propertyId,
-                         @Param("value") String value,
-                         @Param("newValue") String newValue);
+    int addCollectNumber(@Param("iconId") int iconId, @Param("value") int value);
 
-    String getCollectNumber(@Param("iconId") int iconId, @Param("propertyId") int propertyId);
+    int getCollectNumber(int iconId);
+
+    List<IconProperty> getIconPros();
+
+    int addPro(IconProperty iconProperty);
+
+    int deleteIconPro(int iconProId);
+
+    IconProperty getIconPro(int iconProId);
+
+    int setIconPro(IconProperty iconProperty);
 }

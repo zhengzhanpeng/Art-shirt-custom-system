@@ -6,32 +6,13 @@
     <bean id="returnMessage" class="java.util.HashMap">
         <constructor-arg>
             <map key-type="java.lang.String" value-type="java.lang.String">
-                <entry key="LOGIN_ERROR" value="您的权限有误，请于管理员联系"/>
-                <entry key="USER_NAME_OR_PASSWORD_WRONG" value="您的用户名或密码不正确，请重新输入"/>
-                <entry key="SYSTEM_ERROR" value="系统繁忙，请稍后再试或与管理员联系"/>
-                <entry key="USER_NAME_NOT_NULL" value="用户名不能为空"/>
-                <entry key="NAME_NOT_NULL" value="姓名不能为空"/>
-                <entry key="USER_NAME_NOT_NULL" value="用户名不能为空"/>
-                <entry key="DEPARTMENT_NOT_NULL" value="部门不能为空"/>
-                <entry key="PASSWORD_NOT_NULL" value="密码不能为空"/>
-                <entry key="AUTHORITY_NOT_NULL" value="用户权限不能为空"/>
-                <entry key="PHONE_NOT_NULL" value="手机号不能为空"/>
-                <entry key="USER_NAME_EXIST" value="用户名已存在"/>
-                <entry key="USER_NOT_EXIST" value="用户不存在"/>
                 <!--图片的存放路径-->
-                <entry key="USER_CLOTHES_DIR" value="/img/user/clothes/"/>
-                <entry key="ICON_DIR" value="/img/icon/"/>
-                <entry key="CLOTHES_INDEX_DIR" value="/img/clothes/index/"/>
-                <entry key="CLOTHES_FINISHED_DIR" value="/img/clothes/finished/"/>
+                <entry key="ROOT" value="F:/我的项目/work_space/YiYang/out/artifacts/YiYang_war_exploded/"/>
+                <entry key="USER_CLOTHES_DIR" value="img/user/clothes/"/>
+                <entry key="ICON_DIR" value="img/icon/"/>
+                <entry key="CLOTHES_INDEX_DIR" value="img/clothes/index/"/>
+                <entry key="CLOTHES_FINISHED_DIR" value="img/clothes/finished/"/>
                 <entry key="FILE" value=".jpg"/>
-            </map>
-        </constructor-arg>
-    </bean>
-    <bean id="indexPro" class="java.util.HashMap">
-        <constructor-arg>
-            <map key-type="java.lang.String" value-type="java.lang.Integer">
-                <!--ICON表的额外属性-->
-                <entry key="iconCollect" value="1"/>
             </map>
         </constructor-arg>
     </bean>
@@ -41,4 +22,5 @@
     <bean id="orderDao" class="com.zzp.YiYang.DaoImpl.OrderDaoImpl"/>
     <bean id="userDao" class="com.zzp.YiYang.DaoImpl.UserDaoImpl"/>
     <bean id="userManageDao" class="com.zzp.YiYang.DaoImpl.UserManageDaoImpl"/>
+    <bean id="iconPropertyDao" class="com.zzp.YiYang.DaoImpl.IconPropertyDaoImpl"/>
 </beans>

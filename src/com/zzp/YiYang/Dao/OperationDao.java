@@ -17,7 +17,9 @@ public interface OperationDao {
      * @param file
      * @return
      */
-    String uploadImg(CommonsMultipartFile file);
+    String uploadImg(CommonsMultipartFile file, String name);
+
+    String getDir(String name);
 
 
 

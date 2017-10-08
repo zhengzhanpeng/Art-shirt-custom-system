@@ -6,6 +6,7 @@ import com.zzp.YiYang.Dao.UserManageDao;
 import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.User;
 import com.zzp.YiYang.util.MainUtil;
+import com.zzp.YiYang.util.MessageUtil;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -17,12 +18,6 @@ import java.util.Map;
  */
 public class UserManageDaoImpl implements UserManageDao {
     private UserMapper userMapper;
-    private Map<String, String> returnMessage;
-
-    @Resource
-    public void setReturnMessage(Map<String, String> returnMessage) {
-        this.returnMessage = returnMessage;
-    }
 
     @Resource
     public void setUserMapper(UserMapper userMapper) {
@@ -39,7 +34,7 @@ public class UserManageDaoImpl implements UserManageDao {
     public String deleteUser(String userName) {
         int result = userMapper.delete(userName);
         if (result == 0) {
-            return returnMessage.get("USER_NOT_EXIST");
+            return MessageUtil.USER_NOT_EXIST;
         }
         return "1";
     }
@@ -51,14 +46,14 @@ public class UserManageDaoImpl implements UserManageDao {
         user.setUserName(userName);
         int result = userMapper.setPassword(user);
         if (result == 0) {
-            return returnMessage.get("USER_NOT_EXIST");
+            return MessageUtil.USER_NOT_EXIST;
         }
         return "1";
     }
 
     @Override
     public String addUser(UserDTO userDTO) {
-        return UserDaoImpl.addUser(userDTO, userMapper, returnMessage);
+        return UserDaoImpl.addUser(userDTO, userMapper);
     }
 
     @Override

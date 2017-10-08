@@ -9,6 +9,7 @@ import com.zzp.YiYang.mapper.IconMapper;
 import com.zzp.YiYang.pojo.Cart;
 import com.zzp.YiYang.pojo.Collect;
 import com.zzp.YiYang.pojo.Goods;
+import com.zzp.YiYang.util.MessageUtil;
 import com.zzp.YiYang.util.SecurityUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -76,21 +77,22 @@ public class OperationDaoImpl implements OperationDao {
         cart.setNumber(cartDTO.getNumber());
         int result = carMapper.insert(cart);
         if (result == 0) {
-            return returnMessage.get("SYSTEM_ERROR");
+            return MessageUtil.SYSTEM_ERROR;
         }
         return "1";
     }
 
     @Override
-    public String uploadImg(CommonsMultipartFile file) {
-        String userDir = returnMessage.get("USER_CLOTHES_DIR") + SecurityUtil.getUserName() + "/";
-        String imgName = new Date().toString() + returnMessage.get("FILE");
-        File f = new File(userDir);
+    public String uploadImg(CommonsMultipartFile file, String name) {
+        String userDir = getDir(name);
+        String root = returnMessage.get("ROOT");
+        String imgName = new Date().getTime() + returnMessage.get("FILE");
+        File f = new File(root + userDir);
         if (!f.exists()) {
-            f.mkdir();
+            f.mkdirs();
         }
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(userDir + imgName);
+            FileOutputStream fileOutputStream = new FileOutputStream(root + userDir + imgName);
             fileOutputStream.write(file.getBytes());
             fileOutputStream.flush();
             fileOutputStream.close();
@@ -99,7 +101,21 @@ public class OperationDaoImpl implements OperationDao {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return imgName;
+        return userDir + imgName;
+    }
+
+    public String getDir(String name) {
+        String result = null;
+        if (name.equals("user")) {
+            result = returnMessage.get("USER_CLOTHES_DIR") + SecurityUtil.getUserName() + "/";
+        } else if (name.equals("icon")) {
+            result = returnMessage.get("ICON_DIR");
+        } else if (name.equals("index_clothes")) {
+            result = returnMessage.get("CLOTHES_INDEX_DIR");
+        } else if (name.equals("finished_clothes")) {
+            result = returnMessage.get("CLOTHES_FINISHED_DIR");
+        }
+        return result;
     }
 
     @Override
@@ -119,12 +135,10 @@ public class OperationDaoImpl implements OperationDao {
             }
         }
         int upResult = 0;
-        String value;
-        String newValue;
+        int value;
         while (upResult == 0) {
-            value = iconMapper.getCollectNumber(iconId, indexPro.get("iconCollect"));
-            newValue = Integer.valueOf(Integer.parseInt(value) + 1).toString();
-            upResult = iconMapper.addCollectNumber(iconId, indexPro.get("iconCollect"), value, newValue);
+            value = iconMapper.getCollectNumber(iconId);
+            upResult = iconMapper.addCollectNumber(iconId, value);
         }
         return "1";
     }
