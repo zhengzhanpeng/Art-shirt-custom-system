@@ -11,7 +11,7 @@ public class SaveOrderDTO {
     private int sendAddressId;
     private int sendTime;
     private int invoice;
-    private String desc;
+    private String desc1;
 
     public int getId() {
         return id;
@@ -45,11 +45,11 @@ public class SaveOrderDTO {
         this.invoice = invoice;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDesc1() {
+        return desc1;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDesc1(String desc1) {
+        this.desc1 = desc1;
     }
 }

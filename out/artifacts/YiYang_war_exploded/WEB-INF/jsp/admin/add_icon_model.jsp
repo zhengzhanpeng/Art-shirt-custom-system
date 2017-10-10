@@ -31,14 +31,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">图标名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="name" required lay-verify="required" placeholder="请输入图标名称" autocomplete="off"
+                <input type="text" id="name" name="name" required lay-verify="required" placeholder="请输入图标名称" autocomplete="off"
                        class="layui-input input-length-m">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">简介</label>
             <div class="layui-input-inline">
-                <input type="text" name="desc" required lay-verify="required" placeholder="请输入图标名称" autocomplete="off"
+                <input type="text" id="desc" name="desc" required lay-verify="required" placeholder="请输入图标简介" autocomplete="off"
                        class="layui-input input-length-m">
             </div>
         </div>
@@ -58,14 +58,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">是否推荐</label>
             <div class="layui-input-block">
-                <input type="checkbox" name="reco" lay-skin="switch">
+                <input type="checkbox" id="reco" name="reco" lay-skin="switch">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">类型</label>
             <div class="layui-input-block">
                 <c:forEach items="${list}" var="pro">
-                    <input type="checkbox" name="type" title="${pro.value}" value="${pro.id}">
+                    <input type="checkbox" name="type" title="${pro.name}" value="${pro.id}">
                 </c:forEach>
             </div>
         </div>
@@ -88,6 +88,15 @@
             , success: function (res) {
                 $("#address").val(res.address);
                 layer.msg("上传成功", {icon: 6, anim: 0});
+            }
+        });
+        $(".layui-unselect").click(function () {
+            var $reco = $(this).prev();
+            var result = $reco.attr("checked") == 'checked' ? true : false;
+            if(result) {
+                $reco.attr("checked", false);
+            } else {
+                $reco.attr("checked", true);
             }
         });
     });

@@ -23,4 +23,5 @@
     <bean id="userDao" class="com.zzp.YiYang.DaoImpl.UserDaoImpl"/>
     <bean id="userManageDao" class="com.zzp.YiYang.DaoImpl.UserManageDaoImpl"/>
     <bean id="iconPropertyDao" class="com.zzp.YiYang.DaoImpl.IconPropertyDaoImpl"/>
+    <bean id="iconManageDao" class="com.zzp.YiYang.DaoImpl.IconManageDaoImpl"/>
 </beans>

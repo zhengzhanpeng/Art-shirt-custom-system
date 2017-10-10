@@ -2,6 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzp.YiYang.mapper.IconMapper" >
+    <resultMap id="iconList" type="GetIconDTO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="desc1" property="desc1"/>
+        <result column="img_address" property="imgAddress"/>
+        <result column="reco" property="reco"/>
+        <collection property="types" ofType="IconProperty">
+            <id column="p_id" property="id"/>
+            <result column="p_name" property="name"/>
+        </collection>
+    </resultMap>
     <select id="getInfoId" resultType="Integer">
         SELECT COUNT(*) FROM icon_property_info
         WHERE icon_id = #{iconId, jdbcType=INTEGER} AND property_id = #{propertyId, jdbcType=INTEGER}
@@ -19,20 +30,40 @@
     <select id="getCollectNumber" resultType="String">
         SELECT collect_number FROM icon WHERE icon_id = #{iconId} limit 1;
     </select>
-    <select id="getIconPro" resultType="IconProperty">
-        SELECT id, value FROM icon_property;
+    <select id="getIconPros" resultType="IconProperty">
+        SELECT id, name FROM icon_properties;
     </select>
     <insert id="addPro" useGeneratedKeys="true" keyProperty="id" parameterType="IconProperty" >
-        INSERT INTO icon_property VALUES (null, #{value});
+        INSERT INTO icon_properties VALUES (null, #{name});
     </insert>
     <delete id="deleteIconPro" parameterType="Integer">
-        DELETE FROM icon_property WHERE id = #{iconProId} limit 1;
+        DELETE FROM icon_properties WHERE id = #{iconProId} limit 1;
     </delete>
     <select id="getIconPro" parameterType="Integer" resultType="IconProperty">
-        SELECT id, value FROM icon_property WHERE id = #{iconProId};
+        SELECT id, name FROM icon_properties WHERE id = #{iconProId};
     </select>
     <update id="setIconPro" parameterType="IconProperty">
-        UPDATE icon_property SET value = #{value}
+        UPDATE icon_properties SET name = #{name}
         WHERE id = #{id};
     </update>
+    <insert id="addIcon" useGeneratedKeys="true" keyProperty="id" parameterType="Icon" >
+        INSERT INTO icon VALUES (null, #{name}, #{desc}, #{imgAddress}, 0);
+    </insert>
+    <insert id="addType">
+        INSERT INTO icon_properties_info VALUES (null, #{iconId, jdbcType=INTEGER}, #{proId, jdbcType=INTEGER});
+    </insert>
+    <select id="getIcons" resultMap="iconList">
+        SELECT
+        i.id AS id,
+        i.name AS name,
+        i.desc1 AS desc1,
+        i.img_address AS img_address,
+        CASE WHEN r.icon_id=NULL THEN 0 ELSE 1 END AS reco,
+        p.id AS p_id,
+        p.name AS p_name
+        FROM icon i
+        LEFT OUTER JOIN reco_icon r ON i.id = r.icon_id
+        LEFT OUTER JOIN icon_properties_info ipi ON ipi.icon_id = i.id
+        LEFT OUTER JOIN icon_properties p ON ipi.property_id = p.id;
+    </select>
 </mapper>

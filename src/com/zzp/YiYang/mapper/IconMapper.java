@@ -1,5 +1,6 @@
 package com.zzp.YiYang.mapper;
 
+import com.zzp.YiYang.DTO.GetIconDTO;
 import com.zzp.YiYang.pojo.Icon;
 import com.zzp.YiYang.pojo.IconProperty;
 import org.apache.ibatis.annotations.Param;
@@ -36,4 +37,10 @@ public interface IconMapper {
     IconProperty getIconPro(int iconProId);
 
     int setIconPro(IconProperty iconProperty);
+
+    int addIcon(Icon icon);
+
+    int addType(@Param("iconId") int iconId, @Param("proId") int proId);
+
+    List<GetIconDTO> getIcons();
 }

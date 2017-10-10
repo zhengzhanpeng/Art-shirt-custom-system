@@ -10,7 +10,7 @@ public class Order {
     private int id;
     private int sendAddressId;
     private float realityPrice;
-    private String desc;
+    private String desc1;
     private int state;
     private Date buyTime;
     private int sendTime;
@@ -40,12 +40,12 @@ public class Order {
         this.realityPrice = realityPrice;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDesc1() {
+        return desc1;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDesc1(String desc1) {
+        this.desc1 = desc1;
     }
 
     public int getState() {

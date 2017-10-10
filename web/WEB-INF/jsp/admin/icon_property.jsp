@@ -48,7 +48,7 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
@@ -70,14 +70,14 @@
     $(function(){
         var table = $('#layui-table').DataTable({
             "ajax": {
-                "url": "admin/getIconPros",
+                "url": "/admin/getIconPros",
                 "dataSrc": "data",//默认为data
                 "type": "post",
                 "error":function(){layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});}
             },
             "columns": [
                 { "data": "id", "title":"编号","defaultContent":""},
-                { "data": "value", "title":"属性","defaultContent":""},
+                { "data": "name", "title":"属性","defaultContent":""},
                 { "data": null, "title":"操作","defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button>  <button class='layui-btn layui-btn-warm' type='button'>删除</button>"}
             ],
             "language": {
@@ -114,7 +114,15 @@
                 var jqob=$(val);
                 if(i < 0 || jqob.has('button').length ){return true;}//跳过第1项 序号,按钮
                 var txt=jqob.text();
-                var put=$("<input type='text'>");
+                var put;
+                if(i == 0) {
+                    put=$("<input type='text' disabled>");
+                    if(txt == '') {
+                        txt = '0';
+                    }
+                } else {
+                    put=$("<input type='text'>");
+                }
                 put.val(txt);
                 jqob.html(put);
             });
@@ -130,7 +138,7 @@
             var nRow=$(this).parents('tr')[0];
             var rowData = table.row(nRow).data();
             var id = rowData.id;
-            var itemName = rowData.collegeName;
+            var itemName = rowData.name;
             delete rowData["date"];
             if(!id){
                 layer.confirm("确定删除未保存的新增属性吗 ？ ", {icon: 3, title:'确认删除操作', anim: 6}, function(index){
@@ -142,8 +150,8 @@
                 layer.confirm("确定删除属性   " + itemName+"   吗?", {icon: 3, title:'确认删除操作', anim: 6}, function(index){
                     layer.close(index);
                     $.ajax({
-                        "url":"admin/deleteIconPro",
-                        "data":{"id":id},
+                        "url":"/admin/deleteIconPro",
+                        "data":{"iconProId":id},
                         "type":"post",
                         "error":function(){
                             layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
@@ -178,7 +186,7 @@
             if (!data.id) 	data.id="";
             delete data["date"];
             $.ajax({
-                "url":"saveIconPro",
+                "url":"/admin/saveIconPro",
                 "data":data,
                 "type":"post",
                 "error":function(){
@@ -204,6 +212,9 @@
                             //把input变为字符串
                             if(!jqob.has('button').length){
                                 var txt=jqob.children("input").val();
+                                if(i == 0) {
+                                    txt = savedId;
+                                }
                                 jqob.html(txt);
                             }
                         });

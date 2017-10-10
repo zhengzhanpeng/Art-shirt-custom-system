@@ -1,19 +1,21 @@
 package com.zzp.YiYang.DTO;
 
+import com.zzp.YiYang.pojo.IconProperty;
+
 import java.util.List;
 
 /**
- * 仅存放访问icon页面访问用到的类的信息
- *
+ * 管理员获取ICON时用到的bean
  * @author ho
- * @create 2017-09-27 16:25
+ * @create 2017-10-10 19:18
  */
-public class IconDTO {
+public class GetIconDTO {
     private int id;
     private String name;
     private String desc1;
     private String imgAddress;
-    private List<String> types;
+    private boolean reco;
+    private List<IconProperty> types;
 
     public int getId() {
         return id;
@@ -47,11 +49,19 @@ public class IconDTO {
         this.imgAddress = imgAddress;
     }
 
-    public List<String> getTypes() {
+    public boolean isReco() {
+        return reco;
+    }
+
+    public void setReco(boolean reco) {
+        this.reco = reco;
+    }
+
+    public List<IconProperty> getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setTypes(List<IconProperty> types) {
         this.types = types;
     }
 }

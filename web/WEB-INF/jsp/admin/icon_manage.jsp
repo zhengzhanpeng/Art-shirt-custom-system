@@ -20,6 +20,12 @@
     <link rel="stylesheet" type="text/css" href="css/query.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.edittable.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        .img-m{
+            width: 130px;
+            height: 90px;
+        }
+    </style>
 </head>
 <body>
 <div style="margin: 15px">
@@ -32,6 +38,14 @@
         <legend>数据列表</legend>
         <div class="layui-field-box">
             <table class="layui-table" id="layui-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col width="100">
+                    <col width="200">
+                </colgroup>
             </table>
         </div>
     </fieldset>
@@ -49,52 +63,71 @@
 <script type="text/javascript" src="plugins/layui/layui.js"></script>
 
 <script type="text/javascript">
-//    var table = $('#layui-table').DataTable({
-//        "ajax": {
-//            "url": "admin/getIcons",
-//            "dataSrc": "data",//默认为data
-//            "type": "post",
-//            "error": function () {
-//                layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
-//            }
-//        },
-//        "columns": [
-//            {"data": "id", "title": "编号", "defaultContent": ""},
-//            {"data": "imgAddress", "title": "图标", "defaultContent": ""},
-//            {"data": "name", "title": "名称", "defaultContent": ""},
-//            {"data": "desc", "title": "介绍", "defaultContent": ""},
-//            {"data": "type", "title": "分类", "defaultContent": ""},
-//            {
-//                "data": null,
-//                "title": "操作",
-//                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='layui-btn layui-btn-warm' type='button'>删除</button>"
-//            }
-//        ],
-//        "language": {
-//            "sProcessing": "处理中...",
-//            "sLengthMenu": "显示 _MENU_ 项结果",
-//            "sZeroRecords": "没有匹配结果",
-//            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-//            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
-//            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-//            "sInfoPostFix": "",
-//            "sSearch": "搜索:",
-//            "sUrl": "",
-//            "sEmptyTable": "表中数据为空",
-//            "sLoadingRecords": "载入中...",
-//            "sInfoThousands": ",",
-//            "oPaginate": {
-//                "sFirst": "首页",
-//                "sPrevious": "上页",
-//                "sNext": "下页",
-//                "sLast": "末页"
-//            },
-//            "oAria": {
-//                "sSortAscending": ": 以升序排列此列",
-//                "sSortDescending": ": 以降序排列此列"
-//            }
-//        }
-//    });
+    var table = $('#layui-table').DataTable({
+        "ajax": {
+            "url": "admin/getIcons",
+            "dataSrc": "data",//默认为data
+            "type": "post",
+            "error": function () {
+                layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
+            }
+        },
+        "columns": [
+            {"data": "id", "title": "编号", "defaultContent": ""},
+            {"data": null, "title": "图标", "defaultContent": "<img class='img-m'>"},
+            {"data": "name", "title": "名称", "defaultContent": ""},
+            {"data": "desc1", "title": "介绍", "defaultContent": ""},
+            {"data": null, "title": "是否推荐", "defaultContent": "<span class='reco' style='color:#5FB878'>是</span>"},
+            {"data": null, "title": "分类", "defaultContent": "<span class='types' style='color: #01AAED;'></span>"},
+            {
+                "data": null,
+                "title": "操作",
+                "defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button><button class='layui-btn layui-btn-warm' type='button'>删除</button>"
+            }
+        ],
+        "fnInitComplete": function (oSettings, json) {
+            $("tbody tr").each(function () {
+                var rowData = table.row($(this)).data();
+                $(this).find("img").attr("src", rowData.imgAddress);
+                if(rowData.reco == false) {
+                    $(this).find(".reco").text("否").css("color", "#FFB800");
+                }
+                var typesStr = '';
+                var arr = rowData.types;
+                for(var i = 0; i < arr.length; i++) {
+                    if(i != 0) {
+                        typesStr += '、';
+                    }
+                    typesStr += arr[i].name;
+                }
+                $(this).find(".types").text(typesStr);
+            })
+        },
+        "language": {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+    });
     function editTds(tds, thisBtn) {
         <%--var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +--%>
                 <%--<c:forEach items="${list}" var="deprtment">--%>
@@ -282,17 +315,25 @@
                 var btn = layero.find('.layui-layer-btn');
                 btn.css('text-align', 'center');
             }, yes: function (index, layero) {
-                var userName = layer.getChildFrame("#userName").val();
-                var authority = layer.getChildFrame("#authority").val();
-                var password = layer.getChildFrame("#password").val();
-                var phone = layer.getChildFrame("#phone").val();
                 var name = layer.getChildFrame("#name").val();
+                var desc = layer.getChildFrame("#desc").val();
+                var imgAddress = layer.getChildFrame("#address").val();
+                var reco = layer.getChildFrame("#reco").attr("checked") == 'checked' ? true: false;
+                var $input = layer.getChildFrame("input[name='type']");
+                var typeArr = new Array();
+                $input.each(function () {
+                    var $type = $(this);
+                    if($type.attr("checked") == 'checked') {
+                        typeArr.push($type.val());
+                    }
+                });
                 $.ajax({
-                    "url": "superAdmin/addUser",
+                    "url": "admin/addIcon",
                     "data": {
-                        "userName": userName, "name": name, "password": password
-                        , "phone": phone, "authority": authority
+                        "name": name, "desc1": desc, "imgAddress": imgAddress
+                        , "reco": reco, "typeArr": typeArr
                     },
+                    'dataType': "json",
                     "type": "post",
                     "error": function () {
                         layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});

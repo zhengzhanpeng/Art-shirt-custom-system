@@ -34,12 +34,6 @@ public class OperationDaoImpl implements OperationDao {
     private Map<String, String> returnMessage;
     private IconMapper iconMapper;
     private CollectMapper collectMapper;
-    private Map<String, Integer> indexPro;
-
-    @Resource
-    public void setIndexPro(Map<String, Integer> indexPro) {
-        this.indexPro = indexPro;
-    }
 
     @Resource
     public void setCollectMapper(CollectMapper collectMapper) {
@@ -125,15 +119,6 @@ public class OperationDaoImpl implements OperationDao {
         collect.setUserName(SecurityUtil.getUserName());
         collect.setIconId(iconId);
         int result = collectMapper.insert(collect);
-        int infoId = iconMapper.getInfoId(iconId, indexPro.get("iconCollect"));
-        if (infoId == 0) {
-            synchronized (iconMapper) {
-                infoId = iconMapper.getInfoId(iconId, indexPro.get("iconCollect"));
-                if (infoId == 0) {
-                    iconMapper.insertCollectNumber(iconId, indexPro.get("iconCollect"));
-                }
-            }
-        }
         int upResult = 0;
         int value;
         while (upResult == 0) {

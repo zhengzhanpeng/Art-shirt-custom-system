@@ -1,5 +1,6 @@
 package com.zzp.YiYang.Controller.admin;
 
+import com.zzp.YiYang.DTO.AddIconDTO;
 import com.zzp.YiYang.Dao.IconManageDao;
 import com.zzp.YiYang.Dao.OperationDao;
 import com.zzp.YiYang.pojo.IconProperty;
@@ -41,15 +42,16 @@ public class IconManageController {
         return "/admin/icon_manage";
     }
 
-    @RequestMapping("/getIcons")
+    @RequestMapping(value = "/getIcons", method = RequestMethod.POST)
     @ResponseBody
     public String getIcons() {
-        return null;
+        String result = iconManageDao.getIcons();
+        return result;
     }
 
     @RequestMapping("/addIconModel")
     public String addIconModel(ModelMap model) {
-        List<IconProperty> list = iconManageDao.getIconPro();
+        List<IconProperty> list = iconManageDao.getIconPros();
         model.addAttribute("list", list);
         return "/admin/add_icon_model";
     }
@@ -63,9 +65,11 @@ public class IconManageController {
         return map;
     }
 
-    @RequestMapping(value = "addIconPro", method = RequestMethod.POST)
+    @RequestMapping("/addIcon")
     @ResponseBody
-    public String addIconPro(String value) {
-        return iconManageDao.addIconPro(value);
+    public String addIcon(AddIconDTO addIconDTO, @RequestParam("typeArr[]") int[] typeArr) {
+        addIconDTO.setTypes(typeArr);
+        String result = iconManageDao.addIcon(addIconDTO);
+        return result;
     }
 }

@@ -11,7 +11,7 @@ public class Clothes {
     private float price;
     private float realityPrice;
     private String imgAddress;
-    private String desc;
+    private String desc1;
     private boolean isFinished;
 
     public int getId() {
@@ -62,12 +62,12 @@ public class Clothes {
         this.imgAddress = imgAddress;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDesc1() {
+        return desc1;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDesc1(String desc1) {
+        this.desc1 = desc1;
     }
 
     public boolean isFinished() {

@@ -1,19 +1,18 @@
 package com.zzp.YiYang.DTO;
 
-import java.util.List;
-
 /**
- * 仅存放访问icon页面访问用到的类的信息
+ * 添加ICON时接收前台的数据
  *
  * @author ho
- * @create 2017-09-27 16:25
+ * @create 2017-10-09 19:37
  */
-public class IconDTO {
+public class AddIconDTO {
     private int id;
     private String name;
     private String desc1;
     private String imgAddress;
-    private List<String> types;
+    private boolean reco;
+    private int[] types;
 
     public int getId() {
         return id;
@@ -47,11 +46,19 @@ public class IconDTO {
         this.imgAddress = imgAddress;
     }
 
-    public List<String> getTypes() {
+    public boolean getReco() {
+        return reco;
+    }
+
+    public void setReco(boolean reco) {
+        this.reco = reco;
+    }
+
+    public int[] getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setTypes(int[] types) {
         this.types = types;
     }
 }

@@ -3,6 +3,7 @@ package com.zzp.YiYang.DaoImpl;
 import com.zzp.YiYang.Dao.IconPropertyDao;
 import com.zzp.YiYang.mapper.IconMapper;
 import com.zzp.YiYang.pojo.IconProperty;
+import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,9 +25,11 @@ public class IconPropertyDaoImpl implements IconPropertyDao {
     }
 
     @Override
-    public List<IconProperty> getIconPro() {
+    public String getIconPros() {
         List list = iconMapper.getIconPros();
-        return list;
+        String result = MainUtil.getJsonToTable(list);
+        System.out.println("result: " + result);
+        return result;
     }
 
     @Override
