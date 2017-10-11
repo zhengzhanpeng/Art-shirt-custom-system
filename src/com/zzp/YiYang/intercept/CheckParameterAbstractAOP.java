@@ -28,6 +28,9 @@ public abstract class CheckParameterAbstractAOP {
         Object[] objects = joinPoint.getArgs();
         boolean isTrue = true;
         String string = null;
+        if (objects.length == 0 || strings.length == 0) {
+            return joinPoint.proceed();
+        }
         try {
             string = checkObject(objects[0], strings[0]);
         } catch (Exception e) {

@@ -15,4 +15,8 @@ public interface IconManageDao {
     String getIcons();
 
     String addIcon(AddIconDTO addIconDTO);
+
+    String deleteIcon(int iconId);
+
+    String saveIcon(AddIconDTO saveIcon);
 }

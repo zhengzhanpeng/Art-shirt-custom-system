@@ -9,8 +9,11 @@ import com.zzp.YiYang.pojo.Icon;
 import com.zzp.YiYang.pojo.IconProperty;
 import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,6 +32,48 @@ public class IconManageDaoImpl implements IconManageDao {
     @Resource
     public void setIconMapper(IconMapper iconMapper) {
         this.iconMapper = iconMapper;
+    }
+
+    @Override
+    @Transactional
+    public synchronized String saveIcon(AddIconDTO saveIcon) {
+        iconMapper.updateIcon(saveIcon);
+        int iconId = recommendIconMapper.getReco(saveIcon.getId());
+        if (iconId == 0 && saveIcon.getReco()) { //判断是否应该添加或删除reco
+            recommendIconMapper.addReco(iconId);
+        } else if(iconId != 0 && !saveIcon.getReco()) {
+            recommendIconMapper.deleteReco(iconId);
+        }
+        int info;
+        int[] arr = saveIcon.getTypes();
+        List<Integer> properties = iconMapper.getIconPropertyByIcon(saveIcon.getId());
+        for(int i = 0; i < arr.length; i++) { //判断arr中是否包含properties中不存在的元素，并添加指定列
+            if (!properties.contains(arr[i])) {
+                iconMapper.addType(saveIcon.getId(), arr[i]);
+            }
+        }
+        boolean result;
+        for(int i = 0; i < properties.size(); i++) { //判断properties中是否包含arr中不存在的元素，并删除指定行
+            result = false;
+            for(int j = 0; j < arr.length; j++) {
+                if (arr[j] == properties.get(i)) {
+                    result = true;
+                    break;
+                }
+            }
+            if (!result) {
+                iconMapper.removeType(saveIcon.getId(), arr[i]);
+            }
+        }
+        return "1";
+    }
+
+    @Override
+    public String deleteIcon(int iconId) {
+        int result = iconMapper.deleteIcon(iconId);
+        if(result == 0)
+            return MessageUtil.ICON_NOT_EXIST;
+        return "1";
     }
 
     @Override

@@ -98,6 +98,11 @@ public class OperationDaoImpl implements OperationDao {
         return userDir + imgName;
     }
 
+    /**
+     * 通过配置文件读取上传图片的绝对路径
+     * @param name
+     * @return
+     */
     public String getDir(String name) {
         String result = null;
         if (name.equals("user")) {

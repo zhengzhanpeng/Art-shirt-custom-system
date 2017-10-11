@@ -3,6 +3,12 @@
  "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzp.YiYang.mapper.RecommendIconMapper" >
     <insert id="addReco" parameterType="Integer" >
-        INSERT INTO reco_icon VALUES (#{id});
+        INSERT INTO reco_icon VALUES (#{iconId});
     </insert>
+    <delete id="deleteReco" parameterType="Integer">
+        DELETE FROM reco_icon WHERE icon_id = #{iconId} limit 1;
+    </delete>
+    <select id="getReco" parameterType="Integer" resultType="Integer">
+        SELECT icon_id FROM reco_icon WHERE icon_id = #{iconId};
+    </select>
 </mapper>

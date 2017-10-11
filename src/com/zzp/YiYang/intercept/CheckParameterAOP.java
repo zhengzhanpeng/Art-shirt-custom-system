@@ -1,8 +1,11 @@
 package com.zzp.YiYang.intercept;
 
+import com.zzp.YiYang.DTO.AddIconDTO;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.pojo.Order;
+import com.zzp.YiYang.pojo.SendAddress;
+import com.zzp.YiYang.util.MessageUtil;
 
 /**
  * 抽象类的实现
@@ -19,6 +22,50 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
             return checkSaveOrder(object);
         } else if (str.equals("cartDTO")) {
             return checkCartDTO(object);
+        } else if (str.equals("addIconDTO")) {
+            return checkAddIconDTO(object);
+        } else if (str.equals("saveIcon")) {
+            return checkSaveIcon(object);
+        } else if (str.equals("sendAddress")) {
+            return checkSendAddress(object);
+        }
+        return null;
+    }
+
+    private String checkSendAddress(Object object) {
+        if (object instanceof SendAddress) {
+
+        }
+        return null;
+    }
+
+    private String checkSaveIcon(Object object) {
+        if (object instanceof AddIconDTO) {
+            String result = null;
+            AddIconDTO addIconDTO = (AddIconDTO) object;
+            result = checkAddIconDTO(object);
+            if (result != null) {
+                return result;
+            }
+            if (checkInt(addIconDTO.getId())) {
+                return MessageUtil.SYSTEM_ERROR;
+            }
+        }
+        return null;
+    }
+
+    private String checkAddIconDTO(Object object) {
+        if (object instanceof AddIconDTO) {
+            AddIconDTO addIconDTO = (AddIconDTO) object;
+            if (checkStr(addIconDTO.getName())) {
+                return MessageUtil.ICON_NOT_NULL;
+            }
+            if (checkStr(addIconDTO.getImgAddress())) {
+                return MessageUtil.IMG_NOT_NULL;
+            }
+            if (addIconDTO.getTypes().length == 0) {
+                return MessageUtil.TYPES_NOT_NULL;
+            }
         }
         return null;
     }

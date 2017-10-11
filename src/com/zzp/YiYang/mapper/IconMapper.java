@@ -1,5 +1,6 @@
 package com.zzp.YiYang.mapper;
 
+import com.zzp.YiYang.DTO.AddIconDTO;
 import com.zzp.YiYang.DTO.GetIconDTO;
 import com.zzp.YiYang.pojo.Icon;
 import com.zzp.YiYang.pojo.IconProperty;
@@ -42,5 +43,26 @@ public interface IconMapper {
 
     int addType(@Param("iconId") int iconId, @Param("proId") int proId);
 
+    /**
+     * 移除指定ICON的property
+     * @param iconId
+     * @param proId
+     * @return
+     */
+    int removeType(@Param("iconId") int iconId, @Param("proId") int proId);
+
     List<GetIconDTO> getIcons();
+
+    int deleteIcon(int iconId);
+
+    int updateIcon(AddIconDTO addIconDTO);
+
+    /**
+     * 通过iconId获取所有此Id选中的属性Id
+     * @param iconId
+     * @return
+     */
+    List<Integer> getIconPropertyByIcon(int iconId);
+
+
 }

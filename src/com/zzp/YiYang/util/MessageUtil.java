@@ -16,4 +16,9 @@ public class MessageUtil {
     public static final String PHONE_NOT_NULL = "手机号不能为空";
     public static final String USER_NAME_EXIST = "用户名已存在";
     public static final String USER_NOT_EXIST = "用户不存在";
+    public static final String ICON_NOT_EXIST = "图标已删除或不存在";
+    public static final String ICON_NOT_NULL = "图标不能为空";
+    public static final String IMG_NOT_NULL = "请先上传图片";
+    public static final String TYPES_NOT_NULL = "请至少选择图标的一种种类";
+    public static final String PROPERTY_NOT_NULL = "图标类型不能为空";
 }

@@ -65,11 +65,24 @@ public class IconManageController {
         return map;
     }
 
-    @RequestMapping("/addIcon")
+    @RequestMapping(value = "/addIcon", method = RequestMethod.POST)
     @ResponseBody
     public String addIcon(AddIconDTO addIconDTO, @RequestParam("typeArr[]") int[] typeArr) {
         addIconDTO.setTypes(typeArr);
         String result = iconManageDao.addIcon(addIconDTO);
         return result;
+    }
+    
+    @RequestMapping(value = "/saveIcon", method = RequestMethod.POST)
+    @ResponseBody
+    public String saveIcon(AddIconDTO saveIcon, @RequestParam("typeArr[]") int[] typeArr) {
+        saveIcon.setTypes(typeArr);
+        return iconManageDao.saveIcon(saveIcon);
+    }
+
+    @RequestMapping(value = "/deleteIcon", method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteIcon(int iconId) {
+        return iconManageDao.deleteIcon(iconId);
     }
 }

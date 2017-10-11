@@ -45,6 +45,11 @@ public class OrderDaoImpl implements OrderDao {
         return "1";
     }
 
+    /**
+     * 没有检验传参
+     * @param sendAddress
+     * @return
+     */
     @Override
     public String saveSendAddress(SendAddress sendAddress) {
         int result = sendAddressMapper.insert(sendAddress);

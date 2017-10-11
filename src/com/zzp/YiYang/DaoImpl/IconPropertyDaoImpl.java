@@ -45,6 +45,9 @@ public class IconPropertyDaoImpl implements IconPropertyDao {
     @Transactional
     public String saveIconPro(IconProperty iconProperty) {
         int result = 0;
+        if (iconProperty.getName() == null || iconProperty.getName().equals("")) {
+            return MessageUtil.PROPERTY_NOT_NULL;
+        }
         if (iconProperty.getId() == 0) {
             iconMapper.addPro(iconProperty);
         } else {

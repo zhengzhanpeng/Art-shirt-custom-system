@@ -47,23 +47,38 @@
         WHERE id = #{id};
     </update>
     <insert id="addIcon" useGeneratedKeys="true" keyProperty="id" parameterType="Icon" >
-        INSERT INTO icon VALUES (null, #{name}, #{desc}, #{imgAddress}, 0);
+        INSERT INTO icon VALUES (null, #{name}, #{desc1}, #{imgAddress}, 0);
     </insert>
     <insert id="addType">
         INSERT INTO icon_properties_info VALUES (null, #{iconId, jdbcType=INTEGER}, #{proId, jdbcType=INTEGER});
     </insert>
+    <delete id="removeType">
+        DELETE FROM icon_properties_info WHERE
+        icon_id = #{iconId, jdbcType=INTEGER},
+        property_id = #{proId, jdbcType=INTEGER} limit 1;
+    </delete>
     <select id="getIcons" resultMap="iconList">
         SELECT
         i.id AS id,
         i.name AS name,
         i.desc1 AS desc1,
         i.img_address AS img_address,
-        CASE WHEN r.icon_id=NULL THEN 0 ELSE 1 END AS reco,
+        CASE WHEN r.icon_id IS NULL THEN 0 ELSE 1 END AS reco,
         p.id AS p_id,
         p.name AS p_name
         FROM icon i
         LEFT OUTER JOIN reco_icon r ON i.id = r.icon_id
         LEFT OUTER JOIN icon_properties_info ipi ON ipi.icon_id = i.id
         LEFT OUTER JOIN icon_properties p ON ipi.property_id = p.id;
+    </select>
+    <delete id="deleteIcon" parameterType="Integer">
+        DELETE FROM icon WHERE id = #{iconId} limit 1;
+    </delete>
+    <update id="updateIcon" parameterType="AddIconDTO">
+        UPDATE icon SET name = #{name}, desc1 = #{desc1}, img_address = #{imgAddress}
+        WHERE id = #{id} limit 1;
+    </update>
+    <select id="getIconPropertyByIcon" parameterType="Integer" resultType="Integer">
+        SELECT property_id FROM icon_properties_info WHERE icon_id = #{iconId} ;
     </select>
 </mapper>

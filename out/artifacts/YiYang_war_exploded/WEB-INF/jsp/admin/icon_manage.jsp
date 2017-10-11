@@ -63,6 +63,10 @@
 <script type="text/javascript" src="plugins/layui/layui.js"></script>
 
 <script type="text/javascript">
+    layui.code
+    layer.config({
+        offset: '100px'
+    });
     var table = $('#layui-table').DataTable({
         "ajax": {
             "url": "admin/getIcons",
@@ -72,6 +76,7 @@
                 layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
             }
         },
+        "aLengthMenu" : [5, 10, 25], //更改显示记录数选项
         "columns": [
             {"data": "id", "title": "编号", "defaultContent": ""},
             {"data": null, "title": "图标", "defaultContent": "<img class='img-m'>"},
@@ -86,22 +91,7 @@
             }
         ],
         "fnInitComplete": function (oSettings, json) {
-            $("tbody tr").each(function () {
-                var rowData = table.row($(this)).data();
-                $(this).find("img").attr("src", rowData.imgAddress);
-                if(rowData.reco == false) {
-                    $(this).find(".reco").text("否").css("color", "#FFB800");
-                }
-                var typesStr = '';
-                var arr = rowData.types;
-                for(var i = 0; i < arr.length; i++) {
-                    if(i != 0) {
-                        typesStr += '、';
-                    }
-                    typesStr += arr[i].name;
-                }
-                $(this).find(".types").text(typesStr);
-            })
+            changeTable();
         },
         "language": {
             "sProcessing": "处理中...",
@@ -128,6 +118,27 @@
             }
         }
     });
+    $("#layui-table").DataTable().on("page", function () {
+        setTimeout("changeTable()", 100);
+    });
+    function changeTable() {
+        $("tbody tr").each(function () {
+            var rowData = table.row($(this)).data();
+            $(this).find("img").attr("src", rowData.imgAddress);
+            if(rowData.reco == false) {
+                $(this).find(".reco").text("否").css("color", "#FFB800");
+            }
+            var typesStr = '';
+            var arr = rowData.types;
+            for(var i = 0; i < arr.length; i++) {
+                if(i != 0) {
+                    typesStr += '、';
+                }
+                typesStr += arr[i].name;
+            }
+            $(this).find(".types").text(typesStr);
+        })
+    }
     function editTds(tds, thisBtn) {
         <%--var str = "<select id='department' style='height: 30px' name='modules' lay-verify='required' lay-search=''>" +--%>
                 <%--<c:forEach items="${list}" var="deprtment">--%>
@@ -165,66 +176,87 @@
     }
     //编辑按钮
     $("#layui-table tbody").on("click", ".edit-btn", function () {
-        var tds = $(this).parents("tr").children();
-        editTds(tds, $(this));
+        var tr = $(this).parent().parent("tr");
+        var rowData = table.row(tr).data();
+        layer.open({
+            type: 2
+            , title: ['编辑图标'] //不显示标题栏
+            , area: ['500px', '450px']
+            , shade: 0.8
+            , maxmin: true
+            , id: 'LAY_layuipro' //设定一个id，防止重复弹出
+            , btn: ['保存', '取消']
+            , moveType: 1 //拖拽模式，0或者1
+            , offset: 't'
+            , content: ['admin/addIconModel']
+            //,content:'<div  style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><form class="layui-form" action=""><select name="modules" lay-verify="required" lay-search=""><option value="">直接选择或搜索选择</option><option value="1">layer</option><option value="2">form</option><option value="3">layim</option><option value="4">element</option><option value="5">laytpl</option><option value="6">upload</option><option value="7">laydate</option><option value="8">laypage</option><option value="9">flow</option><option value="10">util</option><option value="11">code</option><option value="12">tree</option><option value="13">layedit</option><option value="14">nav</option><option value="15">tab</option><option value="16">table</option><option value="17">select</option><option value="18">checkbox</option><option value="19">switch</option><option value="20">radio</option></select></form></div>'
+            , success: function (layero) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.css('text-align', 'center');
+                layer.getChildFrame("#name").val(rowData.name);
+                layer.getChildFrame("#desc").val(rowData.desc1);
+                layer.getChildFrame("#address").val(rowData.imgAddress);
+                if(rowData.reco) {
+                    var xx = layer.getChildFrame("#reco").attr("checked", true);
+                    xx.next().attr("class", "layui-unselect layui-form-switch layui-form-onswitch");
+                }
+                var arr = rowData.types;
+                for(var i = 0; i < arr.length; i++) {
+                    var tx = layer.getChildFrame("input[value='" + arr[i].id +  "']").attr("checked", true);
+                    tx.next().attr("class", "layui-unselect layui-form-checkbox layui-form-checked");
+                }
+            }, yes: function (index, layero) {
+                var name = layer.getChildFrame("#name").val();
+                var desc = layer.getChildFrame("#desc").val();
+                var imgAddress = layer.getChildFrame("#address").val();
+                var reco = layer.getChildFrame("#reco").attr("checked") == 'checked' ? true: false;
+                var $input = layer.getChildFrame("input[name='type']");
+                var typeArr = new Array();
+                $input.each(function () {
+                    var $type = $(this);
+                    if($type.attr("checked") == 'checked') {
+                        typeArr.push($type.val());
+                    }
+                });
+                $.ajax({
+                    "url": "admin/saveIcon",
+                    "data": {
+                        "id": rowData.id, "name": name, "desc1": desc, "imgAddress": imgAddress
+                        , "reco": reco, "typeArr": typeArr
+                    },
+                    'dataType': "json",
+                    "type": "post",
+                    "error": function () {
+                        layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
+                    },
+                    "success": function (data1) {
+                        if (data1 == "1") {
+                            layer.close(index);
+                            layer.msg('保存成功', {icon: 6, time: 700});
+                            location.replace(location);
+                        } else {
+                            layer.msg(data1, {icon: 5, anim: 0});
+                        }
+                    }
+                });
+
+            }
+            , btn2: function (index, layero) {
+            }
+        });
     });
 
-    //保存
-    $("#layui-table tbody").on("click", ".save-btn", function () {
-        var row = table.row($(this).parents("tr"));
-        var thisObj = $(this);
-        var tds = $(this).parents("tr").children();
-        $.each(tds, function (i, val) {
-            var jqob = $(val);
-            //把input变为字符串
-            if (!jqob.has('button').length) {
-                var txt;
-                if (i == 2) {
-                    txt = jqob.children("select").val();
-                } else {
-                    txt = jqob.children("input").val();
-                }
-                table.cell(jqob).data(txt);//修改DataTables对象的数据
-            }
-        });
-        var data = row.data();
-        thisObj.html("编辑");
-        thisObj.toggleClass("edit-btn layui-btn layui-btn-normal");
-        thisObj.toggleClass("save-btn layui-btn ");
-        $.ajax({
-            "url": "superAdmin/setUser",
-            "data": data,
-            "type": "post",
-            "error": function () {
-                editTds(tds, thisObj);
-                layer.msg("您的输入有误，请认真核对", {icon: 5, anim: 0});
-            },
-            "success": function (data1) {
-                var arr = new Array();
-                arr = data1.split("-");
-                response = arr[0];
-                var savedId = arr[1];
-                if (response == "1") {
-                    layer.msg('保存成功', {icon: 6, time: 700});
-                }
-                else {
-                    editTds(tds, thisObj);
-                    layer.msg(response, {icon: 5, anim: 0});
-                }
-            }
-        });
-    });
     //删除单行
     $("#layui-table tbody").on("click", ".layui-btn-warm", function () {
         var nRow = $(this).parents('tr')[0];
         var rowData = table.row(nRow).data();
-        var itemName = rowData.userName;
+        var id = rowData.id;
         var name = rowData.name;
-        layer.confirm("确定删除用户   " + name + "   吗?", {icon: 3, title: '确认删除操作', anim: 6}, function (index) {
+        layer.confirm("确定删除图标   " + name + "   吗?", {icon: 3, title: '确认删除操作', anim: 6}, function (index) {
             layer.close(index);
             $.ajax({
-                "url": "superAdmin/deleteUser",
-                "data": {"userName": itemName},
+                "url": "admin/deleteIcon",
+                "data": {"iconId": id},
                 "type": "post",
                 "error": function () {
                     layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
@@ -233,6 +265,7 @@
                     if (response == "1") {
                         layer.msg('删除成功', {icon: 6, time: 700});
                         table.row(nRow).remove().draw(false);
+                        changeTable();
                     } else {
                         layer.msg(response, {icon: 5, anim: 0});
                     }
@@ -241,74 +274,19 @@
         })
     });
 
-    //修改密码
-    $("#layui-table tbody").on("click", ".resave-btn", function () {
-        var nRow = $(this).parents('tr')[0];
-        var rowData = table.row(nRow).data();
-        var itemName = rowData.userName;
-        layer.open({
-            type: 1
-            ,
-            title: ['重置密码', 'padding:none !important ;text-align:center'] //不显示标题栏
-            ,
-            closeBtn: false
-            ,
-            area: '500px;'
-            ,
-            shade: 0.8
-            ,
-            id: 'LAY_layuipro' //设定一个id，防止重复弹出
-            ,
-            btn: ['确定', '取消']
-            ,
-            moveType: 1 //拖拽模式，0或者1
-            ,
-            content: '<div  style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><form  class="add-user" action=""><div class="layui-form-item"><label class="layui-form-label">新密码</label><div class="layui-input-block"><input type="text" id="newPassword" name="title" value="123456"  class="layui-input"></div></div></form></div>'
-            ,
-            success: function (layero) {
-                var btn = layero.find('.layui-layer-btn');
-                btn.css('text-align', 'center');
-            },
-            yes: function (index, layero) {
-                var newPassword = $("#newPassword").val();
-                $.ajax({
-                    "url": "superAdmin/setUserPassword",
-                    "data": {"userName": itemName, "password": newPassword},
-                    "type": "post",
-                    "error": function () {
-                        layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
-                    },
-                    "success": function (response) {
-                        if (response == "1") {
-                            layer.msg('修改成功', {icon: 6, time: 700});
-                            layer.close(index);
-                        } else {
-                            layer.msg(response, {icon: 5, anim: 0});
-                        }
-
-                    }
-                });
-            }
-            ,
-            btn2: function (index, layero) {
-            }
-
-        });
-    });
-
-
-    //添加用户
+    //添加图标
     $('#addRow').on('click', function () {
 
         layer.open({
             type: 2
-            , title: ['添加用户'] //不显示标题栏
+            , title: ['添加图标'] //不显示标题栏
             , area: ['500px', '450px']
             , shade: 0.8
             , maxmin: true
             , id: 'LAY_layuipro' //设定一个id，防止重复弹出
             , btn: ['确定', '取消']
             , moveType: 1 //拖拽模式，0或者1
+            , offset: 't'
             , content: ['admin/addIconModel']
             //,content:'<div  style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><form class="layui-form" action=""><select name="modules" lay-verify="required" lay-search=""><option value="">直接选择或搜索选择</option><option value="1">layer</option><option value="2">form</option><option value="3">layim</option><option value="4">element</option><option value="5">laytpl</option><option value="6">upload</option><option value="7">laydate</option><option value="8">laypage</option><option value="9">flow</option><option value="10">util</option><option value="11">code</option><option value="12">tree</option><option value="13">layedit</option><option value="14">nav</option><option value="15">tab</option><option value="16">table</option><option value="17">select</option><option value="18">checkbox</option><option value="19">switch</option><option value="20">radio</option></select></form></div>'
             , success: function (layero) {
@@ -342,13 +320,7 @@
                         if (data1 == "1") {
                             layer.close(index);
                             layer.msg('添加成功', {icon: 6, time: 700});
-                            var temp = table.row.add({
-                                "name": name,
-                                "userName": userName,
-                                "authority": authority,
-                                "phone": phone
-                            });
-                            temp.draw();
+                            location.replace(location);
                         } else {
                             layer.msg(data1, {icon: 5, anim: 0});
                         }
