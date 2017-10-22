@@ -11,8 +11,22 @@ public class Clothes {
     private float price;
     private float realityPrice;
     private String imgAddress;
+    private String backImgAddress;
     private String desc1;
     private boolean isFinished;
+
+    public Clothes() {
+    }
+
+    public Clothes(String name, String type, float price, float realityPrice, String imgAddress, String desc1, boolean isFinished) {
+        this.name = name;
+        this.type = type;
+        this.price = price;
+        this.realityPrice = realityPrice;
+        this.imgAddress = imgAddress;
+        this.desc1 = desc1;
+        this.isFinished = isFinished;
+    }
 
     public int getId() {
         return id;
@@ -60,6 +74,14 @@ public class Clothes {
 
     public void setImgAddress(String imgAddress) {
         this.imgAddress = imgAddress;
+    }
+
+    public String getBackImgAddress() {
+        return backImgAddress;
+    }
+
+    public void setBackImgAddress(String backImgAddress) {
+        this.backImgAddress = backImgAddress;
     }
 
     public String getDesc1() {

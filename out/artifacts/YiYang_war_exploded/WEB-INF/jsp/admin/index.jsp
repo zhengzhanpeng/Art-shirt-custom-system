@@ -123,10 +123,9 @@
     </script>
     <!--锁屏模板 end -->
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tabledit.min.js"></script>
-    <script type="text/javascript" src="plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="datas/nav_admin.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="/datas/nav_admin.js"></script>
 
     <script type="text/javascript" src="js/index_admin.js"></script>
     <script>
@@ -136,5 +135,4 @@
     </script>
 </div>
 </body>
-<script type="text/javascript"> $(document).ready(function(){ });</script>
 </html>

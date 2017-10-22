@@ -53,7 +53,7 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
@@ -82,8 +82,8 @@
             {"data": null, "title": "图标", "defaultContent": "<img class='img-m'>"},
             {"data": "name", "title": "名称", "defaultContent": ""},
             {"data": "desc1", "title": "介绍", "defaultContent": ""},
-            {"data": null, "title": "是否推荐", "defaultContent": "<span class='reco' style='color:#5FB878'>是</span>"},
-            {"data": null, "title": "分类", "defaultContent": "<span class='types' style='color: #01AAED;'></span>"},
+            {"data": "recoStr", "title": "是否推荐", "defaultContent": ""},
+            {"data": "typesStr", "title": "分类", "defaultContent": ""},
             {
                 "data": null,
                 "title": "操作",
@@ -126,17 +126,11 @@
             var rowData = table.row($(this)).data();
             $(this).find("img").attr("src", rowData.imgAddress);
             if(rowData.reco == false) {
-                $(this).find(".reco").text("否").css("color", "#FFB800");
+                $(this).children().eq(4).css("color", "#FFB800");
+            } else {
+                $(this).children().eq(4).css("color", "#5FB878");
             }
-            var typesStr = '';
-            var arr = rowData.types;
-            for(var i = 0; i < arr.length; i++) {
-                if(i != 0) {
-                    typesStr += '、';
-                }
-                typesStr += arr[i].name;
-            }
-            $(this).find(".types").text(typesStr);
+            $(this).children().eq(5).css("color", "#01AAED");
         })
     }
     function editTds(tds, thisBtn) {
@@ -311,7 +305,6 @@
                         "name": name, "desc1": desc, "imgAddress": imgAddress
                         , "reco": reco, "typeArr": typeArr
                     },
-                    'dataType': "json",
                     "type": "post",
                     "error": function () {
                         layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});

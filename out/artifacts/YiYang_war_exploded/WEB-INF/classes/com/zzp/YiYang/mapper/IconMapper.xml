@@ -54,7 +54,7 @@
     </insert>
     <delete id="removeType">
         DELETE FROM icon_properties_info WHERE
-        icon_id = #{iconId, jdbcType=INTEGER},
+        icon_id = #{iconId, jdbcType=INTEGER} AND
         property_id = #{proId, jdbcType=INTEGER} limit 1;
     </delete>
     <select id="getIcons" resultMap="iconList">

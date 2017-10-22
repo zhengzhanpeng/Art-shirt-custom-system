@@ -10,9 +10,22 @@
                 <entry key="ROOT" value="F:/我的项目/work_space/YiYang/out/artifacts/YiYang_war_exploded/"/>
                 <entry key="USER_CLOTHES_DIR" value="img/user/clothes/"/>
                 <entry key="ICON_DIR" value="img/icon/"/>
-                <entry key="CLOTHES_INDEX_DIR" value="img/clothes/index/"/>
-                <entry key="CLOTHES_FINISHED_DIR" value="img/clothes/finished/"/>
+                <entry key="CLOTHES_DIR" value="img/clothes/"/>
                 <entry key="FILE" value=".jpg"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="sizeMessage" class="java.util.HashMap">
+        <constructor-arg>
+            <map key-type="java.lang.String" value-type="java.lang.Integer">
+                <!--图片的存放路径-->
+                <entry key="XS" value="50"/>
+                <entry key="S" value="50"/>
+                <entry key="M" value="50"/>
+                <entry key="L" value="50"/>
+                <entry key="XL" value="50"/>
+                <entry key="XXL" value="50"/>
             </map>
         </constructor-arg>
     </bean>
@@ -24,4 +37,5 @@
     <bean id="userManageDao" class="com.zzp.YiYang.DaoImpl.UserManageDaoImpl"/>
     <bean id="iconPropertyDao" class="com.zzp.YiYang.DaoImpl.IconPropertyDaoImpl"/>
     <bean id="iconManageDao" class="com.zzp.YiYang.DaoImpl.IconManageDaoImpl"/>
+    <bean id="GoodsDao" class="com.zzp.YiYang.DaoImpl.GoodsDaoImpl"/>
 </beans>

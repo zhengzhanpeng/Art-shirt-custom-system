@@ -58,7 +58,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">是否推荐</label>
             <div class="layui-input-block">
-                <input type="checkbox" id="reco" name="reco" lay-skin="switch">
+                <input type="checkbox" id="reco" name="reco" lay-skin="switch"lay-text="开启|关闭">
             </div>
         </div>
         <div class="layui-form-item">

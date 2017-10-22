@@ -1,5 +1,6 @@
 package com.zzp.YiYang.intercept;
 
+import com.zzp.YiYang.DTO.AddGoodsDTO;
 import com.zzp.YiYang.DTO.AddIconDTO;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.DTO.UserDTO;
@@ -28,6 +29,33 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
             return checkSaveIcon(object);
         } else if (str.equals("sendAddress")) {
             return checkSendAddress(object);
+        } else if (str.equals("addGoodsDTO")) {
+            return checkAddGoodsDTO(object);
+        }
+        return null;
+    }
+
+    private String checkAddGoodsDTO(Object object) {
+        if (object instanceof AddGoodsDTO) {
+            AddGoodsDTO addGoodsDTO = (AddGoodsDTO) object;
+            if (checkStr(addGoodsDTO.getName())) {
+                return MessageUtil.CLOTHES_NAME_NOT_NULL;
+            }
+            if (checkStr(addGoodsDTO.getType())) {
+                return MessageUtil.CLOTHES_TYPE_NOT_NULL;
+            }
+            if (addGoodsDTO.getPrice() == 0) {
+                return MessageUtil.PRICE_ERROR;
+            }
+            if (addGoodsDTO.getRealityPrice() == 0) {
+                return MessageUtil.REALITY_PRICE_ERROR;
+            }
+            if (checkStr(addGoodsDTO.getImgAddress())) {
+                return MessageUtil.PROPERTY_NOT_NULL;
+            }
+            if (addGoodsDTO.getSizeNumber() == null) {
+                return MessageUtil.SYSTEM_ERROR;
+            }
         }
         return null;
     }

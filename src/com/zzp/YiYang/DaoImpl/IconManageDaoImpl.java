@@ -35,13 +35,12 @@ public class IconManageDaoImpl implements IconManageDao {
     }
 
     @Override
-    @Transactional
     public synchronized String saveIcon(AddIconDTO saveIcon) {
         iconMapper.updateIcon(saveIcon);
-        int iconId = recommendIconMapper.getReco(saveIcon.getId());
-        if (iconId == 0 && saveIcon.getReco()) { //判断是否应该添加或删除reco
-            recommendIconMapper.addReco(iconId);
-        } else if(iconId != 0 && !saveIcon.getReco()) {
+        Integer iconId = recommendIconMapper.getReco(saveIcon.getId());
+        if (iconId == null && saveIcon.getReco()) { //判断是否应该添加或删除reco
+            recommendIconMapper.addReco(saveIcon.getId());
+        } else if(iconId != null && !saveIcon.getReco()) {
             recommendIconMapper.deleteReco(iconId);
         }
         int info;
@@ -62,7 +61,7 @@ public class IconManageDaoImpl implements IconManageDao {
                 }
             }
             if (!result) {
-                iconMapper.removeType(saveIcon.getId(), arr[i]);
+                iconMapper.removeType(saveIcon.getId(), properties.get(i));
             }
         }
         return "1";
@@ -79,6 +78,27 @@ public class IconManageDaoImpl implements IconManageDao {
     @Override
     public String getIcons() {
         List<GetIconDTO> list = iconMapper.getIcons();
+        String typesStr;
+        List<IconProperty> proList;
+        IconProperty iconProperty;
+        for (GetIconDTO g : list) {
+            typesStr = "";
+            proList = null;
+            proList = g.getTypes();
+            if (g.isReco()) {
+                g.setRecoStr("是");
+            } else {
+                g.setRecoStr("否");
+            }
+            for(int i = 0; i < proList.size(); i++) {
+                iconProperty = proList.get(i);
+                if (i != 0) {
+                    typesStr += "、";
+                }
+                typesStr += iconProperty.getName();
+            }
+            g.setTypesStr(typesStr);
+        }
         String result = MainUtil.getJsonToTable(list);
         return result;
     }

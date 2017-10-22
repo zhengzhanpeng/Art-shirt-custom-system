@@ -11,9 +11,9 @@ var navs = [{
 		"icon": "&#xe606;",
 		"href": "admin/iconProperty"
 	}, {
-		"title": "库存信息",
+		"title": "商品管理",
 		"icon": "&#xe61d;",
-		"href": "user/storeMessage"
+		"href": "admin/goodsManage"
 	}, {
 		"title": "修改密码",
 		"icon": "&#xe614;",

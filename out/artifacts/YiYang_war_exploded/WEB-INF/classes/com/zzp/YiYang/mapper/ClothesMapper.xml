@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.YiYang.mapper.ClothesMapper" >
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="Clothes" >
+        INSERT INTO clothes VALUES (null, #{name}, #{type}, #{price}, #{realityPrice}
+        , #{imgAddress}, #{backImgAddress}, #{desc1}, #{isFinished});
+    </insert>
+    <update id="update" parameterType="Clothes">
+        UPDATE clothes SET
+        name = #{name},
+        type = #{type},
+        price = #{price},
+        reality_price = #{realityPrice},
+        img_address = #{imgAddress},
+        back_img_address = #{backImgAddress},
+        desc1 = #{desc1},
+        is_finished = #{isFinished}
+        WHERE id = #{id};
+    </update>
+    <select id="get" parameterType="Integer" resultType="Clothes">
+        SELECT * FROM clothes WHERE id =#{id} LIMIT 1;
+    </select>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM clothes WHERE id = #{clothesId} LIMIT 1;
+    </delete>
+</mapper>

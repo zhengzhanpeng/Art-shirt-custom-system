@@ -9,5 +9,5 @@ public interface RecommendIconMapper {
 
     int deleteReco(int iconId);
 
-    int getReco(int iconId);
+    Integer getReco(int iconId);
 }

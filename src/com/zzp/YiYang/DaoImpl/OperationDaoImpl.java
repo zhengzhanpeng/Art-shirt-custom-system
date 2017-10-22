@@ -109,10 +109,8 @@ public class OperationDaoImpl implements OperationDao {
             result = returnMessage.get("USER_CLOTHES_DIR") + SecurityUtil.getUserName() + "/";
         } else if (name.equals("icon")) {
             result = returnMessage.get("ICON_DIR");
-        } else if (name.equals("index_clothes")) {
-            result = returnMessage.get("CLOTHES_INDEX_DIR");
-        } else if (name.equals("finished_clothes")) {
-            result = returnMessage.get("CLOTHES_FINISHED_DIR");
+        } else if (name.equals("clothes")) {
+            result = returnMessage.get("CLOTHES_DIR");
         }
         return result;
     }
