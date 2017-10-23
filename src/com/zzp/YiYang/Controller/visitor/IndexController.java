@@ -4,6 +4,7 @@ import com.zzp.YiYang.Dao.ClothesDao;
 import com.zzp.YiYang.Dao.IconDao;
 import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Icon;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * @author ho
  * @create 2017-09-26 15:20
  */
-//@Controller
+@Controller
 public class IndexController {
     private ClothesDao clothesDao;
     private IconDao iconDao;

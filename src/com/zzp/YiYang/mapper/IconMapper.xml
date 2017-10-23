@@ -13,6 +13,11 @@
             <result column="p_name" property="name"/>
         </collection>
     </resultMap>
+    <select id="getRecommendIcon" resultType="Icon">
+        SELECT
+        i.id, i.name, i.desc1, i.img_address AS imgAddress FROM icon i
+        RIGHT OUTER JOIN reco_icon r ON i.id = r.icon_id;
+    </select>
     <select id="getInfoId" resultType="Integer">
         SELECT COUNT(*) FROM icon_property_info
         WHERE icon_id = #{iconId, jdbcType=INTEGER} AND property_id = #{propertyId, jdbcType=INTEGER}
