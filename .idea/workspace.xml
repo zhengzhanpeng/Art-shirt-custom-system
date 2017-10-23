@@ -5,66 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f89f98-45b9-4688-b659-483beadc2497" name="Default" comment="..">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/GoodsManageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/AddGoodsDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GoodsDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/GoodsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendClothesMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendClothesMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/set_goods_model.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/checkbix.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/html/goods_message.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/checkbix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Clothes.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Clothes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Clothes.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Clothes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_icon_model.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_icon_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/datas/nav_admin.js" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/datas/nav_admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/index.html" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Clothes.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Clothes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/datas/nav_admin.js" afterPath="$PROJECT_DIR$/web/datas/nav_admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
     </list>
     <ignored path="YiYang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,7 +34,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="945">
               <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1017#1018#0" expanded="false" />
+                <element signature="e#1063#1064#0" expanded="false" />
+                <element signature="e#1310#1311#0" expanded="false" />
+                <element signature="e#1356#1357#0" expanded="false" />
+                <element signature="e#1435#1436#0" expanded="false" />
+                <element signature="e#1485#1486#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,17 +62,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="783">
               <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#906#907#0" expanded="false" />
-                <element signature="e#946#947#0" expanded="false" />
-                <element signature="e#1022#1023#0" expanded="false" />
-                <element signature="e#1070#1071#0" expanded="false" />
-                <element signature="e#1553#1554#0" expanded="false" />
-                <element signature="e#1600#1601#0" expanded="false" />
-                <element signature="e#2678#2679#0" expanded="false" />
-                <element signature="e#2734#2735#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +72,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,18 +82,18 @@
       <file leaf-file-name="goods_manage.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+            <state relative-caret-position="-452">
+              <caret line="377" column="43" selection-start-line="377" selection-start-column="43" selection-end-line="377" selection-end-column="43" />
               <folding>
-                <marker date="1508666125812" expanded="true" signature="5581:5604" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="5581:5617" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="5581:5632" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="5713:5734" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="5713:5764" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="7484:7496" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="19101:19107" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="19101:19115" placeholder="..." />
-                <marker date="1508666125812" expanded="true" signature="19232:19246" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="5581:5604" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="5581:5617" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="5581:5632" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="5713:5734" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="5713:5764" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="7484:7496" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="19101:19107" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="19101:19115" placeholder="..." />
+                <marker date="1508728543613" expanded="true" signature="19232:19246" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -172,7 +114,60 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="e#520#521#0" expanded="false" />
+                <element signature="e#545#546#0" expanded="false" />
+                <element signature="e#578#579#0" expanded="false" />
+                <element signature="e#606#607#0" expanded="false" />
+                <element signature="e#637#638#0" expanded="false" />
+                <element signature="e#664#665#0" expanded="false" />
+                <element signature="e#704#705#0" expanded="false" />
+                <element signature="e#736#737#0" expanded="false" />
+                <element signature="e#767#768#0" expanded="false" />
+                <element signature="e#794#795#0" expanded="false" />
+                <element signature="e#834#835#0" expanded="false" />
+                <element signature="e#866#867#0" expanded="false" />
+                <element signature="e#897#898#0" expanded="false" />
+                <element signature="e#925#926#0" expanded="false" />
+                <element signature="e#966#967#0" expanded="false" />
+                <element signature="e#1000#1001#0" expanded="false" />
+                <element signature="e#1038#1039#0" expanded="false" />
+                <element signature="e#1073#1074#0" expanded="false" />
+                <element signature="e#1128#1129#0" expanded="false" />
+                <element signature="e#1176#1177#0" expanded="false" />
+                <element signature="e#1208#1209#0" expanded="false" />
+                <element signature="e#1236#1237#0" expanded="false" />
+                <element signature="e#1278#1279#0" expanded="false" />
+                <element signature="e#1312#1313#0" expanded="false" />
+                <element signature="e#1349#1350#0" expanded="false" />
+                <element signature="e#1382#1383#0" expanded="false" />
+                <element signature="e#1434#1435#0" expanded="false" />
+                <element signature="e#1478#1479#0" expanded="false" />
+                <element signature="e#1519#1520#0" expanded="false" />
+                <element signature="e#1556#1557#0" expanded="false" />
+                <element signature="e#1616#1617#0" expanded="false" />
+                <element signature="e#1668#1669#0" expanded="false" />
+                <element signature="e#1703#1704#0" expanded="false" />
+                <element signature="e#1734#1735#0" expanded="false" />
+                <element signature="e#1783#1784#0" expanded="false" />
+                <element signature="e#1823#1824#0" expanded="false" />
+                <element signature="e#1859#1860#0" expanded="false" />
+                <element signature="e#1892#1893#0" expanded="false" />
+                <element signature="e#1943#1944#0" expanded="false" />
+                <element signature="e#1987#1988#0" expanded="false" />
+                <element signature="e#2025#2026#0" expanded="false" />
+                <element signature="e#2059#2060#0" expanded="false" />
+                <element signature="e#2113#2114#0" expanded="false" />
+                <element signature="e#2159#2160#0" expanded="false" />
+                <element signature="e#2190#2191#0" expanded="false" />
+                <element signature="e#2217#2218#0" expanded="false" />
+                <element signature="e#2258#2259#0" expanded="false" />
+                <element signature="e#2290#2291#0" expanded="false" />
+                <element signature="e#2324#2325#0" expanded="false" />
+                <element signature="e#2354#2355#0" expanded="false" />
+                <element signature="e#2400#2401#0" expanded="false" />
+                <element signature="e#2438#2439#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -350,6 +345,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -419,134 +415,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="need" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -764,7 +632,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -1461,8 +1328,8 @@
       </method>
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.UserTest" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.yiyang" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.yiyang" />
+      <item index="1" class="java.lang.String" itemvalue="Application.UserTest" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -1509,11 +1376,12 @@
       <workItem from="1508635982837" duration="17363000" />
       <workItem from="1508665523594" duration="60000" />
       <workItem from="1508665631851" duration="563000" />
+      <workItem from="1508726878385" duration="2901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289770000" />
+    <option name="totallyTimeSpent" value="292671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1539,7 +1407,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35953176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35953176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1549,7 +1417,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4085667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21491876" sideWeight="0.4856397" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21491876" sideWeight="0.4856397" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512482" sideWeight="0.5143603" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22986823" sideWeight="0.50576603" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22986823" sideWeight="0.50576603" order="7" side_tool="true" content_ui="tabs" />
@@ -1873,7 +1741,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1889,17 +1759,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
           <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#906#907#0" expanded="false" />
-            <element signature="e#946#947#0" expanded="false" />
-            <element signature="e#1022#1023#0" expanded="false" />
-            <element signature="e#1070#1071#0" expanded="false" />
-            <element signature="e#1553#1554#0" expanded="false" />
-            <element signature="e#1600#1601#0" expanded="false" />
-            <element signature="e#2678#2679#0" expanded="false" />
-            <element signature="e#2734#2735#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1907,7 +1767,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1017#1018#0" expanded="false" />
+            <element signature="e#1063#1064#0" expanded="false" />
+            <element signature="e#1310#1311#0" expanded="false" />
+            <element signature="e#1356#1357#0" expanded="false" />
+            <element signature="e#1435#1436#0" expanded="false" />
+            <element signature="e#1485#1486#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1923,7 +1791,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#520#521#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#578#579#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#664#665#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#866#867#0" expanded="false" />
+            <element signature="e#897#898#0" expanded="false" />
+            <element signature="e#925#926#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1000#1001#0" expanded="false" />
+            <element signature="e#1038#1039#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1176#1177#0" expanded="false" />
+            <element signature="e#1208#1209#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1312#1313#0" expanded="false" />
+            <element signature="e#1349#1350#0" expanded="false" />
+            <element signature="e#1382#1383#0" expanded="false" />
+            <element signature="e#1434#1435#0" expanded="false" />
+            <element signature="e#1478#1479#0" expanded="false" />
+            <element signature="e#1519#1520#0" expanded="false" />
+            <element signature="e#1556#1557#0" expanded="false" />
+            <element signature="e#1616#1617#0" expanded="false" />
+            <element signature="e#1668#1669#0" expanded="false" />
+            <element signature="e#1703#1704#0" expanded="false" />
+            <element signature="e#1734#1735#0" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1823#1824#0" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+            <element signature="e#1892#1893#0" expanded="false" />
+            <element signature="e#1943#1944#0" expanded="false" />
+            <element signature="e#1987#1988#0" expanded="false" />
+            <element signature="e#2025#2026#0" expanded="false" />
+            <element signature="e#2059#2060#0" expanded="false" />
+            <element signature="e#2113#2114#0" expanded="false" />
+            <element signature="e#2159#2160#0" expanded="false" />
+            <element signature="e#2190#2191#0" expanded="false" />
+            <element signature="e#2217#2218#0" expanded="false" />
+            <element signature="e#2258#2259#0" expanded="false" />
+            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#2324#2325#0" expanded="false" />
+            <element signature="e#2354#2355#0" expanded="false" />
+            <element signature="e#2400#2401#0" expanded="false" />
+            <element signature="e#2438#2439#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1945,18 +1866,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+        <state relative-caret-position="-452">
+          <caret line="377" column="43" selection-start-line="377" selection-start-column="43" selection-end-line="377" selection-end-column="43" />
           <folding>
-            <marker date="1508666125812" expanded="true" signature="5581:5604" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="5581:5617" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="5581:5632" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="5713:5734" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="5713:5764" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="7484:7496" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="19101:19107" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="19101:19115" placeholder="..." />
-            <marker date="1508666125812" expanded="true" signature="19232:19246" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="5581:5604" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="5581:5617" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="5581:5632" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="5713:5734" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="5713:5764" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="7484:7496" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="19101:19107" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="19101:19115" placeholder="..." />
+            <marker date="1508728543613" expanded="true" signature="19232:19246" placeholder="..." />
           </folding>
         </state>
       </provider>

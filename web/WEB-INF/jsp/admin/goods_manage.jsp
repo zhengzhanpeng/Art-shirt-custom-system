@@ -22,8 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <style>
         .img-m{
-            width: 55px;
-            height: 40px;
+            width: 65px;
+            height: 65px;
         }
     </style>
 </head>
@@ -135,24 +135,24 @@
             $(this).find("td").eq(0).click(function () {
                 layer.open({
                     type: 1,
-                    area: ['600px', '300px'],
+                    area: ['460px', '220px'],
                     shade: false,
                     title: false, //不显示标题
-                    content: "<img style='display: inline-block; width: 250px; height: 160px;' src='" + rowData.imgAddress + "' alt='正面'>&nbsp;&nbsp;&nbsp;&nbsp; <img style='display: inline-block; width: 250px; height: 160px;' src='" + rowData.backImgAddress + "' alt='背面'>",
+                    content: "<img style='display: inline-block; width: 220px; height: 220px;' src='" + rowData.imgAddress + "' alt='正面'>&nbsp;&nbsp;&nbsp;&nbsp; <img style='display: inline-block; width: 220px; height: 220px;' src='" + rowData.backImgAddress + "' alt='背面'>",
                     cancel: function(){
 
                     }
                 });
             })
             if(rowData.reco == false) {
-                $(this).children().eq(6).css("color", "#FFB800");
-            } else {
-                $(this).children().eq(6).css("color", "#5FB878");
-            }
-            if(rowData.finished == false) {
                 $(this).children().eq(5).css("color", "#FFB800");
             } else {
                 $(this).children().eq(5).css("color", "#5FB878");
+            }
+            if(rowData.finished == false) {
+                $(this).children().eq(6).css("color", "#FFB800");
+            } else {
+                $(this).children().eq(6).css("color", "#5FB878");
             }
             if(rowData.state == '缺货') {
                 $(this).children().eq(7).css("color", "#FF5722");
@@ -379,7 +379,7 @@
         layer.open({
             type: 2
             , title: ['商品详情'] //不显示标题栏
-            , area: ['500px', '300px']
+            , area: ['500px', '310px']
             , shade: 0.8
             , id: 'LAY_layuipro' //设定一个id，防止重复弹出
             , btn: ['确定', '取消']
