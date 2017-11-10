@@ -26,7 +26,7 @@ public class GoodsDaoImpl implements GoodsDao {
     private ClothesMapper clothesMapper;
     private RecommendClothesMapper recommendClothesMapper;
     private Map<String, Integer> sizeMessage;
-    private final String[] strs = {"XS", "S", "M", "L", "XL", "XXL"}; //衣服的尺码
+    private final String[] strs = {"S", "M", "L", "XL", "XXL", "XXXL"}; //衣服的尺码
 
     @Resource
     public void setSizeMessage(Map<String, Integer> sizeMessage) {
@@ -108,12 +108,12 @@ public class GoodsDaoImpl implements GoodsDao {
     @Override
     public List<Integer> getSizeList() {
         List<Integer> list = new ArrayList<>();
-        list.add(sizeMessage.get("XS"));
         list.add(sizeMessage.get("S"));
         list.add(sizeMessage.get("M"));
         list.add(sizeMessage.get("L"));
         list.add(sizeMessage.get("XL"));
         list.add(sizeMessage.get("XXL"));
+        list.add(sizeMessage.get("XXXL"));
         return list;
     }
 

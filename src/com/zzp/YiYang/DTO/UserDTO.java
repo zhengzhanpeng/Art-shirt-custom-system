@@ -9,9 +9,11 @@ package com.zzp.YiYang.DTO;
 public class UserDTO {
     private String userName;
     private String password;
+    private int enable;
     private String authority;
     private long phone;
     private String name;
+    private String email;
 
     public String getUserName() {
         return userName;
@@ -51,5 +53,21 @@ public class UserDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getEnable() {
+        return enable;
+    }
+
+    public void setEnable(int enable) {
+        this.enable = enable;
     }
 }

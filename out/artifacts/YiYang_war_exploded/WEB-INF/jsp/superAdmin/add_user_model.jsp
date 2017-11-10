@@ -62,6 +62,13 @@
                 placeholder="请输入联系方式">
             </div>
         </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">电子邮箱</label>
+            <div class="layui-input-block">
+                <input id="email" type="text" name="email" value="" class="layui-input"
+                       placeholder="请输入电子邮箱地址">
+            </div>
+        </div>
     </form>
 </div>
 </body>

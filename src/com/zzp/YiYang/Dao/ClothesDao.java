@@ -2,6 +2,7 @@ package com.zzp.YiYang.Dao;
 
 import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
+import com.zzp.YiYang.DTO.ClothesDTO;
 import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Icon;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -20,7 +21,7 @@ public interface ClothesDao {
     List<Clothes> getClothes();
     List<Icon> getCollect(int page, int num);
     int getCollectNum();
-    List<Clothes> getRecommendClothes();
+    List<ClothesDTO> getRecommendClothes();
 
     /**
      * 自定义的商品添加购物车方式。方法

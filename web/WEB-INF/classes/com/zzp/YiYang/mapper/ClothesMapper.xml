@@ -24,4 +24,17 @@
     <delete id="delete" parameterType="Integer">
         DELETE FROM clothes WHERE id = #{clothesId} LIMIT 1;
     </delete>
+    <select id="getRecoClothes" resultType="ClothesDTO">
+        SELECT
+        c.id,
+        c.name,
+        c.type,
+        c.price,
+        c.reality_price AS realityPrice,
+        c.img_address AS imgAddress,
+        c.desc1,
+        c.is_finished AS finished
+        FROM reco_clothes r
+        LEFT OUTER JOIN  clothes c ON c.id = r.clothes_id;
+    </select>
 </mapper>

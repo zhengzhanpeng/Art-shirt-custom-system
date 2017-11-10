@@ -85,9 +85,6 @@
             <div class="layui-inline">
                 <label class="layui-form-label" id="sizeNumber">尺码数量</label>
                 <div class="layui-input-inline" style="width: 50px;">
-                    <input type="text" name="num" placeholder="XS" autocomplete="off" class="layui-input">
-                </div>
-                <div class="layui-input-inline" style="width: 50px;">
                     <input type="text" name="num" placeholder="S" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-input-inline" style="width: 50px;">
@@ -101,6 +98,9 @@
                 </div>
                 <div class="layui-input-inline" style="width: 50px;">
                     <input type="text" name="num" placeholder="XXL" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-input-inline" style="width: 50px;">
+                    <input type="text" name="num" placeholder="XXXL" autocomplete="off" class="layui-input">
                 </div>
             </div>
         </div>

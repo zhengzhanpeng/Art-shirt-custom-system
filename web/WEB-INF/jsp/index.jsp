@@ -25,6 +25,12 @@
     <link rel="stylesheet" href="/css/owl.theme.css">
     <link href="/css/flexslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/responsive.css">
+    <style>
+        i {
+            position: relative;
+            top: 25%;
+        }
+    </style>
 </head>
 <body class="home">
 
@@ -112,8 +118,8 @@
                             <ul class="user-menu">
                                 <li><a href="#">我的账户</a></li>
                                 <li><a href="cart.html">购物车</a></li>
-                                <li><a href="#">登录</a></li>
-                                <li><a href="#">注册</a></li>
+                                <li><a href="login">登录/注册</a></li>
+                                <%--<li><a href="#">注册</a></li>--%>
                                 <li><a href="#">退出</a></li>
                             </ul>
                         </nav>
@@ -126,13 +132,10 @@
                     <nav id="site-menu" role="navigation">
                         <ul class="main-menu hidden-sm hidden-xs">
                             <li class="active">
-                                <a href="index.html">首页</a>
+                                <a href="index">首页</a>
                             </li>
                             <li>
-                                <a href="products.html">图标</a>
-
-
-
+                                <a href="icons">图标</a>
                             </li>
                             <li>
                                 <a href="product.html">衬衫定制</a>
@@ -283,7 +286,9 @@
                         'left': configs.left + 'px',
                         'top': configs.top + 'px',
                         'animation-duration': configs.speed,
-                        'animation-delay': configs.delay
+                        'animation-delay': configs.delay,
+                        'opacity': 0,
+                        'animation-fill-mode': 'forwards'
                     });
                 });
 
@@ -301,8 +306,8 @@
                         animation: 'slide',
                         easing: 'easeInQuad',
                         slideshow: false,
-                        nextText: '<i class="iconfont-angle-right"></i>',
-                        prevText: '<i class="iconfont-angle-left"></i>',
+                        nextText: '<i class="iconfont-angle-right" style="position: relative; top: 0px"></i>',
+                        prevText: '<i class="iconfont-angle-left" style="position: relative; top: 0px"></i>',
                         start: function() {
                             flex_fix_pos(1);
                         },
@@ -372,7 +377,7 @@
                             <div class="inner text-center np">
                                 <div class="ribbon">
                                     <h6 class="nmb">最新款</h6>
-                                    <h5 class="text-semibold uppercase nmb">时尚皮衣</h5>
+                                    <h5 class="text-semibold uppercase nmb">时尚艺术衫</h5>
                                     <div class="space10"></div>
                                     <a href="products.html" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
                                 </div>
@@ -426,13 +431,18 @@
                                             <a href="product.html" class="entry-url"></a>
                                             <ul class="icons unstyled">
                                                 <li>
-                                                    <div class="circle ribbon ribbon-sale">HOT</div>
+                                                    <c:if test="${icon.number < 50}">
+                                                        <div class="circle ribbon ribbon-new">New</div>
+                                                    </c:if>
+                                                    <c:if test="${icon.number >= 100}">
+                                                        <div class="circle ribbon ribbon-sale">HOT</div>
+                                                    </c:if>
                                                 </li>
                                                 <li>
                                                     <a href="${icon.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+                                                    <a href="#" class="circle add-to-cart"><i class="iconfont-star"></i></a>
                                                 </li>
                                             </ul>
                                             <div class="rate-bar">
@@ -443,7 +453,7 @@
                                     </div>
                                     <div class="entry-main">
                                         <h5 class="entry-title">
-                                            <a href="#">${icon.name}</a>
+                                            <a href="javascript:void(0)">${icon.name}</a>
                                         </h5>
                                         <div class="entry-price">
                                             <%--<s class="entry-discount">￥ 350.00</s>--%>
@@ -455,7 +465,7 @@
                                         </div>
                                         <div class="entry-links clearfix">
                                             <a href="#" class="pull-left m-r">+ 添加到收藏</a>
-                                            <a href="#" class="pull-right">+ 加入比较</a>
+                                            <a href="javascript:void(0)" class="pull-right">+ 加入比较</a>
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +483,7 @@
             <div class="container">
                 <div class="row">
                     <header class="section-header clearfix col-sm-offset-3 col-sm-6">
-                        <h3 class="section-title">男士服装</h3>
+                        <h3 class="section-title">服装推荐</h3>
                     </header>
 
                     <div class="clearfix"></div>
@@ -488,251 +498,49 @@
                         </div>
 
                         <div class="owl-carousel owl-theme" data-visible-items="5" data-navigation="true" data-lazyload="true">
-                            <div class="product" data-product-id="9">
-                                <div class="entry-media">
-                                    <img data-src="images/men/jacket/271865-0286_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <div class="circle ribbon ribbon-sale">Sale</div>
-                                            </li>
-                                            <li>
-                                                <a href="images/men/jacket/271865-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="4.5" step="0.5" id="backing9" />
-                                            <div class="rateit" data-rateit-backingfld="#backing9" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+                            <c:forEach items="${clothesList}" var="c">
+                                <div class="product" data-product-id="${c.id}">
+                                    <div class="entry-media">
+                                        <img data-src="${c.imgAddress}" alt="" class="lazyOwl thumb boy-clothes" />
+                                        <div class="hover">
+                                            <a href="product.html" class="entry-url"></a>
+                                            <ul class="icons unstyled">
+                                                <li>
+                                                    <div class="circle ribbon ribbon-sale">HOT</div>
+                                                </li>
+                                                <li>
+                                                    <a href="${c.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="rate-bar">
+                                                <input type="range" value="4.5" step="0.5" id="${c.id}" />
+                                                <div class="rateit" data-rateit-backingfld="#${c.id}" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-main">
+                                        <h5 class="entry-title">
+                                            <a href="#">
+                                                <c:if test="${c.name.length() >13}">${c.name}</c:if>
+                                                <c:if test="${c.name.length() <=13}">${c.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
+                                            <%--${c.name}--%>
+                                            </a>
+                                        </h5>
+                                        <div class="entry-price">
+                                            <c:if test="${c.price == c.realityPrice}">
+                                                <strong class="price">￥ ${c.realityPrice}</strong>
+                                            </c:if>
+                                            <c:if test="${c.price != c.realityPrice}">
+                                                <s class="entry-discount">￥ ${c.price}</s>
+                                                <strong class="accent-color price">￥ ${c.realityPrice}</strong>
+                                            </c:if>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">春季欧美复古死飞太空棉连..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <s class="entry-discount">￥ 350.00</s>
-                                        <strong class="accent-color price">￥ 250.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="10">
-                                <div class="entry-media">
-                                    <img data-src="images/men/jacket/634082-0014_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <a href="images/men/jacket/634082-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="4" step="0.5" id="backing10" />
-                                            <div class="rateit" data-rateit-backingfld="#backing10" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">卫衣套装男士连帽春季外套..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 350.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="11">
-                                <div class="entry-media">
-                                    <img data-src="images/men/jacket/217365-0014_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <div class="circle ribbon ribbon-new">New</div>
-                                            </li>
-                                            <li>
-                                                <a href="images/men/jacket/217365-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="3.5" step="0.5" id="backing11" />
-                                            <div class="rateit" data-rateit-backingfld="#backing11" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">BANGBOY 原创麂皮绒休闲..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 450.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="12">
-                                <div class="entry-media">
-                                    <img data-src="images/men/blazer/105797-1056_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <a href="images/men/blazer/105797-1056_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="5" step="0.5" id="backing12" />
-                                            <div class="rateit" data-rateit-backingfld="#backing12" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">首席名模原创春季款落肩蝙..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 350.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="13">
-                                <div class="entry-media">
-                                    <img data-src="images/men/jumper/271866-0014_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <div class="circle ribbon ribbon-sale">Sale</div>
-                                            </li>
-                                            <li>
-                                                <a href="images/men/jumper/271866-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="4.5" step="0.5" id="backing13" />
-                                            <div class="rateit" data-rateit-backingfld="#backing13" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">相予中国风轻羽薄款T恤休闲..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <s class="entry-discount">￥ 350.00</s>
-                                        <strong class="accent-color price">￥ 250.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="14">
-                                <div class="entry-media">
-                                    <img data-src="images/men/shirt/803500-6989_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <a href="images/men/shirt/803500-6989_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="4" step="0.5" id="backing14" />
-                                            <div class="rateit" data-rateit-backingfld="#backing14" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">振轩衣阁 夏季短袖T恤男 袖..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 350.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="15">
-                                <div class="entry-media">
-                                    <img data-src="images/men/shirt/217360-0014_1_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <div class="circle ribbon ribbon-new">New</div>
-                                            </li>
-                                            <li>
-                                                <a href="images/men/shirt/217360-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="3.5" step="0.5" id="backing15" />
-                                            <div class="rateit" data-rateit-backingfld="#backing15" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">夏季韩版个性印花百搭T恤男..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 450.00</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product" data-product-id="16">
-                                <div class="entry-media">
-                                    <img data-src="images/men/accessories/000095-0014_2_t.jpg" alt="" class="lazyOwl thumb boy-clothes" />
-                                    <div class="hover">
-                                        <a href="product.html" class="entry-url"></a>
-                                        <ul class="icons unstyled">
-                                            <li>
-                                                <a href="images/men/accessories/000095-0014_2.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="rate-bar">
-                                            <input type="range" value="5" step="0.5" id="backing16" />
-                                            <div class="rateit" data-rateit-backingfld="#backing16" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="entry-main">
-                                    <h5 class="entry-title">
-                                        <a href="#">小胡子店2017小清新宽条纹..</a>
-                                    </h5>
-                                    <div class="entry-price">
-                                        <strong class="price">￥ 350.00</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </div>
 
                     </div>

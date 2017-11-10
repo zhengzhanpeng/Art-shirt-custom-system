@@ -10,4 +10,6 @@ import com.zzp.YiYang.DTO.UserDTO;
  */
 public interface UserDao {
     String registerC(UserDTO userDTO);
+
+    boolean checkRegister(String userName, String msg);
 }

@@ -2,12 +2,15 @@ package com.zzp.YiYang.DaoImpl;
 
 import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
+import com.zzp.YiYang.DTO.ClothesDTO;
 import com.zzp.YiYang.Dao.ClothesDao;
+import com.zzp.YiYang.mapper.ClothesMapper;
 import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Icon;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,6 +19,12 @@ import java.util.List;
  */
 @Service
 public class ClothesDaoImpl implements ClothesDao {
+    private ClothesMapper clothesMapper;
+
+    @Resource
+    public void setClothesMapper(ClothesMapper clothesMapper) {
+        this.clothesMapper = clothesMapper;
+    }
 
     @Override
     public List<Clothes> getClothes() {
@@ -33,8 +42,9 @@ public class ClothesDaoImpl implements ClothesDao {
     }
 
     @Override
-    public List<Clothes> getRecommendClothes() {
-        return null;
+    public List<ClothesDTO> getRecommendClothes() {
+        List<ClothesDTO> list = clothesMapper.getRecoClothes();
+        return list;
     }
 
     @Override

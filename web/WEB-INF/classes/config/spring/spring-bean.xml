@@ -26,6 +26,7 @@
                 <entry key="L" value="50"/>
                 <entry key="XL" value="50"/>
                 <entry key="XXL" value="50"/>
+                <entry key="XXXL" value="50"/>
             </map>
         </constructor-arg>
     </bean>

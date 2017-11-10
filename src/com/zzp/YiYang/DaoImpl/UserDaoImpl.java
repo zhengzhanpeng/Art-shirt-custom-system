@@ -4,11 +4,15 @@ import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.Dao.UserDao;
 import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.User;
+import com.zzp.YiYang.util.EmailHelper;
+import com.zzp.YiYang.util.EncryptionUtil;
 import com.zzp.YiYang.util.MessageUtil;
+import com.zzp.YiYang.util.RegisterMail;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import javax.annotation.Resource;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 /**
  * @author ho
@@ -23,8 +27,24 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public boolean checkRegister(String userName, String msg) {
+        boolean result = EmailOperation.checkRegister(userName, msg);
+        if (result) {
+            User user = new User();
+            user.setUserName(userName);
+            user.setEnabled(true);
+            userMapper.setEnabled(user);
+        }
+        return result;
+    }
+
+    @Override
     public String registerC(UserDTO userDTO) {
-        return addUser(userDTO, userMapper);
+        String result = addUser(userDTO, userMapper);
+        if (result.equals("1")) {
+            EmailOperation.sendRegister(userDTO.getName(), userDTO.getUserName(), userDTO.getEmail());
+        }
+        return result;
     }
 
     public static String addUser(UserDTO userDTO, UserMapper userMapper) {

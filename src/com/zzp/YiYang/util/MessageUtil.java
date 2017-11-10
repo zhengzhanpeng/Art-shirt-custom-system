@@ -27,4 +27,6 @@ public class MessageUtil {
     public static final String CLOTHES_TYPE_NOT_NULL = "衣服尺寸不能为空";
     public static final String PRICE_ERROR = "原价不能为0";
     public static final String REALITY_PRICE_ERROR = "现价价不能为0";
+    public static final String EMAIL_SUCCEED = "恭喜您，邮箱认证成功，赶快登陆吧";
+    public static final String EMAIL_DEFEATED = "很抱歉，您的邮箱认证已失效，请您重新登录认证";
 }

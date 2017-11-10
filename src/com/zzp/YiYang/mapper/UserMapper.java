@@ -25,4 +25,6 @@ public interface UserMapper {
     int setPassword(User user);
 
     void setUser(UserDTO userDTO);
+
+    void setEnabled(User user);
 }

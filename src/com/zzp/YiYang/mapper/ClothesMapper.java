@@ -1,6 +1,9 @@
 package com.zzp.YiYang.mapper;
 
+import com.zzp.YiYang.DTO.ClothesDTO;
 import com.zzp.YiYang.pojo.Clothes;
+
+import java.util.List;
 
 /**
  * @author ho
@@ -14,4 +17,6 @@ public interface ClothesMapper {
     int get(int id);
 
     int delete(int clothesId);
+
+    List<ClothesDTO> getRecoClothes();
 }

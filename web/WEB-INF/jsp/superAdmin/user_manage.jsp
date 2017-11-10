@@ -288,11 +288,12 @@
                 var password = layer.getChildFrame("#password").val();
                 var phone = layer.getChildFrame("#phone").val();
                 var name = layer.getChildFrame("#name").val();
+                var email = layer.getChildFrame("#email").val();
                 $.ajax({
                     "url": "superAdmin/addUser",
                     "data": {
                         "userName": userName, "name": name, "password": password
-                        , "phone": phone, "authority": authority
+                        , "phone": phone, "authority": authority, "email": email
                     },
                     "type": "post",
                     "error": function () {

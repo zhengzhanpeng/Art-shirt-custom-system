@@ -59,6 +59,7 @@ public class UserManageController {
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     @ResponseBody
     public String addUser(UserDTO userDTO) {
+        userDTO.setEnable(1);
         return userManageDao.addUser(userDTO);
     }
 

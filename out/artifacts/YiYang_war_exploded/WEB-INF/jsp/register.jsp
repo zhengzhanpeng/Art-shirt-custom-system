@@ -25,10 +25,13 @@
     <div class="connect">
         <p>Link the world. Share to world.</p>
     </div>
-
-    <form action="" method="post" id="registerForm">
+    ${msg}
+    <form action="/registerSubmit" method="post" id="registerForm">
         <div>
-            <input type="text" name="username" class="username" placeholder="您的用户名" autocomplete="off"/>
+            <input type="text" name="name" class="username" placeholder="您的昵称" autocomplete="off"/>
+        </div>
+        <div>
+            <input type="text" name="userName" class="username" placeholder="您的用户名" autocomplete="off"/>
         </div>
         <div>
             <input type="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />
@@ -37,12 +40,11 @@
             <input type="password" name="confirm_password" class="confirm_password" placeholder="再次输入密码" oncontextmenu="return false" onpaste="return false" />
         </div>
         <div>
-            <input type="text" name="phone_number" class="phone_number" placeholder="输入手机号码" autocomplete="off" id="number"/>
+            <input type="text" name="phone" class="phone_number" placeholder="输入手机号码" autocomplete="off" id="number"/>
         </div>
         <div>
             <input type="email" name="email" class="email" placeholder="输入邮箱地址" oncontextmenu="return false" onpaste="return false" />
         </div>
-
         <button id="submit" type="submit">注 册</button>
     </form>
     <a href="/login">
