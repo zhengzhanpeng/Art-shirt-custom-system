@@ -121,6 +121,15 @@
     $("#layui-table").DataTable().on("page", function () {
         setTimeout("changeTable()", 100);
     });
+    setTimeout("changeInput()", 1000);
+    function changeInput() {
+        $("input").change(function () {
+            changeTable();
+        });
+        $("select").change(function () {
+            changeTable();
+        });
+    }
     function changeTable() {
         $("tbody tr").each(function () {
             var rowData = table.row($(this)).data();

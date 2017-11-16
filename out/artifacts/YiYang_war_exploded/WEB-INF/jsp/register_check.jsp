@@ -25,7 +25,7 @@
     <div class="connect">
         <p>您距离注册完成仅需最后一步啦，快去邮箱完成认证吧</p>
     </div>
-    <a href="javascript: again()">
+    <a href="/checkEmail">
         <button type="button" class="register-tis">没有收到邮件？</button>
     </a>
     <a href="/login">
@@ -44,25 +44,25 @@
 <!--表单验证-->
 <script src="/plugins/login/js/jquery.validate.min.js?var1.14.0"></script>
 <script>
-    var name = "${name}";
-    var userName = "${userName}";
-    var email = "${email}";
-    function again() {
-        $.ajax({
-            url: "/againSend"
-            ,type: "post"
-            ,data: {"name": name, "userName": userName, "email": email}
-            ,success: function (data) {
-                if (data == "1") {
-                    layer.msg("发送成功，请查收", {icon: 6, time: 700});
-                    return;
-                }
-                layer.msg(data, {icon: 5, anim: 0});
-            }
-            ,error: function () {
-                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});
-            }
-        });
-    }
+    <%--var name = "${name}";--%>
+    <%--var userName = "${userName}";--%>
+    <%--var email = "${email}";--%>
+    <%--function again() {--%>
+        <%--$.ajax({--%>
+            <%--url: "/againSend"--%>
+            <%--,type: "post"--%>
+            <%--,data: {"name": name, "userName": userName, "email": email}--%>
+            <%--,success: function (data) {--%>
+                <%--if (data == "1") {--%>
+                    <%--layer.msg("发送成功，请查收", {icon: 6, time: 700});--%>
+                    <%--return;--%>
+                <%--}--%>
+                <%--layer.msg(data, {icon: 5, anim: 0});--%>
+            <%--}--%>
+            <%--,error: function () {--%>
+                <%--layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});--%>
+            <%--}--%>
+        <%--});--%>
+    <%--}--%>
 </script>
 </html>

@@ -1,7 +1,6 @@
 package com.zzp.YiYang.Dao;
 
 import com.zzp.YiYang.DTO.IconDTO;
-import com.zzp.YiYang.pojo.Icon;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public interface IconDao {
      * @param num 每页包含数目
      * @return
      */
-    List<Icon> getRecommendIcon(int page, int num);
+    String getRecommendIcon(int page, int num);
 
     /**
      * 同上
@@ -30,7 +29,7 @@ public interface IconDao {
      * @param num
      * @return
      */
-    List<Icon> getCollectIcon(int page, int num);
+    String getCollectIcon(int page, int num);
 
     /**
      * 通过收藏数倒序排序分页
@@ -38,7 +37,7 @@ public interface IconDao {
      * @param num
      * @return
      */
-    List<Icon> getCollectMaxIcon(int page, int num);
+    String getCollectMaxIcon(int page, int num);
 
     int getCollectNum();
 

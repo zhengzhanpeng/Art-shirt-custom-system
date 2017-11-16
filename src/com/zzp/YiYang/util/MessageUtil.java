@@ -6,7 +6,8 @@ package com.zzp.YiYang.util;
  */
 public class MessageUtil {
     public static final String LOGIN_ERROR = "您的权限有误，请于管理员联系";
-    public static final String USER_NAME_OR_PASSWORD_WRONG = "您的用户名或密码不正确，请重新输入";
+    public static final String USER_NAME_OR_PASSWORD_OR_EMAIL_WRONG = "您的输入有误或邮箱未验证，请查证。";
+    public static final String USER_NAME_OR_PASSWORD_WRONG = "您输入的用户名或密码有误，请查证。";
     public static final String SYSTEM_ERROR = "系统繁忙，请稍后再试或与管理员联系";
     public static final String USER_NAME_NOT_NULL = "用户名不能为空";
     public static final String NAME_NOT_NULL = "姓名不能为空";
@@ -29,4 +30,6 @@ public class MessageUtil {
     public static final String REALITY_PRICE_ERROR = "现价价不能为0";
     public static final String EMAIL_SUCCEED = "恭喜您，邮箱认证成功，赶快登陆吧";
     public static final String EMAIL_DEFEATED = "很抱歉，您的邮箱认证已失效，请您重新登录认证";
+    public static final String ICON_HAD_COLLECT = "您已收藏此图标，无法重复收藏";
+    public static final String DO_NOT_LOGIN = "您还没有登录嗷";
 }

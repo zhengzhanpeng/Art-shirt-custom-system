@@ -13,9 +13,13 @@ import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
 
 import javax.annotation.Resource;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author ho
@@ -26,11 +30,23 @@ public class GoodsDaoImpl implements GoodsDao {
     private ClothesMapper clothesMapper;
     private RecommendClothesMapper recommendClothesMapper;
     private Map<String, Integer> sizeMessage;
+    private Map<String, String> returnMessage;
     private final String[] strs = {"S", "M", "L", "XL", "XXL", "XXXL"}; //衣服的尺码
+    private ExecutorService executorService;
+
+    @Resource
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Resource
     public void setSizeMessage(Map<String, Integer> sizeMessage) {
         this.sizeMessage = sizeMessage;
+    }
+
+    @Resource
+    public void setReturnMessage(Map<String, String> returnMessage) {
+        this.returnMessage = returnMessage;
     }
 
     @Resource
@@ -102,6 +118,23 @@ public class GoodsDaoImpl implements GoodsDao {
         if (result == 0) {
             return MessageUtil.CLOTHES_NOT_EXIST;
         }
+        executorService.execute(() -> {  //删除图片所在路径的文件;
+            Clothes clothes = clothesMapper.getImgAddress(clothesId);
+            String imgAddress = clothes.getImgAddress();
+            String backImgAddress = clothes.getBackImgAddress();
+            String root = returnMessage.get("ROOT");
+            String clothesDir = returnMessage.get("CLOTHES_DIR");
+            String file = returnMessage.get("FILE");
+            if (imgAddress == null || backImgAddress == null || root == null || clothesDir == null || file == null) {
+                return;
+            }
+            String fileAddress =  root + clothesDir + imgAddress + file;
+            String backFileAddress = root + clothesDir + backImgAddress + file;
+            File file1 = new File(fileAddress);
+            file1.delete();
+            file1 = new File(backFileAddress);
+            file1.delete();
+        });
         return "1";
     }
 

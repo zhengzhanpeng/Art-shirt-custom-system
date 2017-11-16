@@ -120,7 +120,7 @@
                                 <li><a href="cart.html">购物车</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
-                                <li><a href="#">退出</a></li>
+                                <li><a href="/j_spring_security_logout ">退出</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -135,10 +135,10 @@
                                 <a href="index">首页</a>
                             </li>
                             <li>
-                                <a href="icons">图标</a>
+                                <a href="/icons">图标</a>
                             </li>
                             <li>
-                                <a href="product.html">衬衫定制</a>
+                                <a href="/user/clothes_make">衬衫定制</a>
                             </li>
                             <li>
                                 <a href="cart.html">购物车</a>
@@ -426,7 +426,10 @@
                             <c:forEach items="${iconList}" var="icon">
                                 <div class="product" data-product-id="${icon.id}">
                                     <div class="entry-media">
-                                        <img data-src="${icon.imgAddress}" alt="" class="lazyOwl thumb girl-clothes" />
+                                        <%--<span class="img-center-m">--%>
+                                            <span class="span-img-center-m"></span>
+                                            <img data-src="${icon.imgAddress}" alt="" class="lazyOwl thumb girl-clothes img-center-m" />
+                                        <%--</span>--%>
                                         <div class="hover">
                                             <a href="product.html" class="entry-url"></a>
                                             <ul class="icons unstyled">
@@ -442,7 +445,7 @@
                                                     <a href="${icon.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="circle add-to-cart"><i class="iconfont-star"></i></a>
+                                                    <a href="javascript:void(0)" class="circle add-to-collect"><i class="iconfont-star"></i></a>
                                                 </li>
                                             </ul>
                                             <div class="rate-bar">
@@ -464,7 +467,7 @@
                                             </strong>
                                         </div>
                                         <div class="entry-links clearfix">
-                                            <a href="#" class="pull-left m-r">+ 添加到收藏</a>
+                                            <a href="javascript:void(0)" class="pull-left m-r add-to-collect">+ 添加到收藏</a>
                                             <a href="javascript:void(0)" class="pull-right">+ 加入比较</a>
                                         </div>
                                     </div>
@@ -497,11 +500,12 @@
                             </div>
                         </div>
 
-                        <div class="owl-carousel owl-theme" data-visible-items="5" data-navigation="true" data-lazyload="true">
+                        <div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true" data-lazyload="true">
                             <c:forEach items="${clothesList}" var="c">
                                 <div class="product" data-product-id="${c.id}">
                                     <div class="entry-media">
-                                        <img data-src="${c.imgAddress}" alt="" class="lazyOwl thumb boy-clothes" />
+                                        <span class="span-img-center-m"></span>
+                                        <img data-src="${c.imgAddress}" alt="" class="lazyOwl thumb boy-clothes img-center-m" />
                                         <div class="hover">
                                             <a href="product.html" class="entry-url"></a>
                                             <ul class="icons unstyled">
@@ -524,8 +528,8 @@
                                     <div class="entry-main">
                                         <h5 class="entry-title">
                                             <a href="#">
-                                                <c:if test="${c.name.length() >13}">${c.name}</c:if>
-                                                <c:if test="${c.name.length() <=13}">${c.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
+                                                <c:if test="${c.name.length() >18}">${c.name}</c:if>
+                                                <c:if test="${c.name.length() <=18}">${c.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
                                             <%--${c.name}--%>
                                             </a>
                                         </h5>
@@ -715,5 +719,27 @@
 </script>
 <script src="/js/owl.carousel.js"></script>
 <script src="/js/jquery.flexslider-min.js"></script>
+<script src="/js/layer.js"></script>
+<script>
+    $(".add-to-collect").click(function () {
+        var iconId = $(this).parents(".product").attr("data-product-id");
+        $.ajax({
+            url: "/user/addToCollect"
+            ,type: "post"
+            ,data: {"iconId": iconId}
+            ,success: function (data) {
+                if (data == "1") {
+                    layer.msg('收藏成功', {icon: 6, time: 700, offset: '100px'});
+                    return;
+                }
+                layer.msg(data, {icon: 5, anim: 0, offset: '100px'});
+            }
+            ,error: function () {
+                layer.msg("当前系统繁忙，添加失败，请稍后再试！", {icon: 5, anim: 0, offset: '100px'});
+            }
+        });
+
+    })
+</script>
 </body>
 </html>

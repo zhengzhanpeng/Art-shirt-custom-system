@@ -8,16 +8,13 @@
         <result column="desc1" property="desc1"/>
         <result column="img_address" property="imgAddress"/>
         <result column="reco" property="reco"/>
+        <result column="number" property="number"/>
         <collection property="types" ofType="IconProperty">
             <id column="p_id" property="id"/>
             <result column="p_name" property="name"/>
         </collection>
     </resultMap>
-    <select id="getRecommendIcon" resultType="Icon">
-        SELECT
-        i.id, i.name, i.desc1, i.img_address AS imgAddress, i.number FROM icon i
-        RIGHT OUTER JOIN reco_icon r ON i.id = r.icon_id;
-    </select>
+
     <select id="getInfoId" resultType="Integer">
         SELECT COUNT(*) FROM icon_property_info
         WHERE icon_id = #{iconId, jdbcType=INTEGER} AND property_id = #{propertyId, jdbcType=INTEGER}
@@ -28,12 +25,12 @@
         VALUES (null, #{iconId, jdbcType=INTEGER}, #{propertyId, jdbcType=INTEGER}, 0);
     </insert>
     <update id="addCollectNumber">
-        UPDATE icon SET value = #{value} + 1
-        WHERE icon_id = #{iconId, jdbcType=INTEGER}
-        AND value = #{value, jdbcType=INTEGER};
+        UPDATE icon SET number = #{value} + 1
+        WHERE id = #{iconId, jdbcType=INTEGER}
+        AND number = #{value, jdbcType=INTEGER};
     </update>
-    <select id="getCollectNumber" resultType="String">
-        SELECT collect_number FROM icon WHERE icon_id = #{iconId} limit 1;
+    <select id="getCollectNumber" resultType="Integer">
+        SELECT number FROM icon WHERE id = #{iconId} limit 1;
     </select>
     <select id="getIconPros" resultType="IconProperty">
         SELECT id, name FROM icon_properties;
@@ -68,6 +65,7 @@
         i.name AS name,
         i.desc1 AS desc1,
         i.img_address AS img_address,
+        i.number AS number,
         CASE WHEN r.icon_id IS NULL THEN 0 ELSE 1 END AS reco,
         p.id AS p_id,
         p.name AS p_name
@@ -85,5 +83,11 @@
     </update>
     <select id="getIconPropertyByIcon" parameterType="Integer" resultType="Integer">
         SELECT property_id FROM icon_properties_info WHERE icon_id = #{iconId} ;
+    </select>
+    <select id="getIconNum" resultType="Integer">
+        SELECT COUNT(*) FROM icon;
+    </select>
+    <select id="getImgAddress" parameterType="Integer" resultType="String">
+        SELECT img_address FROM icon WHERE id = #{id} LIMIT 1;
     </select>
 </mapper>

@@ -10,7 +10,6 @@ public class UserMessageDTO {
     private String name;
     private String userName;
     private String authority;
-    private long phone;
 
     public String getName() {
         return name;
@@ -34,13 +33,5 @@ public class UserMessageDTO {
 
     public void setAuthority(String authority) {
         this.authority = authority;
-    }
-
-    public long getPhone() {
-        return phone;
-    }
-
-    public void setPhone(long phone) {
-        this.phone = phone;
     }
 }

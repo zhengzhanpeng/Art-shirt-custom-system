@@ -11,4 +11,15 @@
     <select id="getReco" parameterType="Integer" resultType="Integer">
         SELECT icon_id FROM reco_icon WHERE icon_id = #{iconId};
     </select>
+    <select id="getRecommendIcon" resultType="Icon">
+        SELECT
+        i.id, i.img_address AS imgAddress FROM icon i
+        RIGHT OUTER JOIN reco_icon r ON i.id = r.icon_id
+        <if test="offset != -1">
+            LIMIT #{offset}, #{num}
+        </if>;
+    </select>
+    <select id="getRecommendNum" resultType="Integer">
+        SELECT COUNT(*) FROM reco_icon;
+    </select>
 </mapper>

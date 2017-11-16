@@ -22,7 +22,6 @@ public class UserTest {
         userDTO.setPassword(MainUtil.hashpw("dengni"));
         userDTO.setAuthority("ROLE_SUPER_ADMIN");
         userDTO.setName("郑占鹏");
-        userDTO.setPhone(15512778965L);
         UserMapper userMapper = (UserMapper) beanFactory.getBean("userMapper");
         userMapper.addUser(userDTO);
     }

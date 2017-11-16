@@ -12,4 +12,6 @@ public interface UserDao {
     String registerC(UserDTO userDTO);
 
     boolean checkRegister(String userName, String msg);
+
+    boolean checkUserAndSendEmail(String userName, String password);
 }

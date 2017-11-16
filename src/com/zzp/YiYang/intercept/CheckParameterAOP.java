@@ -108,8 +108,6 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
                 result = returnMessage.get("PASSWORD_NOT_NULL");
             } else if (checkStr(userDTO.getName())) {
                 result = returnMessage.get("NAME_NOT_NULL");
-            } else if (checkLong(userDTO.getPhone())) {
-                result = returnMessage.get("PHONE_NOT_NULL");
             }
         }
         return result;

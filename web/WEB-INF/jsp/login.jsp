@@ -35,9 +35,11 @@
         </div>
         <button id="submit" type="submit">登 陆</button>
     </form>
-
     <a href="/register">
         <button type="button" class="register-tis">还有没有账号？</button>
+    </a><br>
+    <a href="/checkEmail">
+        <button type="button" id="check" class="register-tis">邮箱未验证成功？</button>
     </a>
     <br>
     <h2 align="center">${msg}</h2>

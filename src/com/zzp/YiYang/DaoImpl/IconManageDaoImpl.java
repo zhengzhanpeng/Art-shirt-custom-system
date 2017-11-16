@@ -5,16 +5,17 @@ import com.zzp.YiYang.DTO.GetIconDTO;
 import com.zzp.YiYang.Dao.IconManageDao;
 import com.zzp.YiYang.mapper.IconMapper;
 import com.zzp.YiYang.mapper.RecommendIconMapper;
+import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Icon;
 import com.zzp.YiYang.pojo.IconProperty;
 import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.io.File;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author ho
@@ -23,6 +24,18 @@ import java.util.List;
 public class IconManageDaoImpl implements IconManageDao {
     private IconMapper iconMapper;
     private RecommendIconMapper recommendIconMapper;
+    private ExecutorService executorService;
+    private Map<String, String> returnMessage;
+
+    @Resource
+    public void setReturnMessage(Map<String, String> returnMessage) {
+        this.returnMessage = returnMessage;
+    }
+
+    @Resource
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Resource
     public void setRecommendIconMapper(RecommendIconMapper recommendIconMapper) {
@@ -72,6 +85,18 @@ public class IconManageDaoImpl implements IconManageDao {
         int result = iconMapper.deleteIcon(iconId);
         if(result == 0)
             return MessageUtil.ICON_NOT_EXIST;
+        executorService.execute(() -> {  //删除本地图片
+            String imgAddress = iconMapper.getImgAddress(iconId);
+            String root = returnMessage.get("ROOT");
+            String iconDir = returnMessage.get("ICON_DIR");
+            String file = returnMessage.get("FILE");
+            if (imgAddress == null || root == null || iconDir == null || file == null) {
+                return;
+            }
+            String fileAddress =  root + iconDir + imgAddress + file;
+            File file1 = new File(fileAddress);
+            file1.delete();
+        });
         return "1";
     }
 

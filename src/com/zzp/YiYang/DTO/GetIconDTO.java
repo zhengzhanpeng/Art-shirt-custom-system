@@ -16,6 +16,7 @@ public class GetIconDTO {
     private String imgAddress;
     private boolean reco;
     private List<IconProperty> types;
+    private int number;
     private String recoStr;
     private String typesStr;
 
@@ -81,5 +82,13 @@ public class GetIconDTO {
 
     public void setTypesStr(String typesStr) {
         this.typesStr = typesStr;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

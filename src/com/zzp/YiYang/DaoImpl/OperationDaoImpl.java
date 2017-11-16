@@ -20,8 +20,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author ho
@@ -34,6 +37,12 @@ public class OperationDaoImpl implements OperationDao {
     private Map<String, String> returnMessage;
     private IconMapper iconMapper;
     private CollectMapper collectMapper;
+    private ExecutorService executorService;
+
+    @Resource
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Resource
     public void setCollectMapper(CollectMapper collectMapper) {
@@ -116,18 +125,28 @@ public class OperationDaoImpl implements OperationDao {
     }
 
     @Override
-    @Transactional
     public String AddToCollect(int iconId) {
         Collect collect = new Collect();
         collect.setUserName(SecurityUtil.getUserName());
         collect.setIconId(iconId);
-        int result = collectMapper.insert(collect);
-        int upResult = 0;
-        int value;
-        while (upResult == 0) {
-            value = iconMapper.getCollectNumber(iconId);
-            upResult = iconMapper.addCollectNumber(iconId, value);
+        int result = collectMapper.isExistCollect(collect);
+        if (result != 0) {   //若已收藏返回信息
+            return MessageUtil.ICON_HAD_COLLECT;
         }
+        if (collect.getIconId() == 0) {  //若ID异常 返回信息
+            return MessageUtil.SYSTEM_ERROR;
+        }
+        collectMapper.insert(collect);
+        executorService.execute(() -> {   //在新的线程内采用CAS添加图标收藏
+            int upResult = 0;
+            int value;
+            int i = 0;
+            while (upResult == 0 || i > 100) {  //增加图标的收藏数量
+                value = iconMapper.getCollectNumber(iconId);
+                upResult = iconMapper.addCollectNumber(iconId, value);
+                i++;
+            }
+        });
         return "1";
     }
 }

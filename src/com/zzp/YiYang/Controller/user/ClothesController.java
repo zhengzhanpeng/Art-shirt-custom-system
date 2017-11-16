@@ -4,6 +4,7 @@ import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.ClothesDao;
 import com.zzp.YiYang.Dao.IconDao;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ import java.util.List;
  * @author ho
  * @create 2017-09-27 16:47
  */
-//@Controller
+@Controller
 @RequestMapping("/user")
 public class ClothesController {
     private ClothesDao clothesDao;
@@ -36,38 +37,34 @@ public class ClothesController {
         this.clothesDao = clothesDao;
     }
 
-    @RequestMapping("/clothes")
+    @RequestMapping("/clothes_make")
     public String clothes(ModelMap model) {
         List clothesList = clothesDao.getClothes();
         List recommendClothesList = clothesDao.getRecommendClothes();
-        int collectNum = iconDao.getCollectNum();
-        int recommendNum = iconDao.getRecommendNum();
         model.addAttribute("clothesList", clothesList);
         model.addAttribute("recommendClothesList", recommendClothesList);
-        model.addAttribute("collectNum", collectNum);
-        model.addAttribute("recommendNum", recommendNum);
-        return "/user/clothes";
+        return "/user/clothes_make";
     }
 
-    @RequestMapping(value = "/getCollectIcon", method = RequestMethod.POST)
+    @RequestMapping(value = "/getCollectIcon", method = RequestMethod.GET)
     @ResponseBody
-    public List getCollect(int page, int num) {
-        List list = iconDao.getCollectIcon(page, num);
-        return list;
+    public String getCollectIcon(int page, int num) {
+        String result = iconDao.getCollectIcon(page, num);
+        return result;
     }
 
-    @RequestMapping(value = "/getRecommendIcon", method = RequestMethod.POST)
+    @RequestMapping(value = "/getRecommendIcon", method = RequestMethod.GET)
     @ResponseBody
-    public List getRecommend(int page, int num) {
-        List list = iconDao.getRecommendIcon(page, num);
-        return list;
+    public String getRecommend(int page, int num) {
+        String result = iconDao.getRecommendIcon(page, num);
+        return result;
     }
 
-    @RequestMapping(value = "/getCollectMaxIcon", method = RequestMethod.POST)
+    @RequestMapping(value = "/getCollectMaxIcon", method = RequestMethod.GET)
     @ResponseBody
-    public List getCollectMax(int page, int num) {
-        List list = iconDao.getCollectMaxIcon(page, num);
-        return list;
+    public String getCollectMax(int page, int num) {
+        String result = iconDao.getCollectMaxIcon(page, num);
+        return result;
     }
 
     @RequestMapping(value = "addNewToCart", method = RequestMethod.POST)

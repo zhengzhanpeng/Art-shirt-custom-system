@@ -11,7 +11,6 @@ public class UserDTO {
     private String password;
     private int enable;
     private String authority;
-    private long phone;
     private String name;
     private String email;
 
@@ -37,14 +36,6 @@ public class UserDTO {
 
     public void setAuthority(String authority) {
         this.authority = authority;
-    }
-
-    public long getPhone() {
-        return phone;
-    }
-
-    public void setPhone(long phone) {
-        this.phone = phone;
     }
 
     public String getName() {

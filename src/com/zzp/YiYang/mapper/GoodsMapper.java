@@ -19,4 +19,10 @@ public interface GoodsMapper {
     List<GetGoodsDTO> get();
 
     int updateById(GoodsDTO goodsDTO);
+
+    /**
+     * 获取非成品商品信息
+     * @return
+     */
+    List<GetGoodsDTO> getGoods();
 }

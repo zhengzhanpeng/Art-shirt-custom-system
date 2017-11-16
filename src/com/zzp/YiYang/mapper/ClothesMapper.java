@@ -19,4 +19,10 @@ public interface ClothesMapper {
     int delete(int clothesId);
 
     List<ClothesDTO> getRecoClothes();
+
+    /**
+     * 获取图片文件路径
+     * @return
+     */
+    Clothes getImgAddress(int id);
 }

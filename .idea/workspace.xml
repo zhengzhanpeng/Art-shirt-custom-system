@@ -2,91 +2,128 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" line="111" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" line="425" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="360" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="241" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="51" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f89f98-45b9-4688-b659-483beadc2497" name="Default" comment="..">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mail.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ClothesDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/test/SendMailTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/EncryptionUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/mail.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/register.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/index.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/set_goods_model.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/index.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/index.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/set_goods_model.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/superAdmin/UserManageController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/superAdmin/UserManageController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/ExecutorUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/check_email.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/EasyLazyload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/EasyLazyload.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/admin/AdminIndexController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/admin/AdminIndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/ClothesController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/ClothesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IconController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IconController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IndexController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/UserDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/UserDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/ClothesDao.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/ClothesDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/UserMessageDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/UserMessageDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/IconDao.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/IconDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/UserDao.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/test/UserTest.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/test/UserTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/superAdmin/UserManageController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/superAdmin/UserManageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/RegisterMail.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/RegisterMail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/admin/AdminIndexController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/admin/AdminIndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/ClothesController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/ClothesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IconController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IconController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IndexController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/LoginController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/visitor/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/GetIconDTO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/UserDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/UserDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/ClothesDao.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/ClothesDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/UserMessageDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/UserMessageDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/IconDao.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/IconDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/UserDao.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/IconDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/test/UserTest.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/test/UserTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/RegisterMail.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/RegisterMail.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_goods_model.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_goods_model.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/icons.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/icons.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/add_user_model.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/add_user_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/user_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/user_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/flexslider.css" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/flexslider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register_check.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register_check.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/minified.css" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/minified.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/goods_message.html" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/goods_message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/superAdmin/UserManageController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/superAdmin/UserManageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/jquery.pagination-1.2.1.js" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/jquery.pagination-1.2.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/minified.js" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/minified.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/AdminIndexController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/AdminIndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IconController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IconController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserMessageDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserMessageDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/IconMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/add_user_model.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/add_user_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/flexslider.css" afterPath="$PROJECT_DIR$/web/css/flexslider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/minified.css" afterPath="$PROJECT_DIR$/web/css/minified.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/html/goods_message.html" afterPath="$PROJECT_DIR$/web/html/goods_message.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" afterPath="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/minified.js" afterPath="$PROJECT_DIR$/web/js/minified.js" />
     </list>
     <ignored path="YiYang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,95 +146,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java">
+      <file leaf-file-name="ClothesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-554">
-              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/spring/spring-security.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_check.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterMail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/register.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+            <state relative-caret-position="127">
+              <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,12 +158,102 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml">
+      <file leaf-file-name="ClothesDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+            <state relative-caret-position="150">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+              <folding>
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClothesMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClothesMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4289">
+              <caret line="775" column="7" selection-start-line="775" selection-start-column="7" selection-end-line="775" selection-end-column="7" />
+              <folding>
+                <marker date="1510825192461" expanded="true" signature="35227:35243" placeholder="..." />
+                <marker date="1510825192461" expanded="true" signature="36618:36634" placeholder="..." />
+                <marker date="1510825192461" expanded="true" signature="38011:38027" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetGoodsDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-bean.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icons.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/demo1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
+              <folding>
+                <marker date="1510626532412" expanded="true" signature="13713:13741" placeholder="..." />
+                <marker date="1510626532412" expanded="true" signature="13823:13851" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -239,57 +282,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/GoodsManageController.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/GoodsDao.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/AddGoodsDTO.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Clothes.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" />
-        <option value="$PROJECT_DIR$/web/css/flexslider.css" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ClothesDTO.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
-        <option value="$PROJECT_DIR$/web/css/minified.css" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IconController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" />
-        <option value="$PROJECT_DIR$/web/html/goods_message.html" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/PhoneMessageTest.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/JavaSmsApi.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/config/mail.properties" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/EmailHelper.java" />
-        <option value="$PROJECT_DIR$/src/config/index.properties" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/add_user_model.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/superAdmin/UserManageController.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/SendMailTest.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/registerCheck.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/EncryptionUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/config/register.properties" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/web/css/minified.css" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IconController.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/check_email.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java" />
+        <option value="$PROJECT_DIR$/web/js/minified.js" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserMessageDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" />
+        <option value="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" />
+        <option value="$PROJECT_DIR$/web/css/jquery.flex-images.css" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/ExecutorUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
       </list>
     </option>
   </component>
@@ -359,9 +402,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -431,6 +471,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,10 +605,6 @@
               <option name="myItemId" value="YiYang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -606,28 +668,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intercept" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="DTO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -651,28 +691,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DaoImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -749,10 +767,6 @@
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superAdmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -780,26 +794,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YiYang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -811,27 +810,27 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;usermapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/UserMapper.xml&#10;em&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/EmailHelper.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;regist&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register_check.jsp&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;re.pr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/register.properties&#10;user&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.User&#10;userma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/UserMapper.xml&#10;usermapp&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.UserMapper&#10;userdao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java&#10;c&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/check_result.jsp&#10;mapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/UserMapper.xml&#10;regis&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;user.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/superAdmin/add_user_model.jsp&#10;userdto&#9;PSI&#9;JAVA://com.zzp.YiYang.DTO.UserDTO&#10;login.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/login.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/IndexController.java&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;mapp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;clodao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/IndexController.java&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java&#10;contro&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/IndexController.java&#10;icon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Icon.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;icondao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java&#10;con&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/IndexController.java&#10;icon.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Icon.java&#10;iconmapper.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;add&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/AddGoodsDTO.java&#10;.h&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/html/goods_message.html&#10;daoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java&#10;gmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;cont&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/admin/GoodsManageController.java&#10;meu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;clothesmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goo.html&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/html/goods_message.html&#10;dao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java&#10;go&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Dao/GoodsDao.java&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;gooddao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Dao/GoodsDao.java&#10;goo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/AddGoodsDTO.java&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendClothesMapper.xml&#10;addgoodto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/AddGoodsDTO.java&#10;recomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendClothesMapper.java&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;cloth&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;get&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/GetGoodsDTO.java&#10;inde&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;index.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;clo_ma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.java&#10;clothesdao&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.ClothesDaoImpl&#10;clothes.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Clothes.java&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;opcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OperationController.java&#10;clothmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.ClothesMapper&#10;collect&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;icomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;coll&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;collec&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.java&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recm&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;contr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recomm&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.RecommendIconMapper&#10;recom&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;icons&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/icons.jsp&#10;main&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;mainu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;colle&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;mu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;icon&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.Icon&#10;oper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/EmailOperation.java&#10;regi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;clothes_&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;registe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;userdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/UserDTO.java&#10;register&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/js/minified.js&#10;messu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;util&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;spring&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-security.xml&#10;daoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java&#10;mesu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
-      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\util" />
-      <recent name="F:\我的项目\work_space\YiYang\out\artifacts\YiYang_war_exploded\WEB-INF\classes\com\zzp\YiYang\test" />
-      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\test" />
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\lib" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
+      <recent name="F:\我的项目\work_space\YiYang\web" />
+      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zzp.YiYang.util" />
       <recent name="com.zzp.YiYang.DTO" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
-      <recent name="F:\我的项目\work_space\YiYang\web" />
-      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\js" />
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
+      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\util" />
+      <recent name="F:\我的项目\work_space\YiYang\out\artifacts\YiYang_war_exploded\WEB-INF\classes\com\zzp\YiYang\test" />
+      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\test" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.yiyang">
@@ -1574,11 +1573,17 @@
       <workItem from="1509667978503" duration="4708000" />
       <workItem from="1510124061491" duration="7254000" />
       <workItem from="1510186565965" duration="21475000" />
+      <workItem from="1510385366619" duration="7664000" />
+      <workItem from="1510452462222" duration="17926000" />
+      <workItem from="1510539663610" duration="11331000" />
+      <workItem from="1510619541848" duration="3618000" />
+      <workItem from="1510705793319" duration="22054000" />
+      <workItem from="1510798513756" duration="11426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355578000" />
+    <option name="totallyTimeSpent" value="429597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1597,7 +1602,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3970346" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1648,7 +1653,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="35" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1657,421 +1662,457 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/flexslider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ClothesDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IconController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="378">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2808">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Icon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding>
+            <element signature="e#391#420#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/minified.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="0" column="37119" selection-start-line="0" selection-start-column="37119" selection-end-line="0" selection-end-column="37119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="182" column="43" selection-start-line="182" selection-start-column="43" selection-end-line="182" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/jdk7.0/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.flex-images.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/jquery.flex-images.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="945">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8262">
-          <caret line="306" column="45" selection-start-line="306" selection-start-column="45" selection-end-line="306" selection-end-column="45" />
+        <state relative-caret-position="378">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="1377">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1086#1087#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#2355#2356#0" expanded="false" />
+            <element signature="e#2379#2380#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="110">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/ExecutorUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+        <state relative-caret-position="189">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/OperationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Clothes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="140">
+          <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+          <folding>
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OrderDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/GoodsManageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2727">
-          <caret line="101" column="69" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+        <state relative-caret-position="219">
+          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/GoodsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/IconManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconManageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/GoodsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+          <folding>
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="122" column="7" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+          <folding>
+            <marker date="1510819451356" expanded="true" signature="6147:6159" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4374">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+        <state relative-caret-position="172">
+          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
           <folding>
-            <marker date="1508728543613" expanded="true" signature="5581:5604" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="5581:5617" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="5581:5632" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="5713:5734" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="5713:5764" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="7484:7496" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="19101:19107" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="19101:19115" placeholder="..." />
-            <marker date="1508728543613" expanded="true" signature="19232:19246" placeholder="..." />
+            <marker date="1510819472631" expanded="true" signature="5814:5865" placeholder="..." />
+            <marker date="1510819472631" expanded="true" signature="5946:5997" placeholder="..." />
+            <marker date="1510819472631" expanded="true" signature="7717:7729" placeholder="..." />
+            <marker date="1510819472631" expanded="true" signature="19334:19348" placeholder="..." />
+            <marker date="1510819472631" expanded="true" signature="19465:19479" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/minified.css">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="0" column="705" selection-start-line="0" selection-start-column="705" selection-end-line="0" selection-end-column="705" />
+        <state relative-caret-position="204">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="231">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#726#727#0" expanded="false" />
-            <element signature="e#774#775#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+          <folding>
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/demo1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="122" column="59" selection-start-line="122" selection-start-column="59" selection-end-line="122" selection-end-column="59" />
+        <state relative-caret-position="244">
+          <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
           <folding>
-            <marker date="1510125399477" expanded="true" signature="13681:13709" placeholder="..." />
-            <marker date="1510125399477" expanded="true" signature="13791:13819" placeholder="..." />
+            <marker date="1510626532412" expanded="true" signature="13713:13741" placeholder="..." />
+            <marker date="1510626532412" expanded="true" signature="13823:13851" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="231">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/test/mail.properties" />
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/mail.properties" />
-    <entry file="file://$PROJECT_DIR$/web/html/goods_message.html">
+    <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="73">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/EmailHelper.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/index.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/mail.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/admin/AdminIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="294" column="77" selection-start-line="294" selection-start-column="77" selection-end-line="294" selection-end-column="77" />
+        <state relative-caret-position="4289">
+          <caret line="775" column="7" selection-start-line="775" selection-start-column="7" selection-end-line="775" selection-end-column="7" />
           <folding>
-            <marker date="1510210073879" expanded="true" signature="4733:4745" placeholder="..." />
-            <marker date="1510210073879" expanded="true" signature="8914:9005" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/add_user_model.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/superAdmin/UserManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/SendMailTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/EncryptionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="30" column="73" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/register.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/spring/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-554">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
+            <marker date="1510825192461" expanded="true" signature="35227:35243" placeholder="..." />
+            <marker date="1510825192461" expanded="true" signature="36618:36634" placeholder="..." />
+            <marker date="1510825192461" expanded="true" signature="38011:38027" placeholder="..." />
           </folding>
         </state>
       </provider>

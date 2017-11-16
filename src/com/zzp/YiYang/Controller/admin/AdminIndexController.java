@@ -2,7 +2,6 @@ package com.zzp.YiYang.Controller.admin;
 
 import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.mapper.UserMapper;
-import com.zzp.YiYang.pojo.User;
 import com.zzp.YiYang.util.SecurityUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -26,7 +25,7 @@ public class AdminIndexController {
 
     @RequestMapping("/index")
     public String index(ModelMap model) {
-        UserDTO user = userMapper.getUserDTO(SecurityUtil.getUserName());
+        UserDTO user = userMapper.getUserInfo(SecurityUtil.getUserName());
         model.addAttribute("user", user);
         return "/admin/index";
     }

@@ -2,7 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzp.YiYang.mapper.CollectMapper" >
-    <insert id="insert" parameterType="collect" >
+    <insert id="insert" parameterType="Collect" >
         INSERT INTO collect VALUES (null, #{userName}, #{iconId});
     </insert>
+    <select id="isExistCollect" parameterType="Collect" resultType="Integer">
+        SELECT count(*) FROM collect WHERE icon_id = #{iconId} AND username = #{userName} limit 1;
+    </select>
+    <select id="getCollectIcon" resultType="Icon">
+        SELECT i.id, i.img_address AS imgAddress
+        FROM collect c 
+        LEFT OUTER JOIN icon i ON c.icon_id = i.id
+        WHERE c.username = #{userName}
+        LIMIT #{offset}, #{num};
+    </select>
+    <select id="getCollectNum" parameterType="String" resultType="Integer">
+        SELECT count(*) FROM collect WHERE username = #{userName};
+    </select>
+    <select id="getCollectMaxIcon" resultType="Icon">
+        SELECT id, img_address AS imgAddress FROM icon ORDER BY number DESC
+        LIMIT #{offset}, #{num};
+    </select>
 </mapper>

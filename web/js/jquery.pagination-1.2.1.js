@@ -20,7 +20,7 @@
 
     var Page = function (element, options) {
         var defaultOption = {
-            pageSize: 10,
+            pageSize: 12,
             pageBtnCount: 11,
             showFirstLastBtn: true,
             firstBtnText: null,
@@ -51,7 +51,7 @@
         this.$info = $('<div class="m-pagination-info"></div>');
         this.options = $.extend(true, {}, defaultOption, $.fn.page.defaults, options);
         this.total = this.options.total || 0;
-        this.options.pageSizeItems = this.options.pageSizeItems || [5, 10, 15, 20],
+        this.options.pageSizeItems = this.options.pageSizeItems || [6, 12, 18, 24],
         this.currentPageIndex = 0;
         this.currentPageSize = this.options.pageSize;
         this.pageCount = this.getPageCount(this.total, this.currentPageSize);
@@ -181,7 +181,9 @@
                         console && console.error("the response of totalName :  '" + that.options.remote.totalName + "'  not found");
                     } else {
                         that.total = total;
-                        if (typeof that.options.remote.callback === 'function') that.options.remote.callback(result);
+                        if (typeof that.options.remote.callback === 'function') {
+                            that.options.remote.callback(result);
+                        }
                         that.renderPagination(pageIndex);
                     }
                 }

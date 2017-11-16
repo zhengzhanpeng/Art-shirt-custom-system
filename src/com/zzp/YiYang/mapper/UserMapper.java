@@ -16,7 +16,7 @@ public interface UserMapper {
 
     User getUser(String userName);
 
-    UserDTO getUserDTO(String userName);
+    UserDTO getUserInfo(String userName);
 
     List<UserMessageDTO> getUsers();
 
@@ -27,4 +27,7 @@ public interface UserMapper {
     void setUser(UserDTO userDTO);
 
     void setEnabled(User user);
+
+    String getPassword(String userName);
+    UserDTO getUserAll(String userName);
 }

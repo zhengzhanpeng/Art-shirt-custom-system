@@ -26,9 +26,33 @@ public class UserDaoImpl implements UserDao {
         this.userMapper = userMapper;
     }
 
+    /**
+     * 检验用户名密码是否正确，若正确则发送验证邮箱
+     * @param userName
+     * @param password
+     * @return
+     */
+    @Override
+    public boolean checkUserAndSendEmail(String userName, String password) {
+        if (userName == null || password == null) {
+            return false;
+        }
+        UserDTO userDTO = userMapper.getUserAll(userName);
+        String hashPassword = userDTO.getPassword();
+        boolean result;
+        if (hashPassword == null) {
+            return false;
+        }
+        result = BCrypt.checkpw(password, hashPassword);
+        if (result) {
+            EmailOperation.sendRegister(userDTO.getName(), userDTO.getUserName(), userDTO.getEmail());
+        }
+        return result;
+    }
+
     @Override
     public boolean checkRegister(String userName, String msg) {
-        boolean result = EmailOperation.checkRegister(userName, msg);
+        boolean result = EmailOperation.checkRegister(userName, msg);  //检验信息是否正确
         if (result) {
             User user = new User();
             user.setUserName(userName);

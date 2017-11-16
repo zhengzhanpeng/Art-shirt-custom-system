@@ -47,4 +47,22 @@
         UPDATE goods SET number = number + #{addNumber}
         WHERE id = #{id} AND number = #{number};
     </update>
+    <select id="getGoods" resultMap="getGoodsDTOList">
+        SELECT
+        c.id,
+        c.name,
+        c.type,
+        c.price,
+        c.reality_price,
+        c.desc1,
+        c.img_address,
+        c.back_img_address,
+        CASE WHEN r.clothes_id IS NULL THEN 0 ELSE 1 END AS reco,
+        g.size,
+        g.number
+        FROM clothes c
+        LEFT OUTER JOIN reco_clothes r ON c.id = r.clothes_id
+        LEFT OUTER JOIN goods g ON g.clothes_id = c.id
+        WHERE is_finished = 0;
+    </select>
 </mapper>

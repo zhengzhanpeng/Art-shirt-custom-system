@@ -13,7 +13,7 @@ import java.util.List;
  * @create 2017-09-30 16:37
  */
 public interface IconMapper {
-    List<Icon> getRecommendIcon();
+
 
     /**
      * 添加某图标的number属性
@@ -64,5 +64,16 @@ public interface IconMapper {
      */
     List<Integer> getIconPropertyByIcon(int iconId);
 
+    /**
+     * 获取Icon的总数量
+     * @return
+     */
+    int getIconNum();
 
+    /**
+     * 获取ICON图片地址
+     * @param id
+     * @return
+     */
+    String getImgAddress(int id);
 }

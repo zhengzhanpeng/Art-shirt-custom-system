@@ -20,7 +20,6 @@
         <constructor-arg>
             <map key-type="java.lang.String" value-type="java.lang.Integer">
                 <!--图片的存放路径-->
-                <entry key="XS" value="50"/>
                 <entry key="S" value="50"/>
                 <entry key="M" value="50"/>
                 <entry key="L" value="50"/>
@@ -30,6 +29,10 @@
             </map>
         </constructor-arg>
     </bean>
+    <!--创建线程执行类-->
+    <bean id="executorUtil" class="com.zzp.YiYang.util.ExecutorUtil"/>
+    <bean id="executorService" factory-bean="executorUtil" factory-method="createExecutor"/>
+
     <bean id="iconDao" class="com.zzp.YiYang.DaoImpl.IconDaoImpl"/>
     <bean id="clothesDao" class="com.zzp.YiYang.DaoImpl.ClothesDaoImpl"/>
     <bean id="myOrderDao" class="com.zzp.YiYang.DaoImpl.MyOrderDaoImpl"/>
@@ -39,5 +42,5 @@
     <bean id="userManageDao" class="com.zzp.YiYang.DaoImpl.UserManageDaoImpl"/>
     <bean id="iconPropertyDao" class="com.zzp.YiYang.DaoImpl.IconPropertyDaoImpl"/>
     <bean id="iconManageDao" class="com.zzp.YiYang.DaoImpl.IconManageDaoImpl"/>
-    <bean id="GoodsDao" class="com.zzp.YiYang.DaoImpl.GoodsDaoImpl"/>
+    <bean id="goodsDao" class="com.zzp.YiYang.DaoImpl.GoodsDaoImpl"/>
 </beans>

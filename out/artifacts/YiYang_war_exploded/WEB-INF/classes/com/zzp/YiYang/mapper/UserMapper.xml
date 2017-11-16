@@ -4,14 +4,14 @@
 <mapper namespace="com.zzp.YiYang.mapper.UserMapper">
     <insert id="addUser" parameterType="userDTO">
         INSERT INTO users VALUES (#{userName}, #{password}, #{enable});
-        INSERT INTO user_info VALUES(#{userName}, #{name}, #{phone}, #{email});
+        INSERT INTO user_info VALUES(#{userName}, #{name}, #{email});
         INSERT INTO authorities VALUES (#{userName}, #{authority});
     </insert>
     <select id="getUser1" parameterType="String" resultType="String">
         SELECT password FROM users WHERE username = 'admin';
     </select>
     <select id="getUsers" resultType="UserMessageDTO">
-        SELECT u.username, name, phone, authority FROM users u
+        SELECT u.username, name, authority FROM users u
         LEFT OUTER JOIN user_info i ON u.username = i.username
         LEFT OUTER JOIN authorities a ON u.username = a.username;
     </select>
@@ -23,17 +23,30 @@
         WHERE username = #{userName} limit 1;
     </update>
     <update id="setUser" parameterType="UserDTO">
-        UPDATE user_info SET name = #{name}, phone = #{phone} WHERE username = #{userName} limit 1;
+        UPDATE user_info SET name = #{name} WHERE username = #{userName} limit 1;
         UPDATE authorities SET authority = #{authority} WHERE username = #{userName} limit 1;
     </update>
     <select id="getUser" parameterType="String" resultType="User">
         SELECT * FROM users WHERE username = #{userName};
     </select>
-    <select id="getUserDTO" parameterType="String" resultType="UserDTO">
-        SELECT name, phone FROM user_info WHERE username = #{userName};
+    <select id="getUserInfo" parameterType="String" resultType="UserDTO">
+        SELECT name, email FROM user_info WHERE username = #{userName};
     </select>
     <update id="setEnabled" parameterType="User">
         UPDATE users SET enabled = #{enabled}
         WHERE username = #{userName} limit 1;
     </update>
+    <select id="getPassword" parameterType="String" resultType="String">
+        SELECT password FROM users WHERE username = #{userName} limit 1;
+    </select>
+    <select id="getUserAll" parameterType="String" resultType="UserDTO">
+        SELECT
+        u.username,
+        u.password,
+        i.name,
+        i.email
+        FROM users u
+        LEFT OUTER JOIN user_info i ON u.username = i.username
+        WHERE u.username = #{userName} ;
+    </select>
 </mapper>

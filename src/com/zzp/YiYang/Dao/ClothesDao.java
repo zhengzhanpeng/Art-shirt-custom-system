@@ -3,7 +3,7 @@ package com.zzp.YiYang.Dao;
 import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.DTO.ClothesDTO;
-import com.zzp.YiYang.pojo.Clothes;
+import com.zzp.YiYang.DTO.GetGoodsDTO;
 import com.zzp.YiYang.pojo.Icon;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
@@ -18,7 +18,7 @@ public interface ClothesDao {
      * 商品页面返回所有衣服款式
      * @return
      */
-    List<Clothes> getClothes();
+    List<GetGoodsDTO> getClothes();
     List<Icon> getCollect(int page, int num);
     int getCollectNum();
     List<ClothesDTO> getRecommendClothes();

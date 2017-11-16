@@ -3,6 +3,7 @@ package com.zzp.YiYang.Controller.visitor;
 import com.zzp.YiYang.DTO.ClothesDTO;
 import com.zzp.YiYang.Dao.ClothesDao;
 import com.zzp.YiYang.Dao.IconDao;
+import com.zzp.YiYang.mapper.RecommendIconMapper;
 import com.zzp.YiYang.pojo.Icon;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,6 +22,12 @@ import java.util.List;
 public class IndexController {
     private ClothesDao clothesDao;
     private IconDao iconDao;
+    private RecommendIconMapper recommendIconMapper;
+
+    @Resource
+    public void setRecommendIconMapper(RecommendIconMapper recommendIconMapper) {
+        this.recommendIconMapper = recommendIconMapper;
+    }
 
     @Resource
     public void setClothesDao(ClothesDao clothesDao) {
@@ -35,7 +42,7 @@ public class IndexController {
     @RequestMapping("/index")
     public String index(ModelMap model) {
         List<ClothesDTO> clothesList = clothesDao.getRecommendClothes();
-        List<Icon> iconList = iconDao.getRecommendIcon(0, 0);
+        List<Icon> iconList = recommendIconMapper.getRecommendIcon(-1, 0);
         model.addAttribute("clothesList", clothesList);
         model.addAttribute("iconList", iconList);
         return "/index";
