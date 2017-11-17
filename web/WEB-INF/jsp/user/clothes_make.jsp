@@ -218,16 +218,16 @@
                     <div class="col-xs-12 col-sm-4">
 
                         <div class="product-preview">
-                            <div class="big-image">
+                            <div id="see" class="big-image">
                                 <img id="to_see" class="cloudzoom"
                                      data-cloudzoom="zoomImage: 'images/women/skirt/103314-0735_1_o.jpg', animationTime: 200, zoomHeight: 300, zoomWidth: 300"
-                                     src="images/women/skirt/103314-0735_1_t.jpg">
+                                     src="">
                             </div>
                             <ul class="thumbs unstyled clearfix">
-                                <li><a id="turn1" href="images/women/skirt/103314-0735_1_o.jpg"><img
-                                        src="images/women/skirt/103314-0735_1_t.jpg" alt=""/></a></li>
-                                <li><a id="turn2" href="images/women/skirt/103314-0735_2_o.jpg"><img
-                                        src="images/women/skirt/103314-0735_2_t.jpg" alt=""/></a></li>
+                                <li><a id="turn1" href=""><img
+                                        src="" alt=""/></a></li>
+                                <li><a id="turn2" href=""><img
+                                        src="" alt=""/></a></li>
                             </ul>
                         </div>
                         <!--
@@ -239,7 +239,7 @@
 
                             <div class="inside">
                                 <c:forEach items="${clothesList}" var="c">
-                                    <a href="#" class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
+                                    <a href="#" onclick="changeMessage(${c.id})" class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
                                 </c:forEach>
 
                             </div>
@@ -256,18 +256,14 @@
                     <div class="col-xs-12 col-sm-8">
                         <section class="product-details add-cart">
                             <header class="entry-header">
-                                <h2 class="entry-title uppercase">${clothesList.get(0).name}</h2>
+                                <h2 id="clothesName" class="entry-title uppercase"></h2>
                             </header>
                             <article class="entry-content">
                                 <figure>
                                     <span class="entry-price inline-middle">
-                                        <c:if test="${clothesList.get(0).price == clothesList.get(0).realityPrice}">
-                                            <strong class="price">￥ ${clothesList.get(0).realityPrice}</strong>
-                                        </c:if>
-                                        <c:if test="${clothesList.get(0).price != clothesList.get(0).realityPrice}">
-                                            <s class="entry-discount">￥ ${clothesList.get(0).price}</s>
-                                            <strong class="accent-color price">￥ ${clothesList.get(0).realityPrice}</strong>
-                                        </c:if>
+                                        <strong id="clothesPrice" class="price" hidden></strong>
+                                        <s id="clothesPrice2" class="entry-discount" hidden></s>
+                                        <strong id="clothesRealityPrice" class="accent-color price" hidden></strong>
                                     </span>
                                     <div class="rate-bar inline-middle">
                                         <input type="range" value="4.5" step="0.5" id="backing0"/>
@@ -281,11 +277,11 @@
                                     <ul class="entry-meta unstyled">
                                         <li>
                                             <span class="key">品牌:</span>
-                                            <span class="value">${clothesList.get(0).type}</span>
+                                            <span id="clothesType" class="value"></span>
                                         </li>
                                         <li>
-                                            <span class="key">商品状态:</span>
-                                            <span class="value">库存</span>
+                                            <span class="key">供应状态:</span>
+                                            <span id="clothesNumber" class="value"></span>
                                         </li>
                                         <%--<li>--%>
                                         <%--<span class="key">商品信息:</span>--%>
@@ -297,7 +293,7 @@
 
                                     <figcaption class="m-b-sm">
                                         <h5 class="subheader uppercase">商品介绍:</h5>
-                                        <p>${clothesList.get(0).desc1}</p>
+                                        <p id="clothesDesc1"></p>
                                     </figcaption>
 
                                     <div class="row">
@@ -315,13 +311,13 @@
                                         <div class="col-xs-12 col-sm-6">
                                             <h5 class="subheader uppercase">尺码:</h5>
                                             <div class="inline-middle styled-dd">
-                                                <select>
-                                                    <option>-- 请选择 --</option>
-                                                    <option value="S">S</option>
-                                                    <option value="M">M</option>
-                                                    <option value="L">L</option>
-                                                    <option value="XL">XL</option>
-                                                    <option value="XXL">XXL</option>
+                                                <select id="clothesSize" onchange="changeNumber()">
+                                                    <option id="origin-m" value="请选择">-- 请选择 --</option>
+                                                    <option id="S" value="S">S</option>
+                                                    <option id="M" value="M">M</option>
+                                                    <option id="L" value="L">L</option>
+                                                    <option id="XL" value="XL">XL</option>
+                                                    <option id="XXL" value="XXL">XXL</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -632,42 +628,99 @@
 <script src="/js/jquery.flex-images.js"></script>
 <script src="/js/jquery.pagination-1.2.1.js"></script>
 <script>
+    var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
+    <c:forEach items="${clothesList}" var="c">
+    var map = new Map();
+    map.set("name", '${c.name}');
+    map.set("desc1", '${c.desc1}');
+    map.set("type", "${c.type}");
+    map.set("price", ${c.price});
+    map.set("realityPrice", ${c.realityPrice});
+    map.set("imgAddress", "${c.imgAddress}");
+    map.set("backImgAddress", "${c.backImgAddress}");
+    var goodsMap = new Map();
+    goodsMap.set("${c.goods.get(0).size}", ${c.goods.get(0).number});
+    goodsMap.set("${c.goods.get(1).size}", ${c.goods.get(1).number});
+    goodsMap.set("${c.goods.get(2).size}", ${c.goods.get(2).number});
+    goodsMap.set("${c.goods.get(3).size}", ${c.goods.get(3).number});
+    goodsMap.set("${c.goods.get(4).size}", ${c.goods.get(4).number});
+    goodsMap.set("${c.goods.get(5).size}", ${c.goods.get(5).number});
+    map.set("goods", goodsMap);
+    clothesMap.set(${c.id}, map);
+    </c:forEach>
+
+//    $(".adaption-m").hide();  //设置所有款式衣服图片初始隐藏，待下面加载完毕后显示
+
+    function changeMessage(id) {  //点击衣服后切换对应属性
+        var map = clothesMap.get(id);
+        $("#clothesName").text(map.get("name"));
+        $("#clothesType").text(map.get("type"));
+        $("#clothesDesc1").text(map.get("desc1"));
+
+        var goods = map.get("goods");
+        $("#S").val(goods.get("S"));
+        $("#M").val(goods.get("M"));
+        $("#L").val(goods.get("L"));
+        $("#XL").val(goods.get("XXL"));
+        $("#XXL").val(goods.get("XXL"));
+
+        changeNumber(); //修改供应状态
+
+        var price = map.get("price");  //设置价格显示
+        var realityPrice = map.get("realityPrice");
+        if(price == realityPrice) {
+            $("#clothesRealityPrice").hide();
+            $("#clothesPrice2").hide();
+            $("#clothesPrice").show().text("￥ " + price);
+        } else {
+            $("#clothesPrice").hide();
+            $("#clothesPrice2").show().text("￥ " + price);
+            $("#clothesRealityPrice").show().text("￥ " + realityPrice);
+        }
+
+        //修改衣服显示图片
+        $("#turn1").attr("href", map.get("imgAddress")).children().eq(0).attr("src", map.get("imgAddress"));
+        $("#turn2").attr("href", map.get("backImgAddress")).children().eq(0).attr("src", map.get("backImgAddress"));
+        changeClothesImg($("#turn1"));
+    }
+    function changeClothesImg(data) {
+        $("#to_see").remove();
+        $("<img>", {
+            id: "to_see",
+            class: "cloudzoom",
+            src: $(data).children().eq(0).attr("src")
+        }).attr("data-cloudzoom", "zoomImage: '" + $(data).attr("href") + "', animationTime: 200").appendTo($("#see"));
+        CloudZoom.quickStart();
+    }
+    function changeNumber() { //当选择尺码后，修改供应状态
+        var num = $("#clothesSize").val();
+        if(num == '请选择') {
+            $("#clothesNumber").text("选择尺码后获取");
+            return;
+        }
+        if(num >= 500) {
+            $("#clothesNumber").text("充足");
+        } else if (num >= 100) {
+            $("#clothesNumber").text("正常");
+        } else if(num > 0) {
+            $("#clothesNumber").text("仅剩 " + num);
+        } else {
+            $("#clothesNumber").text("缺货中");
+        }
+    }
     $(function () {
-        var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
-        <c:forEach items="${clothesList}" var="c">
-        var map = new Map();
-        map.set("name", '${c.name}');
-        map.set("desc1", '${c.desc1}');
-        map.set("type", "${c.type}");
-        map.set("price", ${c.price});
-        map.set("realityPrice", ${c.realityPrice});
-        map.set("imgAddress", "${c.imgAddress}");
-        map.set("backImgAddress", "${c.backImgAddress}");
-        var goodsMap = new Map();
-        goodsMap.set("${c.goods.get(0).size}", ${c.goods.get(0).number});
-        goodsMap.set("${c.goods.get(1).size}", ${c.goods.get(1).number});
-        goodsMap.set("${c.goods.get(2).size}", ${c.goods.get(2).number});
-        goodsMap.set("${c.goods.get(3).size}", ${c.goods.get(3).number});
-        goodsMap.set("${c.goods.get(4).size}", ${c.goods.get(4).number});
-        goodsMap.set("${c.goods.get(5).size}", ${c.goods.get(5).number});
-        map.set("goods", goodsMap);
-        clothesMap.set(${c.id}, map);
-        </c:forEach>
-        alert(clothesMap.get(13).get("name"));
-        $("#product-reviews").attr("class", "tab-pane fade in"); //设置精心推荐和收藏最多为未选中
-        $("#product-shipping").attr("class", "tab-pane fade in");
+
+
+
+        var length = $(".adaption-m").length / 2;
+        $(".adaption-m").eq(Math.round(length) - 1).click();
 
         var disqus_shortname = 'gfashion';
-        CloudZoom.quickStart();//启动图片放大插件
-        $('#turn1').click(function () {
-            $("#to_see").attr("data-cloudzoom", "zoomImage: 'images/women/skirt/103314-0735_1_o.jpg', animationTime: 200, zoomHeight: 300, zoomWidth: 300");
-            $("#to_see").attr("src", "images/women/skirt/103314-0735_1_o.jpg");
-            CloudZoom.quickStart();
-        })
+//        $('#turn1').click(function () {
+//            changeClothesImg(this);
+//        })
         $('#turn2').click(function () {
-            $("#to_see").attr("data-cloudzoom", "zoomImage: 'images/women/skirt/103314-0735_2_o.jpg', animationTime: 200, zoomHeight: 300, zoomWidth: 300");
-            $("#to_see").attr("src", "images/women/skirt/103314-0735_2_o.jpg");
-            CloudZoom.quickStart();
+            changeClothesImg(this);
         })
         $("#page1").page({
             firstBtnText: '首页',
@@ -769,6 +822,8 @@
                 totalName: 'total'              //指定返回数据的总数据量的字段名
             }
         });
+        $("#product-reviews").attr("class", "tab-pane fade in"); //设置精心推荐和收藏最多为未选中
+        $("#product-shipping").attr("class", "tab-pane fade in");
     })
 </script>
 
