@@ -2,14 +2,23 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" line="111" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="356" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="355" mnemonic="1" />
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="241" mnemonic="3" />
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="51" mnemonic="4" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="716" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="712" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f89f98-45b9-4688-b659-483beadc2497" name="Default" comment="..">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/minus_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/plus_alt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/style-img.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/html/img_edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/drag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/html2canvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-ui.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
     </list>
     <ignored path="YiYang.iws" />
@@ -32,211 +41,168 @@
     <favorites_list name="YiYang" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ClothesController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
-                  <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClothesDaoImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="891">
-                  <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
-                  <folding>
-                    <element signature="e#815#816#0" expanded="true" />
-                    <element signature="e#861#862#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClothesMapper.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClothesMapper.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="999">
-                  <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="78">
-                  <caret line="241" column="91" selection-start-line="241" selection-start-column="88" selection-end-line="241" selection-end-column="98" />
-                  <folding>
-                    <marker date="1510912128093" expanded="true" signature="36334:36350" placeholder="..." />
-                    <marker date="1510912128093" expanded="true" signature="37725:37741" placeholder="..." />
-                    <marker date="1510912128093" expanded="true" signature="39118:39134" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GetGoodsDTO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="621">
-                  <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#617#618#0" expanded="false" />
-                    <element signature="e#642#643#0" expanded="false" />
-                    <element signature="e#675#676#0" expanded="false" />
-                    <element signature="e#703#704#0" expanded="false" />
-                    <element signature="e#734#735#0" expanded="false" />
-                    <element signature="e#761#762#0" expanded="false" />
-                    <element signature="e#801#802#0" expanded="false" />
-                    <element signature="e#833#834#0" expanded="false" />
-                    <element signature="e#864#865#0" expanded="false" />
-                    <element signature="e#891#892#0" expanded="false" />
-                    <element signature="e#931#932#0" expanded="false" />
-                    <element signature="e#963#964#0" expanded="false" />
-                    <element signature="e#994#995#0" expanded="false" />
-                    <element signature="e#1022#1023#0" expanded="false" />
-                    <element signature="e#1063#1064#0" expanded="false" />
-                    <element signature="e#1097#1098#0" expanded="false" />
-                    <element signature="e#1135#1136#0" expanded="false" />
-                    <element signature="e#1170#1171#0" expanded="false" />
-                    <element signature="e#1225#1226#0" expanded="false" />
-                    <element signature="e#1273#1274#0" expanded="false" />
-                    <element signature="e#1305#1306#0" expanded="false" />
-                    <element signature="e#1333#1334#0" expanded="false" />
-                    <element signature="e#1375#1376#0" expanded="false" />
-                    <element signature="e#1409#1410#0" expanded="false" />
-                    <element signature="e#1446#1447#0" expanded="false" />
-                    <element signature="e#1479#1480#0" expanded="false" />
-                    <element signature="e#1531#1532#0" expanded="false" />
-                    <element signature="e#1575#1576#0" expanded="false" />
-                    <element signature="e#1616#1617#0" expanded="false" />
-                    <element signature="e#1653#1654#0" expanded="false" />
-                    <element signature="e#1713#1714#0" expanded="false" />
-                    <element signature="e#1765#1766#0" expanded="false" />
-                    <element signature="e#1800#1801#0" expanded="false" />
-                    <element signature="e#1831#1832#0" expanded="false" />
-                    <element signature="e#1880#1881#0" expanded="false" />
-                    <element signature="e#1920#1921#0" expanded="false" />
-                    <element signature="e#1957#1958#0" expanded="false" />
-                    <element signature="e#1985#1986#0" expanded="false" />
-                    <element signature="e#2032#2033#0" expanded="false" />
-                    <element signature="e#2066#2067#0" expanded="false" />
-                    <element signature="e#2104#2105#0" expanded="false" />
-                    <element signature="e#2138#2139#0" expanded="false" />
-                    <element signature="e#2192#2193#0" expanded="false" />
-                    <element signature="e#2238#2239#0" expanded="false" />
-                    <element signature="e#2269#2270#0" expanded="false" />
-                    <element signature="e#2296#2297#0" expanded="false" />
-                    <element signature="e#2337#2338#0" expanded="false" />
-                    <element signature="e#2369#2370#0" expanded="false" />
-                    <element signature="e#2403#2404#0" expanded="false" />
-                    <element signature="e#2433#2434#0" expanded="false" />
-                    <element signature="e#2479#2480#0" expanded="false" />
-                    <element signature="e#2517#2518#0" expanded="false" />
-                    <element signature="e#2549#2550#0" expanded="false" />
-                    <element signature="e#2577#2578#0" expanded="false" />
-                    <element signature="e#2619#2620#0" expanded="false" />
-                    <element signature="e#2653#2654#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="spring-bean.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="icons.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5454">
-                  <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="demo1.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/css/demo1.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="14634">
-                  <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
-                  <folding>
-                    <marker date="1510626532412" expanded="true" signature="13713:13741" placeholder="..." />
-                    <marker date="1510626532412" expanded="true" signature="13823:13851" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="825" column="65" selection-start-line="825" selection-start-column="65" selection-end-line="825" selection-end-column="65" />
-                  <folding>
-                    <marker date="1510912128093" expanded="true" signature="36334:36350" placeholder="..." />
-                    <marker date="1510912128093" expanded="true" signature="37725:37741" placeholder="..." />
-                    <marker date="1510912128093" expanded="true" signature="39118:39134" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="737" column="0" selection-start-line="737" selection-start-column="0" selection-end-line="737" selection-end-column="0" />
+              <folding>
+                <marker date="1511079196223" expanded="true" signature="37599:37615" placeholder="..." />
+                <marker date="1511079196223" expanded="true" signature="39046:39062" placeholder="..." />
+                <marker date="1511079196223" expanded="true" signature="40476:40492" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="goods_manage.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="261" column="19" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
+              <folding>
+                <marker date="1510969234348" expanded="true" signature="5814:5865" placeholder="..." />
+                <marker date="1510969234348" expanded="true" signature="5946:5997" placeholder="..." />
+                <marker date="1510969234348" expanded="true" signature="7717:7729" placeholder="..." />
+                <marker date="1510969234348" expanded="true" signature="19334:19348" placeholder="..." />
+                <marker date="1510969234348" expanded="true" signature="19465:19479" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="img_edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/img_edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-665">
+              <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drag.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drag.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-405">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetGoodsDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#617#618#0" expanded="false" />
+                <element signature="e#642#643#0" expanded="false" />
+                <element signature="e#675#676#0" expanded="false" />
+                <element signature="e#703#704#0" expanded="false" />
+                <element signature="e#734#735#0" expanded="false" />
+                <element signature="e#761#762#0" expanded="false" />
+                <element signature="e#801#802#0" expanded="false" />
+                <element signature="e#833#834#0" expanded="false" />
+                <element signature="e#864#865#0" expanded="false" />
+                <element signature="e#891#892#0" expanded="false" />
+                <element signature="e#931#932#0" expanded="false" />
+                <element signature="e#963#964#0" expanded="false" />
+                <element signature="e#994#995#0" expanded="false" />
+                <element signature="e#1022#1023#0" expanded="false" />
+                <element signature="e#1063#1064#0" expanded="false" />
+                <element signature="e#1097#1098#0" expanded="false" />
+                <element signature="e#1135#1136#0" expanded="false" />
+                <element signature="e#1170#1171#0" expanded="false" />
+                <element signature="e#1225#1226#0" expanded="false" />
+                <element signature="e#1273#1274#0" expanded="false" />
+                <element signature="e#1305#1306#0" expanded="false" />
+                <element signature="e#1333#1334#0" expanded="false" />
+                <element signature="e#1375#1376#0" expanded="false" />
+                <element signature="e#1409#1410#0" expanded="false" />
+                <element signature="e#1446#1447#0" expanded="false" />
+                <element signature="e#1479#1480#0" expanded="false" />
+                <element signature="e#1531#1532#0" expanded="false" />
+                <element signature="e#1575#1576#0" expanded="false" />
+                <element signature="e#1616#1617#0" expanded="false" />
+                <element signature="e#1653#1654#0" expanded="false" />
+                <element signature="e#1713#1714#0" expanded="false" />
+                <element signature="e#1765#1766#0" expanded="false" />
+                <element signature="e#1800#1801#0" expanded="false" />
+                <element signature="e#1831#1832#0" expanded="false" />
+                <element signature="e#1880#1881#0" expanded="false" />
+                <element signature="e#1920#1921#0" expanded="false" />
+                <element signature="e#1957#1958#0" expanded="false" />
+                <element signature="e#1985#1986#0" expanded="false" />
+                <element signature="e#2032#2033#0" expanded="false" />
+                <element signature="e#2066#2067#0" expanded="false" />
+                <element signature="e#2104#2105#0" expanded="false" />
+                <element signature="e#2138#2139#0" expanded="false" />
+                <element signature="e#2192#2193#0" expanded="false" />
+                <element signature="e#2238#2239#0" expanded="false" />
+                <element signature="e#2269#2270#0" expanded="false" />
+                <element signature="e#2296#2297#0" expanded="false" />
+                <element signature="e#2337#2338#0" expanded="false" />
+                <element signature="e#2369#2370#0" expanded="false" />
+                <element signature="e#2403#2404#0" expanded="false" />
+                <element signature="e#2433#2434#0" expanded="false" />
+                <element signature="e#2479#2480#0" expanded="false" />
+                <element signature="e#2517#2518#0" expanded="false" />
+                <element signature="e#2549#2550#0" expanded="false" />
+                <element signature="e#2577#2578#0" expanded="false" />
+                <element signature="e#2619#2620#0" expanded="false" />
+                <element signature="e#2653#2654#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-bean.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icons.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5454">
+              <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14634">
+              <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
+              <folding>
+                <marker date="1510626532412" expanded="true" signature="13713:13741" placeholder="..." />
+                <marker date="1510626532412" expanded="true" signature="13823:13851" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -251,7 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/config/register.properties" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
@@ -294,14 +259,15 @@
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconManageDaoImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
+        <option value="$PROJECT_DIR$/web/html/img_edit.html" />
       </list>
     </option>
   </component>
@@ -371,6 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -492,6 +459,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -765,7 +750,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -779,27 +763,27 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;get&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/GetGoodsDTO.java&#10;inde&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;index.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;clo_ma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.java&#10;clothesdao&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.ClothesDaoImpl&#10;clothes.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Clothes.java&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;opcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OperationController.java&#10;clothmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.ClothesMapper&#10;collect&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;icomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;coll&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;collec&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.java&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recm&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;contr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recomm&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.RecommendIconMapper&#10;recom&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;icons&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/icons.jsp&#10;main&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;mainu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;colle&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;mu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;icon&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.Icon&#10;oper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/EmailOperation.java&#10;regi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;clothes_&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;registe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;userdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/UserDTO.java&#10;register&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/js/minified.js&#10;messu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;util&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;spring&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-security.xml&#10;daoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java&#10;mesu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;man&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;man.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;get&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/GetGoodsDTO.java&#10;inde&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;index.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;clo_ma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.java&#10;clothesdao&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.ClothesDaoImpl&#10;clothes.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Clothes.java&#10;opcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OperationController.java&#10;clothmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.ClothesMapper&#10;collect&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;icomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;coll&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;collec&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.java&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recm&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;contr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recomm&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.RecommendIconMapper&#10;recom&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;icons&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/icons.jsp&#10;main&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;mainu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;colle&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;mu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;icon&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.Icon&#10;oper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/EmailOperation.java&#10;regi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;clothes_&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;registe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;userdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/UserDTO.java&#10;register&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/js/minified.js&#10;messu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;util&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;spring&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-security.xml" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
-      <recent name="F:\我的项目\work_space\YiYang\web" />
-      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\js" />
+      <recent name="F:\我的项目\work_space\YiYang\web\css" />
+      <recent name="F:\我的项目\work_space\YiYang\web\images" />
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
+      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zzp.YiYang.util" />
       <recent name="com.zzp.YiYang.DTO" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\js" />
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
-      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\util" />
-      <recent name="F:\我的项目\work_space\YiYang\out\artifacts\YiYang_war_exploded\WEB-INF\classes\com\zzp\YiYang\test" />
-      <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\test" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
+      <recent name="F:\我的项目\work_space\YiYang\web" />
+      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.yiyang">
@@ -1549,11 +1533,12 @@
       <workItem from="1510705793319" duration="22054000" />
       <workItem from="1510798513756" duration="11426000" />
       <workItem from="1510903869475" duration="7877000" />
+      <workItem from="1510965769427" duration="18399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437474000" />
+    <option name="totallyTimeSpent" value="455873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1569,10 +1554,10 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1632,60 +1617,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2808">
-          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/RegisterMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/EmailOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1917,20 +1848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
-          <folding>
-            <marker date="1510819472631" expanded="true" signature="5814:5865" placeholder="..." />
-            <marker date="1510819472631" expanded="true" signature="5946:5997" placeholder="..." />
-            <marker date="1510819472631" expanded="true" signature="7717:7729" placeholder="..." />
-            <marker date="1510819472631" expanded="true" signature="19334:19348" placeholder="..." />
-            <marker date="1510819472631" expanded="true" signature="19465:19479" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1968,8 +1885,8 @@
         <state relative-caret-position="891">
           <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding>
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#861#862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1978,9 +1895,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2103,14 +2018,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1485052630214" expanded="true" signature="29736:29753" placeholder="..." />
+            <marker date="1485052630214" expanded="true" signature="70854:70871" placeholder="..." />
+            <marker date="1485052630214" expanded="true" signature="85099:85115" placeholder="..." />
+            <marker date="1485052630214" expanded="true" signature="232762:232806" placeholder="..." />
+            <marker date="1485052630214" expanded="true" signature="356577:356630" placeholder="..." />
+            <marker date="1485052630214" expanded="true" signature="356644:356668" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style-img.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/jquery-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="825" column="65" selection-start-line="825" selection-start-column="65" selection-end-line="825" selection-end-column="65" />
+          <caret line="737" column="0" selection-start-line="737" selection-start-column="0" selection-end-line="737" selection-end-column="0" />
           <folding>
-            <marker date="1510912128093" expanded="true" signature="36334:36350" placeholder="..." />
-            <marker date="1510912128093" expanded="true" signature="37725:37741" placeholder="..." />
-            <marker date="1510912128093" expanded="true" signature="39118:39134" placeholder="..." />
+            <marker date="1511079196223" expanded="true" signature="37599:37615" placeholder="..." />
+            <marker date="1511079196223" expanded="true" signature="39046:39062" placeholder="..." />
+            <marker date="1511079196223" expanded="true" signature="40476:40492" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/html2canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/img_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="261" column="19" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
+          <folding>
+            <marker date="1510969234348" expanded="true" signature="5814:5865" placeholder="..." />
+            <marker date="1510969234348" expanded="true" signature="5946:5997" placeholder="..." />
+            <marker date="1510969234348" expanded="true" signature="7717:7729" placeholder="..." />
+            <marker date="1510969234348" expanded="true" signature="19334:19348" placeholder="..." />
+            <marker date="1510969234348" expanded="true" signature="19465:19479" placeholder="..." />
           </folding>
         </state>
       </provider>

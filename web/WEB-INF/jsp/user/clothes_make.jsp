@@ -241,7 +241,6 @@
                                 <c:forEach items="${clothesList}" var="c">
                                     <a href="#" onclick="changeMessage(${c.id})" class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
                                 </c:forEach>
-
                             </div>
 
                         </div>
@@ -627,6 +626,7 @@
 <script src="/js/products.js"></script>
 <script src="/js/jquery.flex-images.js"></script>
 <script src="/js/jquery.pagination-1.2.1.js"></script>
+<script src="/js/layer.js"></script>
 <script>
     var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
     <c:forEach items="${clothesList}" var="c">
@@ -705,23 +705,53 @@
         } else if(num > 0) {
             $("#clothesNumber").text("仅剩 " + num);
         } else {
-            $("#clothesNumber").text("缺货中");
+            $("#clothesNumber").text("缺货");
         }
     }
+
+    function editImg(data) {
+        layer.open({
+            type: 2
+            ,content: "/html/img_edit.html"
+            ,area: ['1120px', '565px']
+            ,offset: '10px'
+            ,closeBtn: 2
+            ,title: false
+            ,scrollbar: false
+            ,btn: ['保存', '取消']
+            ,btnAlign: 'c'
+            ,yes: function(index, layero){
+                //按钮【按钮一】的回调
+            }
+            ,btn2: function(index, layero){
+                //按钮【按钮二】的回调
+
+                //return false 开启该代码可禁止点击该按钮关闭
+            }
+            ,success: function (layero, index) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.css('text-align', 'center');
+                var str1 = "/" + $("#turn1").attr("href");
+                var str2 = "/" + $("#turn2").attr("href");
+                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
+                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
+                layer.getChildFrame("#data").attr("src", "/" + $(data).find(".item-img-m").attr("src"))
+            }
+        })
+    }
+
     $(function () {
-
-
-
         var length = $(".adaption-m").length / 2;
         $(".adaption-m").eq(Math.round(length) - 1).click();
 
         var disqus_shortname = 'gfashion';
-//        $('#turn1').click(function () {
-//            changeClothesImg(this);
-//        })
+        $('#turn1').click(function () {
+            changeClothesImg(this);
+        })
         $('#turn2').click(function () {
             changeClothesImg(this);
         })
+
         $("#page1").page({
             firstBtnText: '首页',
             lastBtnText: '尾页',
@@ -743,8 +773,8 @@
                     $("#demo1").children().remove();
                     for (var i = 0; i < data.length; i++) {
                         icon = data[i];
-                        var $div = $("<div class='item' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img src='" + icon.imgAddress + "'>");
+                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
+                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
                         $div.append($img);
                         $("#demo1").append($div);
                     }
@@ -776,7 +806,7 @@
                     $("#demo2").empty();
                     for (var i = 0; i < data.length; i++) {
                         icon = data[i];
-                        var $div = $("<div class='item' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
+                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
                         var $img = $("<img src='" + icon.imgAddress + "'>");
                         $div.append($img);
                         $("#demo2").append($div);
@@ -810,7 +840,7 @@
                     $("#demo3").empty();
                     for (var i = 0; i < data.length; i++) {
                         icon = data[i];
-                        var $div = $("<div class='item' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
+                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
                         var $img = $("<img src='" + icon.imgAddress + "'>");
                         $div.append($img);
                         $("#demo3").append($div);
@@ -822,6 +852,7 @@
                 totalName: 'total'              //指定返回数据的总数据量的字段名
             }
         });
+
         $("#product-reviews").attr("class", "tab-pane fade in"); //设置精心推荐和收藏最多为未选中
         $("#product-shipping").attr("class", "tab-pane fade in");
     })
