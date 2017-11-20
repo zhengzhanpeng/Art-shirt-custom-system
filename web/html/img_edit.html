@@ -6,6 +6,7 @@
     <style>
         .img-m {
             display: inline-block;
+            position: relative;
             width: 480px;
             height: 480px;
         }
@@ -46,7 +47,20 @@
             top: 490px;
             right: 290px;
         }
-
+        #imgOriginal {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 480px;
+            height: 480px;
+        }
+        #backImgOriginal {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 480px;
+            height: 480px;
+        }
         .resizable1 img {
             width: 100%;
             height: 100%;
@@ -58,10 +72,10 @@
 <body>
 <img id="data" src="" hidden>
 <div id="img" class="img-m">
-
+<img id="imgOriginal">
 </div>
 <div id="backImg" class="img-m">
-
+    <img id="backImgOriginal">
 </div>
 <br>
 <a href="#" class="plus-m" onclick="javascript: addIcon('img')"><img id="imgPlus" class="icon-m" src="/images/plus_alt.png"></a>

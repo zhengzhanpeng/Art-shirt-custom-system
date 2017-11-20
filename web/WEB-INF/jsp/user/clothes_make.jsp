@@ -237,9 +237,9 @@
                 -->
                         <div class="scroller demo1" style="">
 
-                            <div class="inside">
+                            <div class="inside" id="clothes">
                                 <c:forEach items="${clothesList}" var="c">
-                                    <a href="#" onclick="changeMessage(${c.id})" class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
+                                    <a href="#" onclick="changeMessage(${c.id})" data=${c.id} class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
                                 </c:forEach>
                             </div>
 
@@ -339,7 +339,7 @@
                         </section>
                     </div>
                 </div>
-
+                <div id="canvas"></div>
                 <div class="m-t-lg" style="margin: 0;">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#product-description" class="tab-m" data-toggle="tab">我的收藏</a></li>
@@ -627,6 +627,8 @@
 <script src="/js/jquery.flex-images.js"></script>
 <script src="/js/jquery.pagination-1.2.1.js"></script>
 <script src="/js/layer.js"></script>
+<script type="text/javascript" src="/js/html2canvas.js"></script>
+
 <script>
     var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
     <c:forEach items="${clothesList}" var="c">
@@ -683,6 +685,7 @@
         $("#turn2").attr("href", map.get("backImgAddress")).children().eq(0).attr("src", map.get("backImgAddress"));
         changeClothesImg($("#turn1"));
     }
+
     function changeClothesImg(data) {
         $("#to_see").remove();
         $("<img>", {
@@ -692,6 +695,7 @@
         }).attr("data-cloudzoom", "zoomImage: '" + $(data).attr("href") + "', animationTime: 200").appendTo($("#see"));
         CloudZoom.quickStart();
     }
+
     function changeNumber() { //当选择尺码后，修改供应状态
         var num = $("#clothesSize").val();
         if(num == '请选择') {
@@ -709,7 +713,10 @@
         }
     }
 
-    function editImg(data) {
+    function editImg(data) {   //打开编辑图片窗口
+        var nowClothes = $("#clothes > .active");
+        var nowId = parseInt(nowClothes.attr("data"));
+        var map = clothesMap.get(nowId);
         layer.open({
             type: 2
             ,content: "/html/img_edit.html"
@@ -721,7 +728,27 @@
             ,btn: ['保存', '取消']
             ,btnAlign: 'c'
             ,yes: function(index, layero){
-                //按钮【按钮一】的回调
+                var img = layer.getChildFrame("#img")[0];
+                html2canvas(img, {   //截图img图片，保存数据
+                    onrendered: function(canvas) {
+                        var dataImgURL = canvas.toDataURL();
+                        map.set("imgAddress", dataImgURL);
+                        clothesMap.set(nowId, map);
+                        setTimeout("changeMessage(" + nowId + ")", 200);
+                    },
+                });
+                var backImg = layer.getChildFrame("#backImg")[0]
+                html2canvas(backImg, {  //截图backImg图片，保存数据
+                    onrendered: function(canvas) {
+                        var dataImgURL = canvas.toDataURL();
+                        map.set("backImgAddress", dataImgURL);
+                        clothesMap.set(nowId, map);
+//                        var str = clothesMap.get(nowId).get("imgAddress");
+//                        alert(str);
+                        setTimeout("changeMessage(" + nowId + ")", 200);
+                    },
+                });
+                setTimeout("layer.close(" + index + ")", 200);
             }
             ,btn2: function(index, layero){
                 //按钮【按钮二】的回调
@@ -731,10 +758,17 @@
             ,success: function (layero, index) {
                 var btn = layero.find('.layui-layer-btn');
                 btn.css('text-align', 'center');
-                var str1 = "/" + $("#turn1").attr("href");
-                var str2 = "/" + $("#turn2").attr("href");
-                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
-                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
+                var str1 = $("#turn1").attr("href");
+                var str2 = $("#turn2").attr("href");
+                if(str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
+                    str1 = "/" + str1;
+                    str2 = "/" + str2;
+                }
+
+//                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
+//                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
+                layer.getChildFrame("#imgOriginal").attr("src", str1);
+                layer.getChildFrame("#backImgOriginal").attr("src", str2);
                 layer.getChildFrame("#data").attr("src", "/" + $(data).find(".item-img-m").attr("src"))
             }
         })
@@ -807,7 +841,7 @@
                     for (var i = 0; i < data.length; i++) {
                         icon = data[i];
                         var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img src='" + icon.imgAddress + "'>");
+                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
                         $div.append($img);
                         $("#demo2").append($div);
                     }
@@ -841,7 +875,7 @@
                     for (var i = 0; i < data.length; i++) {
                         icon = data[i];
                         var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img src='" + icon.imgAddress + "'>");
+                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
                         $div.append($img);
                         $("#demo3").append($div);
                     }
