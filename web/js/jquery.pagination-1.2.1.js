@@ -20,7 +20,7 @@
 
     var Page = function (element, options) {
         var defaultOption = {
-            pageSize: 12,
+            pageSize: 6,
             pageBtnCount: 11,
             showFirstLastBtn: true,
             firstBtnText: null,

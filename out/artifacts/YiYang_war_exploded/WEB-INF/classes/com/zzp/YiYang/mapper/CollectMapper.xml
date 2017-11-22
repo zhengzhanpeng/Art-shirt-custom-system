@@ -9,7 +9,7 @@
         SELECT count(*) FROM collect WHERE icon_id = #{iconId} AND username = #{userName} limit 1;
     </select>
     <select id="getCollectIcon" resultType="Icon">
-        SELECT i.id, i.img_address AS imgAddress
+        SELECT i.id, i.img_address AS imgAddress, i.name, i.desc1
         FROM collect c 
         LEFT OUTER JOIN icon i ON c.icon_id = i.id
         WHERE c.username = #{userName}
@@ -19,7 +19,7 @@
         SELECT count(*) FROM collect WHERE username = #{userName};
     </select>
     <select id="getCollectMaxIcon" resultType="Icon">
-        SELECT id, img_address AS imgAddress FROM icon ORDER BY number DESC
+        SELECT id, img_address AS imgAddress, name, desc1 FROM icon ORDER BY number DESC
         LIMIT #{offset}, #{num};
     </select>
 </mapper>

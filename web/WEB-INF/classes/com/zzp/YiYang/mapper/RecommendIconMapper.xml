@@ -13,7 +13,7 @@
     </select>
     <select id="getRecommendIcon" resultType="Icon">
         SELECT
-        i.id, i.img_address AS imgAddress FROM icon i
+        i.id, i.img_address AS imgAddress, i.name, i.desc1, i.number FROM icon i
         RIGHT OUTER JOIN reco_icon r ON i.id = r.icon_id
         <if test="offset != -1">
             LIMIT #{offset}, #{num}

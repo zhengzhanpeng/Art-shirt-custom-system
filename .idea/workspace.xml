@@ -2,17 +2,32 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" line="111" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="355" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="241" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="51" mnemonic="4" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="719" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="363" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="248" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="54" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="732" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f89f98-45b9-4688-b659-483beadc2497" name="Default" comment="..">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/fonts/dropify.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/fonts/dropify.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/fonts/dropify.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/imgHover.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/css/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/css/dropify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/css/dropify.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/fonts/dropify.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/js/dropify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/dist/js/dropify.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/jquery.pagination-1.2.1.js" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/js/jquery.pagination-1.2.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CollectMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/html/img_edit.html" afterPath="$PROJECT_DIR$/web/html/img_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" afterPath="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" />
     </list>
     <ignored path="YiYang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,153 +50,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clothes_make.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-331">
-              <caret line="734" column="58" selection-start-line="734" selection-start-column="58" selection-end-line="734" selection-end-column="58" />
+            <state relative-caret-position="37">
+              <caret line="801" column="34" selection-start-line="801" selection-start-column="34" selection-end-line="801" selection-end-column="34" />
               <folding>
-                <marker date="1511170318317" expanded="true" signature="39272:39288" placeholder="..." />
-                <marker date="1511170318317" expanded="true" signature="40719:40735" placeholder="..." />
-                <marker date="1511170318317" expanded="true" signature="42168:42184" placeholder="..." />
+                <marker date="1511344483626" expanded="true" signature="39190:39197" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="goods_manage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
+      <file leaf-file-name="IconMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1244">
-              <caret line="130" column="38" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
-              <folding>
-                <marker date="1511159329822" expanded="true" signature="5814:5865" placeholder="..." />
-                <marker date="1511159329822" expanded="true" signature="5946:5997" placeholder="..." />
-                <marker date="1511159329822" expanded="true" signature="7717:7729" placeholder="..." />
-                <marker date="1511159329822" expanded="true" signature="19334:19348" placeholder="..." />
-                <marker date="1511159329822" expanded="true" signature="19465:19479" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="img_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/img_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="2268">
+              <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drag.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/drag.js">
+      <file leaf-file-name="IconMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="86">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetGoodsDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetGoodsDTO.java">
+      <file leaf-file-name="ClothesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#617#618#0" expanded="false" />
-                <element signature="e#642#643#0" expanded="false" />
-                <element signature="e#675#676#0" expanded="false" />
-                <element signature="e#703#704#0" expanded="false" />
-                <element signature="e#734#735#0" expanded="false" />
-                <element signature="e#761#762#0" expanded="false" />
-                <element signature="e#801#802#0" expanded="false" />
-                <element signature="e#833#834#0" expanded="false" />
-                <element signature="e#864#865#0" expanded="false" />
-                <element signature="e#891#892#0" expanded="false" />
-                <element signature="e#931#932#0" expanded="false" />
-                <element signature="e#963#964#0" expanded="false" />
-                <element signature="e#994#995#0" expanded="false" />
-                <element signature="e#1022#1023#0" expanded="false" />
-                <element signature="e#1063#1064#0" expanded="false" />
-                <element signature="e#1097#1098#0" expanded="false" />
-                <element signature="e#1135#1136#0" expanded="false" />
-                <element signature="e#1170#1171#0" expanded="false" />
-                <element signature="e#1225#1226#0" expanded="false" />
-                <element signature="e#1273#1274#0" expanded="false" />
-                <element signature="e#1305#1306#0" expanded="false" />
-                <element signature="e#1333#1334#0" expanded="false" />
-                <element signature="e#1375#1376#0" expanded="false" />
-                <element signature="e#1409#1410#0" expanded="false" />
-                <element signature="e#1446#1447#0" expanded="false" />
-                <element signature="e#1479#1480#0" expanded="false" />
-                <element signature="e#1531#1532#0" expanded="false" />
-                <element signature="e#1575#1576#0" expanded="false" />
-                <element signature="e#1616#1617#0" expanded="false" />
-                <element signature="e#1653#1654#0" expanded="false" />
-                <element signature="e#1713#1714#0" expanded="false" />
-                <element signature="e#1765#1766#0" expanded="false" />
-                <element signature="e#1800#1801#0" expanded="false" />
-                <element signature="e#1831#1832#0" expanded="false" />
-                <element signature="e#1880#1881#0" expanded="false" />
-                <element signature="e#1920#1921#0" expanded="false" />
-                <element signature="e#1957#1958#0" expanded="false" />
-                <element signature="e#1985#1986#0" expanded="false" />
-                <element signature="e#2032#2033#0" expanded="false" />
-                <element signature="e#2066#2067#0" expanded="false" />
-                <element signature="e#2104#2105#0" expanded="false" />
-                <element signature="e#2138#2139#0" expanded="false" />
-                <element signature="e#2192#2193#0" expanded="false" />
-                <element signature="e#2238#2239#0" expanded="false" />
-                <element signature="e#2269#2270#0" expanded="false" />
-                <element signature="e#2296#2297#0" expanded="false" />
-                <element signature="e#2337#2338#0" expanded="false" />
-                <element signature="e#2369#2370#0" expanded="false" />
-                <element signature="e#2403#2404#0" expanded="false" />
-                <element signature="e#2433#2434#0" expanded="false" />
-                <element signature="e#2479#2480#0" expanded="false" />
-                <element signature="e#2517#2518#0" expanded="false" />
-                <element signature="e#2549#2550#0" expanded="false" />
-                <element signature="e#2577#2578#0" expanded="false" />
-                <element signature="e#2619#2620#0" expanded="false" />
-                <element signature="e#2653#2654#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-bean.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="262">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icons.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+      <file leaf-file-name="IconDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5454">
-              <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+            <state relative-caret-position="123">
+              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+      <file leaf-file-name="IconDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14634">
-              <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
-              <folding>
-                <marker date="1510626532412" expanded="true" signature="13713:13741" placeholder="..." />
-                <marker date="1510626532412" expanded="true" signature="13823:13851" placeholder="..." />
-              </folding>
+            <state relative-caret-position="123">
+              <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendIconMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.pagination-1.2.1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imgHover.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/imgHover.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-270">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/EmailHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/UserDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/UserDaoImpl.java" />
@@ -234,15 +198,12 @@
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/test/UserTest.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" />
-        <option value="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" />
         <option value="$PROJECT_DIR$/web/css/jquery.flex-images.css" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/util/ExecutorUtil.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
@@ -260,7 +221,12 @@
         <option value="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
         <option value="$PROJECT_DIR$/web/html/img_edit.html" />
+        <option value="$PROJECT_DIR$/web/js/dist/css/demo.css" />
+        <option value="$PROJECT_DIR$/web/css/imgHover.css" />
+        <option value="$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
       </list>
     </option>
   </component>
@@ -330,9 +296,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -454,6 +420,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -738,27 +722,27 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;man&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;man.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;get&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/GetGoodsDTO.java&#10;inde&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;index.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;clo_ma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.java&#10;clothesdao&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.ClothesDaoImpl&#10;clothes.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Clothes.java&#10;opcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OperationController.java&#10;clothmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.ClothesMapper&#10;collect&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;icomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;coll&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;collec&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.java&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recm&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;contr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recomm&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.RecommendIconMapper&#10;recom&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;icons&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/icons.jsp&#10;main&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;mainu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;colle&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;mu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;icon&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.Icon&#10;oper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/EmailOperation.java&#10;regi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;clothes_&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;registe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;userdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/UserDTO.java&#10;register&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/js/minified.js&#10;messu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;util&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;spring&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-security.xml" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;collec&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;remapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.java&#10;man&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;man.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/goods_manage.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;get&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/GetGoodsDTO.java&#10;inde&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;index.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;clo_ma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;goodsmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;clothesdao&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.ClothesDaoImpl&#10;clothes.java&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/Clothes.java&#10;opcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OperationController.java&#10;clothmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.ClothesMapper&#10;collect&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;icomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;reco&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;coll&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;re&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;controller&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recm&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.java&#10;contr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;recomm&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.RecommendIconMapper&#10;recom&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml&#10;icons&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/icons.jsp&#10;main&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;mainu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;colle&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;mu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MainUtil.java&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;icon&#9;PSI&#9;JAVA://com.zzp.YiYang.pojo.Icon&#10;oper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/EmailOperation.java&#10;regi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/RegisterMail.java&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/visitor/LoginController.java&#10;clothes_&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;registe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;userdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/UserDTO.java&#10;register&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/register.jsp&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;.js&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/js/minified.js&#10;messu&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;util&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
+      <recent name="F:\我的项目\work_space\YiYang\web" />
+      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zzp.YiYang.util" />
+      <recent name="com.zzp.YiYang.DTO" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\我的项目\work_space\YiYang\web\js" />
       <recent name="F:\我的项目\work_space\YiYang\web\css" />
       <recent name="F:\我的项目\work_space\YiYang\web\images" />
       <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
       <recent name="F:\我的项目\work_space\YiYang\src\com\zzp\YiYang\util" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zzp.YiYang.util" />
-      <recent name="com.zzp.YiYang.DTO" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
-      <recent name="F:\我的项目\work_space\YiYang\web" />
-      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.yiyang">
@@ -1511,11 +1495,13 @@
       <workItem from="1510965769427" duration="18399000" />
       <workItem from="1511142455369" duration="961000" />
       <workItem from="1511158075573" duration="12857000" />
+      <workItem from="1511250184907" duration="655000" />
+      <workItem from="1511311047786" duration="17501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469691000" />
+    <option name="totallyTimeSpent" value="487847000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1528,13 +1514,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34266886" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1594,56 +1580,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Icon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/minified.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="0" column="37119" selection-start-line="0" selection-start-column="37119" selection-end-line="0" selection-end-column="37119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="182" column="43" selection-start-line="182" selection-start-column="43" selection-end-line="182" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/jdk7.0/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.flex-images.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/jquery.flex-images.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1662,14 +1598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1677,29 +1605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,7 +1619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1722,7 +1626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1744,7 +1647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1752,7 +1654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1760,7 +1661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1775,21 +1675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1828,7 +1713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1857,17 +1741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="999">
           <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1999,14 +1872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/html2canvas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -2016,7 +1881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1244">
+        <state relative-caret-position="3510">
           <caret line="130" column="38" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
           <folding>
             <marker date="1511159329822" expanded="true" signature="5814:5865" placeholder="..." />
@@ -2030,21 +1895,139 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/img_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
+        <state relative-caret-position="1998">
           <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dist/js/dropify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/minified.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="1319" selection-start-line="12" selection-start-column="1312" selection-end-line="12" selection-end-column="1319" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dist/js/dropify.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="9" column="785" selection-start-line="9" selection-start-column="785" selection-end-line="9" selection-end-column="785" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dist/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="984" column="22" selection-start-line="984" selection-start-column="22" selection-end-line="984" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/imgHover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.pagination-1.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="734" column="58" selection-start-line="734" selection-start-column="58" selection-end-line="734" selection-end-column="58" />
+        <state relative-caret-position="37">
+          <caret line="801" column="34" selection-start-line="801" selection-start-column="34" selection-end-line="801" selection-end-column="34" />
           <folding>
-            <marker date="1511170318317" expanded="true" signature="39272:39288" placeholder="..." />
-            <marker date="1511170318317" expanded="true" signature="40719:40735" placeholder="..." />
-            <marker date="1511170318317" expanded="true" signature="42168:42184" placeholder="..." />
+            <marker date="1511344483626" expanded="true" signature="39190:39197" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/RecommendIconMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

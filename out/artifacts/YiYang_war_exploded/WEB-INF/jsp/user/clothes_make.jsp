@@ -39,6 +39,9 @@
     <script src="/js/init.js" type="text/javascript"></script>
     <script type="text/javascript" src="/js/cloudzoom.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" href="/js/dist/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="/js/dist/css/dropify.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/imgHover.css">
     <style type="text/css">
         .girl-clothes {
             height: 260px;
@@ -61,6 +64,10 @@
             position: relative;
             top: 25%;
         }
+        a:link { text-decoration: none;}
+    　　 a:active { text-decoration:blink}
+    　　 a:hover { text-decoration:underline;}
+    　　 a:visited { text-decoration: none;}
     </style>
 </head>
 <body class="product-single">
@@ -68,7 +75,7 @@
 <div id="page-wrapper">
 
     <header id="site-header" role="banner">
-        <div class="header-top" style="background: #FFF">
+        <div class="header-top">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-7">
@@ -158,7 +165,7 @@
                         </nav>
                     </div>
                     <div class="logo-wrapper">
-                        <a href="index.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+                        <a href="index.html" class="logo">
                             <h1>艺扬
                                 <small>服饰商城</small>
                             </h1>
@@ -345,10 +352,11 @@
                         <li class="active"><a href="#product-description" class="tab-m" data-toggle="tab">我的收藏</a></li>
                         <li><a href="#product-reviews" class="tab-m" data-toggle="tab">精心推荐</a></li>
                         <li><a href="#product-shipping" class="tab-m" data-toggle="tab">收藏最多</a></li>
+                        <li><a href="#product-uploading" class="tab-m" data-toggle="tab">自主上传</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="product-description">
-                            <div style="max-width:1000px;margin:auto;padding:0 10px 10px">
+                            <div style="max-width:1200px;margin:auto;padding:0 10px 10px">
                                 <div id="demo1" class="flex-images img-show-m">
 
                                 </div>
@@ -356,7 +364,7 @@
                             <div id="page1" class="m-pagination"></div>
                         </div>
                         <div class="tab-pane fade in active" id="product-reviews">
-                            <div style="max-width:1000px;margin:auto;padding:0 10px 10px">
+                            <div style="max-width:1200px;margin:auto;padding:0 10px 10px">
                                 <div id="demo2" class="flex-images img-show-m">
 
                                 </div>
@@ -364,12 +372,16 @@
                             <div id="page2" class="m-pagination"></div>
                         </div>
                         <div class="tab-pane fade in active" id="product-shipping">
-                            <div style="max-width:1000px;margin:auto;padding:0 10px 10px">
+                            <div style="max-width:1200px;margin:auto;padding:0 10px 10px">
                                 <div id="demo3" class="flex-images img-show-m">
 
                                 </div>
                             </div>
                             <div id="page3" class="m-pagination"></div>
+                        </div>
+                        <div class="tab-pane fade in active" id="product-uploading">
+                            <input type="file" id="input-file-now" data-height="320" data-max-file-size="50M"  data-allowed-file-extensions="jpg png jpeg" class="dropify" />
+                            <button id="uploadingIcon" class="btn btn-primary">开始制作</button>
                         </div>
                     </div>
                 </div>
@@ -628,6 +640,7 @@
 <script src="/js/jquery.pagination-1.2.1.js"></script>
 <script src="/js/layer.js"></script>
 <script type="text/javascript" src="/js/html2canvas.js"></script>
+<script type="text/javascript" src="/js/dist/js/dropify.min.js"></script>
 
 <script>
     var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
@@ -732,15 +745,10 @@
                 html2canvas(img, {   //截图img图片，保存数据
                     onrendered: function(canvas) {
                         var dataImgURL = canvas.toDataURL();
-//                        $("#canvas").append(canvas);
                         map.set("imgAddress", dataImgURL);
                         clothesMap.set(nowId, map);
-//                        var str = clothesMap.get(nowId).get("imgAddress");
-//                        alert(str);
                         setTimeout("changeMessage(" + nowId + ")", 200);
                     },
-                    // width: 300,hh
-                    // height: 300
                 });
                 var backImg = layer.getChildFrame("#backImg")[0]
                 html2canvas(backImg, {  //截图backImg图片，保存数据
@@ -779,7 +787,94 @@
         })
     }
 
+    function pageChange(result, idCss) {
+        var data = result.data;
+        var icon;
+        $(idCss).children().remove();
+        for (var i = 0; i < data.length; i++) {
+            icon = data[i];
+            var $div = $("<div class='item viwe' onclick='javascript: editImg(this);' style='data-w='300' data-h='200'></div>");
+            var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
+            var divHover = $("<div class='hover-m'>");
+            var h2 = $("<h2 class='h2-m'>").text(icon.name);
+            var p = $("<p class='p-m'>").text(icon.desc1);
+            divHover.append(h2).append(p);
+            $div.append(divHover);
+            $div.append($img);
+            $(idCss).append($div);
+        }
+        $(idCss).flexImages({rowHeight: 200});
+    }
     $(function () {
+        $('.dropify').dropify({   //实例化上传组件
+            messages: {
+                default: '从电脑拖放一个图片到这里或者点击这里',
+                replace: '拖放或者点击这里来替换当前图片'
+//                error:   '对不起，该文件暂不允许上传，({{ error }}'
+            }
+        });
+
+        $("#uploadingIcon").click(function () {
+            var nowClothes = $("#clothes > .active");
+            var nowId = parseInt(nowClothes.attr("data"));
+            var map = clothesMap.get(nowId);
+            layer.open({
+                type: 2
+                ,content: "/html/img_edit.html"
+                ,area: ['1120px', '565px']
+                ,offset: '10px'
+                ,closeBtn: 2
+                ,title: false
+                ,scrollbar: false
+                ,btn: ['保存', '取消']
+                ,btnAlign: 'c'
+                ,yes: function(index, layero){
+                    var img = layer.getChildFrame("#img")[0];
+                    html2canvas(img, {   //截图img图片，保存数据
+                        onrendered: function(canvas) {
+                            var dataImgURL = canvas.toDataURL();
+                            map.set("imgAddress", dataImgURL);
+                            clothesMap.set(nowId, map);
+                            setTimeout("changeMessage(" + nowId + ")", 200);
+                        },
+                    });
+                    var backImg = layer.getChildFrame("#backImg")[0]
+                    html2canvas(backImg, {  //截图backImg图片，保存数据
+                        onrendered: function(canvas) {
+                            var dataImgURL = canvas.toDataURL();
+                            map.set("backImgAddress", dataImgURL);
+                            clothesMap.set(nowId, map);
+//                        var str = clothesMap.get(nowId).get("imgAddress");
+//                        alert(str);
+                            setTimeout("changeMessage(" + nowId + ")", 200);
+                        },
+                    });
+                    setTimeout("layer.close(" + index + ")", 200);
+                }
+                ,btn2: function(index, layero){
+                    //按钮【按钮二】的回调
+
+                    //return false 开启该代码可禁止点击该按钮关闭
+                }
+                ,success: function (layero, index) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.css('text-align', 'center');
+                    var str1 = $("#turn1").attr("href");
+                    var str2 = $("#turn2").attr("href");
+                    if(str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
+                        str1 = "/" + str1;
+                        str2 = "/" + str2;
+                    }
+
+//                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
+//                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
+                    layer.getChildFrame("#imgOriginal").attr("src", str1);
+                    layer.getChildFrame("#backImgOriginal").attr("src", str2);
+                    layer.getChildFrame("#data").attr("src", $(".dropify-render > img").attr("src"))
+                }
+            })
+        });
+
         var length = $(".adaption-m").length / 2;
         $(".adaption-m").eq(Math.round(length) - 1).click();
 
@@ -807,17 +902,7 @@
                 callback: function (result, pageIndex) {
                     //回调函数
                     //result 为 请求返回的数据，呈现数据
-                    var data = result.data;
-                    var icon;
-                    $("#demo1").children().remove();
-                    for (var i = 0; i < data.length; i++) {
-                        icon = data[i];
-                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
-                        $div.append($img);
-                        $("#demo1").append($div);
-                    }
-                    $('#demo1').flexImages({rowHeight: 140});
+                    pageChange(result, "#demo1");
                 },
                 pageIndexName: 'page',     //请求参数，当前页数，索引从0开始
                 pageSizeName: 'num',       //请求参数，每页数量
@@ -840,17 +925,7 @@
                 callback: function (result, pageIndex) {
                     //回调函数
                     //result 为 请求返回的数据，呈现数据
-                    var data = result.data;
-                    var icon;
-                    $("#demo2").empty();
-                    for (var i = 0; i < data.length; i++) {
-                        icon = data[i];
-                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
-                        $div.append($img);
-                        $("#demo2").append($div);
-                    }
-                    $('#demo2').flexImages({rowHeight: 140});
+                    pageChange(result, "#demo2");
                 },
                 pageIndexName: 'page',     //请求参数，当前页数，索引从0开始
                 pageSizeName: 'num',       //请求参数，每页数量
@@ -874,17 +949,7 @@
                 callback: function (result, pageIndex) {
                     //回调函数
                     //result 为 请求返回的数据，呈现数据
-                    var data = result.data;
-                    var icon;
-                    $("#demo3").empty();
-                    for (var i = 0; i < data.length; i++) {
-                        icon = data[i];
-                        var $div = $("<div class='item' onclick='javascript: editImg(this);' style='padding: 5px 5px' data-w='100' data-h='100'></div>");
-                        var $img = $("<img class='item-img-m' src='" + icon.imgAddress + "'>");
-                        $div.append($img);
-                        $("#demo3").append($div);
-                    }
-                    $('#demo3').flexImages({rowHeight: 140});
+                    pageChange(result, "#demo3");
                 },
                 pageIndexName: 'page',     //请求参数，当前页数，索引从0开始
                 pageSizeName: 'num',       //请求参数，每页数量
@@ -894,6 +959,7 @@
 
         $("#product-reviews").attr("class", "tab-pane fade in"); //设置精心推荐和收藏最多为未选中
         $("#product-shipping").attr("class", "tab-pane fade in");
+        $("#product-uploading").attr("class", "tab-pane fade in");
     })
 </script>
 
