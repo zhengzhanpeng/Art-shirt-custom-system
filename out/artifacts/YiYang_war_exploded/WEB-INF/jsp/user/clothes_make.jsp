@@ -64,10 +64,22 @@
             position: relative;
             top: 25%;
         }
-        a:link { text-decoration: none;}
-    　　 a:active { text-decoration:blink}
-    　　 a:hover { text-decoration:underline;}
-    　　 a:visited { text-decoration: none;}
+
+        a:link {
+            text-decoration: none;
+        }
+
+        　　 a:active {
+            text-decoration: blink
+        }
+
+        　　 a:hover {
+            text-decoration: underline;
+        }
+
+        　　 a:visited {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body class="product-single">
@@ -246,7 +258,8 @@
 
                             <div class="inside" id="clothes">
                                 <c:forEach items="${clothesList}" var="c">
-                                    <a href="#" onclick="changeMessage(${c.id})" data=${c.id} class="adaption-m"><img src="${c.imgAddress}" alt="${c.name}"/></a>
+                                    <a href="#" onclick="changeMessage(${c.id})" data=${c.id} class="adaption-m"><img
+                                            src="${c.imgAddress}" alt="${c.name}"/></a>
                                 </c:forEach>
                             </div>
 
@@ -314,7 +327,7 @@
                                         <%--</div>--%>
                                         <%--</div>--%>
                                         <div class="space30 visible-xs"></div>
-                                        <div class="col-xs-12 col-sm-6">
+                                        <div class="col-xs-12 col-sm-4">
                                             <h5 class="subheader uppercase">尺码:</h5>
                                             <div class="inline-middle styled-dd">
                                                 <select id="clothesSize" onchange="changeNumber()">
@@ -324,7 +337,17 @@
                                                     <option id="L" value="L">L</option>
                                                     <option id="XL" value="XL">XL</option>
                                                     <option id="XXL" value="XXL">XXL</option>
+                                                    <option id="XXXL" value="XXXL">XXXL</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <h5 class="subheader uppercase">数量:</h5>
+                                            <div class="qty-btn-group" style="width: 100px">
+                                                <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i></button>
+                                                <input type="text" value="1" />
+                                                <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i></button>
+
                                             </div>
                                         </div>
                                     </div>
@@ -334,10 +357,7 @@
                                             <a href="#" class="btn btn-default btn-lg btn-round add-to-cart">添加到购物车</a>
                                         </li>
                                         <li>
-                                            <a href="#">+ 添加到收藏</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">+ 加入比较</a>
+                                            <a href="#">+ 立即购买</a>
                                         </li>
                                     </ul>
 
@@ -380,7 +400,8 @@
                             <div id="page3" class="m-pagination"></div>
                         </div>
                         <div class="tab-pane fade in active" id="product-uploading">
-                            <input type="file" id="input-file-now" data-height="320" data-max-file-size="50M"  data-allowed-file-extensions="jpg png jpeg" class="dropify" />
+                            <input type="file" id="input-file-now" data-height="320" data-max-file-size="50M"
+                                   data-allowed-file-extensions="jpg png jpeg" class="dropify"/>
                             <button id="uploadingIcon" class="btn btn-primary">开始制作</button>
                         </div>
                     </div>
@@ -664,7 +685,7 @@
     clothesMap.set(${c.id}, map);
     </c:forEach>
 
-//    $(".adaption-m").hide();  //设置所有款式衣服图片初始隐藏，待下面加载完毕后显示
+    //    $(".adaption-m").hide();  //设置所有款式衣服图片初始隐藏，待下面加载完毕后显示
 
     function changeMessage(id) {  //点击衣服后切换对应属性
         var map = clothesMap.get(id);
@@ -676,14 +697,15 @@
         $("#S").val(goods.get("S"));
         $("#M").val(goods.get("M"));
         $("#L").val(goods.get("L"));
-        $("#XL").val(goods.get("XXL"));
+        $("#XL").val(goods.get("XL"));
         $("#XXL").val(goods.get("XXL"));
+        $("#XXXL").val(goods.get("XXXL"));
 
         changeNumber(); //修改供应状态
 
         var price = map.get("price");  //设置价格显示
         var realityPrice = map.get("realityPrice");
-        if(price == realityPrice) {
+        if (price == realityPrice) {
             $("#clothesRealityPrice").hide();
             $("#clothesPrice2").hide();
             $("#clothesPrice").show().text("￥ " + price);
@@ -711,15 +733,15 @@
 
     function changeNumber() { //当选择尺码后，修改供应状态
         var num = $("#clothesSize").val();
-        if(num == '请选择') {
+        if (num == '请选择') {
             $("#clothesNumber").text("选择尺码后获取");
             return;
         }
-        if(num >= 500) {
+        if (num >= 500) {
             $("#clothesNumber").text("充足");
         } else if (num >= 100) {
             $("#clothesNumber").text("正常");
-        } else if(num > 0) {
+        } else if (num > 0) {
             $("#clothesNumber").text("仅剩 " + num);
         } else {
             $("#clothesNumber").text("缺货");
@@ -732,18 +754,18 @@
         var map = clothesMap.get(nowId);
         layer.open({
             type: 2
-            ,content: "/html/img_edit.html"
-            ,area: ['1120px', '565px']
-            ,offset: '10px'
-            ,closeBtn: 2
-            ,title: false
-            ,scrollbar: false
-            ,btn: ['保存', '取消']
-            ,btnAlign: 'c'
-            ,yes: function(index, layero){
+            , content: "/html/img_edit.html"
+            , area: ['1120px', '565px']
+            , offset: '10px'
+            , closeBtn: 2
+            , title: false
+            , scrollbar: false
+            , btn: ['保存', '关闭']
+            , btnAlign: 'c'
+            , yes: function (index, layero) {
                 var img = layer.getChildFrame("#img")[0];
                 html2canvas(img, {   //截图img图片，保存数据
-                    onrendered: function(canvas) {
+                    onrendered: function (canvas) {
                         var dataImgURL = canvas.toDataURL();
                         map.set("imgAddress", dataImgURL);
                         clothesMap.set(nowId, map);
@@ -752,7 +774,7 @@
                 });
                 var backImg = layer.getChildFrame("#backImg")[0]
                 html2canvas(backImg, {  //截图backImg图片，保存数据
-                    onrendered: function(canvas) {
+                    onrendered: function (canvas) {
                         var dataImgURL = canvas.toDataURL();
                         map.set("backImgAddress", dataImgURL);
                         clothesMap.set(nowId, map);
@@ -761,19 +783,19 @@
                         setTimeout("changeMessage(" + nowId + ")", 200);
                     },
                 });
-                setTimeout("layer.close(" + index + ")", 200);
+                layer.msg("保存成功", {icon: 6, time: 700, offset: '10px'});
             }
-            ,btn2: function(index, layero){
+            , btn2: function (index, layero) {
                 //按钮【按钮二】的回调
 
                 //return false 开启该代码可禁止点击该按钮关闭
             }
-            ,success: function (layero, index) {
+            , success: function (layero, index) {
                 var btn = layero.find('.layui-layer-btn');
                 btn.css('text-align', 'center');
                 var str1 = $("#turn1").attr("href");
                 var str2 = $("#turn2").attr("href");
-                if(str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
+                if (str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
                     str1 = "/" + str1;
                     str2 = "/" + str2;
                 }
@@ -820,18 +842,18 @@
             var map = clothesMap.get(nowId);
             layer.open({
                 type: 2
-                ,content: "/html/img_edit.html"
-                ,area: ['1120px', '565px']
-                ,offset: '10px'
-                ,closeBtn: 2
-                ,title: false
-                ,scrollbar: false
-                ,btn: ['保存', '取消']
-                ,btnAlign: 'c'
-                ,yes: function(index, layero){
+                , content: "/html/img_edit.html"
+                , area: ['1120px', '565px']
+                , offset: '10px'
+                , closeBtn: 2
+                , title: false
+                , scrollbar: false
+                , btn: ['保存', '关闭']
+                , btnAlign: 'c'
+                , yes: function (index, layero) {
                     var img = layer.getChildFrame("#img")[0];
                     html2canvas(img, {   //截图img图片，保存数据
-                        onrendered: function(canvas) {
+                        onrendered: function (canvas) {
                             var dataImgURL = canvas.toDataURL();
                             map.set("imgAddress", dataImgURL);
                             clothesMap.set(nowId, map);
@@ -840,7 +862,7 @@
                     });
                     var backImg = layer.getChildFrame("#backImg")[0]
                     html2canvas(backImg, {  //截图backImg图片，保存数据
-                        onrendered: function(canvas) {
+                        onrendered: function (canvas) {
                             var dataImgURL = canvas.toDataURL();
                             map.set("backImgAddress", dataImgURL);
                             clothesMap.set(nowId, map);
@@ -849,19 +871,19 @@
                             setTimeout("changeMessage(" + nowId + ")", 200);
                         },
                     });
-                    setTimeout("layer.close(" + index + ")", 200);
+                    layer.msg("保存成功", {icon: 6, time: 700, offset: '10px'});
                 }
-                ,btn2: function(index, layero){
+                , btn2: function (index, layero) {
                     //按钮【按钮二】的回调
 
                     //return false 开启该代码可禁止点击该按钮关闭
                 }
-                ,success: function (layero, index) {
+                , success: function (layero, index) {
                     var btn = layero.find('.layui-layer-btn');
                     btn.css('text-align', 'center');
                     var str1 = $("#turn1").attr("href");
                     var str2 = $("#turn2").attr("href");
-                    if(str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
+                    if (str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
                         str1 = "/" + str1;
                         str2 = "/" + str2;
                     }
@@ -960,6 +982,10 @@
         $("#product-reviews").attr("class", "tab-pane fade in"); //设置精心推荐和收藏最多为未选中
         $("#product-shipping").attr("class", "tab-pane fade in");
         $("#product-uploading").attr("class", "tab-pane fade in");
+
+        $(".add-to-cart").click(function () {
+
+        })
     })
 </script>
 

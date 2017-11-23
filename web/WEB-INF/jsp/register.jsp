@@ -28,10 +28,10 @@
     ${msg}
     <form action="/registerSubmit" method="post" id="registerForm">
         <div>
-            <input type="text" name="name" class="username" placeholder="您的昵称" autocomplete="off"/>
+            <input type="text" name="name" class="name" placeholder="您的昵称" autocomplete="off" oncontextmenu="return false" onpaste="return false"/>
         </div>
         <div>
-            <input type="text" name="userName" class="username" placeholder="您的用户名" autocomplete="off"/>
+            <input type="text" name="userName" class="username" placeholder="您的用户名" autocomplete="off" oncontextmenu="return false" onpaste="return false"/>
         </div>
         <div>
             <input type="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />

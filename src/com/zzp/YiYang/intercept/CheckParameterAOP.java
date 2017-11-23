@@ -103,11 +103,15 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
         if (object instanceof UserDTO) {
             UserDTO userDTO = (UserDTO) object;
             if (checkStr(userDTO.getUserName())) {
-                result = returnMessage.get("USER_NAME_NOT_NULL");
+                result = MessageUtil.USER_NAME_NOT_NULL;
             } else if (checkStr(userDTO.getPassword())) {
-                result = returnMessage.get("PASSWORD_NOT_NULL");
+                result = MessageUtil.PASSWORD_NOT_NULL;
             } else if (checkStr(userDTO.getName())) {
-                result = returnMessage.get("NAME_NOT_NULL");
+                result = MessageUtil.NAME_NOT_NULL;
+            } else if (hasChinese(userDTO.getUserName())) {
+                result = MessageUtil.USER_NAME_HAS_CHINESE;
+            } else if (hasChinese(userDTO.getPassword())) {
+                result = MessageUtil.PASSWORD_HAS_CHINESE;
             }
         }
         return result;
@@ -118,7 +122,7 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
         if (object instanceof Order) {
             Order order = (Order) object;
             if (checkInt(order.getSendAddressId())) {
-                result = returnMessage.get("SYSTEM_ERROR");
+                result = MessageUtil.SYSTEM_ERROR;
             }
         }
         return result;
@@ -129,13 +133,13 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
         if (object instanceof CartDTO) {
             CartDTO cartDTO = (CartDTO) object;
             if (cartDTO.getClothesId() == 0) {
-                result = returnMessage.get("SYSTEM_ERROR");
+                result = MessageUtil.SYSTEM_ERROR;
             } else if (checkStr(cartDTO.getSize())) {
-                result = returnMessage.get("SIZE_NOT_NULL");
+                result = MessageUtil.SIZE_NOT_NULL;
             } else if (checkStr(cartDTO.getImgAddress())) {
-                result = returnMessage.get("SYSTEM_ERROR");
+                result = MessageUtil.SYSTEM_ERROR;
             } else if (cartDTO.getNumber() == 0) {
-                result = returnMessage.get("NUMBER_NOT_NULL");
+                result = MessageUtil.NUMBER_NOT_NULL;
             }
         }
         return result;
@@ -151,5 +155,56 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
 
     public boolean checkInt(Integer value) {
         return value == null || value == 0;
+    }
+
+    /**
+     * 是否包含中文字符<br>
+     * 包含中文标点符号<br>
+     *
+     * @param str
+     * @return
+     */
+    public boolean hasChinese(String str) {
+        if (str == null) {
+            return false;
+        }
+        char[] ch = str.toCharArray();
+        for (char c : ch) {
+            if (isChinese(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 是否是中文字符<br>
+     * 包含中文标点符号<br>
+     *
+     * @param c
+     * @return
+     */
+    private boolean isChinese(char c) {
+        Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
+        if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.GENERAL_PUNCTUATION) {
+            return true;
+        } else if (ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {
+            return true;
+        }
+        return false;
     }
 }

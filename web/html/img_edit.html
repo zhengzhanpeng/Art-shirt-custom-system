@@ -86,6 +86,7 @@
 <script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/js/drag.js"></script>
+<script type="text/javascript" src="/js/layer.js"></script>
 <script>
     //使新添加进#make中的图片变为可自由拖动与可改变大小
     function changeMakeImg() {
@@ -120,10 +121,18 @@
     }
     function removeIcon(data) {
         if(data == "img") {
-            var children = $("#img").children();
+            var children = $("#img").children(".resizable1");
+            if(children.length == 0) {
+                layer.msg("仅能移除未保存的图标嗷", {icon: 5, anim: 0});
+                return;
+            }
             children.eq(children.length - 1).remove();
         } else {
-            var children = $("#backImg").children();
+            var children = $("#backImg").children(".resizable1");
+            if(children.length == 0) {
+                layer.msg("仅能移除未保存的图标嗷", {icon: 5, anim: 0});
+                return;
+            }
             children.eq(children.length - 1).remove();
         }
     }
