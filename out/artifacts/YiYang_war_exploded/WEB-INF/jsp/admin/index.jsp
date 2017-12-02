@@ -123,9 +123,9 @@
     </script>
     <!--锁屏模板 end -->
 
-    <script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="/plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="/datas/nav_admin.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="datas/nav_admin.js"></script>
 
     <script type="text/javascript" src="js/index_admin.js"></script>
     <script>

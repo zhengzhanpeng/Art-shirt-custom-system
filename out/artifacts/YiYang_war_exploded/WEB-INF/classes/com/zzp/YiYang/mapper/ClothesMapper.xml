@@ -40,4 +40,10 @@
     <select id="getImgAddress" parameterType="Integer" resultType="String">
         SELECT img_address AS imgAddress, back_img_address AS backImgAddress FROM clothes WHERE id = #{id} LIMIT 1;
     </select>
+    <select id="getRealityPrice" parameterType="Integer" resultType="Float">
+        SELECT reality_price FROM clothes WHERE id = #{id} LIMIT 1;
+    </select>
+    <select id="getName" parameterType="Integer" resultType="String">
+        SELECT name FROM clothes WHERE id = #{id} LIMIT 1;
+    </select>
 </mapper>

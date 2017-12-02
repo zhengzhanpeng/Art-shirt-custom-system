@@ -140,6 +140,8 @@ public class CheckParameterAOP extends CheckParameterAbstractAOP {
                 result = MessageUtil.SYSTEM_ERROR;
             } else if (cartDTO.getNumber() == 0) {
                 result = MessageUtil.NUMBER_NOT_NULL;
+            } else if (checkStr(cartDTO.getBackImgAddress())) {
+                return MessageUtil.SYSTEM_ERROR;
             }
         }
         return result;

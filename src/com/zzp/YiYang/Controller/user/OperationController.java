@@ -3,10 +3,7 @@ package com.zzp.YiYang.Controller.user;
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.OperationDao;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
@@ -43,7 +40,7 @@ public class OperationController {
 
     @RequestMapping(value = "/uploadImg")
     @ResponseBody
-    public String uploadImg(CommonsMultipartFile file) {
+    public String uploadImg(@RequestParam(value = "file") CommonsMultipartFile file) {
         String imgAddress = operationDao.uploadImg(file, "user");
         return imgAddress;
     }

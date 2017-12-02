@@ -5,6 +5,7 @@ import net.sf.json.JSONArray;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -57,6 +58,10 @@ public class MainUtil {
 		String userName = userDetails.getUsername();
 		System.out.println(userName);
 		return userName;
+	}
+
+	public static void rollBack() {
+		TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 	}
 }
 

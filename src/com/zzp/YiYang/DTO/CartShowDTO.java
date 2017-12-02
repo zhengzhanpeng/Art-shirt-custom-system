@@ -8,14 +8,13 @@ package com.zzp.YiYang.DTO;
  */
 public class CartShowDTO {
     private int id;
+    private int clothesId;
     private String name;
-    private String type;
     private String size;
     private int number;
     private String imgAddress;
-    private int goodsNumber;
+    private String backImgAddress;
     private float price;
-    private float realityPrice;
 
     public int getId() {
         return id;
@@ -25,20 +24,20 @@ public class CartShowDTO {
         this.id = id;
     }
 
+    public int getClothesId() {
+        return clothesId;
+    }
+
+    public void setClothesId(int clothesId) {
+        this.clothesId = clothesId;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getSize() {
@@ -65,12 +64,12 @@ public class CartShowDTO {
         this.imgAddress = imgAddress;
     }
 
-    public int getGoodsNumber() {
-        return goodsNumber;
+    public String getBackImgAddress() {
+        return backImgAddress;
     }
 
-    public void setGoodsNumber(int goodsNumber) {
-        this.goodsNumber = goodsNumber;
+    public void setBackImgAddress(String backImgAddress) {
+        this.backImgAddress = backImgAddress;
     }
 
     public float getPrice() {
@@ -79,13 +78,5 @@ public class CartShowDTO {
 
     public void setPrice(float price) {
         this.price = price;
-    }
-
-    public float getRealityPrice() {
-        return realityPrice;
-    }
-
-    public void setRealityPrice(float realityPrice) {
-        this.realityPrice = realityPrice;
     }
 }

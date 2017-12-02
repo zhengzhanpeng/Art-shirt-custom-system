@@ -10,6 +10,7 @@ public class CartDTO {
     private int clothesId;
     private String size;
     private String imgAddress;
+    private String backImgAddress;
     private int number;
 
     public int getClothesId() {
@@ -32,8 +33,18 @@ public class CartDTO {
         return imgAddress;
     }
 
+    public String getBackImgAddress() {
+        return backImgAddress;
+    }
+
+    public void setBackImgAddress(String backImgAddress) {
+
+        this.backImgAddress = backImgAddress;
+    }
+
     public void setImgAddress(String imgAddress) {
         this.imgAddress = imgAddress;
+
     }
 
     public int getNumber() {

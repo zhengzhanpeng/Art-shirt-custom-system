@@ -20,9 +20,13 @@ public interface ClothesMapper {
 
     List<ClothesDTO> getRecoClothes();
 
+    float getRealityPrice(int id);
+
     /**
      * 获取图片文件路径
      * @return
      */
     Clothes getImgAddress(int id);
+
+    String getName(int id);
 }

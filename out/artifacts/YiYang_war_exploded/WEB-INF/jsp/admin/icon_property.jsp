@@ -15,10 +15,10 @@
 <head>
     <meta charset="UTF-8">
     <title>信息</title>
-    <link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css">
-    <link rel="stylesheet" type="text/css" href="../css/query.css">
-    <link rel="stylesheet" type="text/css" href="../css/jquery.edittable.css">
-    <link  rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/query.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.edittable.css">
+    <link  rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <div style="margin: 15px">
@@ -48,13 +48,13 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/jquery-1.12.3.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
-<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
-<script type="text/javascript" charset="utf8" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
 <script type="text/javascript">
     layui.use(['laydate', 'jquery', 'form'], function() {
         var $ = layui.jquery;
@@ -70,7 +70,7 @@
     $(function(){
         var table = $('#layui-table').DataTable({
             "ajax": {
-                "url": "/admin/getIconPros",
+                "url": "admin/getIconPros",
                 "dataSrc": "data",//默认为data
                 "type": "post",
                 "error":function(){layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});}
@@ -150,7 +150,7 @@
                 layer.confirm("确定删除属性   " + itemName+"   吗?", {icon: 3, title:'确认删除操作', anim: 6}, function(index){
                     layer.close(index);
                     $.ajax({
-                        "url":"/admin/deleteIconPro",
+                        "url":"admin/deleteIconPro",
                         "data":{"iconProId":id},
                         "type":"post",
                         "error":function(){
@@ -186,7 +186,7 @@
             if (!data.id) 	data.id="";
             delete data["date"];
             $.ajax({
-                "url":"/admin/saveIconPro",
+                "url":"admin/saveIconPro",
                 "data":data,
                 "type":"post",
                 "error":function(){

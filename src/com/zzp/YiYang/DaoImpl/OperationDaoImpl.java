@@ -2,7 +2,7 @@ package com.zzp.YiYang.DaoImpl;
 
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.OperationDao;
-import com.zzp.YiYang.mapper.CarMapper;
+import com.zzp.YiYang.mapper.CartMapper;
 import com.zzp.YiYang.mapper.CollectMapper;
 import com.zzp.YiYang.mapper.GoodsMapper;
 import com.zzp.YiYang.mapper.IconMapper;
@@ -33,7 +33,7 @@ import java.util.concurrent.ExecutorService;
 @Service
 public class OperationDaoImpl implements OperationDao {
     private GoodsMapper goodsMapper;
-    private CarMapper carMapper;
+    private CartMapper cartMapper;
     private Map<String, String> returnMessage;
     private IconMapper iconMapper;
     private CollectMapper collectMapper;
@@ -60,8 +60,8 @@ public class OperationDaoImpl implements OperationDao {
     }
 
     @Resource
-    public void setCarMapper(CarMapper carMapper) {
-        this.carMapper = carMapper;
+    public void setCartMapper(CartMapper cartMapper) {
+        this.cartMapper = cartMapper;
     }
 
     @Resource
@@ -72,13 +72,18 @@ public class OperationDaoImpl implements OperationDao {
     @Override
     @Transactional
     public String addToCart(CartDTO cartDTO) {
-        Goods goods = goodsMapper.getGoodsIdAndNumber(cartDTO.getClothesId(), cartDTO.getSize());
+        String size = cartDTO.getSize();
+        byte[] bs = size.getBytes();  //将utf-8的字符编码转为iso-8859-1
+        size = new String(bs);
+        System.out.println(size);
+        Goods goods = goodsMapper.getGoodsIdAndNumber(cartDTO.getClothesId(), size);
         Cart cart = new Cart();
         cart.setUserName(SecurityUtil.getUserName());
         cart.setGoodsId(goods.getId());
         cart.setImgAddress(cartDTO.getImgAddress());
+        cart.setBackImgAddress(cartDTO.getBackImgAddress());
         cart.setNumber(cartDTO.getNumber());
-        int result = carMapper.insert(cart);
+        int result = cartMapper.insert(cart);
         if (result == 0) {
             return MessageUtil.SYSTEM_ERROR;
         }

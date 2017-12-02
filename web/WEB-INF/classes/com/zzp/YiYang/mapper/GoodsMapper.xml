@@ -65,4 +65,9 @@
         LEFT OUTER JOIN goods g ON g.clothes_id = c.id
         WHERE is_finished = 0;
     </select>
+    <update id="plusNumber">
+        UPDATE goods
+        SET number = number + #{numberPlus}
+        WHERE id = #{id} AND number = #{numberNow} LIMIT 1;
+    </update>
 </mapper>

@@ -18,30 +18,30 @@
     <meta charset="UTF-8"/>
     <title>商品</title>
 
-    <link rel="stylesheet" href="/css/minified.css">
+    <link rel="stylesheet" href="css/minified.css">
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/modernizr.min.js"></script>
-    <link rel="stylesheet" href="/css/jquery.nouislider.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/owl.theme.css">
-    <link rel="stylesheet" href="/css/innerpage.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/jquery.pagination.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.nouislider.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/innerpage.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/jquery.pagination.css">
 
-    <link href="/css/demo1.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="/css/jquery.flex-images.css">
+    <link href="css/demo1.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/jquery.flex-images.css">
 
-    <script src="/js/jquery.easing.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.js" type="text/javascript"></script>
 
-    <script src="/js/scroller.js" type="text/javascript"></script>
+    <script src="js/scroller.js" type="text/javascript"></script>
 
-    <script src="/js/init.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/js/cloudzoom.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/cloudzoom.css">
-    <link rel="stylesheet" type="text/css" href="/js/dist/css/demo.css">
-    <link rel="stylesheet" type="text/css" href="/js/dist/css/dropify.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/imgHover.css">
+    <script src="js/init.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/cloudzoom.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" href="js/dist/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="js/dist/css/dropify.min.css">
+    <link rel="stylesheet" type="text/css" href="css/imgHover.css">
     <style type="text/css">
         .girl-clothes {
             height: 260px;
@@ -172,7 +172,7 @@
                                 <li><a href="cart.html">购物车</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
-                                <li><a href="/j_spring_security_logout ">退出</a></li>
+                                <li><a href="j_spring_security_logout ">退出</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -189,13 +189,13 @@
                                 <a href="index">首页</a>
                             </li>
                             <li>
-                                <a href="/icons">图标</a>
+                                <a href="icons">图标</a>
                             </li>
                             <li class="active">
-                                <a href="/user/clothes_make">衬衫定制</a>
+                                <a href="user/clothes_make">衬衫定制</a>
                             </li>
                             <li>
-                                <a href="cart.html">购物车</a>
+                                <a href="user/cart">购物车</a>
                             </li>
                             <li>
                                 <a href="contact-us.html">联系我们</a>
@@ -345,7 +345,7 @@
                                             <h5 class="subheader uppercase">数量:</h5>
                                             <div class="qty-btn-group" style="width: 100px">
                                                 <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i></button>
-                                                <input type="text" value="1" />
+                                                <input id="number" type="text" value="1" />
                                                 <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i></button>
 
                                             </div>
@@ -354,10 +354,10 @@
 
                                     <ul class="inline-li li-m-r-l m-t-lg">
                                         <li>
-                                            <a href="#" class="btn btn-default btn-lg btn-round add-to-cart">添加到购物车</a>
+                                            <a href="javascript: void(0);" class="btn btn-default btn-lg btn-round add-to-cart">添加到购物车</a>
                                         </li>
                                         <li>
-                                            <a href="#">+ 立即购买</a>
+                                            <a href="javascript: void(0);">+ 立即购买</a>
                                         </li>
                                     </ul>
 
@@ -652,16 +652,16 @@
 
 </div>
 
-<script src="/js/minified.js"></script>
+<script src="js/minified.js"></script>
 
-<script src="/js/jquery.nouislider.js"></script>
-<script src="/js/owl.carousel.js"></script>
-<script src="/js/products.js"></script>
-<script src="/js/jquery.flex-images.js"></script>
-<script src="/js/jquery.pagination-1.2.1.js"></script>
-<script src="/js/layer.js"></script>
-<script type="text/javascript" src="/js/html2canvas.js"></script>
-<script type="text/javascript" src="/js/dist/js/dropify.min.js"></script>
+<script src="js/jquery.nouislider.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/products.js"></script>
+<script src="js/jquery.flex-images.js"></script>
+<script src="js/jquery.pagination-1.2.1.js"></script>
+<script src="js/layer.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/dist/js/dropify.min.js"></script>
 
 <script>
     var clothesMap = new Map(); //构建clothes的Map对象，以用户ID为键
@@ -754,7 +754,7 @@
         var map = clothesMap.get(nowId);
         layer.open({
             type: 2
-            , content: "/html/img_edit.html"
+            , content: "html/img_edit.html"
             , area: ['1120px', '565px']
             , offset: '10px'
             , closeBtn: 2
@@ -796,15 +796,15 @@
                 var str1 = $("#turn1").attr("href");
                 var str2 = $("#turn2").attr("href");
                 if (str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
-                    str1 = "/" + str1;
-                    str2 = "/" + str2;
+                    str1 = "../" + str1;
+                    str2 = "../" + str2;
                 }
 
 //                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
 //                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
                 layer.getChildFrame("#imgOriginal").attr("src", str1);
                 layer.getChildFrame("#backImgOriginal").attr("src", str2);
-                layer.getChildFrame("#data").attr("src", "/" + $(data).find(".item-img-m").attr("src"))
+                layer.getChildFrame("#data").attr("src", "../" + $(data).find(".item-img-m").attr("src"))
             }
         })
     }
@@ -827,6 +827,45 @@
         }
         $(idCss).flexImages({rowHeight: 200});
     }
+    function uploadImg(str) {  //从网页上获取用户制作的图片数据并上传，返回上传后图片地址
+        var data = $(str).attr("src");
+        var imgAddress;
+
+        // dataURL 的格式为 “data:image/png;base64,****”,逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
+        data=data.split(',')[1];
+        if(data == null) {
+            layer.msg("请选择已制作好的衣服上传！", {icon: 5, anim: 6, offset: '10px'});
+            return;
+        }
+        data=window.atob(data);
+        var ia = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++) {
+            ia[i] = data.charCodeAt(i);
+        };
+
+        // canvas.toDataURL 返回的默认格式就是 image/png
+        var blob=new Blob([ia], {type:"image/png"});
+        var file=new FormData();
+
+        file.append('file',blob);
+
+        $.ajax({
+            url: "user/uploadImg"
+            ,type: "post"
+            ,data: file
+            ,async : false
+            ,cache : false
+            ,contentType : false// 告诉jQuery不要去设置Content-Type请求头
+            ,processData : false// 告诉jQuery不要去处理发送的数据
+            ,success: function (data) {
+                imgAddress = data;
+            }
+            ,error: function () {
+                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
+            }
+        });
+        return imgAddress;
+    }
     $(function () {
         $('.dropify').dropify({   //实例化上传组件
             messages: {
@@ -842,7 +881,7 @@
             var map = clothesMap.get(nowId);
             layer.open({
                 type: 2
-                , content: "/html/img_edit.html"
+                , content: "html/img_edit.html"
                 , area: ['1120px', '565px']
                 , offset: '10px'
                 , closeBtn: 2
@@ -884,15 +923,15 @@
                     var str1 = $("#turn1").attr("href");
                     var str2 = $("#turn2").attr("href");
                     if (str1.substring(0, 4) != 'data') {  //验证是否为截图后的数据，如果是则不能加 "/"
-                        str1 = "/" + str1;
-                        str2 = "/" + str2;
+                        str1 = "../" + str1;
+                        str2 = "../" + str2;
                     }
 
 //                layer.getChildFrame("#img").css("background", "url(" + str1 + ")").css("background-size", "480px 480px");
 //                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
                     layer.getChildFrame("#imgOriginal").attr("src", str1);
                     layer.getChildFrame("#backImgOriginal").attr("src", str2);
-                    layer.getChildFrame("#data").attr("src", $(".dropify-render > img").attr("src"))
+                    layer.getChildFrame("#data").attr("src", "../" + $(".dropify-render > img").attr("src"))
                 }
             })
         });
@@ -919,7 +958,7 @@
             showPageSizes: true,
             infoFormat: '{start} ~ {end}条，共{total}条',
             remote: {
-                url: '/user/getCollectIcon',  //请求地址
+                url: 'user/getCollectIcon',  //请求地址
                 params: {},       //自定义请求参数
                 callback: function (result, pageIndex) {
                     //回调函数
@@ -942,7 +981,7 @@
             showPageSizes: true,
             infoFormat: '{start} ~ {end}条，共{total}条',
             remote: {
-                url: '/user/getRecommendIcon',  //请求地址
+                url: 'user/getRecommendIcon',  //请求地址
                 params: {},       //自定义请求参数
                 callback: function (result, pageIndex) {
                     //回调函数
@@ -966,7 +1005,7 @@
             showPageSizes: true,
             infoFormat: '{start} ~ {end}条，共{total}条',
             remote: {
-                url: '/user/getCollectMaxIcon',  //请求地址
+                url: 'user/getCollectMaxIcon',  //请求地址
                 params: {},       //自定义请求参数
                 callback: function (result, pageIndex) {
                     //回调函数
@@ -984,7 +1023,39 @@
         $("#product-uploading").attr("class", "tab-pane fade in");
 
         $(".add-to-cart").click(function () {
-
+            var clothesId = $(".adaption-m.active").attr("data");
+            var clothesSize = $("#clothesSize").find("option:selected").text();
+            var number = $("#number").val();
+            var imgAddress = uploadImg("#turn1 img");
+            var backImgAddress = uploadImg("#turn2 img");
+            if(imgAddress == null || backImgAddress == null) {
+                return;
+            }
+            if(clothesSize == '-- 请选择 --') {
+                layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
+                return;
+            }
+            $.ajax({
+                url: "user/addToCart"
+                ,type: "post"
+                ,data: {
+                    "clothesId": clothesId
+                    ,"size": clothesSize
+                    ,"number":number
+                    ,"imgAddress": imgAddress
+                    ,"backImgAddress": backImgAddress
+                }
+                ,success: function (data) {
+                    if (data == "1") {
+                        layer.msg("添加成功", {icon: 6, time: 700, offset: '10px'});
+                        return;
+                    }
+                    layer.msg(data, {icon: 5, anim: 0});
+                }
+                ,error: function () {
+                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
+                }
+            });
         })
     })
 </script>

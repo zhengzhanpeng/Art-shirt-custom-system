@@ -50,7 +50,7 @@
         c.name,
         c.type,
         b.reality_price
-        FROM order o
+        FROM order1 o
         LEFT OUTER JOIN send_address s ON o.username = s.username
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
@@ -58,7 +58,7 @@
         WHERE o.id = #{orderId};
     </select>
     <update id="set" parameterType="order">
-        UPDATE order
+        UPDATE order1
         <set>
             <if test="sendAddress != 0 ">
                 send_address_id = #{sendAddress},
@@ -87,4 +87,14 @@
     <select id="getOrder" parameterType="String" resultType="order">
         SELECT  FROM  WHERE ;
     </select>
+    <insert id="addOrder" parameterType="order" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO order1 VALUES
+        (null, #{userName},
+        <if test="sendAddressId == 0">null, </if>
+        <if test="sendAddressId != 0">#{sendAddressId}, </if>
+        #{realityPrice}, #{desc1}, #{state}, null, null, #{invoice});
+    </insert>
+    <update id="setRealityPrice">
+        UPDATE order1 SET reality_price = #{realityPrice, jdbcType=FLOAT} WHERE id = #{id};
+    </update>
 </mapper>

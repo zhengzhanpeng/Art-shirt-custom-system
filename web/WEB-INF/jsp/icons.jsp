@@ -17,14 +17,14 @@
     <base src=" <%=basePath%>">
     <meta charset="UTF-8" />
     <title>服装商城</title>
-    <link rel="stylesheet" href="/css/minified.css">
-    <script src="/js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" href="css/minified.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
 
-    <script src="/js/modernizr.min.js"></script>
-    <link rel="stylesheet" href="/css/jquery.nouislider.css">
-    <link rel="stylesheet" href="/css/isotope.css">
-    <link rel="stylesheet" href="/css/innerpage.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.nouislider.css">
+    <link rel="stylesheet" href="css/isotope.css">
+    <link rel="stylesheet" href="css/innerpage.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         i {
             position: relative;
@@ -120,7 +120,7 @@
                                 <li><a href="cart.html">购物车</a></li>
                                 <li><a href="#">查看</a></li>
                                 <li><a href="login">登录/注册</a></li>
-                                <li><a href="/j_spring_security_logout ">退出</a></li>
+                                <li><a href="j_spring_security_logout ">退出</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -138,10 +138,10 @@
                                 <a href="icons">图标</a>
                             </li>
                             <li>
-                                <a href="/user/clothes_make">衬衫定制</a>
+                                <a href="user/clothes_make">衬衫定制</a>
                             </li>
                             <li>
-                                <a href="cart.html">购物车</a>
+                                <a href="user/cart">购物车</a>
                             </li>
                             <li>
                                 <a href="contact-us.html">联系我们</a>
@@ -630,18 +630,18 @@
 
 </div>
 
-<script src="/js/minified.js"></script>
+<script src="js/minified.js"></script>
 
-<script src="/js/jquery.nouislider.js"></script>
-<script src="/js/jquery.isotope.min.js"></script>
-<script src="/js/products.js"></script>
-<script src="/js/layer.js"></script>
-<%--<script src="/js/jquery-1.12.3.min.js"></script>--%>
+<script src="js/jquery.nouislider.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/layer.js"></script>
+<%--<script src="js/jquery-1.12.3.min.js"></script>--%>
 <script>
     $(".add-to-collect").click(function () {
         var iconId = $(this).parents(".product").attr("data-product-id");
         $.ajax({
-            url: "/user/addToCollect"
+            url: "user/addToCollect"
             ,type: "post"
             ,data: {"iconId": iconId}
             ,success: function (data) {

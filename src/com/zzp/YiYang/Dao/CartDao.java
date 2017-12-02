@@ -1,6 +1,7 @@
 package com.zzp.YiYang.Dao;
 
 import com.zzp.YiYang.DTO.CartShowDTO;
+import com.zzp.YiYang.DTO.GetCartDTO;
 
 import java.util.List;
 
@@ -18,5 +19,7 @@ public interface CartDao {
      * @param cartIdList 购物车ID
      * @return 返回生成订单的ID；
      */
-    String createOrder(List<Integer> cartIdList);
+    String createOrder(List<GetCartDTO> cartIdList);
+
+    String deleteCart(int id);
 }

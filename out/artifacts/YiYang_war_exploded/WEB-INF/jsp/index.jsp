@@ -18,13 +18,13 @@
     <base src=" <%=basePath%>">
     <meta charset="UTF-8" />
     <title>艺扬服饰商城</title>
-    <link rel="stylesheet" href="/css/minified.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/modernizr.min.js"></script>
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/owl.theme.css">
-    <link href="/css/flexslider.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="css/minified.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         i {
             position: relative;
@@ -120,7 +120,7 @@
                                 <li><a href="cart.html">购物车</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
-                                <li><a href="/j_spring_security_logout ">退出</a></li>
+                                <li><a href="j_spring_security_logout ">退出</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -135,13 +135,13 @@
                                 <a href="index">首页</a>
                             </li>
                             <li>
-                                <a href="/icons">图标</a>
+                                <a href="icons">图标</a>
                             </li>
                             <li>
-                                <a href="/user/clothes_make">衬衫定制</a>
+                                <a href="user/clothes_make">衬衫定制</a>
                             </li>
                             <li>
-                                <a href="cart.html">购物车</a>
+                                <a href="user/cart">购物车</a>
                             </li>
                             <li>
                                 <a href="contact-us.html">联系我们</a>
@@ -711,20 +711,20 @@
 
 </div>
 
-<script src="/js/minified.js"></script>
+<script src="js/minified.js"></script>
 
 <script>
 
 
 </script>
-<script src="/js/owl.carousel.js"></script>
-<script src="/js/jquery.flexslider-min.js"></script>
-<script src="/js/layer.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/layer.js"></script>
 <script>
     $(".add-to-collect").click(function () {
         var iconId = $(this).parents(".product").attr("data-product-id");
         $.ajax({
-            url: "/user/addToCollect"
+            url: "user/addToCollect"
             ,type: "post"
             ,data: {"iconId": iconId}
             ,success: function (data) {

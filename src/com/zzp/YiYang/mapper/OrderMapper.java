@@ -2,6 +2,7 @@ package com.zzp.YiYang.mapper;
 
 import com.zzp.YiYang.DTO.OrderDTO;
 import com.zzp.YiYang.pojo.Order;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,4 +16,8 @@ public interface OrderMapper {
     int set(Order order);
 
     List<Order> getOrder(String userName);
+
+    int addOrder(Order order);
+
+    int setRealityPrice(@Param("id") int id, @Param("realityPrice") double realityPrice);
 }

@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Order {
     private int id;
+    private String userName;
     private int sendAddressId;
     private float realityPrice;
     private String desc1;
@@ -22,6 +23,14 @@ public class Order {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getSendAddressId() {

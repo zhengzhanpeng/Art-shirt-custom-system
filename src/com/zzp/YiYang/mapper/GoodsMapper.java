@@ -25,4 +25,6 @@ public interface GoodsMapper {
      * @return
      */
     List<GetGoodsDTO> getGoods();
+
+    int plusNumber(@Param("id") int id, @Param("numberNow") int numberNow, @Param("numberPlus") int numberPlus);
 }

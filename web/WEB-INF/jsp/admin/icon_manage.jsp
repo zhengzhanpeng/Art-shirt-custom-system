@@ -53,7 +53,7 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/jquery-1.12.3.min.js"></script>
 
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>

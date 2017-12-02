@@ -15,7 +15,7 @@
     <base href=" <%=basePath%>">
     <base src=" <%=basePath%>">
     <title>注册</title>
-    <link rel="stylesheet" href="/plugins/login/css/style.css">
+    <link rel="stylesheet" href="plugins/login/css/style.css">
 </head>
 <body>
 
@@ -25,24 +25,24 @@
     <div class="connect">
         <p>您距离注册完成仅需最后一步啦，快去邮箱完成认证吧</p>
     </div>
-    <a href="/checkEmail">
+    <a href="checkEmail">
         <button type="button" class="register-tis">没有收到邮件？</button>
     </a>
-    <a href="/login">
+    <a href="login">
         <button type="button" class="register-tis">验证成功</button>
     </a>
 
 </div>
 
 </body>
-<script src="/js/jquery-1.12.3.min.js"></script>
-<script src="/js/layer.js"></script>
-<script src="/plugins/login/js/common.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/layer.js"></script>
+<script src="plugins/login/js/common.js"></script>
 <!--背景图片自动更换-->
-<script src="/plugins/login/js/supersized.3.2.7.min.js"></script>
-<script src="/plugins/login/js/supersized-init.js"></script>
+<script src="plugins/login/js/supersized.3.2.7.min.js"></script>
+<script src="plugins/login/js/supersized-init.js"></script>
 <!--表单验证-->
-<script src="/plugins/login/js/jquery.validate.min.js?var1.14.0"></script>
+<script src="plugins/login/js/jquery.validate.min.js?var1.14.0"></script>
 <script>
     <%--var name = "${name}";--%>
     <%--var userName = "${userName}";--%>

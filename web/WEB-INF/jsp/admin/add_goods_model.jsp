@@ -15,7 +15,7 @@
 <head>
     <base href=" <%=basePath%>">
     <base src=" <%=basePath%>">
-    <link rel="stylesheet" type="text/css" href="/plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
     <style>
@@ -127,8 +127,8 @@
     </form>
 </div>
 </body>
-<script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript" src="/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
 <script>
     //Demo
     layui.use(['form', 'upload'], function () {

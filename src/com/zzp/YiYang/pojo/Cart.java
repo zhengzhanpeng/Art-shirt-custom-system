@@ -9,6 +9,7 @@ public class Cart {
     private String userName;
     private int goodsId;
     private String imgAddress;
+    private String backImgAddress;
     private int number;
 
     public int getId() {
@@ -41,6 +42,14 @@ public class Cart {
 
     public void setImgAddress(String imgAddress) {
         this.imgAddress = imgAddress;
+    }
+
+    public String getBackImgAddress() {
+        return backImgAddress;
+    }
+
+    public void setBackImgAddress(String backImgAddress) {
+        this.backImgAddress = backImgAddress;
     }
 
     public int getNumber() {

@@ -26,3 +26,7 @@
 .span-img-center-m {
     height:100%;display:inline-block;vertical-align:middle
 }
+i {
+    position: relative;
+    top: 25%;
+}
