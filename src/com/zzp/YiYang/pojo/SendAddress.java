@@ -9,9 +9,9 @@ public class SendAddress {
     private String userName;
     private String receiveName;
     private long phone;
-    private String province;
-    private String city;
-    private String district;
+    private int province;
+    private int city;
+    private int district;
     private String address;
     private String postalCode;
     private String addressLabel;
@@ -49,27 +49,27 @@ public class SendAddress {
         this.phone = phone;
     }
 
-    public String getProvince() {
+    public int getProvince() {
         return province;
     }
 
-    public void setProvince(String province) {
+    public void setProvince(int province) {
         this.province = province;
     }
 
-    public String getCity() {
+    public int getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(int city) {
         this.city = city;
     }
 
-    public String getDistrict() {
+    public int getDistrict() {
         return district;
     }
 
-    public void setDistrict(String district) {
+    public void setDistrict(int district) {
         this.district = district;
     }
 

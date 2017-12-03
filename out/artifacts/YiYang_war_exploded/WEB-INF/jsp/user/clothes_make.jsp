@@ -198,7 +198,7 @@
                                 <a href="user/cart">购物车</a>
                             </li>
                             <li>
-                                <a href="contact-us.html">联系我们</a>
+                                <a href="user/order">我的订单</a>
                             </li>
                             <li>
                                 <a href="new/index.html">即将上线</a>

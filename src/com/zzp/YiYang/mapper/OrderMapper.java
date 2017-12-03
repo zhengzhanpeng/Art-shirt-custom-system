@@ -20,4 +20,11 @@ public interface OrderMapper {
     int addOrder(Order order);
 
     int setRealityPrice(@Param("id") int id, @Param("realityPrice") double realityPrice);
+
+    /**
+     * 根据OrderId获取username，用于验证用户身份
+     * @param id
+     * @return
+     */
+    String getUserName(int id);
 }

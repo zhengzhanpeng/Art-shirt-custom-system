@@ -12,6 +12,7 @@ import java.util.List;
 public class OrderDTO {
     private int id;
     private List<SendAddress> sendAddresses;
+    private float realityPrice;
     private int sendTime;
     private int invoice;
     private List<ItemDTO> itemDTOs;
@@ -54,5 +55,13 @@ public class OrderDTO {
 
     public void setItemDTOs(List<ItemDTO> itemDTOs) {
         this.itemDTOs = itemDTOs;
+    }
+
+    public float getRealityPrice() {
+        return realityPrice;
+    }
+
+    public void setRealityPrice(float realityPrice) {
+        this.realityPrice = realityPrice;
     }
 }

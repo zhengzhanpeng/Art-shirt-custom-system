@@ -5,6 +5,7 @@
     <resultMap id="orderDTOMap" type="orderDTO">
         <id column="order_id" property="id"/>
         <result column="send_time" property="sendTime"/>
+        <result column="price" property="realityPrice"/>
         <result column="invoice" property="invoice"/>
         <collection property="sendAddresses" ofType="sendAddress">
             <id column="send_address_id" property="id"/>
@@ -21,6 +22,7 @@
         <collection property="itemDTOs" ofType="ItemDTO">
             <id column="bought_item_id" property="id"/>
             <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
             <result column="number" property="number"/>
             <result column="size" property="size"/>
             <result column="name" property="name"/>
@@ -33,6 +35,7 @@
         o.id AS order_id,
         o.send_time,
         o.invoice,
+        o.reality_price AS price,
         s.id AS send_address_id,
         s.receive_name,
         s.phone,
@@ -45,6 +48,7 @@
         s.default_address,
         b.id AS bought_item_id,
         b.img_address,
+        b.back_img_address,
         b.number,
         g.size,
         c.name,
@@ -97,4 +101,7 @@
     <update id="setRealityPrice">
         UPDATE order1 SET reality_price = #{realityPrice, jdbcType=FLOAT} WHERE id = #{id};
     </update>
+    <select id="getUserName" parameterType="Integer" resultType="String">
+        SELECT username FROM order1 WHERE id = #{id} LIMIT 1;
+    </select>
 </mapper>

@@ -7,131 +7,108 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" line="111" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="383" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="260" mnemonic="3" />
     <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="54" mnemonic="4" />
-    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" line="1024" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp" line="504" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp" line="929" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp" line="293" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f89f98-45b9-4688-b659-483beadc2497" name="Default" comment="..">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/mark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/mark1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/mark2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetCartDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BoughtItemMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BoughtItemMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/BoughtItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/carts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/carts.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CarMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/CarMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CarMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CarMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CarMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/CarMapper.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/CartDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/CartDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/CartShowDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/CartShowDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/CartDao.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Dao/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Cart.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Cart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Order.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/pojo/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/CartController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OperationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/CartDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/CartDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/CartShowDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/CartShowDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/CartDao.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Dao/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DaoImpl/OperationDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/intercept/CheckParameterAOP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Cart.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Cart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Order.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/pojo/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MainUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/util/MessageUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/+.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/LR_lunbo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/back_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/ban_next_24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/ban_pre_24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/bottom_img09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/c.imgloading.312342643ad87085c2b962218229a968.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/cart_countdown.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/fixed_weixin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/floor_img10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/goods_img02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/goods_img03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/header_sprites1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/icon_dou.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/icon_sina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/icon_tencent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/icon_weixin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/index.supermarket.seckilling.bg-l-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/index.supermarket.seckilling.bg-m-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/index.supermarket.seckilling.bg-r-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/index_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/index_icons1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/meishi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/panic-text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/promise_img01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/promise_img02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/promise_img03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/promise_img04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/promise_img05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/shopping_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/slogan.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/top_phone_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/weixin_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/weixin_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/xhw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/yck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/yes_ok.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/zfb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/images/zxzf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/model.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/css/buyConfirm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/css/checkOut.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/css/public.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/address_all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/base.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/buyConfirm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/checkout.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/html5shiv-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/jquery-1.11.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/jquery_cart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/tuan.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugins/buy/js/unslider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OrderController.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/Controller/user/OrderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/ItemDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/ItemDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/OrderDTO.class" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/DTO/OrderDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OrderController.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/Controller/user/OrderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/ItemDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/ItemDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/OrderDTO.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/DTO/OrderDTO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_goods_model.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_goods_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_icon_model.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/add_icon_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/goods_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/goods_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_property.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/icon_property.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/check_email.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/check_email.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/check_result.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/check_result.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/icons.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/icons.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register_check.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/register_check.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/user_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/superAdmin/user_manage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/cart.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/cart.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/WEB-INF/jsp/user/clothes_make.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/minified.css" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/css/minified.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/goods_message.html" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/goods_message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/img_edit.html" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/html/img_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/plugins/login/js/supersized-init.js" afterPath="$PROJECT_DIR$/out/artifacts/YiYang_war_exploded/plugins/login/js/supersized-init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/CartController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/CartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/CartDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/CartDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/CartShowDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/CartShowDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/CartDao.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/CartDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/intercept/CheckParameterAOP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OrderController.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OrderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ItemDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ItemDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/OrderDTO.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/OrderDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OrderDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OrderDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Cart.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Cart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Order.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/ClothesMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/GoodsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/SendAddressMapper.xml" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/SendAddressMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/SendAddress.java" afterPath="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/SendAddress.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/zzp/YiYang/mapper/OrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_property.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_property.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/check_email.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/check_email.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/minified.css" afterPath="$PROJECT_DIR$/web/css/minified.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/html/goods_message.html" afterPath="$PROJECT_DIR$/web/html/goods_message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/html/img_edit.html" afterPath="$PROJECT_DIR$/web/html/img_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/plugins/login/js/supersized-init.js" afterPath="$PROJECT_DIR$/web/plugins/login/js/supersized-init.js" />
     </list>
     <ignored path="YiYang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,108 +131,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClothesMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
+      <file leaf-file-name="order.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="-1437">
+              <caret line="889" column="34" selection-start-line="889" selection-start-column="34" selection-end-line="889" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java">
+      <file leaf-file-name="checkout.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/checkout.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="174">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-30">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/base.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3870">
+              <caret line="0" column="19579" selection-start-line="0" selection-start-column="19571" selection-end-line="0" selection-end-column="19579" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="599" column="43" selection-start-line="599" selection-start-column="43" selection-end-line="599" selection-end-column="43" />
+            <state relative-caret-position="108">
+              <caret line="68" column="36" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.java">
+      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClothesMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
+      <file leaf-file-name="jquery_cart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/jquery_cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="99">
+              <caret line="2" column="2674" selection-start-line="2" selection-start-column="2667" selection-end-line="2" selection-end-column="2674" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java">
+      <file leaf-file-name="tuan.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/tuan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="63" column="37" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml">
+      <file leaf-file-name="unslider.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/unslider.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/CartController.java">
+      <file leaf-file-name="buyConfirm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/buyConfirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
-              <folding>
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/CartDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -285,17 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_goods_model.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/add_icon_model.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/goods_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/icon_property.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/index.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/superAdmin/user_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/check_email.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/check_result.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register_check.jsp" />
         <option value="$PROJECT_DIR$/web/html/goods_message.html" />
@@ -311,9 +272,6 @@
         <option value="$PROJECT_DIR$/src/config/spring/spring-bean.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CarMapper.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/CartShowDTO.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetCartDTO.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Order.java" />
@@ -326,8 +284,6 @@
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BoughtItemMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/BoughtItem.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.xml" />
@@ -335,7 +291,23 @@
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Dao/CartDao.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/CartController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/model.jsp" />
+        <option value="$PROJECT_DIR$/web/plugins/buy/css/base.css" />
+        <option value="$PROJECT_DIR$/web/plugins/buy/js/index.js" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ItemDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DTO/OrderDTO.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/mapper/SendAddressMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/zzp/YiYang/pojo/SendAddress.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp" />
+        <option value="$PROJECT_DIR$/web/plugins/buy/js/checkout.min.js" />
       </list>
     </option>
   </component>
@@ -518,6 +490,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YiYang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,8 +834,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -827,27 +847,29 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/cart.jsp&#10;cartcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;cart.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/cart.jsp&#10;cart&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java&#10;cartmap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CartMapper.xml&#10;cartmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CartMapper.java&#10;clothmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;clothesmapp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;order&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;ordermap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.java&#10;cartdaoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java&#10;goods&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;bou&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/BoughtItem.java&#10;boumapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/BoughtItemMapper.java&#10;clo.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;orderma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/cart.jsp&#10;con&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;mess&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;mainu&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;goodsma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodsmap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.java&#10;clomap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;goodsmapp&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;meu&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MessageUtil&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;ordermapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;daoim&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.CartDaoImpl&#10;carsho&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/CartShowDTO.java&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;cartdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/CartDTO.java&#10;mapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;daoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java&#10;car&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;.pr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/jdbc.properties&#10;collectma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml&#10;iconmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;login&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/login.jsp&#10;pro&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/jdbc.properties&#10;dao&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java&#10;carmapp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CarMapper.xml&#10;carmapper&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.CarMapper&#10;.proper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/jdbc.properties&#10;spring-&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-applicationContext.xml&#10;check&#9;PSI&#9;JAVA://com.zzp.YiYang.intercept.CheckParameterAOP&#10;iconma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/admin/icon_manage.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/order.jsp&#10;.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/order.jsp&#10;orderd&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/OrderDTO.java&#10;sendmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/SendAddressMapper.xml&#10;sendadd&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/SendAddress.java&#10;send&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/SendAddress.java&#10;order&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OrderController.java&#10;or.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/order.jsp&#10;orderma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;ordermapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.java&#10;orcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/OrderController.java&#10;ormapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;orderdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/OrderDTO.java&#10;ordermappe&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.xml&#10;or&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/order.jsp&#10;cartcon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;cart.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/cart.jsp&#10;cart&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java&#10;cartmap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CartMapper.xml&#10;cartmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CartMapper.java&#10;clothmapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;clothesmapp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;ordermap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/OrderMapper.java&#10;cartdaoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java&#10;goods&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;bou&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/pojo/BoughtItem.java&#10;boumapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/BoughtItemMapper.java&#10;clo.jsp&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/user/clothes_make.jsp&#10;con&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;mess&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/util/MessageUtil.java&#10;mainu&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MainUtil&#10;goodsma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.xml&#10;goodsmap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/GoodsMapper.java&#10;clomap&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.xml&#10;clo&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;goodsmapp&#9;PSI&#9;JAVA://com.zzp.YiYang.mapper.GoodsMapper&#10;meu&#9;PSI&#9;JAVA://com.zzp.YiYang.util.MessageUtil&#10;clomapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/ClothesMapper.java&#10;index&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/web/WEB-INF/jsp/index.jsp&#10;bean&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;bean.&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/spring/spring-bean.xml&#10;daoim&#9;PSI&#9;JAVA://com.zzp.YiYang.DaoImpl.CartDaoImpl&#10;carsho&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/CartShowDTO.java&#10;clocon&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/ClothesController.java&#10;cartdto&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DTO/CartDTO.java&#10;mapper&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/IconMapper.xml&#10;daoi&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java&#10;car&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/Controller/user/CartController.java&#10;.pr&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/config/jdbc.properties&#10;collectma&#9;FILE&#9;file://F:/我的项目/work_space/YiYang/src/com/zzp/YiYang/mapper/CollectMapper.xml" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\user" />
-      <recent name="F:\我的项目\work_space\YiYang\web\images" />
-      <recent name="F:\我的项目\work_space\YiYang\web\css" />
-      <recent name="F:\我的项目\work_space\YiYang\web\js" />
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\plugins\buy" />
+      <recent name="F:\我的项目\work_space\YiYang\web\plugins" />
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
+      <recent name="F:\我的项目\work_space\YiYang\web" />
+      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zzp.YiYang.util" />
       <recent name="com.zzp.YiYang.DTO" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\admin\" />
-      <recent name="F:\我的项目\work_space\YiYang\web" />
-      <recent name="F:\我的项目\work_space\YiYang\src\config\spring" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\我的项目\work_space\YiYang\web\WEB-INF\jsp\user" />
+      <recent name="F:\我的项目\work_space\YiYang\web\plugins\buy" />
+      <recent name="F:\我的项目\work_space\YiYang\web\plugins\buy\images" />
+      <recent name="F:\我的项目\work_space\YiYang\web\images" />
+      <recent name="F:\我的项目\work_space\YiYang\web\css" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.yiyang">
@@ -1609,11 +1631,13 @@
       <workItem from="1511916734107" duration="10611000" />
       <workItem from="1512088366278" duration="11105000" />
       <workItem from="1512199426026" duration="8140000" />
+      <workItem from="1512263875766" duration="9201000" />
+      <workItem from="1512284773362" duration="11084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="565337000" />
+    <option name="totallyTimeSpent" value="585622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1626,20 +1650,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266886" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30313015" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.354201" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36738056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36738056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1691,7 +1715,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="50" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1700,259 +1724,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/products.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="100" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/IconMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CarMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CarMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/config/spring/spring-bean.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/IconDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OperationDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2008">
-          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1924#1925#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/IconDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OperationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/visitor/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/ClothesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/ClothesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/ClothesDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#815#816#0" expanded="false" />
-            <element signature="e#861#862#0" expanded="false" />
-            <element signature="e#940#941#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="false" />
-            <element signature="e#1216#1217#0" expanded="false" />
-            <element signature="e#1264#1265#0" expanded="false" />
-            <element signature="e#1288#1289#0" expanded="false" />
-            <element signature="e#1538#1539#0" expanded="false" />
-            <element signature="e#1565#1566#0" expanded="false" />
-            <element signature="e#1678#1679#0" expanded="false" />
-            <element signature="e#1705#1706#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3888">
-          <caret line="144" column="33" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
-          <folding>
-            <marker date="1511924868025" expanded="true" signature="13703:13731" placeholder="..." />
-            <marker date="1511924868025" expanded="true" signature="13813:13841" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3861">
-          <caret line="143" column="50" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="28" column="110" selection-start-line="28" selection-start-column="110" selection-end-line="28" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#1819#1820#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1048" column="38" selection-start-line="1048" selection-start-column="38" selection-end-line="1048" selection-end-column="38" />
-          <folding>
-            <marker date="1511924934276" expanded="true" signature="40119:40126" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BouthtItem.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BoughtItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/BoughtItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/BoughtItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/OrderDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/MyOrderDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ItemDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GoodsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/GetIconDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1960,7 +1735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1968,7 +1742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1976,7 +1749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1984,7 +1756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1992,7 +1763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2000,7 +1770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2008,7 +1777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2024,7 +1792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2032,7 +1799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2040,29 +1806,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="1107">
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding />
         </state>
@@ -2070,15 +1819,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/ClothesMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
+        <state relative-caret-position="621">
           <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="621">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding />
         </state>
@@ -2086,17 +1834,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/CartMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="324">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/CartDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="486">
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding />
         </state>
@@ -2104,29 +1849,318 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/CartDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="0">
           <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="1026">
           <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="190" column="21" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/css/checkOut.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/css/public.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/css/buyConfirm.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/icons.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="146" column="46" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="146" column="46" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
           <folding>
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
+            <marker date="1512269134727" expanded="true" signature="13698:13726" placeholder="..." />
+            <marker date="1512269134727" expanded="true" signature="13808:13836" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/model.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/clothes_make.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5400">
+          <caret line="200" column="46" selection-start-line="200" selection-start-column="46" selection-end-line="200" selection-end-column="46" />
+          <folding>
+            <marker date="1512269156301" expanded="true" signature="40114:40121" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/cart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="599" column="43" selection-start-line="599" selection-start-column="43" selection-end-line="599" selection-end-column="43" />
+        <state relative-caret-position="4374">
+          <caret line="162" column="61" selection-start-line="162" selection-start-column="61" selection-end-line="162" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/ItemDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#361#362#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#569#570#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#970#971#0" expanded="false" />
+            <element signature="e#997#998#0" expanded="false" />
+            <element signature="e#1037#1038#0" expanded="false" />
+            <element signature="e#1069#1070#0" expanded="false" />
+            <element signature="e#1100#1101#0" expanded="false" />
+            <element signature="e#1127#1128#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+            <element signature="e#1199#1200#0" expanded="false" />
+            <element signature="e#1230#1231#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1297#1298#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+            <element signature="e#1505#1506#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="104" column="61" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/util/MainUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DaoImpl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/html5shiv-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1568" selection-start-line="0" selection-start-column="1567" selection-end-line="0" selection-end-column="1568" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/Controller/user/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/address_all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="0" column="201720" selection-start-line="0" selection-start-column="201720" selection-end-line="0" selection-end-column="201720" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/mapper/SendAddressMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/DTO/OrderDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zzp/YiYang/pojo/SendAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/buyConfirm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="68" column="36" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/jquery_cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="2" column="2674" selection-start-line="2" selection-start-column="2667" selection-end-line="2" selection-end-column="2674" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/tuan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/unslider.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/base.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3870">
+          <caret line="0" column="19579" selection-start-line="0" selection-start-column="19571" selection-end-line="0" selection-end-column="19579" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/buy/js/checkout.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/user/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1437">
+          <caret line="889" column="34" selection-start-line="889" selection-start-column="34" selection-end-line="889" selection-end-column="34" />
           <folding />
         </state>
       </provider>

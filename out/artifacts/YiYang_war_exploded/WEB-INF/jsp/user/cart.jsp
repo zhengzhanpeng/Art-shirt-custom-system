@@ -160,7 +160,7 @@
                                 <a href="user/cart">购物车</a>
                             </li>
                             <li>
-                                <a href="contact-us.html">联系我们</a>
+                                <a href="user/order">我的订单</a>
                             </li>
                             <li>
                                 <a href="new/index.html">即将上线</a>
@@ -230,7 +230,7 @@
                                data-toggle="lightbox">
                                 <img src="${c.backImgAddress}" alt=""/>
                             </a>
-                            <a class="entry-title" href="javascript:void(0);">${c.name}</a>
+                            <a class="entry-title name" href="javascript:void(0);">${c.name}</a>
                         </td>
                         <td><span class="unit-price">$${c.price}</span></td>
                         <td>
@@ -589,6 +589,7 @@
         }
         $(".close").click(function () {
             var $number = $(this).parent().parent().find(".number");
+//            var name = $(this).parent().parent().find(".name").text();
             var id = $number.attr("data");
             $.ajax({
                 url: "user/deleteCart"
@@ -596,7 +597,7 @@
                 ,data: {"id": id}
                 ,success: function (data) {
                     if (data == "1") {
-                        layer.msg("删除成功", {icon: 6, time: 700, offset: "10px"});
+                        layer.msg("已移除", {icon: 6, time: 700, offset: "10px"});
                         layer.close(index);
                         return;
                     }

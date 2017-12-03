@@ -9,6 +9,7 @@ package com.zzp.YiYang.DTO;
 public class ItemDTO {
     private int id;
     private String imgAddress;
+    private String backImgAddress;
     private int number;
     private String size;
     private String name;
@@ -29,6 +30,14 @@ public class ItemDTO {
 
     public void setImgAddress(String imgAddress) {
         this.imgAddress = imgAddress;
+    }
+
+    public String getBackImgAddress() {
+        return backImgAddress;
+    }
+
+    public void setBackImgAddress(String backImgAddress) {
+        this.backImgAddress = backImgAddress;
     }
 
     public int getNumber() {

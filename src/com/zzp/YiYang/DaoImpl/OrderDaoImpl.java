@@ -6,6 +6,7 @@ import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.mapper.SendAddressMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
+import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
 
 import javax.annotation.Resource;
@@ -52,10 +53,11 @@ public class OrderDaoImpl implements OrderDao {
      */
     @Override
     public String saveSendAddress(SendAddress sendAddress) {
+        sendAddress.setUserName(MainUtil.getUserName());
         int result = sendAddressMapper.insert(sendAddress);
         if (result == 0) {
             return MessageUtil.SYSTEM_ERROR;
         }
-        return "1";
+        return "" + sendAddress.getId();
     }
 }
