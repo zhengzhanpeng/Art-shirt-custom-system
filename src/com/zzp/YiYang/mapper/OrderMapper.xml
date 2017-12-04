@@ -6,7 +6,7 @@
         <id column="order_id" property="id"/>
         <result column="send_time" property="sendTime"/>
         <result column="price" property="realityPrice"/>
-        <result column="invoice" property="invoice"/>
+        <result column="send_type" property="sendType"/>
         <collection property="sendAddresses" ofType="sendAddress">
             <id column="send_address_id" property="id"/>
             <result column="receive_name" property="receiveName"/>
@@ -30,11 +30,11 @@
             <result column="reality_price" property="realityPrice"/>
         </collection>
     </resultMap>
-    <select id="getOrderDTO" parameterType="int" resultMap="orderDTOMap">
+    <select id="getOrderDTO" resultMap="orderDTOMap">
         SELECT
         o.id AS order_id,
         o.send_time,
-        o.invoice,
+        o.send_type,
         o.reality_price AS price,
         s.id AS send_address_id,
         s.receive_name,
@@ -59,7 +59,7 @@
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
-        WHERE o.id = #{orderId};
+        WHERE o.id = #{orderId} AND o.username = #{userName};
     </select>
     <update id="set" parameterType="order">
         UPDATE order1
@@ -82,8 +82,8 @@
             <if test="sendTime != 0">
                 send_time = #{sendTime},
             </if>
-            <if test="invoice != 0">
-                invoice = #{invoice}
+            <if test="sendType != 0">
+                sendType = #{sendType}
             </if>
         </set>
         WHERE id = #{id};
@@ -96,7 +96,7 @@
         (null, #{userName},
         <if test="sendAddressId == 0">null, </if>
         <if test="sendAddressId != 0">#{sendAddressId}, </if>
-        #{realityPrice}, #{desc1}, #{state}, null, null, #{invoice});
+        #{realityPrice}, #{desc1}, #{state}, null, null, #{sendType});
     </insert>
     <update id="setRealityPrice">
         UPDATE order1 SET reality_price = #{realityPrice, jdbcType=FLOAT} WHERE id = #{id};

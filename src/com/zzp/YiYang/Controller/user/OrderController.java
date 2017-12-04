@@ -1,11 +1,11 @@
 package com.zzp.YiYang.Controller.user;
 
 import com.zzp.YiYang.DTO.OrderDTO;
+import com.zzp.YiYang.DTO.ToPayDTO;
 import com.zzp.YiYang.Dao.OrderDao;
 import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
-import com.zzp.YiYang.util.MainUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,10 +39,6 @@ public class OrderController {
 
     @RequestMapping("/order/{orderId}")
     public String order(@PathVariable int orderId, ModelMap model) {
-        String username = orderMapper.getUserName(orderId);
-        if (!username.equals(MainUtil.getUserName())) {
-            return "/login";
-        }
         OrderDTO orderDTO = orderDao.getOrder(orderId);
         model.addAttribute("orderDTO", orderDTO);
         return "/user/order";
@@ -60,5 +56,15 @@ public class OrderController {
     public String addSendAddress(SendAddress sendAddress) {
         String result = orderDao.saveSendAddress(sendAddress);
         return result;
+    }
+    @RequestMapping(value = "/deleteAddress", method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteAddress(int id) {
+        return orderDao.deleteAddress(id);
+    }
+    @RequestMapping(value = "/toPay", method = RequestMethod.POST)
+    public String toPay(ToPayDTO toPayDTO) {
+
+        return "redirect: user/order/26";
     }
 }

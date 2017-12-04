@@ -14,4 +14,6 @@ public interface OrderDao {
     String saveOrder(Order order);
 
     String saveSendAddress(SendAddress sendAddress);
+
+    String deleteAddress(int id);
 }

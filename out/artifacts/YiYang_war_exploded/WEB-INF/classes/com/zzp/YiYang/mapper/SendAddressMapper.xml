@@ -6,4 +6,7 @@
         INSERT INTO send_address VALUES (null, #{userName}, #{receiveName}, #{phone}, #{province},
         #{city}, #{district}, #{address}, #{postalCode}, #{addressLabel}, #{defaultAddress});
     </insert>
+    <delete id="delete" >
+        DELETE FROM send_address WHERE id = #{id} AND username = #{userName} LIMIT 1;
+    </delete>
 </mapper>

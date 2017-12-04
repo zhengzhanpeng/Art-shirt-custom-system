@@ -33,7 +33,7 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public OrderDTO getOrder(int orderId) {
-        OrderDTO orderDTO = orderMapper.getOrderDTO(orderId);
+        OrderDTO orderDTO = orderMapper.getOrderDTO(orderId, MainUtil.getUserName());
         return orderDTO;
     }
 
@@ -43,6 +43,12 @@ public class OrderDaoImpl implements OrderDao {
         if (result == 0) {
             return MessageUtil.SYSTEM_ERROR;
         }
+        return "1";
+    }
+
+    @Override
+    public String deleteAddress(int id) {
+        sendAddressMapper.delete(id, MainUtil.getUserName());
         return "1";
     }
 

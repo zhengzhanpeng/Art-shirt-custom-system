@@ -14,8 +14,8 @@ public class Order {
     private String desc1;
     private int state;
     private Date buyTime;
-    private int sendTime;
-    private int invoice;
+    private Date sendTime;
+    private int sendType;  // 1.不限送货时间，周一至周日 2.工作日送货，周一至周五 3.双休日、假日送货，周六至周日
 
     public int getId() {
         return id;
@@ -73,19 +73,19 @@ public class Order {
         this.buyTime = buyTime;
     }
 
-    public int getSendTime() {
+    public Date getSendTime() {
         return sendTime;
     }
 
-    public void setSendTime(int sendTime) {
+    public void setSendTime(Date sendTime) {
         this.sendTime = sendTime;
     }
 
-    public int getInvoice() {
-        return invoice;
+    public int getSendType() {
+        return sendType;
     }
 
-    public void setInvoice(int invoice) {
-        this.invoice = invoice;
+    public void setSendType(int sendType) {
+        this.sendType = sendType;
     }
 }

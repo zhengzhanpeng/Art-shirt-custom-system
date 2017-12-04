@@ -2,6 +2,7 @@ package com.zzp.YiYang.DTO;
 
 import com.zzp.YiYang.pojo.SendAddress;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,8 +14,8 @@ public class OrderDTO {
     private int id;
     private List<SendAddress> sendAddresses;
     private float realityPrice;
-    private int sendTime;
-    private int invoice;
+    private Date sendTime;
+    private int sendType;
     private List<ItemDTO> itemDTOs;
 
     public int getId() {
@@ -33,20 +34,20 @@ public class OrderDTO {
         this.sendAddresses = sendAddresses;
     }
 
-    public int getSendTime() {
+    public Date getSendTime() {
         return sendTime;
     }
 
-    public void setSendTime(int sendTime) {
+    public void setSendTime(Date sendTime) {
         this.sendTime = sendTime;
     }
 
-    public int getInvoice() {
-        return invoice;
+    public int getSendType() {
+        return sendType;
     }
 
-    public void setInvoice(int invoice) {
-        this.invoice = invoice;
+    public void setSendType(int sendType) {
+        this.sendType = sendType;
     }
 
     public List<ItemDTO> getItemDTOs() {

@@ -49,6 +49,9 @@
         .boy-clothes {
             height: 210px;
         }
+        .xm-address-list .selected .edit-btn {
+            display: inline-block !important;
+        }
     </style>
 </head>
 <body>
@@ -229,7 +232,7 @@
                     bcPrice: 150,//计算界值
                     activityDiscountMoney: 0.00,//活动优惠
                     showCouponBox: 0,
-                    invoice: {
+                    sendType: {
                         NA: "0",
                         personal: "1",
                         company: "2",
@@ -240,10 +243,13 @@
             </script>
             <div class="container">
                 <div class="checkout-box">
-                    <form id="checkoutForm" action="#" method="post">
+                    <form id="checkoutForm" action="user/toPay" method="post">
                         <div class="checkout-box-bd">
                             <!-- 地址状态 0：默认选择；1：新增地址；2：修改地址 -->
-                            <input type="hidden" name="Checkout[addressState]" id="addrState" value="0">
+                            <input type="hidden" name="Checkout[addressState]" id="addrState" value="1">
+                            <input type="hidden" name="id" value="${orderDTO.id}">
+                            <input type="hidden" name="sendAddressId" id="sendAddressId" value="">
+                            <input type="hidden" name="sendType" id="sendType" value="1">
                             <!-- 收货地址 -->
                             <div class="xm-box">
                                 <div class="box-hd ">
@@ -253,7 +259,7 @@
                                 <div class="box-bd">
                                     <div class="clearfix xm-address-list" id="checkoutAddrList">
                                         <c:forEach items="${orderDTO.sendAddresses}" var="s">
-                                            <dl class="item <c:if test="${s.defaultAddress}">selected</c:if>"
+                                            <dl class="item send-address-m <c:if test="${s.defaultAddress}">selected</c:if>"
                                                 data="${s.id}">
                                                 <dt>
                                                     <strong class="itemConsignee">${s.receiveName}</strong>
@@ -265,6 +271,7 @@
                                                        dStr="${s.district}"></p>
                                                     <p class="itemStreet">${s.address}(${s.postalCode})</p>
                                                     <span class="edit-btn J_editAddr">编辑</span>
+                                                    <span class="edit-btn delete-address">删除</span>
                                                 </dd>
                                                 <dd style="display:none">
                                                     <input type="radio" name="Checkout[address]" class="addressId"
@@ -391,12 +398,12 @@
                                 </div>
                                 <div class="box-bd">
                                     <ul class="checkout-option-list clearfix J_optionList">
-                                        <li class="item selected"><input type="radio" checked="checked"
+                                        <li class="item send-type selected" data="1"><input type="radio" checked="checked"
                                                                          name="Checkout[best_time]" value="1">
                                             <p>不限送货时间<span>周一至周日</span></p></li>
-                                        <li class="item "><input type="radio" name="Checkout[best_time]" value="2">
+                                        <li class="item send-type" data="2"><input type="radio" name="Checkout[best_time]" value="2">
                                             <p>工作日送货<span>周一至周五</span></p></li>
-                                        <li class="item "><input type="radio" name="Checkout[best_time]" value="3">
+                                        <li class="item send-type" data="3"><input type="radio" name="Checkout[best_time]" value="3">
                                             <p>双休日、假日送货<span>周六至周日</span></p></li>
                                     </ul>
                                 </div>
@@ -409,24 +416,24 @@
                             <%--<h3 class="title">发票信息</h2>--%>
                             <%--</div>--%>
                             <%--<div class="box-bd">--%>
-                            <%--<ul class="checkout-option-list checkout-option-invoice clearfix J_optionList J_optionInvoice">--%>
+                            <%--<ul class="checkout-option-list checkout-option-sendType clearfix J_optionList J_optionInvoice">--%>
                             <%--<li class="hide">--%>
                             <%--电子个人发票4--%>
                             <%--</li>--%>
                             <%--<li class="item selected">--%>
-                            <%--<!--<label><input type="radio"  class="needInvoice" value="0" name="Checkout[invoice]">不开发票</label>-->--%>
-                            <%--<input type="radio"    checked="checked"  value="4" name="Checkout[invoice]">--%>
+                            <%--<!--<label><input type="radio"  class="needInvoice" value="0" name="Checkout[sendType]">不开发票</label>-->--%>
+                            <%--<input type="radio"    checked="checked"  value="4" name="Checkout[sendType]">--%>
                             <%--<p>电子发票（非纸质）</p>--%>
                             <%--</li>--%>
                             <%--<li class="item ">--%>
-                            <%--<input type="radio"   value="1" name="Checkout[invoice]">--%>
+                            <%--<input type="radio"   value="1" name="Checkout[sendType]">--%>
                             <%--<p>普通发票（纸质）</p>--%>
                             <%--</li>--%>
                             <%--</ul>--%>
-                            <%--<p id="eInvoiceTip" class="e-invoice-tip ">--%>
+                            <%--<p id="eInvoiceTip" class="e-sendType-tip ">--%>
                             <%--电子发票是税务局认可的有效凭证，可作为售后维权凭据，不随商品寄送。开票后不可更换纸质发票，如需报销请选择普通发票。<a href="http://bbs.xiaomi.cn/thread-9285999-1-1.html" target="_blank">什么是电子发票？</a>--%>
                             <%--</p>--%>
-                            <%--<div class="invoice-info nvoice-info-1" id="checkoutInvoiceElectronic" style="display:none;">--%>
+                            <%--<div class="sendType-info nvoice-info-1" id="checkoutInvoiceElectronic" style="display:none;">--%>
 
                             <%--<p class="tip">电子发票目前仅对个人用户开具，不可用于单位报销 ，不随商品寄送</p>--%>
                             <%--<p>发票内容：购买商品明细</p>--%>
@@ -441,7 +448,7 @@
                             <%--</dl>--%>
                             <%--</p>--%>
                             <%--</div>--%>
-                            <%--<div class="invoice-info invoice-info-2" id="checkoutInvoiceDetail"  style="display:none;" >--%>
+                            <%--<div class="sendType-info sendType-info-2" id="checkoutInvoiceDetail"  style="display:none;" >--%>
                             <%--<p>发票内容：购买商品明细</p>--%>
                             <%--<p>--%>
                             <%--发票抬头：请确认单位名称正确,以免因名称错误耽搁您的报销。注：合约机话费仅能开个人发票--%>
@@ -459,7 +466,7 @@
                             <%--单位--%>
                             <%--</li>--%>
                             <%--</ul>--%>
-                            <%--<div  id='CheckoutInvoiceTitle' class=" hide  invoice-title">--%>
+                            <%--<div  id='CheckoutInvoiceTitle' class=" hide  sendType-title">--%>
                             <%--<label for="Checkout[invoice_title]">单位名称：</label>--%>
                             <%--<input name="Checkout[invoice_title]" type="text" maxlength="49" value="" class="input"> <span class="tip-msg J_tipMsg"></span>--%>
                             <%--</div>--%>
@@ -515,7 +522,7 @@
                                         <div class="checkout-count clearfix">
                                             <div class="checkout-count-extend xm-add-buy">
                                                 <h3 class="title">会员留言</h3></br>
-                                                <input type="text"/>
+                                                <input type="text" name="desc1" id="desc1"/>
 
                                             </div>
                                             <!-- checkout-count-extend -->
@@ -582,7 +589,7 @@
                             <input type="hidden" id="couponValue" name="Checkout[couponsValue]">
                             <div class="checkout-confirm">
 
-                                <a href="#" class="btn btn-lineDakeLight btn-back-cart">返回购物车</a>
+                                <a href="user/cart" class="btn btn-lineDakeLight btn-back-cart">返回购物车</a>
                                 <input type="submit" class="btn btn-primary" value="立即下单" id="checkoutToPay"/>
                             </div>
                         </div>
@@ -938,8 +945,66 @@
             var msgId = {"province": pStr, "city": cStr, "district": dStr}
             var msg = getMessage(msgId);
             $(this).text(msg.province + " " + msg.city + " " + msg.district);
-        })
+        });
+        $(".delete-address").click(function () {
+            var address = $(this).parent().find(".itemRegion").text();
+            var id = $(this).parent().parent().attr("data");
+            var addressDom = $(this).parent().parent();
+            layer.confirm("您确定要删除 <span sytle='color: #FF5722;'>" + address + "</span> 吗？", {
+                anim: 6
+                , offset: '10px'
+            }, function (index) {
+                $.ajax({
+                    url: "user/deleteAddress"
+                    ,type: "post"
+                    ,data: {"id": id}
+                    ,success: function (data) {
+                        if (data == "1") {
+                            layer.msg("移除成功", {icon: 6, time: 700, offset: '10px'});
+                            addressDom.remove();
+                            layer.close(index);
+                            return;
+                        }
+                        layer.msg(data, {icon: 5, anim: 0, offset: '10px'});
+                    }
+                    ,error: function () {
+                        layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
+                    }
+                });
+            });
+
+
+        });
         $("#checkoutAddrList").children().show();
+        $(".send-address-m").click(function () {
+            $("#sendAddressId").val($(this).attr("data"));
+        })
+        $(".send-type").click(function () {
+            $("#sendType").val($(this).attr("data"));
+        })
+        $("#checkoutToPay").click(function () {
+//            var sendAddressId = $(".item .send-address-m .selected").attr("data");
+//            var sendType = $(".item .send-type .selected").attr("data");
+//            var desc1 = $("#desc1").val();
+//            var id = $("#checkoutForm").attr("data");
+//            $.ajax({
+//                url: "user/toPay"
+//                ,type: "post"
+//                ,data: {}
+//                ,success: function (data) {
+//                    if (data == "1") {
+//                        layer.msg(, {icon: 6, time: 700});
+//                        layer.close(index);
+//                        setTimeout("location.reload(true)", 500);
+//                        return;
+//                    }
+//                    layer.msg(data, {icon: 5, anim: 0});
+//                }
+//                ,error: function () {
+//                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});
+//                }
+//            });
+        })
     })
 </script>
 </body>

@@ -11,7 +11,7 @@ import java.util.List;
  * @create 2017-10-01 16:22
  */
 public interface OrderMapper {
-    OrderDTO getOrderDTO(int orderId);
+    OrderDTO getOrderDTO(@Param("orderId") int orderId, @Param("userName") String userName);
 
     int set(Order order);
 
