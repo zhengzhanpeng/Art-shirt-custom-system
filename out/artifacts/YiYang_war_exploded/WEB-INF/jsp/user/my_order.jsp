@@ -94,24 +94,6 @@
                                 <a href="javascript:void(0);" id="total-cart">
                                     <i class="iconfont-shopping-cart round-icon"></i>
                                 </a>
-
-                                <div id="sub-cart" class="sub-header">
-                                    <div class="cart-header">
-                                        <span>你的购物车目前是空的</span>
-                                        <small><a href="cart.html">(查看所有)</a></small>
-                                    </div>
-                                    <ul class="cart-items product-medialist unstyled clearfix"></ul>
-                                    <div class="cart-footer">
-                                        <div class="cart-total clearfix">
-                                            <span class="pull-left uppercase">Total</span>
-                                            <span class="pull-right total">$ 0</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <a href="cart.html" class="btn btn-default btn-round view-cart">View
-                                                Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                         </ul>
                     </div>
@@ -156,10 +138,10 @@
                             <li>
                                 <a href="user/clothes_make">衬衫定制</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="user/cart">购物车</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="user/order">我的订单</a>
                             </li>
                             <li>
@@ -170,13 +152,23 @@
                         <div id="mobile-menu" class="dl-menuwrapper visible-xs visible-sm">
                             <button class="dl-trigger"><i class="iconfont-reorder round-icon"></i></button>
                             <ul class="dl-menu">
-                                <li class="active">
-                                    <a href="javsacript:void(0);">首页</a>
+                                <li>
+                                    <a href="index">首页</a>
                                 </li>
                                 <li>
-                                    <a href="javsacript:void(0);">服装</a>
-
-
+                                    <a href="icons">图标</a>
+                                </li>
+                                <li>
+                                    <a href="user/clothes_make">衬衫定制</a>
+                                </li>
+                                <li>
+                                    <a href="user/cart">购物车</a>
+                                </li>
+                                <li class="active">
+                                    <a href="user/order">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="new/index.html">即将上线</a>
                                 </li>
                             </ul>
                         </div>
@@ -191,15 +183,162 @@
         <div class="container">
             <div class="relative">
                 <ul class="bc unstyled clearfix">
-                    <li><a href="#">首页</a></li>
-                    <li class="active">购物车</li>
+
                 </ul>
             </div>
         </div>
     </div>
     <main id="main-content" role="main">
 
+        <section class="section">
+            <div class="container">
 
+                <table class="tbl-cart">
+                    <thead>
+                    <tr>
+                        <th>订单名称</th>
+                        <th>商品名称</th>
+                        <th style="width: 15%;">单价</th>
+                        <th style="width: 15%;">数量</th>
+                        <th class="hidden-xs" style="width: 15%;">合计</th>
+                        <th style="width: 15%;">尺码</th>
+                        <th class="hidden-xs" style="width: 10%;"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="hide empty-cart">
+                        <td colspan="5">
+                            您的订单为空，您可以查看我们的<a href="user/clothes_make">商品</a>
+                        </td>
+                    </tr>
+                    <c:forEach items="${orderList}" var="o">
+                    <tr>
+                        <td>
+                            <a class="entry-thumbnail img-address" href="${o.imgAddress}"
+                               data-toggle="lightbox">
+                                <img src="${o.imgAddress}" alt=""/>
+                            </a>
+                            <a class="entry-thumbnail back-img-address" href="${o.backImgAddress}"
+                               data-toggle="lightbox">
+                                <img src="${o.backImgAddress}" alt=""/>
+                            </a>
+                            <a class="entry-title name" href="javascript:void(0);">${o.name}</a>
+                        </td>
+                        <td><span class="unit-price">$${o.price}</span></td>
+                        <td>
+                            <div class="qty-btn-group">
+                                <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i>
+                                </button>
+                                <input class="number" data="${o.id}" data-clothes="${o.clothesId}" type="text" value="${o.number}"/>
+                                <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="hidden-xs"><strong class="text-bold row-total">$${o.price}</strong></td>
+                        <td class="hidden-xs">
+                            <div class="inline-middle styled-dd">
+                                <select class="clothesSize size">
+                                    <option value="S" <c:if test="${o.size.equals('S')}">selected</c:if> >S</option>
+                                    <option value="M" <c:if test="${o.size.equals('M')}">selected</c:if>>M</option>
+                                    <option value="L" <c:if test="${o.size.equals('L')}">selected</c:if>>L</option>
+                                    <option value="XL" <c:if test="${o.size.equals('XL')}">selected</c:if>>XL</option>
+                                    <option value="XXL" <c:if test="${o.size.equals('XXL')}">selected</c:if>>XXL</option>
+                                    <option value="XXXL" <c:if test="${o.size.equals('XXXL')}">selected</c:if>>XXXL</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td class="hidden-xs">
+                            <button type="button" class="close" aria-hidden="true">×</button>
+                        </td>
+                    </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <section class="section visible-items-4">
+            <div class="container">
+                <div class="row">
+                    <header class="section-header clearfix col-sm-offset-3 col-sm-6">
+                        <h3 class="section-title">你可能会感兴趣</h3>
+                    </header>
+
+                    <div class="clearfix"></div>
+
+                    <div id="featured-products" class="add-cart" data-product=".product"
+                         data-thumbnail=".entry-media .thumb" data-title=".entry-title > a" data-url=".entry-title > a"
+                         data-price=".entry-price > .price">
+
+                        <div class="owl-controls clickable top">
+                            <div class="owl-buttons">
+                                <div class="owl-prev"><i class="iconfont-angle-left"></i></div>
+                                <div class="owl-next"><i class="iconfont-angle-right"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true"
+                             data-lazyload="true">
+                            <c:forEach items="${recommendClothesList}" var="o">
+                                <div class="product" data-product-id="${o.id}">
+                                    <div class="entry-media">
+                                        <span class="span-img-center-m"></span>
+                                        <img data-src="${o.imgAddress}" alt=""
+                                             class="lazyOwl thumb boy-clothes img-center-m"/>
+                                        <div class="hover">
+                                            <a href="product.html" class="entry-url"></a>
+                                            <ul class="icons unstyled">
+                                                <li>
+                                                    <div class="circle ribbon ribbon-sale">HOT</div>
+                                                </li>
+                                                <li>
+                                                    <a href="${o.imgAddress}" class="circle" data-toggle="lightbox"><i
+                                                            class="iconfont-search"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="circle add-to-cart"><i
+                                                            class="iconfont-shopping-cart"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="rate-bar">
+                                                <input type="range" value="4.5" step="0.5" id="${o.id}"/>
+                                                <div class="rateit" data-rateit-backingfld="#${o.id}"
+                                                     data-rateit-starwidth="12" data-rateit-starheight="12"
+                                                     data-rateit-resetable="false" data-rateit-ispreset="true"
+                                                     data-rateit-min="0" data-rateit-max="5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-main">
+                                        <h5 class="entry-title">
+                                            <a href="#">
+                                                <c:if test="${o.name.length() >18}">${o.name}</c:if>
+                                                <c:if test="${o.name.length() <=18}">${o.name}
+                                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
+                                                    <%--${c.name}--%>
+                                            </a>
+                                        </h5>
+                                        <div class="entry-price">
+                                            <c:if test="${o.price == o.realityPrice}">
+                                                <strong class="price">￥ ${o.realityPrice}</strong>
+                                            </c:if>
+                                            <c:if test="${o.price != o.realityPrice}">
+                                                <s class="entry-discount">￥ ${o.price}</s>
+                                                <strong class="accent-color price">￥ ${o.realityPrice}</strong>
+                                            </c:if>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c:forEach>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -370,6 +509,75 @@
 <script src="js/products.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/layer.js"></script>
+<script>
+    function toBuy() {
+        var numbers = $(".number");
+        var sizes = $(".size");
+        var array = new Array();
+        for(var i = 0; i < numbers.length; i++) {
+            array.push({
+                "id": numbers.eq(i).attr("data")
+                ,"clothesId": numbers.eq(i).attr("data-clothes")
+                ,"imgAddress": $(".img-address").attr("href")
+                ,"backImgAddress": $(".back-img-address").attr("href")
+                ,"number": numbers.eq(i).val()
+                ,"size": sizes.eq(i).val()
+            })
+        }
+        var str = JSON.stringify(array);
+        $.ajax({
+            url: "user/createOrder"
+            ,type: "post"
+            ,data: JSON.stringify(array)
+            ,contentType : 'application/json;charset=utf-8'
+            ,success: function (data) {
+                if (!isNaN(data)) {
+                    window.location.href="user/order/" + data;
+                    return;
+                }
+                layer.alert(data, {icon: 5, anim: 1, offset: '10px'});
+            }
+            ,error: function () {
+                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
+            }
+        });
+    }
+    $(function () {
+        $(".down").each(function () {
+            $(this).click();
+        })
+        $(".up").each(function () {
+            $(this).click();
+        })
+    })
+    $(function () {
+        var x = ${cartShowList.size()};
+        if(x == 0) {
+            $(".empty-cart").attr("class", "empty-cart");
+        }
+        $(".close").click(function () {
+            var $number = $(this).parent().parent().find(".number");
+//            var name = $(this).parent().parent().find(".name").text();
+            var id = $number.attr("data");
+            $.ajax({
+                url: "user/deleteCart"
+                ,type: "post"
+                ,data: {"id": id}
+                ,success: function (data) {
+                    if (data == "1") {
+                        layer.msg("已移除", {icon: 6, time: 700, offset: "10px"});
+                        layer.close(index);
+                        return;
+                    }
+                    layer.msg(data, {icon: 5, anim: 0, offset: "10px"});
+                }
+                ,error: function () {
+                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: "10px"});
+                }
+            });
+        })
+    })
+</script>
 
 </body>
 </html>

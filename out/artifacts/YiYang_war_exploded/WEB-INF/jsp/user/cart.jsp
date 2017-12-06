@@ -219,39 +219,39 @@
                             您的购物车为空，您可以查看我们的<a href="user/clothes_make">商品</a>
                         </td>
                     </tr>
-                    <c:forEach items="${cartShowList}" var="c">
+                    <c:forEach items="${cartShowList}" var="o">
                     <tr>
                         <td>
-                            <a class="entry-thumbnail img-address" href="${c.imgAddress}"
+                            <a class="entry-thumbnail img-address" href="${o.imgAddress}"
                                data-toggle="lightbox">
-                                <img src="${c.imgAddress}" alt=""/>
+                                <img src="${o.imgAddress}" alt=""/>
                             </a>
-                            <a class="entry-thumbnail back-img-address" href="${c.backImgAddress}"
+                            <a class="entry-thumbnail back-img-address" href="${o.backImgAddress}"
                                data-toggle="lightbox">
-                                <img src="${c.backImgAddress}" alt=""/>
+                                <img src="${o.backImgAddress}" alt=""/>
                             </a>
-                            <a class="entry-title name" href="javascript:void(0);">${c.name}</a>
+                            <a class="entry-title name" href="javascript:void(0);">${o.name}</a>
                         </td>
-                        <td><span class="unit-price">$${c.price}</span></td>
+                        <td><span class="unit-price">$${o.price}</span></td>
                         <td>
                             <div class="qty-btn-group">
                                 <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i>
                                 </button>
-                                <input class="number" data="${c.id}" data-clothes="${c.clothesId}" type="text" value="${c.number}"/>
+                                <input class="number" data="${o.id}" data-clothes="${o.clothesId}" type="text" value="${o.number}"/>
                                 <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i>
                                 </button>
                             </div>
                         </td>
-                        <td class="hidden-xs"><strong class="text-bold row-total">$${c.price}</strong></td>
+                        <td class="hidden-xs"><strong class="text-bold row-total">$${o.price}</strong></td>
                         <td class="hidden-xs">
                             <div class="inline-middle styled-dd">
                                 <select class="clothesSize size">
-                                    <option value="S" <c:if test="${c.size.equals('S')}">selected</c:if> >S</option>
-                                    <option value="M" <c:if test="${c.size.equals('M')}">selected</c:if>>M</option>
-                                    <option value="L" <c:if test="${c.size.equals('L')}">selected</c:if>>L</option>
-                                    <option value="XL" <c:if test="${c.size.equals('XL')}">selected</c:if>>XL</option>
-                                    <option value="XXL" <c:if test="${c.size.equals('XXL')}">selected</c:if>>XXL</option>
-                                    <option value="XXXL" <c:if test="${c.size.equals('XXXL')}">selected</c:if>>XXXL</option>
+                                    <option value="S" <c:if test="${o.size.equals('S')}">selected</c:if> >S</option>
+                                    <option value="M" <c:if test="${o.size.equals('M')}">selected</c:if>>M</option>
+                                    <option value="L" <c:if test="${o.size.equals('L')}">selected</c:if>>L</option>
+                                    <option value="XL" <c:if test="${o.size.equals('XL')}">selected</c:if>>XL</option>
+                                    <option value="XXL" <c:if test="${o.size.equals('XXL')}">selected</c:if>>XXL</option>
+                                    <option value="XXXL" <c:if test="${o.size.equals('XXXL')}">selected</c:if>>XXXL</option>
                                 </select>
                             </div>
                         </td>
@@ -312,11 +312,11 @@
 
                         <div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true"
                              data-lazyload="true">
-                            <c:forEach items="${recommendClothesList}" var="c">
-                                <div class="product" data-product-id="${c.id}">
+                            <c:forEach items="${recommendClothesList}" var="o">
+                                <div class="product" data-product-id="${o.id}">
                                     <div class="entry-media">
                                         <span class="span-img-center-m"></span>
-                                        <img data-src="${c.imgAddress}" alt=""
+                                        <img data-src="${o.imgAddress}" alt=""
                                              class="lazyOwl thumb boy-clothes img-center-m"/>
                                         <div class="hover">
                                             <a href="product.html" class="entry-url"></a>
@@ -325,7 +325,7 @@
                                                     <div class="circle ribbon ribbon-sale">HOT</div>
                                                 </li>
                                                 <li>
-                                                    <a href="${c.imgAddress}" class="circle" data-toggle="lightbox"><i
+                                                    <a href="${o.imgAddress}" class="circle" data-toggle="lightbox"><i
                                                             class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
@@ -334,8 +334,8 @@
                                                 </li>
                                             </ul>
                                             <div class="rate-bar">
-                                                <input type="range" value="4.5" step="0.5" id="${c.id}"/>
-                                                <div class="rateit" data-rateit-backingfld="#${c.id}"
+                                                <input type="range" value="4.5" step="0.5" id="${o.id}"/>
+                                                <div class="rateit" data-rateit-backingfld="#${o.id}"
                                                      data-rateit-starwidth="12" data-rateit-starheight="12"
                                                      data-rateit-resetable="false" data-rateit-ispreset="true"
                                                      data-rateit-min="0" data-rateit-max="5"></div>
@@ -345,19 +345,19 @@
                                     <div class="entry-main">
                                         <h5 class="entry-title">
                                             <a href="#">
-                                                <c:if test="${c.name.length() >18}">${c.name}</c:if>
-                                                <c:if test="${c.name.length() <=18}">${c.name}
+                                                <c:if test="${o.name.length() >18}">${o.name}</c:if>
+                                                <c:if test="${o.name.length() <=18}">${o.name}
                                                     <br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
                                                     <%--${c.name}--%>
                                             </a>
                                         </h5>
                                         <div class="entry-price">
-                                            <c:if test="${c.price == c.realityPrice}">
-                                                <strong class="price">￥ ${c.realityPrice}</strong>
+                                            <c:if test="${o.price == o.realityPrice}">
+                                                <strong class="price">￥ ${o.realityPrice}</strong>
                                             </c:if>
-                                            <c:if test="${c.price != c.realityPrice}">
-                                                <s class="entry-discount">￥ ${c.price}</s>
-                                                <strong class="accent-color price">￥ ${c.realityPrice}</strong>
+                                            <c:if test="${o.price != o.realityPrice}">
+                                                <s class="entry-discount">￥ ${o.price}</s>
+                                                <strong class="accent-color price">￥ ${o.realityPrice}</strong>
                                             </c:if>
                                         </div>
                                     </div>
@@ -564,7 +564,7 @@
             ,contentType : 'application/json;charset=utf-8'
             ,success: function (data) {
                 if (!isNaN(data)) {
-                    alert(data);
+                    window.location.href="user/order/" + data;
                     return;
                 }
                 layer.alert(data, {icon: 5, anim: 1, offset: '10px'});

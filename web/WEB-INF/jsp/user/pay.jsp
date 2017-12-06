@@ -36,6 +36,58 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="plugins/buy/css/public.css" type="text/css" rel="stylesheet"/>
+    <%--<link rel="stylesheet" type="text/css" href="plugins/buy/css/base.css"/>--%>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="plugins/buy/js/jquery_cart.js"></script>
+    <link rel="stylesheet" type="text/css" href="plugins/buy/css/buyConfirm.css" />
+    <script src="plugins/buy/js/unslider.min.js" type="text/javascript"></script>
+    <script src="plugins/buy/js/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        window.onload = function(){
+            new tab('test4-input-input_tab1-input_tab2', '-');
+        }
+        function tab(o, s, cb, ev){ //tab换类
+            var $ = function(o){return document.getElementById(o)};
+            var css = o.split((s||'_'));
+            if(css.length!=4)return;
+            this.event = ev || 'onclick';
+            o = $(o);
+            if(o){
+                this.ITEM = [];
+                o.id = css[0];
+                var item = o.getElementsByTagName(css[1]);
+                var j=1;
+                for(var i=0;i<item.length;i++){
+                    if(item[i].className.indexOf(css[2])>=0 || item[i].className.indexOf(css[3])>=0){
+                        if(item[i].className == css[2])o['cur'] = item[i];
+                        item[i].callBack = cb||function(){};
+                        item[i]['css'] = css;
+                        item[i]['link'] = o;
+                        this.ITEM[j] = item[i];
+                        item[i]['Index'] = j++;
+                        item[i][this.event] = this.ACTIVE;
+                    }
+                }
+                return o;
+            }
+        }
+        tab.prototype = {
+            ACTIVE:function(){
+                var $ = function(o){return document.getElementById(o)};
+                this['link']['cur'].className = this['css'][3];
+                this.className = this['css'][2];
+                try{
+                    $(this['link']['id']+'_'+this['link']['cur']['Index']).style.display = 'none';
+                    $(this['link']['id']+'_'+this['Index']).style.display = 'block';
+                }catch(e){}
+                this.callBack.call(this);
+                this['link']['cur'] = this;
+            }
+        }
+    </script>
     <style type="text/css">
         .girl-clothes {
             height: 260px;
@@ -190,16 +242,162 @@
     <div class="breadcrumb-container">
         <div class="container">
             <div class="relative">
-                <ul class="bc unstyled clearfix">
-                    <li><a href="#">首页</a></li>
-                    <li class="active">购物车</li>
-                </ul>
+                <%--<ul class="bc unstyled clearfix">--%>
+                    <%--<li><a href="#">首页</a></li>--%>
+                    <%--<li class="active">购物车</li>--%>
+                <%--</ul>--%>
             </div>
         </div>
     </div>
     <main id="main-content" role="main">
 
+        <!--订单提交body部分开始-->
 
+
+        <div class="border_top_cart">
+
+            <div class="container payment-con">
+                <form  target="_blank" action="#" id="pay-form" method="post">
+                    <div class="order-info">
+                        <div class="msg">
+                            <h3>您的订单已提交成功！付款咯～</h3>
+                            <p></p>
+
+                            <p class="post-date">成功付款后，3天内发货</p>
+                        </div>
+                        <div class="info">
+                            <p>
+                                金额：<span class="pay-total">${order.realityPrice}元</span>
+                            </p>
+                            <p>
+                                订单：${order.id}                   </p>
+                            <p>
+                                配送：${order.sendAddress.receiveName}                                    <span class="line">/</span>
+                                ${order.sendAddress.phone}                                    <span class="line">/</span>
+                                <span id="address"></span> ${order.sendAddress.address}                                                                <span class="line">/</span>
+
+                                <c:if test="${order.sendType == 1}">不限送货时间</c:if>
+                                <c:if test="${order.sendType == 2}">工作日送货</c:if>
+                                <c:if test="${order.sendType == 3}">双休日、假日送货</c:if>
+                            </p>
+                        </div>
+                        <div class="icon-box">
+                            <i class="iconfont"><img src="plugins/buy/images/yes_ok.png"></i>
+                        </div>
+                    </div>
+
+                    <div class="xm-plain-box">
+                        <!-- 选择支付方式 -->
+                        <div class="box-hd bank-title clearfix">
+                            <div id="titleWrap" class="title-wrap">
+                                <h2 class="title">选择支付方式</h2>
+                                <h2 class="title hide " >你还需要继续支付 <em>49.00</em> 元</h2>
+                                <span class="tip-tag"></span>
+                            </div>
+                        </div>
+                        <div class="box-bd" id="bankList">
+                            <div class="payment-bd">
+                                <form name="ck">
+                                    <dl class="clearfix payment-box" >
+                                        <dt>
+                                            <strong>支付平台</strong>
+                                        <p>手机等大额支付推荐使用支付宝快捷支付</p>
+                                        </dt>
+                                        <dd>
+                                            <fieldset id="test4-input-input_tab1-input_tab2" style=" border:none;">
+                                                <ul class="payment-list clearfix" >
+                                                    <%--<li> <input class="input_tab1" name="myradio" id="r1" type="radio" checked="checked"/><label for="r1" ><img src="plugins/buy/images/xhw.png" alt=""/></label></label></li>--%>
+                                                    <li><input class="input_tab2" name="myradio" id="r2" type="radio" /><label for="r2" ><img src="plugins/buy/images/zfb.png" alt=""/></label></li>
+                                                    <%--<li> <input class="input_tab2" name="myradio" id="r3" type="radio" /><label for="r2" ><img src="plugins/buy/images/yck.png" alt=""/></label></li>--%>
+                                                    <%--<li>  <input class="input_tab2" name="myradio" id="r4" type="radio" /><label for="r2" ><img src="plugins/buy/images/zxzf.png" alt=""/></label></li>--%>
+                                                </ul>
+                                                <%--<div >--%>
+                                                    <%--<div id="test4_1">--%>
+                                                        <%--<ul class="payment-list clearfix"  style="background-color:#f3f3f3;   ">--%>
+                                                            <%--<div class="xhw">--%>
+                                                                <%--<div class="whx_banner">--%>
+                                                                    <%--<div style="clear:both"><p class="p1">请选择锡货卡：</p><p class="p2">对不起，没有可用的锡货卡！</p><a class="a3" href="#">立即去充值</a></div>--%>
+                                                                    <%--<div style="clear:both"><p class="p1">已绑定手机号：</p><p class="a3">15961726437</p></div>--%>
+                                                                    <%--<div style="clear:both"> <p class="p1">短信效验码</p><input id="mobileCode" name="mobileCode" type="text" value=""><input id="send" type="button" style="cursor:hand" value="点击获取手机验证码" onclick="sendMobileCode()"></div>--%>
+                                                                <%--</div>--%>
+                                                            <%--</div>--%>
+                                                        <%--</ul>--%>
+                                                    <%--</div>--%>
+                                                    <%--<div  id="test4_2" style="display:none;">--%>
+
+                                                    <%--</div>--%>
+                                                    <%--<div  id="test4_3" style="display:none;">--%>
+
+                                                    <%--</div>--%>
+                                                    <%--<div  id="test4_4" style="display:none;">--%>
+
+                                                    <%--</div>--%>
+
+
+
+                                                <%--</div>--%>
+                                            </fieldset>
+                                        </dd>
+                                    </dl>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box-ft clearfix">
+                            <input type="submit" class="btn btn-primary" value="下一步" id="payBtn">
+                            <%--<a href="#" class="btn btn-lineDakeLight">修改订单</a>--%>
+                            <span class="tip"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 支付弹框 -->
+            <div class="modal hide to-pay-tip" id="toPayTip">
+                <div class="modal-header">
+        <span class="close" id="toPayTipClose">
+            <i class="iconfont">&#xe617;</i>
+        </span>
+                    <h3>正在支付...</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="pay-tip clearfix">
+                        <div class="fail">
+                            <h4>如果支付失败...</h4>
+                            <p>额度问题，推荐<a href="#" id="alipayTrigger">支付宝快捷支付 &gt;</a></p>
+                            <p>其他问题，查看<a href="#">支付常见问题 &gt;</a></p>
+                        </div>
+                        <div class="success">
+                            <h4>支付成功了</h4>
+                            <p>立即查看<a href="#" target="_blank">订单详情 &gt;</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 余额支付弹框 -->
+            <div class="modal hide  balance-pay" id="balancePay">
+                <div class="modal-body">
+                    <h3>账户余额支付：<span class="num"><em id="useCashAccountPayLeft">0.00</em>元</span></h3>
+                    <p id="checkCodeTip">短信验证码已下发至您的手机<span class="num"></span></p>
+                    <input type="text" name="verifycode" id="verifycode" class="input" placeholder="请输入验证码"> <span class="send-again" id="sendAgain">重新发送<em></em></span>
+                    <p><input type="button" value="确认支付" class="btn btn-primary" id="toPay">
+                        <div class="select-other">
+                    <p><span id="bankName"></span> <span class="num">49.00元</span></p>
+
+                </div>
+                <a href="javascript:;" id="chooseOther">选择其他方式支付&gt;</a>
+            </div>
+
+        </div>
+
+
+
+        <script src="plugins/buy/js/base.min.js"></script>
+
+        <script type="text/javascript" src="plugins/buy/js/buyConfirm.js"></script>
+
+
+
+
+<!--订单提交body部分结束-->
 
     </main>
 
@@ -361,7 +559,7 @@
     </footer>
 
 </div>
-<script src="js/jquery-1.12.3.min.js"></script>
+
 <script src="js/minified.js"></script>
 
 <script>
@@ -370,6 +568,16 @@
 <script src="js/products.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/layer.js"></script>
-
+<script src="plugins/buy/js/address_all.js"></script>
+<script>
+    $(function () {
+        var pStr = ${order.sendAddress.province};
+        var cStr = ${order.sendAddress.city};
+        var dStr = ${order.sendAddress.district};
+        var msgId = {"province": pStr, "city": cStr, "district": dStr}
+        var msg = getMessage(msgId);
+        $("#address").text(msg.province + "," + msg.city + "," + msg.district + " ");
+    })
+</script>
 </body>
 </html>

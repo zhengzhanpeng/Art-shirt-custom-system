@@ -30,6 +30,82 @@
             <result column="reality_price" property="realityPrice"/>
         </collection>
     </resultMap>
+    <resultMap id="myOrderDTOMap" type="MyOrderDTO">
+        <id column="order_id" property="id"/>
+        <result column="send_time" property="sendTime"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <result column="state" property="state"/>
+        <association property="sendAddress" javaType="sendAddress">
+            <id column="send_address_id" property="id"/>
+            <result column="receive_name" property="receiveName"/>
+            <result column="phone" property="phone"/>
+            <result column="province" property="province"/>
+            <result column="city" property="city"/>
+            <result column="district" property="district"/>
+            <result column="address" property="address"/>
+            <result column="postal_code" property="postalCode"/>
+            <result column="address_label" property="addressLabel"/>
+            <result column="default_address" property="defaultAddress"/>
+        </association>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
+    <resultMap id="anOrderDTOMap" type="AnOrderDTO">
+        <id column="order_id" property="id"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <association  property="sendAddress" javaType="sendAddress">
+            <id column="send_address_id" property="id"/>
+            <result column="receive_name" property="receiveName"/>
+            <result column="phone" property="phone"/>
+            <result column="province" property="province"/>
+            <result column="city" property="city"/>
+            <result column="district" property="district"/>
+            <result column="address" property="address"/>
+            <result column="postal_code" property="postalCode"/>
+            <result column="address_label" property="addressLabel"/>
+            <result column="default_address" property="defaultAddress"/>
+        </association >
+    </resultMap>
+    <select id="getOrders" resultMap="MyOrderDTOMap">
+        SELECT
+        o.id AS order_id,
+        o.send_time,
+        o.send_type,
+        o.state,
+        o.reality_price AS price,
+        s.id AS send_address_id,
+        s.receive_name,
+        s.phone,
+        s.province,
+        s.city,
+        s.district,
+        s.address,
+        s.postal_code,
+        s.address_label,
+        s.default_address,
+        b.id AS bought_item_id,
+        b.img_address,
+        b.back_img_address,
+        b.number,
+        c.name,
+        b.reality_price
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
+        LEFT OUTER JOIN bought_item b ON b.order_id = o.id
+        LEFT OUTER JOIN goods g ON g.id = b.goods_id
+        LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        WHERE o.username = #{userName};
+    </select>
     <select id="getOrderDTO" resultMap="orderDTOMap">
         SELECT
         o.id AS order_id,
@@ -59,19 +135,38 @@
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
-        WHERE o.id = #{orderId} AND o.username = #{userName};
+        WHERE o.id = #{orderId} AND o.username = #{userName} LIMIT 1;
+    </select>
+    <select id="getAnOrderDTO" resultMap="anOrderDTOMap">
+        SELECT
+        o.id AS order_id,
+        o.send_type,
+        o.reality_price AS price,
+        s.id AS send_address_id,
+        s.receive_name,
+        s.phone,
+        s.province,
+        s.city,
+        s.district,
+        s.address,
+        s.postal_code,
+        s.address_label,
+        s.default_address
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.username = s.username
+        WHERE o.id = #{orderId} LIMIT 1;
     </select>
     <update id="set" parameterType="order">
         UPDATE order1
         <set>
-            <if test="sendAddress != 0 ">
-                send_address_id = #{sendAddress},
+            <if test="sendAddressId != 0 ">
+                send_address_id = #{sendAddressId},
             </if>
             <if test="realityPrice != 0">
                 reality_price = #{realityPrice},
             </if>
-            <if test="desc != null and desc != ''">
-                desc = #{desc},
+            <if test="desc1 != null and desc1 != ''">
+                desc1 = #{desc1},
             </if>
             <if test="state != 0">
                 state = #{state},
@@ -83,7 +178,7 @@
                 send_time = #{sendTime},
             </if>
             <if test="sendType != 0">
-                sendType = #{sendType}
+                send_type = #{sendType}
             </if>
         </set>
         WHERE id = #{id};
@@ -103,5 +198,11 @@
     </update>
     <select id="getUserName" parameterType="Integer" resultType="String">
         SELECT username FROM order1 WHERE id = #{id} LIMIT 1;
+    </select>
+    <select id="getState" parameterType="Integer" resultType="Integer">
+        SELECT state FROM order1 WHERE id = #{id} LIMIT 1;
+    </select>
+    <select id="getStateByUserName" resultType="Integer">
+        SELECT state FROM order1 WHERE id = #{id} AND username = #{userName} LIMIT 1;
     </select>
 </mapper>

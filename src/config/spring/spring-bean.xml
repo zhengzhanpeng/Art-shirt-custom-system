@@ -44,4 +44,5 @@
     <bean id="iconManageDao" class="com.zzp.YiYang.DaoImpl.IconManageDaoImpl"/>
     <bean id="goodsDao" class="com.zzp.YiYang.DaoImpl.GoodsDaoImpl"/>
     <bean id="cartDao" class="com.zzp.YiYang.DaoImpl.CartDaoImpl"/>
+    <bean id="closeOrderThread" class="com.zzp.YiYang.util.CloseOrderThread" init-method="toStart"/>
 </beans>

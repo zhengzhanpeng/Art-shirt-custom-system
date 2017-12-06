@@ -1,6 +1,7 @@
 package com.zzp.YiYang.Dao;
 
 import com.zzp.YiYang.DTO.OrderDTO;
+import com.zzp.YiYang.DTO.ToPayDTO;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
 
@@ -16,4 +17,6 @@ public interface OrderDao {
     String saveSendAddress(SendAddress sendAddress);
 
     String deleteAddress(int id);
+
+    boolean toPay(ToPayDTO toPayDTO);
 }

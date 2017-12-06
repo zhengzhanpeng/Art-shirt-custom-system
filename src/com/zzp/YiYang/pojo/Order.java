@@ -12,7 +12,7 @@ public class Order {
     private int sendAddressId;
     private float realityPrice;
     private String desc1;
-    private int state;
+    private int state;  // 0：提交购物车，但是未指定收货地址等信息 1：已提交未支付 2：已支付 3：过期
     private Date buyTime;
     private Date sendTime;
     private int sendType;  // 1.不限送货时间，周一至周日 2.工作日送货，周一至周五 3.双休日、假日送货，周六至周日

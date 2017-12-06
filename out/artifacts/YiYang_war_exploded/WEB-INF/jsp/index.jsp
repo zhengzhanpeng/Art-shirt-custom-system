@@ -501,11 +501,11 @@
                         </div>
 
                         <div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true" data-lazyload="true">
-                            <c:forEach items="${clothesList}" var="c">
-                                <div class="product" data-product-id="${c.id}">
+                            <c:forEach items="${clothesList}" var="o">
+                                <div class="product" data-product-id="${o.id}">
                                     <div class="entry-media">
                                         <span class="span-img-center-m"></span>
-                                        <img data-src="${c.imgAddress}" alt="" class="lazyOwl thumb boy-clothes img-center-m" />
+                                        <img data-src="${o.imgAddress}" alt="" class="lazyOwl thumb boy-clothes img-center-m" />
                                         <div class="hover">
                                             <a href="product.html" class="entry-url"></a>
                                             <ul class="icons unstyled">
@@ -513,33 +513,33 @@
                                                     <div class="circle ribbon ribbon-sale">HOT</div>
                                                 </li>
                                                 <li>
-                                                    <a href="${c.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+                                                    <a href="${o.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
                                                 </li>
                                             </ul>
                                             <div class="rate-bar">
-                                                <input type="range" value="4.5" step="0.5" id="${c.id}" />
-                                                <div class="rateit" data-rateit-backingfld="#${c.id}" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+                                                <input type="range" value="4.5" step="0.5" id="${o.id}" />
+                                                <div class="rateit" data-rateit-backingfld="#${o.id}" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="entry-main">
                                         <h5 class="entry-title">
                                             <a href="#">
-                                                <c:if test="${c.name.length() >18}">${c.name}</c:if>
-                                                <c:if test="${c.name.length() <=18}">${c.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
+                                                <c:if test="${o.name.length() >18}">${o.name}</c:if>
+                                                <c:if test="${o.name.length() <=18}">${o.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
                                             <%--${c.name}--%>
                                             </a>
                                         </h5>
                                         <div class="entry-price">
-                                            <c:if test="${c.price == c.realityPrice}">
-                                                <strong class="price">￥ ${c.realityPrice}</strong>
+                                            <c:if test="${o.price == o.realityPrice}">
+                                                <strong class="price">￥ ${o.realityPrice}</strong>
                                             </c:if>
-                                            <c:if test="${c.price != c.realityPrice}">
-                                                <s class="entry-discount">￥ ${c.price}</s>
-                                                <strong class="accent-color price">￥ ${c.realityPrice}</strong>
+                                            <c:if test="${o.price != o.realityPrice}">
+                                                <s class="entry-discount">￥ ${o.price}</s>
+                                                <strong class="accent-color price">￥ ${o.realityPrice}</strong>
                                             </c:if>
                                         </div>
                                     </div>

@@ -906,32 +906,7 @@
         });
         return result;
     }
-    function getMessage(msg) {  //获取省市区的名称
-        var province, city, district;
-        var pStr, cStr, dStr;
-        for (var i = 0; i < data.length; i++) {
-            province = data[i];
-            if (msg.province == province.id) {
-                pStr = province.name;
 
-                for (var j = 0; j < province.child.length; j++) {
-                    city = province.child[j];
-                    if (city.id == msg.city) {
-                        cStr = city.name;
-                        for (var k = 0; k < city.child.length; k++) {
-                            district = city.child[k];
-                            if (district.id = msg.district) {
-                                dStr = district.name;
-                                return {"province": pStr, "city": cStr, "district": dStr};
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-        return {"province": null, "city": null, "district": null};
-    }
     $(function () {
         $(".price").each(function () {
             var price = $(this).text();
