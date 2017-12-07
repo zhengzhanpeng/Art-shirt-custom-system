@@ -76,7 +76,7 @@
             <result column="default_address" property="defaultAddress"/>
         </association >
     </resultMap>
-    <select id="getOrders" resultMap="MyOrderDTOMap">
+    <select id="getOrders" resultMap="myOrderDTOMap">
         SELECT
         o.id AS order_id,
         o.send_time,
@@ -97,8 +97,9 @@
         b.img_address,
         b.back_img_address,
         b.number,
+        b.reality_price,
         c.name,
-        b.reality_price
+        g.size
         FROM order1 o
         LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
@@ -135,7 +136,7 @@
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
-        WHERE o.id = #{orderId} AND o.username = #{userName} LIMIT 1;
+        WHERE o.id = #{orderId} AND o.username = #{userName};
     </select>
     <select id="getAnOrderDTO" resultMap="anOrderDTOMap">
         SELECT

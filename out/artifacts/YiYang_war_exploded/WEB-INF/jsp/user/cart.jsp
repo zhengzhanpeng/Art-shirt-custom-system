@@ -556,6 +556,10 @@
                 ,"size": sizes.eq(i).val()
             })
         }
+        if(array.length == 0) {
+            layer.msg("当前购物车为空！", {icon: 5, anim: 0, offset: '10px'});
+            return;
+        }
         var str = JSON.stringify(array);
         $.ajax({
             url: "user/createOrder"

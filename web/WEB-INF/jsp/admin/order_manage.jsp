@@ -72,13 +72,13 @@
     $(function(){
         var table = $('#layui-table').DataTable({
             "ajax": {
-                "url": "admin/getIconPros",
+                "url": "admin/getOrders",
                 "dataSrc": "data",//默认为data
                 "type": "post",
                 "error":function(){layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});}
             },
             "columns": [
-                { "data": "id", "title":"编号","defaultContent":""},
+                { "data": "id", "title":"订单编号","defaultContent":""},
                 { "data": "name", "title":"属性","defaultContent":""},
                 { "data": null, "title":"操作","defaultContent": "<button class='edit-btn layui-btn layui-btn-normal' type='button'>编辑</button>  <button class='layui-btn layui-btn-warm' type='button'>删除</button>"}
             ],

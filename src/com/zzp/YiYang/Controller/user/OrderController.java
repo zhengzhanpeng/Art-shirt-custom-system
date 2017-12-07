@@ -99,7 +99,7 @@ public class OrderController {
     public String toPay(ToPayDTO toPayDTO) {
         boolean result = orderDao.toPay(toPayDTO);
         if (result)
-            return "redirect: user/order/" + toPayDTO.getId();
+            return "redirect: order/" + toPayDTO.getId();
         else
             return "/login";
     }

@@ -44,6 +44,10 @@
         .boy-clothes {
             height: 210px;
         }
+
+        .order-margin {
+            margin: 10px 0 0 0;
+        }
     </style>
 </head>
 <body>
@@ -196,13 +200,12 @@
                 <table class="tbl-cart">
                     <thead>
                     <tr>
-                        <th>订单名称</th>
-                        <th>商品名称</th>
-                        <th style="width: 15%;">单价</th>
-                        <th style="width: 15%;">数量</th>
-                        <th class="hidden-xs" style="width: 15%;">合计</th>
-                        <th style="width: 15%;">尺码</th>
-                        <th class="hidden-xs" style="width: 10%;"></th>
+                        <th>订单编号</th>
+                        <th>商品样图</th>
+                        <th >商品详情</th>
+                        <th class="hidden-xs" >合计</th>
+                        <th >订单状态</th>
+                        <th class="hidden-xs">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -213,42 +216,42 @@
                     </tr>
                     <c:forEach items="${orderList}" var="o">
                     <tr>
+                        <td><div class="order-number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${o.id}</div></td>
                         <td>
-                            <a class="entry-thumbnail img-address" href="${o.imgAddress}"
+                            <c:forEach items="${o.itemDTOs}" var="i">
+                            <a class="entry-thumbnail img-address order-margin" href="${i.imgAddress}"
                                data-toggle="lightbox">
-                                <img src="${o.imgAddress}" alt=""/>
+                                <img src="${i.imgAddress}" alt=""/>
                             </a>
-                            <a class="entry-thumbnail back-img-address" href="${o.backImgAddress}"
+                            <a class="entry-thumbnail back-img-address order-margin" href="${i.backImgAddress}"
                                data-toggle="lightbox">
-                                <img src="${o.backImgAddress}" alt=""/>
+                                <img src="${i.backImgAddress}" alt=""/>
                             </a>
-                            <a class="entry-title name" href="javascript:void(0);">${o.name}</a>
+                                <br>
+                            </c:forEach>
                         </td>
-                        <td><span class="unit-price">$${o.price}</span></td>
                         <td>
-                            <div class="qty-btn-group">
-                                <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i>
-                                </button>
-                                <input class="number" data="${o.id}" data-clothes="${o.clothesId}" type="text" value="${o.number}"/>
-                                <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i>
-                                </button>
-                            </div>
+                            <c:forEach items="${o.itemDTOs}" var="i">
+                                <a class="entry-title name order-margin" href="javascript:void(0);">${i.name} ${i.size} ${i.number}件</a>
+                                <br>
+                            </c:forEach>
                         </td>
-                        <td class="hidden-xs"><strong class="text-bold row-total">$${o.price}</strong></td>
-                        <td class="hidden-xs">
-                            <div class="inline-middle styled-dd">
-                                <select class="clothesSize size">
-                                    <option value="S" <c:if test="${o.size.equals('S')}">selected</c:if> >S</option>
-                                    <option value="M" <c:if test="${o.size.equals('M')}">selected</c:if>>M</option>
-                                    <option value="L" <c:if test="${o.size.equals('L')}">selected</c:if>>L</option>
-                                    <option value="XL" <c:if test="${o.size.equals('XL')}">selected</c:if>>XL</option>
-                                    <option value="XXL" <c:if test="${o.size.equals('XXL')}">selected</c:if>>XXL</option>
-                                    <option value="XXXL" <c:if test="${o.size.equals('XXXL')}">selected</c:if>>XXXL</option>
-                                </select>
-                            </div>
+                        <td class="hidden-xs"><strong class="text-bold row-total">$${o.realityPrice}</strong></td>
+                        <td>
+                            <span class="unit-price">
+                                <c:if test="${o.state == -1}">订单已取消</c:if>
+                                <c:if test="${o.state == 0}">待填写收货信息</c:if>
+                                <c:if test="${o.state == 1}">待付款</c:if>
+                                <c:if test="${o.state == 2}">已付款，待发货</c:if>
+                                <c:if test="${o.state == 3}">已发货</c:if>
+                            </span>
                         </td>
                         <td class="hidden-xs">
-                            <button type="button" class="close" aria-hidden="true">×</button>
+                            <c:if test="${o.state == -1}"><a href="javascript:void(0);">暂不可操作</a></c:if>
+                            <c:if test="${o.state == 0}"><a href="user/order/${o.id}">完善信息</a></c:if>
+                            <c:if test="${o.state == 1}"><a href="user/order/${o.id}">去付款</a></c:if>
+                            <c:if test="${o.state == 2}"><a href="javascript:void(0);">提醒发货</a></c:if>
+                            <c:if test="${o.state == 3}"><a href="javascript:void(0);">暂不可操作</a></c:if>
                         </td>
                     </tr>
                     </c:forEach>
@@ -510,73 +513,7 @@
 <script src="js/owl.carousel.js"></script>
 <script src="js/layer.js"></script>
 <script>
-    function toBuy() {
-        var numbers = $(".number");
-        var sizes = $(".size");
-        var array = new Array();
-        for(var i = 0; i < numbers.length; i++) {
-            array.push({
-                "id": numbers.eq(i).attr("data")
-                ,"clothesId": numbers.eq(i).attr("data-clothes")
-                ,"imgAddress": $(".img-address").attr("href")
-                ,"backImgAddress": $(".back-img-address").attr("href")
-                ,"number": numbers.eq(i).val()
-                ,"size": sizes.eq(i).val()
-            })
-        }
-        var str = JSON.stringify(array);
-        $.ajax({
-            url: "user/createOrder"
-            ,type: "post"
-            ,data: JSON.stringify(array)
-            ,contentType : 'application/json;charset=utf-8'
-            ,success: function (data) {
-                if (!isNaN(data)) {
-                    window.location.href="user/order/" + data;
-                    return;
-                }
-                layer.alert(data, {icon: 5, anim: 1, offset: '10px'});
-            }
-            ,error: function () {
-                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
-            }
-        });
-    }
-    $(function () {
-        $(".down").each(function () {
-            $(this).click();
-        })
-        $(".up").each(function () {
-            $(this).click();
-        })
-    })
-    $(function () {
-        var x = ${cartShowList.size()};
-        if(x == 0) {
-            $(".empty-cart").attr("class", "empty-cart");
-        }
-        $(".close").click(function () {
-            var $number = $(this).parent().parent().find(".number");
-//            var name = $(this).parent().parent().find(".name").text();
-            var id = $number.attr("data");
-            $.ajax({
-                url: "user/deleteCart"
-                ,type: "post"
-                ,data: {"id": id}
-                ,success: function (data) {
-                    if (data == "1") {
-                        layer.msg("已移除", {icon: 6, time: 700, offset: "10px"});
-                        layer.close(index);
-                        return;
-                    }
-                    layer.msg(data, {icon: 5, anim: 0, offset: "10px"});
-                }
-                ,error: function () {
-                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: "10px"});
-                }
-            });
-        })
-    })
+
 </script>
 
 </body>

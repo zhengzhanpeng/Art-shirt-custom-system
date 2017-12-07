@@ -14,6 +14,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <base href=" <%=basePath%>">
+    <base src=" <%=basePath%>">
     <title>信息</title>
     <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="css/query.css">

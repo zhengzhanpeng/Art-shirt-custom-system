@@ -12,8 +12,8 @@
     <base href=" <%=basePath%>">
     <base src=" <%=basePath%>">
     <title></title>
-    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
@@ -60,9 +60,9 @@
     </fieldset>
 
 </div>
-<script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript" src="/js/jquery.tabledit.min.js"></script>
-<script type="text/javascript" src="/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.tabledit.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
 </body>
 
 </html>

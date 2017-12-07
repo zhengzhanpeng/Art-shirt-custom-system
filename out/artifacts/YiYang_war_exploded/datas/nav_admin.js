@@ -15,6 +15,10 @@ var navs = [{
 		"icon": "&#xe61d;",
 		"href": "admin/goodsManage"
 	}, {
+		"title": "订单管理",
+		"icon": "&#xe614;",
+		"href": "admin/orderManage"
+	}, {
 		"title": "修改密码",
 		"icon": "&#xe614;",
 		"href": "user/setPassword"
