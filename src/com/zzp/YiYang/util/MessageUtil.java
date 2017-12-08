@@ -6,7 +6,7 @@ package com.zzp.YiYang.util;
  */
 public class MessageUtil {
     public static final String LOGIN_ERROR = "您的权限有误，请于管理员联系";
-    public static final String USER_NAME_OR_PASSWORD_OR_EMAIL_WRONG = "您的输入有误或邮箱未验证，请查证。";
+    public static final String USER_NAME_OR_PASSWORD_OR_EMAIL_WRONG = "您输入的用户名或密码不正确或邮箱未验证，请查证。";
     public static final String USER_NAME_OR_PASSWORD_WRONG = "您输入的用户名或密码有误，请查证。";
     public static final String SYSTEM_ERROR = "系统繁忙，请稍后再试或与管理员联系";
     public static final String USER_NAME_NOT_NULL = "用户名不能为空";

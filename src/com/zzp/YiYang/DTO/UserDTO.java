@@ -13,6 +13,7 @@ public class UserDTO {
     private String authority;
     private String name;
     private String email;
+    private Long phone;
 
     public String getUserName() {
         return userName;
@@ -60,5 +61,13 @@ public class UserDTO {
 
     public void setEnable(int enable) {
         this.enable = enable;
+    }
+
+    public long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(long phone) {
+        this.phone = phone;
     }
 }

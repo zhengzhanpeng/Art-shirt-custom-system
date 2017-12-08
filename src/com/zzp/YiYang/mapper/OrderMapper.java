@@ -3,6 +3,7 @@ package com.zzp.YiYang.mapper;
 import com.zzp.YiYang.DTO.AnOrderDTO;
 import com.zzp.YiYang.DTO.MyOrderDTO;
 import com.zzp.YiYang.DTO.OrderDTO;
+import com.zzp.YiYang.DTO.OrderManageDTO;
 import com.zzp.YiYang.pojo.Order;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,6 +19,10 @@ public interface OrderMapper {
     int set(Order order);
 
     List<MyOrderDTO> getOrders(String userName);
+
+    List<OrderManageDTO> getOrdersByMaker();
+
+    List<OrderManageDTO> getOrdersBySender();
 
     int addOrder(Order order);
 

@@ -57,8 +57,8 @@ public class UserManageDaoImpl implements UserManageDao {
     }
 
     @Override
-    public String setUser(UserDTO userDTO) {
-        userMapper.setUser(userDTO);
+    public String setUser(UserDTO userSetDTO) {
+        userMapper.setUser(userSetDTO);
         return "1";
     }
 }

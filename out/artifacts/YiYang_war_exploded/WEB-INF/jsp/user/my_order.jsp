@@ -242,8 +242,9 @@
                                 <c:if test="${o.state == -1}">订单已取消</c:if>
                                 <c:if test="${o.state == 0}">待填写收货信息</c:if>
                                 <c:if test="${o.state == 1}">待付款</c:if>
-                                <c:if test="${o.state == 2}">已付款，待发货</c:if>
-                                <c:if test="${o.state == 3}">已发货</c:if>
+                                <c:if test="${o.state == 2}">已付款，正在急速制作中</c:if>
+                                <c:if test="${o.state == 3}">已制作完成，待发货</c:if>
+                                <c:if test="${o.state == 4}">已发货</c:if>
                             </span>
                         </td>
                         <td class="hidden-xs">
@@ -251,7 +252,8 @@
                             <c:if test="${o.state == 0}"><a href="user/order/${o.id}">完善信息</a></c:if>
                             <c:if test="${o.state == 1}"><a href="user/order/${o.id}">去付款</a></c:if>
                             <c:if test="${o.state == 2}"><a href="javascript:void(0);">提醒发货</a></c:if>
-                            <c:if test="${o.state == 3}"><a href="javascript:void(0);">暂不可操作</a></c:if>
+                            <c:if test="${o.state == 3}"><a href="javascript:void(0);">提醒发货</a></c:if>
+                            <c:if test="${o.state == 4}"><a href="javascript:void(0);">暂不可操作</a></c:if>
                         </td>
                     </tr>
                     </c:forEach>

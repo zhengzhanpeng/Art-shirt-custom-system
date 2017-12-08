@@ -8,6 +8,7 @@ package com.zzp.YiYang.DTO;
  */
 public class UserMessageDTO {
     private String name;
+    private Long phone;
     private String userName;
     private String authority;
 
@@ -33,5 +34,13 @@ public class UserMessageDTO {
 
     public void setAuthority(String authority) {
         this.authority = authority;
+    }
+
+    public Long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 }

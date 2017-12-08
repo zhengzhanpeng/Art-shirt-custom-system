@@ -1,18 +1,17 @@
 package com.zzp.YiYang.DaoImpl;
 
+import com.zzp.YiYang.DTO.PasswordDTO;
 import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.Dao.UserDao;
 import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.User;
-import com.zzp.YiYang.util.EmailHelper;
-import com.zzp.YiYang.util.EncryptionUtil;
+import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
-import com.zzp.YiYang.util.RegisterMail;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import javax.annotation.Resource;
-import java.util.Map;
-import java.util.ResourceBundle;
 
 /**
  * @author ho
@@ -48,6 +47,25 @@ public class UserDaoImpl implements UserDao {
             EmailOperation.sendRegister(userDTO.getName(), userDTO.getUserName(), userDTO.getEmail());
         }
         return result;
+    }
+
+    @Override
+    public String setPasswordC(PasswordDTO passwordDTO) {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String username = null;
+        if (principal instanceof UserDetails) {
+            username = ((UserDetails)principal).getUsername();
+        } else {
+            username = principal.toString();
+        }
+        User user = userMapper.getUser(username);
+        boolean b = BCrypt.checkpw(passwordDTO.getPassword(), user.getPassword());
+        if (!b) {
+            return "密码不正确！";
+        }
+        user.setPassword(MainUtil.hashpw(passwordDTO.getNewPassword1()));
+        userMapper.setPassword(user);
+        return "1";
     }
 
     @Override

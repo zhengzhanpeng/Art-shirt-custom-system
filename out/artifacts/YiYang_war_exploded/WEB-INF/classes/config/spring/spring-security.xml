@@ -11,9 +11,11 @@
 
     <http pattern="/login*" security="none"/>
     <http auto-config="true">
-        <intercept-url pattern="/user/**" access="ROLE_USER"/>
-        <intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
-        <intercept-url pattern="/superAdmin/*" access="ROLE_SUPER_ADMIN"/>
+        <intercept-url pattern="/user/**" access="ROLE_USER, ROLE_ADMIN, ROLE_MAKER, ROLE_SENDER, ROLE_SUPER_ADMIN"/>
+        <intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/maker/**" access="ROLE_MAKER"/>
+        <intercept-url pattern="/sender/**" access="ROLE_SENDER"/>
+        <intercept-url pattern="/superAdmin/**" access="ROLE_SUPER_ADMIN"/>
         <form-login
                 login-page="/login"
                 default-target-url="/success"

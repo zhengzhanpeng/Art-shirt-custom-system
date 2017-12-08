@@ -2,34 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzp.YiYang.mapper.OrderMapper">
-    <resultMap id="orderDTOMap" type="orderDTO">
-        <id column="order_id" property="id"/>
-        <result column="send_time" property="sendTime"/>
-        <result column="price" property="realityPrice"/>
-        <result column="send_type" property="sendType"/>
-        <collection property="sendAddresses" ofType="sendAddress">
-            <id column="send_address_id" property="id"/>
-            <result column="receive_name" property="receiveName"/>
-            <result column="phone" property="phone"/>
-            <result column="province" property="province"/>
-            <result column="city" property="city"/>
-            <result column="district" property="district"/>
-            <result column="address" property="address"/>
-            <result column="postal_code" property="postalCode"/>
-            <result column="address_label" property="addressLabel"/>
-            <result column="default_address" property="defaultAddress"/>
-        </collection>
-        <collection property="itemDTOs" ofType="ItemDTO">
-            <id column="bought_item_id" property="id"/>
-            <result column="img_address" property="imgAddress"/>
-            <result column="back_img_address" property="backImgAddress"/>
-            <result column="number" property="number"/>
-            <result column="size" property="size"/>
-            <result column="name" property="name"/>
-            <result column="type" property="type"/>
-            <result column="reality_price" property="realityPrice"/>
-        </collection>
-    </resultMap>
     <resultMap id="myOrderDTOMap" type="MyOrderDTO">
         <id column="order_id" property="id"/>
         <result column="send_time" property="sendTime"/>
@@ -59,23 +31,7 @@
             <result column="reality_price" property="realityPrice"/>
         </collection>
     </resultMap>
-    <resultMap id="anOrderDTOMap" type="AnOrderDTO">
-        <id column="order_id" property="id"/>
-        <result column="price" property="realityPrice"/>
-        <result column="send_type" property="sendType"/>
-        <association  property="sendAddress" javaType="sendAddress">
-            <id column="send_address_id" property="id"/>
-            <result column="receive_name" property="receiveName"/>
-            <result column="phone" property="phone"/>
-            <result column="province" property="province"/>
-            <result column="city" property="city"/>
-            <result column="district" property="district"/>
-            <result column="address" property="address"/>
-            <result column="postal_code" property="postalCode"/>
-            <result column="address_label" property="addressLabel"/>
-            <result column="default_address" property="defaultAddress"/>
-        </association >
-    </resultMap>
+
     <select id="getOrders" resultMap="myOrderDTOMap">
         SELECT
         o.id AS order_id,
@@ -107,6 +63,135 @@
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
         WHERE o.username = #{userName};
     </select>
+
+    <!--衣服制作员获取相应的订单信息-->
+    <resultMap id="getOrdersByMakerMap" type="OrderManageDTO">
+        <id column="order_id" property="id"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <result column="desc1" property="desc1"/>
+        <result column="state" property="state"/>
+        <result column="receive_name" property="receiveName"/>
+        <result column="phone" property="phone"/>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
+
+    <select id="getOrdersByMaker" resultMap="getOrdersByMakerMap">
+        SELECT
+        o.id AS order_id,
+        o.send_type,
+        o.state,
+        o.desc1,
+        o.reality_price AS price,
+        s.receive_name,
+        s.phone,
+        b.id AS bought_item_id,
+        b.img_address,
+        b.back_img_address,
+        b.number,
+        b.reality_price,
+        c.name,
+        g.size
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
+        LEFT OUTER JOIN bought_item b ON b.order_id = o.id
+        LEFT OUTER JOIN goods g ON g.id = b.goods_id
+        LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        WHERE state BETWEEN 1 AND 2;
+    </select>
+    <!--!!衣服制作员获取相应的订单信息-->
+
+    <!--发货员获取相应的订单信息-->
+    <resultMap id="getOrdersBySenderMap" type="OrderManageDTO">
+        <id column="order_id" property="id"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <result column="desc1" property="desc1"/>
+        <result column="state" property="state"/>
+        <result column="receive_name" property="receiveName"/>
+        <result column="phone" property="phone"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="district" property="district"/>
+        <result column="address" property="address"/>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
+
+    <select id="getOrdersBySender" resultMap="getOrdersBySenderMap">
+        SELECT
+        o.id AS order_id,
+        o.send_time,
+        o.send_type,
+        o.state,
+        o.desc1,
+        o.reality_price AS price,
+        s.receive_name,
+        s.phone,
+        s.province,
+        s.city,
+        s.district,
+        s.address,
+        b.id AS bought_item_id,
+        b.img_address,
+        b.back_img_address,
+        b.number,
+        b.reality_price,
+        c.name,
+        g.size
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
+        LEFT OUTER JOIN bought_item b ON b.order_id = o.id
+        LEFT OUTER JOIN goods g ON g.id = b.goods_id
+        LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        WHERE state BETWEEN 1 AND 2;
+    </select>
+
+    <resultMap id="orderDTOMap" type="orderDTO">
+        <id column="order_id" property="id"/>
+        <result column="send_time" property="sendTime"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <collection property="sendAddresses" ofType="sendAddress">
+            <id column="send_address_id" property="id"/>
+            <result column="receive_name" property="receiveName"/>
+            <result column="phone" property="phone"/>
+            <result column="province" property="province"/>
+            <result column="city" property="city"/>
+            <result column="district" property="district"/>
+            <result column="address" property="address"/>
+            <result column="postal_code" property="postalCode"/>
+            <result column="address_label" property="addressLabel"/>
+            <result column="default_address" property="defaultAddress"/>
+        </collection>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
     <select id="getOrderDTO" resultMap="orderDTOMap">
         SELECT
         o.id AS order_id,
@@ -138,6 +223,23 @@
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
         WHERE o.id = #{orderId} AND o.username = #{userName};
     </select>
+    <resultMap id="anOrderDTOMap" type="AnOrderDTO">
+        <id column="order_id" property="id"/>
+        <result column="price" property="realityPrice"/>
+        <result column="send_type" property="sendType"/>
+        <association  property="sendAddress" javaType="sendAddress">
+            <id column="send_address_id" property="id"/>
+            <result column="receive_name" property="receiveName"/>
+            <result column="phone" property="phone"/>
+            <result column="province" property="province"/>
+            <result column="city" property="city"/>
+            <result column="district" property="district"/>
+            <result column="address" property="address"/>
+            <result column="postal_code" property="postalCode"/>
+            <result column="address_label" property="addressLabel"/>
+            <result column="default_address" property="defaultAddress"/>
+        </association >
+    </resultMap>
     <select id="getAnOrderDTO" resultMap="anOrderDTOMap">
         SELECT
         o.id AS order_id,

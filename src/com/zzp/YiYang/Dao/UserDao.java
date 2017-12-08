@@ -1,5 +1,6 @@
 package com.zzp.YiYang.Dao;
 
+import com.zzp.YiYang.DTO.PasswordDTO;
 import com.zzp.YiYang.DTO.UserDTO;
 
 /**
@@ -14,4 +15,6 @@ public interface UserDao {
     boolean checkRegister(String userName, String msg);
 
     boolean checkUserAndSendEmail(String userName, String password);
+
+    String setPasswordC(PasswordDTO passwordDTO);
 }

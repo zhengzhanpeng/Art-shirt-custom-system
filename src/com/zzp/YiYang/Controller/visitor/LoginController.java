@@ -125,6 +125,10 @@ public class LoginController {
                 return "redirect:/index";
             } else if (authority.equals("ROLE_SUPER_ADMIN")) {
                 return "redirect:/superAdmin/index";
+            } else if (authority.equals("ROLE_MAKER")) {
+                return "redirect:/maker/index";
+            } else if (authority.equals("ROLE_SENDER")) {
+                return "redirect:/sender/index";
             }
         }
         model.addAttribute("msg", MessageUtil.LOGIN_ERROR);

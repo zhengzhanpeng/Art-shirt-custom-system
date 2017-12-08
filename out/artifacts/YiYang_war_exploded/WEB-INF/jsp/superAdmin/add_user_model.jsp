@@ -51,6 +51,8 @@
                 <select id="authority" name="modules" lay-verify="required" lay-search="">
                     <option value="ROLE_USER">ROLE_USER</option>
                     <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                    <option value="ROLE_MAKER">ROLE_MAKER</option>
+                    <option value="ROLE_SENDER">ROLE_SENDER</option>
                     <option value="ROLE_SUPER_ADMIN">ROLE_SUPER_ADMIN</option>
                 </select>
             </div>

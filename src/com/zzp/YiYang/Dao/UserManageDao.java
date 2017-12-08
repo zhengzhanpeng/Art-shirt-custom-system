@@ -18,5 +18,5 @@ public interface UserManageDao {
 
     String addUser(UserDTO userDTO);
 
-    String setUser(UserDTO userDTO);
+    String setUser(UserDTO userSetDTO);
 }

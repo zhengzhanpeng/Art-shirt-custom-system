@@ -4,14 +4,14 @@
 <mapper namespace="com.zzp.YiYang.mapper.UserMapper">
     <insert id="addUser" parameterType="userDTO">
         INSERT INTO users VALUES (#{userName}, #{password}, #{enable});
-        INSERT INTO user_info VALUES(#{userName}, #{name}, #{email});
+        INSERT INTO user_info VALUES(#{userName}, #{name}, #{email}, #{phone});
         INSERT INTO authorities VALUES (#{userName}, #{authority});
     </insert>
     <select id="getUser1" parameterType="String" resultType="String">
         SELECT password FROM users WHERE username = 'admin';
     </select>
     <select id="getUsers" resultType="UserMessageDTO">
-        SELECT u.username, name, authority FROM users u
+        SELECT u.username, name, authority, phone FROM users u
         LEFT OUTER JOIN user_info i ON u.username = i.username
         LEFT OUTER JOIN authorities a ON u.username = a.username;
     </select>
@@ -23,14 +23,14 @@
         WHERE username = #{userName} limit 1;
     </update>
     <update id="setUser" parameterType="UserDTO">
-        UPDATE user_info SET name = #{name} WHERE username = #{userName} limit 1;
+        UPDATE user_info SET name = #{name}, phone = #{phone} WHERE username = #{userName} limit 1;
         UPDATE authorities SET authority = #{authority} WHERE username = #{userName} limit 1;
     </update>
     <select id="getUser" parameterType="String" resultType="User">
         SELECT * FROM users WHERE username = #{userName};
     </select>
     <select id="getUserInfo" parameterType="String" resultType="UserDTO">
-        SELECT name, email FROM user_info WHERE username = #{userName};
+        SELECT name, email, phone FROM user_info WHERE username = #{userName};
     </select>
     <update id="setEnabled" parameterType="User">
         UPDATE users SET enabled = #{enabled}
@@ -44,7 +44,8 @@
         u.username,
         u.password,
         i.name,
-        i.email
+        i.email,
+        i.phone
         FROM users u
         LEFT OUTER JOIN user_info i ON u.username = i.username
         WHERE u.username = #{userName} ;
