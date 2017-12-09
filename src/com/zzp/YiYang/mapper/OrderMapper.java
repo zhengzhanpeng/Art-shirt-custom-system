@@ -37,7 +37,11 @@ public interface OrderMapper {
 
     int getState(int id);
 
+    int setStateFinished(int id);
+
     Integer getStateByUserName(@Param("id") int id, @Param("userName") String userName);
 
     AnOrderDTO getAnOrderDTO(int id);
+
+    float getPrice(int id);
 }

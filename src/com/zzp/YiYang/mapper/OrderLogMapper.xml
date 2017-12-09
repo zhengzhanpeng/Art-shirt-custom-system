@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.YiYang.mapper.OrderLogMapper" >
+    <insert id="insert" parameterType="OrderLog">
+        INSERT INTO order_log VALUES(null, #{content}, #{name}, #{phone}, #{logTime});
+    </insert>
+</mapper>

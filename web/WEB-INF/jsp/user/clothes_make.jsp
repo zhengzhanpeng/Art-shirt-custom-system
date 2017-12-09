@@ -344,9 +344,11 @@
                                         <div class="col-xs-12 col-sm-3">
                                             <h5 class="subheader uppercase">数量:</h5>
                                             <div class="qty-btn-group" style="width: 100px">
-                                                <button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i></button>
-                                                <input id="number" type="text" value="1" />
-                                                <button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i></button>
+                                                <button type="button" class="down"><i
+                                                        class="iconfont-caret-down inline-middle"></i></button>
+                                                <input id="number" type="text" value="1"/>
+                                                <button type="button" class="up"><i
+                                                        class="iconfont-caret-up inline-middle"></i></button>
 
                                             </div>
                                         </div>
@@ -354,10 +356,11 @@
 
                                     <ul class="inline-li li-m-r-l m-t-lg">
                                         <li>
-                                            <a href="javascript: void(0);" class="btn btn-default btn-lg btn-round add-to-cart">添加到购物车</a>
+                                            <a href="javascript: void(0);"
+                                               class="btn btn-default btn-lg btn-round add-to-cart">添加到购物车</a>
                                         </li>
                                         <li>
-                                            <a href="javascript: void(0);">+ 立即购买</a>
+                                            <a id="buyM" href="javascript: void(0);">+ 立即购买</a>
                                         </li>
                                     </ul>
 
@@ -448,7 +451,7 @@
                                                             class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="circle add-to-cart"><i
+                                                    <a href="javascript: addToCartFinished(${o.id})" class="circle"><i
                                                             class="iconfont-shopping-cart"></i></a>
                                                 </li>
                                             </ul>
@@ -832,35 +835,36 @@
         var imgAddress;
 
         // dataURL 的格式为 “data:image/png;base64,****”,逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
-        data=data.split(',')[1];
-        if(data == null) {
+        data = data.split(',')[1];
+        if (data == null) {
             layer.msg("请选择已制作好的衣服上传！", {icon: 5, anim: 6, offset: '10px'});
             return;
         }
-        data=window.atob(data);
+        data = window.atob(data);
         var ia = new Uint8Array(data.length);
         for (var i = 0; i < data.length; i++) {
             ia[i] = data.charCodeAt(i);
-        };
+        }
+        ;
 
         // canvas.toDataURL 返回的默认格式就是 image/png
-        var blob=new Blob([ia], {type:"image/png"});
-        var file=new FormData();
+        var blob = new Blob([ia], {type: "image/png"});
+        var file = new FormData();
 
-        file.append('file',blob);
+        file.append('file', blob);
 
         $.ajax({
             url: "user/uploadImg"
-            ,type: "post"
-            ,data: file
-            ,async : false
-            ,cache : false
-            ,contentType : false// 告诉jQuery不要去设置Content-Type请求头
-            ,processData : false// 告诉jQuery不要去处理发送的数据
-            ,success: function (data) {
+            , type: "post"
+            , data: file
+            , async: false
+            , cache: false
+            , contentType: false// 告诉jQuery不要去设置Content-Type请求头
+            , processData: false// 告诉jQuery不要去处理发送的数据
+            , success: function (data) {
                 imgAddress = data;
             }
-            ,error: function () {
+            , error: function () {
                 layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
             }
         });
@@ -1022,37 +1026,73 @@
         $("#product-shipping").attr("class", "tab-pane fade in");
         $("#product-uploading").attr("class", "tab-pane fade in");
 
+        $("#buyM").click(function () {   //立即购买调用函数
+            var clothesId = $(".adaption-m.active").attr("data");
+            var clothesSize = $("#clothesSize").find("option:selected").text();
+            var number = $("#number").val();
+            if (clothesSize == '-- 请选择 --') {
+                layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
+                return;
+            }
+            var imgAddress = uploadImg("#turn1 img");
+            var backImgAddress = uploadImg("#turn2 img");
+            if (imgAddress == null || backImgAddress == null) {
+                return;
+            }
+            $.ajax({
+                url: "user/buy"
+                , type: "post"
+                , data: {
+                    "clothesId": clothesId
+                    , "size": clothesSize
+                    , "number": number
+                    , "imgAddress": imgAddress
+                    , "backImgAddress": backImgAddress
+                }
+                , success: function (data) {
+                    if (!isNaN(data)) {
+                        window.location.href="user/order/" + data;
+                        return;
+                    }
+                    layer.msg(data, {icon: 5, anim: 0});
+                }
+                , error: function () {
+                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
+                }
+            });
+        })
+
         $(".add-to-cart").click(function () {
             var clothesId = $(".adaption-m.active").attr("data");
             var clothesSize = $("#clothesSize").find("option:selected").text();
             var number = $("#number").val();
-            var imgAddress = uploadImg("#turn1 img");
-            var backImgAddress = uploadImg("#turn2 img");
-            if(imgAddress == null || backImgAddress == null) {
+            if (clothesSize == '-- 请选择 --') {
+                layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
                 return;
             }
-            if(clothesSize == '-- 请选择 --') {
-                layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
+            var imgAddress = uploadImg("#turn1 img");
+            var backImgAddress = uploadImg("#turn2 img");
+            if (imgAddress == null || backImgAddress == null) {
                 return;
             }
             $.ajax({
                 url: "user/addToCart"
-                ,type: "post"
-                ,data: {
+                , type: "post"
+                , data: {
                     "clothesId": clothesId
-                    ,"size": clothesSize
-                    ,"number":number
-                    ,"imgAddress": imgAddress
-                    ,"backImgAddress": backImgAddress
+                    , "size": clothesSize
+                    , "number": number
+                    , "imgAddress": imgAddress
+                    , "backImgAddress": backImgAddress
                 }
-                ,success: function (data) {
+                , success: function (data) {
                     if (data == "1") {
                         layer.msg("添加成功", {icon: 6, time: 700, offset: '10px'});
                         return;
                     }
                     layer.msg(data, {icon: 5, anim: 0});
                 }
-                ,error: function () {
+                , error: function () {
                     layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
                 }
             });

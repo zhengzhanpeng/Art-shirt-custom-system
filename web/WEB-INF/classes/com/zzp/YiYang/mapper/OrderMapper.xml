@@ -308,4 +308,10 @@
     <select id="getStateByUserName" resultType="Integer">
         SELECT state FROM order1 WHERE id = #{id} AND username = #{userName} LIMIT 1;
     </select>
+    <select id="getPrice" parameterType="Integer" resultType="Float">
+        SELECT reality_price FROM order1 WHERE id = #{id} LIMIT 1;
+    </select>
+    <update id="setStateFinished" parameterType="Integer">
+        UPDATE order1 set state = 3 WHERE id = #{id} AND state = 2 LIMIT 1;
+    </update>
 </mapper>

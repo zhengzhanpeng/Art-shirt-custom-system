@@ -19,25 +19,17 @@ var navs = [{
 		"icon": "&#xe614;",
 		"href": "admin/orderManage"
 	}, {
-		"title": "修改密码",
-		"icon": "&#xe614;",
-		"href": "user/setPassword"
+		"title": "操作日志",
+		"icon": "&#xe63c;",
+		"href": "manager/orderLog"
 	}]
 }, {
-	"title": "日志查询",
+	"title": "个人设置",
 	"icon": "fa-cogs",
 	"spread": false,
 	"children": [{
-		"title": "进货详情",
-		"icon": "&#xe63c;",
-		"href": "user/stockLog"
-	}, {
-		"title": "售货详情",
-		"icon": "&#xe63c;",
-		"href": "user/sellLog"
-	}, {
-		"title": "商品损坏信息",
-		"icon": "&#xe63c;",
-		"href": "user/badLog"
+		"title": "修改密码",
+		"icon": "&#xe614;",
+		"href": "user/setPassword"
 	}]
 }];

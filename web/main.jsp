@@ -19,7 +19,7 @@
 <body>
 <div>
     <blockquote class="layui-elem-quote">
-        <h2 style="font-size: 20px"><i class="layui-icon" style="font-size: 25px">&#xe609;</i>&nbsp;&nbsp;考拉超市库存管理系统</h2>
+        <h2 style="font-size: 20px"><i class="layui-icon" style="font-size: 25px">&#xe609;</i>&nbsp;&nbsp;艺扬服饰商城管理系统</h2>
     </blockquote>
     <fieldset class="layui-elem-field">
         <legend>操作介绍</legend>
@@ -28,7 +28,7 @@
                 <legend><i class="layui-icon">&#xe600;</i> 添加商品</legend>
                 <div class="layui-field-box">
                     <p>
-                        点击进货录入中的添加商品按钮，即可在最上一行录入新的商品
+                        点击商城管理中的添加商品按钮，即可在最上一行录入新的商品（需要库存管理员的权限）
                     </p>
                 </div>
             </fieldset>

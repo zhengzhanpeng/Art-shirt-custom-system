@@ -60,6 +60,13 @@ public class CartDaoImpl implements CartDao{
     }
 
     @Override
+    public String buy(GetCartDTO get) {
+        List<GetCartDTO> list = new ArrayList<>(1);
+        list.add(get);
+        return createOrder(list);
+    }
+
+    @Override
     public String deleteCart(int id) {
         if (id == 0) {
             return MessageUtil.SYSTEM_ERROR;

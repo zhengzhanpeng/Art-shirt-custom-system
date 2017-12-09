@@ -516,7 +516,7 @@
                                                     <a href="${o.imgAddress}" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+                                                    <a href="javascript: addToCartFinished(${o.id})" class="circle"><i class="iconfont-shopping-cart"></i></a>
                                                 </li>
                                             </ul>
                                             <div class="rate-bar">
@@ -527,7 +527,7 @@
                                     </div>
                                     <div class="entry-main">
                                         <h5 class="entry-title">
-                                            <a href="#">
+                                            <a href="javascript: void(0);">
                                                 <c:if test="${o.name.length() >18}">${o.name}</c:if>
                                                 <c:if test="${o.name.length() <=18}">${o.name}<br>&nbsp;&nbsp;&nbsp;&nbsp;</c:if>
                                             <%--${c.name}--%>

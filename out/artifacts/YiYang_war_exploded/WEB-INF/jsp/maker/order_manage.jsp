@@ -20,13 +20,14 @@
     <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="css/query.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.edittable.css">
-    <link  rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <div style="margin: 15px">
     <blockquote class="layui-elem-quote">
         <h2 style="font-size: 20px" class="layui-inline">
-            <i class="layui-icon" style="font-size: 30px">&#xe629;</i> 订单管理</h2>
+            <i class="layui-icon" style="font-size: 30px">&#xe629;</i> 订单管理 (制作完成后记得确认嗷)</h2>
+
     </blockquote>
     <fieldset class="layui-elem-field">
         <legend>数据列表</legend>
@@ -34,7 +35,7 @@
             <table class="layui-table" id="layui-table">
                 <colgroup>
                     <col>
-                    <col >
+                    <col>
                     <col>
                     <col>
                     <col>
@@ -57,9 +58,9 @@
 <script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="plugins/layui/layui.js"></script>
 <script type="text/javascript">
-    layui.use(['laydate', 'jquery', 'form'], function() {
+    layui.use(['laydate', 'jquery', 'form'], function () {
         var $ = layui.jquery;
-        $("#date").click(function() {
+        $("#date").click(function () {
             layui.laydate({
                 elem: this
             });
@@ -68,24 +69,57 @@
 </script>
 
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         var table = $('#layui-table').DataTable({
             "ajax": {
                 "url": "maker/getOrders",
                 "dataSrc": "data",//默认为data
                 "type": "post",
-                "error":function(){layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});}
+                "error": function () {
+                    layer.msg("服务器繁忙，请稍后再试", {icon: 5, anim: 0});
+                }
             },
             "columns": [
-                { "data": "id", "title":"订单编号","defaultContent":""},
-                { "data": "details", "title":"订单详情","defaultContent":""},
-                { "data": "desc1", "title":"会员留言","defaultContent":""},
-                { "data": "realityPrice", "title":"合计","defaultContent":""},
-                { "data": "receiveName", "title":"收货人","defaultContent":""},
-                { "data": "phone", "title":"联系电话","defaultContent":""},
-                { "data": "stateStr", "title":"状态","defaultContent":""},
-                { "data": null, "title":"操作","defaultContent": "<button class='download-btn layui-btn layui-btn-normal' type='button'>下载图片</button>  <button class='set-price layui-btn layui-btn-warm' type='button'>修改价格</button>"}
+                {"data": "id", "title": "订单编号", "defaultContent": ""},
+                {"data": "details", "title": "订单详情", "defaultContent": ""},
+                {"data": "desc1", "title": "会员留言", "defaultContent": ""},
+                {"data": "realityPrice", "title": "合计", "defaultContent": ""},
+                {"data": "receiveName", "title": "收货人", "defaultContent": ""},
+                {"data": "phone", "title": "联系电话", "defaultContent": ""},
+                {"data": "stateStr", "title": "状态", "defaultContent": ""},
+                {
+                    "data": null,
+                    "title": "操作",
+                    "defaultContent": "<button class='download-btn layui-btn layui-btn-normal' type='button'>下载图片</button>  <button class='set-price layui-btn layui-btn-warm' type='button'>修改价格</button>"
+                }
             ],
+            "fnInitComplete": function (oSettings, json) {
+                $("tbody tr").dblclick(function () {
+                    var data = table.row($(this)).data();
+                    var rowD = $(this)[0]
+                    layer.confirm(data.receiveName + '的订单已经做好了吗?', {icon: 6, anim: 6, title:'订单确认'}, function(index){
+                        $.ajax({
+                            url: "maker/finish"
+                            ,type: "post"
+                            ,data: {"id": data.id}
+                            ,success: function (data) {
+                                if (data == "1") {
+                                    layer.msg("已提交", {icon: 6, time: 700});
+                                    layer.close(index);
+                                    table.row(rowD).remove().draw(false);
+                                    return;
+                                }
+                                layer.msg(data, {icon: 5, anim: 0});
+                            }
+                            ,error: function () {
+                                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});
+                            }
+                        });
+
+                        layer.close(index);
+                    });
+                })
+            },
             "language": {
                 "sProcessing": "处理中...",
                 "sLengthMenu": "显示 _MENU_ 项结果",
@@ -121,48 +155,72 @@
         //保存
         $("#layui-table tbody").on("click", ".save-btn", function () {
             var row = table.row($(this).parents("tr"));
+            var data = row.data();
             var thisObj = $(this);
             var tds = $(this).parents("tr").children();
-            $.each(tds, function (i, val) {
-                var jqob = $(val);
-                //把input变为字符串
-                if (!jqob.has('button').length) {
-                    var txt;
-                    if (i == 2) {
-                        txt = jqob.children("select").val();
-                    } else {
-                        txt = jqob.children("input").val();
+
+            layer.prompt({
+                formType: 2,
+                title: '  您将要修改' + data.receiveName + "的订单价格，请简要叙述您的原因",
+                area: ['400px', '80px']
+            }, function(value, index, elem){
+                $.each(tds, function (i, val) {
+                    var jqob = $(val);
+                    //把input变为字符串
+                    if (!jqob.has('button').length) {
+                        var txt;
+                        if (i == 2) {
+                            txt = jqob.children("select").val();
+                        } else {
+                            txt = jqob.children("input").val();
+                        }
+                        table.cell(jqob).data(txt);//修改DataTables对象的数据
                     }
-                    table.cell(jqob).data(txt);//修改DataTables对象的数据
-                }
+                });
+
+                thisObj.html("修改价格");
+                thisObj.attr("class", "set-price layui-btn layui-btn-warm");
+
+                $.ajax({
+                    "url": "maker/setPrice",
+                    "data": {"id": data.id, "price": data.realityPrice, "reason": value},
+                    "type": "post",
+                    "error": function () {
+                        editTds(tds, thisObj);
+                        layer.msg("您的输入有误，请认真核对", {icon: 5, anim: 0});
+                    },
+                    "success": function (data1) {
+
+                        if (data1 == "1") {
+                            layer.msg('保存成功', {icon: 6, time: 700});
+                            return;
+                        }
+                        else {
+                            editTds(tds, thisObj);
+                            layer.msg(data1, {icon: 5, anim: 0});
+                        }
+                    }
+                });
+                layer.close(index);
             });
-            var data = row.data();
-            thisObj.html("修改价格");
-            thisObj.attr("class", "set-price layui-btn layui-btn-warm");
-        $.ajax({
-            "url": "maker/setPrice",
-            "data": {"id": data.id, "price": data.realityPrice},
-            "type": "post",
-            "error": function () {
-                editTds(tds, thisObj);
-                layer.msg("您的输入有误，请认真核对", {icon: 5, anim: 0});
-            },
-            "success": function (data1) {
-                var arr = new Array();
-                arr = data1.split("-");
-                response = arr[0];
-                var savedId = arr[1];
-                if (response == "1") {
-                    layer.msg('保存成功', {icon: 6, time: 700});
-                }
-                else {
-                    editTds(tds, thisObj);
-                    layer.msg(response, {icon: 5, anim: 0});
-                }
-            }
-        });
+
         });
 
+        $("#layui-table tbody").on("click", ".download-btn", function () {
+            var row = table.row($(this).parents("tr"));
+            var data = row.data();
+            var items = data.itemDTOs;
+            var item;
+            var fileName;
+            for (var i = 0; i < items.length; i++) {
+                item = items[i];
+                fileName = data.receiveName + " " + item.name + "正面 " + item.size + " " + item.number + ".png";
+                window.open("maker/downByPath?paths=" + item.imgAddress + "&fileName=" + fileName);
+                fileName = data.receiveName + " " + item.name + "反面 " + item.size + " " + item.number + ".png";
+                window.open("maker/downByPath?paths=" + item.backImgAddress + "&fileName=" + fileName);
+            }
+//            alert(items[0].name);
+        })
     });
     function editTds(tds, thisBtn) {
         $.each(tds, function (i, val) {

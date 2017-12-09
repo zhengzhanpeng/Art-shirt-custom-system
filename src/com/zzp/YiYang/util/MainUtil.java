@@ -56,7 +56,6 @@ public class MainUtil {
 		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
 		String userName = userDetails.getUsername();
-		System.out.println(userName);
 		return userName;
 	}
 

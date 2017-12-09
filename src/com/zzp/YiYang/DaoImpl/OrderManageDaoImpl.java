@@ -2,14 +2,21 @@ package com.zzp.YiYang.DaoImpl;
 
 import com.zzp.YiYang.DTO.ItemDTO;
 import com.zzp.YiYang.DTO.OrderManageDTO;
+import com.zzp.YiYang.DTO.UserDTO;
 import com.zzp.YiYang.Dao.OrderManageDao;
+import com.zzp.YiYang.mapper.OrderLogMapper;
 import com.zzp.YiYang.mapper.OrderMapper;
+import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.Order;
+import com.zzp.YiYang.pojo.OrderLog;
+import com.zzp.YiYang.util.ExecutorUtil;
 import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author ho
@@ -17,6 +24,24 @@ import java.util.List;
  */
 public class OrderManageDaoImpl implements OrderManageDao {
     private OrderMapper orderMapper;
+    private ExecutorService executorService;
+    private UserMapper userMapper;
+    private OrderLogMapper orderLogMapper;
+
+    @Resource
+    public void setOrderLogMapper(OrderLogMapper orderLogMapper) {
+        this.orderLogMapper = orderLogMapper;
+    }
+
+    @Resource
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+    @Resource
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Resource
     public void setOrderMapper(OrderMapper orderMapper) {
@@ -24,7 +49,16 @@ public class OrderManageDaoImpl implements OrderManageDao {
     }
 
     @Override
-    public String setPrice(int id, float price) {
+    public String finish(int id) {
+        int result = orderMapper.setStateFinished(id);
+        if (result == 0) {
+            return MessageUtil.FINISH_DEFAULT;
+        }
+        return "1";
+    }
+
+    @Override
+    public String setPrice(int id, float price, String reason) {
         Order order = new Order();
         order.setId(id);
         order.setRealityPrice(price);
@@ -32,6 +66,18 @@ public class OrderManageDaoImpl implements OrderManageDao {
         if (result == 0) {
             return MessageUtil.SYSTEM_ERROR;
         }
+        UserDTO userDTO = userMapper.getUserInfo(MainUtil.getUserName());
+        executorService.execute(() -> {
+            float realityPrice = orderMapper.getPrice(id);
+            String logStr = "修改订单价格：订单编号为" + id + "，原价" + realityPrice + "元，修改为"
+                    + price + "元。原因：" + reason;
+            OrderLog orderLog = new OrderLog();
+            orderLog.setContent(logStr);
+            orderLog.setLogTime(new Date());
+            orderLog.setName(userDTO.getName());
+            orderLog.setPhone(userDTO.getPhone());
+            orderLogMapper.insert(orderLog);
+        });
         return "1";
     }
 

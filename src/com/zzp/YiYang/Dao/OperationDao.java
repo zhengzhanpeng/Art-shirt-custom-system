@@ -29,4 +29,6 @@ public interface OperationDao {
      * @return
      */
     String AddToCollect(int iconId);
+
+    String addToCartFinished(int id);
 }

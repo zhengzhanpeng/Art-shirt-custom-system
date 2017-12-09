@@ -2,6 +2,8 @@ package com.zzp.YiYang.Controller.user;
 
 import com.zzp.YiYang.DTO.BuyAtOnceDTO;
 import com.zzp.YiYang.DTO.CartDTO;
+import com.zzp.YiYang.DTO.GetCartDTO;
+import com.zzp.YiYang.Dao.CartDao;
 import com.zzp.YiYang.Dao.ClothesDao;
 import com.zzp.YiYang.Dao.IconDao;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,12 @@ import java.util.List;
 public class ClothesController {
     private ClothesDao clothesDao;
     private IconDao iconDao;
+    private CartDao cartDao;
+
+    @Resource
+    public void setCartDao(CartDao cartDao) {
+        this.cartDao = cartDao;
+    }
 
     @Resource
     public void setIconDao(IconDao iconDao) {
@@ -65,6 +73,12 @@ public class ClothesController {
     public String getCollectMax(int page, int num) {
         String result = iconDao.getCollectMaxIcon(page, num);
         return result;
+    }
+
+    @RequestMapping(value = "/buy", method = RequestMethod.POST)
+    @ResponseBody
+    public String buy(GetCartDTO get) {
+        return cartDao.buy(get);
     }
 
     @RequestMapping(value = "addNewToCart", method = RequestMethod.POST)

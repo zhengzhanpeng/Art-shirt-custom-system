@@ -37,7 +37,7 @@
         FROM reco_clothes r
         LEFT OUTER JOIN  clothes c ON c.id = r.clothes_id;
     </select>
-    <select id="getImgAddress" parameterType="Integer" resultType="String">
+    <select id="getImgAddress" parameterType="Integer" resultType="Clothes">
         SELECT img_address AS imgAddress, back_img_address AS backImgAddress FROM clothes WHERE id = #{id} LIMIT 1;
     </select>
     <select id="getRealityPrice" parameterType="Integer" resultType="Float">

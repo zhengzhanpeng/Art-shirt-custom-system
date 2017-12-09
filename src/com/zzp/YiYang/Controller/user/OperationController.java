@@ -31,6 +31,12 @@ public class OperationController {
         return result;
     }
 
+    @RequestMapping(value = "addToCartFinished", method = RequestMethod.POST)
+    @ResponseBody
+    public String addToCartFinished(int id) {
+        return operationDao.addToCartFinished(id);
+    }
+
     @RequestMapping(value = "/addToCollect", method = RequestMethod.POST)
     @ResponseBody
     public String addToCollect(int iconId) {

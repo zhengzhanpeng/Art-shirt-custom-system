@@ -6,5 +6,7 @@ package com.zzp.YiYang.Dao;
  */
 public interface OrderManageDao {
     String getOrders();
-    String setPrice(int id, float price);
+    String setPrice(int id, float price, String reason);
+
+    String finish(int id);
 }

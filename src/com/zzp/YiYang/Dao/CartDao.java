@@ -22,4 +22,6 @@ public interface CartDao {
     String createOrder(List<GetCartDTO> cartIdList);
 
     String deleteCart(int id);
+
+    String buy(GetCartDTO get);
 }

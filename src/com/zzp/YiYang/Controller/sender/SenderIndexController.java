@@ -27,6 +27,6 @@ public class SenderIndexController {
     public String index(ModelMap model) {
         UserDTO user = userMapper.getUserInfo(SecurityUtil.getUserName());
         model.addAttribute("user", user);
-        return "/admin/index";
+        return "/sender/index";
     }
 }

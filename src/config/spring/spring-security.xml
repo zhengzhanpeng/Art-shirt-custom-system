@@ -20,7 +20,7 @@
                 login-page="/login"
                 default-target-url="/success"
                 authentication-failure-url="/login/1"/>
-        <logout logout-success-url="/index"/>
+        <logout logout-success-url="/login"/>
         <!-- enable csrf protection -->
     </http>
     <beans:bean name="BCryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>

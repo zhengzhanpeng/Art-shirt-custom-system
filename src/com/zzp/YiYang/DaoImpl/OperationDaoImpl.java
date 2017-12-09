@@ -2,11 +2,9 @@ package com.zzp.YiYang.DaoImpl;
 
 import com.zzp.YiYang.DTO.CartDTO;
 import com.zzp.YiYang.Dao.OperationDao;
-import com.zzp.YiYang.mapper.CartMapper;
-import com.zzp.YiYang.mapper.CollectMapper;
-import com.zzp.YiYang.mapper.GoodsMapper;
-import com.zzp.YiYang.mapper.IconMapper;
+import com.zzp.YiYang.mapper.*;
 import com.zzp.YiYang.pojo.Cart;
+import com.zzp.YiYang.pojo.Clothes;
 import com.zzp.YiYang.pojo.Collect;
 import com.zzp.YiYang.pojo.Goods;
 import com.zzp.YiYang.util.MessageUtil;
@@ -20,9 +18,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
@@ -38,6 +34,12 @@ public class OperationDaoImpl implements OperationDao {
     private IconMapper iconMapper;
     private CollectMapper collectMapper;
     private ExecutorService executorService;
+    private ClothesMapper clothesMapper;
+
+    @Resource
+    public void setClothesMapper(ClothesMapper clothesMapper) {
+        this.clothesMapper = clothesMapper;
+    }
 
     @Resource
     public void setExecutorService(ExecutorService executorService) {
@@ -75,7 +77,6 @@ public class OperationDaoImpl implements OperationDao {
         String size = cartDTO.getSize();
         byte[] bs = size.getBytes();  //将utf-8的字符编码转为iso-8859-1
         size = new String(bs);
-        System.out.println(size);
         Goods goods = goodsMapper.getGoodsIdAndNumber(cartDTO.getClothesId(), size);
         Cart cart = new Cart();
         cart.setUserName(SecurityUtil.getUserName());
@@ -127,6 +128,18 @@ public class OperationDaoImpl implements OperationDao {
             result = returnMessage.get("CLOTHES_DIR");
         }
         return result;
+    }
+
+    @Override
+    public String addToCartFinished(int id) {
+        Clothes clothes = clothesMapper.getImgAddress(id);
+        CartDTO cartDTO = new CartDTO();
+        cartDTO.setBackImgAddress(clothes.getBackImgAddress());
+        cartDTO.setImgAddress(clothes.getImgAddress());
+        cartDTO.setClothesId(id);
+        cartDTO.setNumber(1);
+        cartDTO.setSize("L");
+        return addToCart(cartDTO);
     }
 
     @Override

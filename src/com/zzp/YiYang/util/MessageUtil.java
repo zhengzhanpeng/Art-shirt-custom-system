@@ -35,5 +35,6 @@ public class MessageUtil {
     public static final String USER_NAME_HAS_CHINESE = "用户名不能存在中文";
     public static final String PASSWORD_HAS_CHINESE = "用户名不能存在中文";
     public static final String NUMBER_NOT_NULL = "购买数量不能为空";
+    public static final String FINISH_DEFAULT = "修改失败，该订单可能未付款，请检查";
     public static final String SYSTEM_BUSY = "当前系统繁忙，很抱歉给您造成的不便，请您稍后再试";
 }
