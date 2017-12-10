@@ -7,6 +7,8 @@
         <result column="send_time" property="sendTime"/>
         <result column="price" property="realityPrice"/>
         <result column="send_type" property="sendType"/>
+        <result column="e_name" property="eName"/>
+        <result column="e_number" property="eNumber"/>
         <result column="state" property="state"/>
         <association property="sendAddress" javaType="sendAddress">
             <id column="send_address_id" property="id"/>
@@ -55,12 +57,15 @@
         b.number,
         b.reality_price,
         c.name,
+        e.name AS e_name,
+        e.number AS e_number,
         g.size
         FROM order1 o
         LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        LEFT OUTER JOIN express_message e ON o.id = e.order_id
         WHERE o.username = #{userName};
     </select>
 
@@ -150,10 +155,10 @@
         s.district,
         s.address,
         b.id AS bought_item_id,
-        b.img_address,
-        b.back_img_address,
+        <!--b.img_address,-->
+        <!--b.back_img_address,-->
         b.number,
-        b.reality_price,
+        <!--b.reality_price,-->
         c.name,
         g.size
         FROM order1 o
@@ -161,7 +166,7 @@
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
-        WHERE state BETWEEN 1 AND 2;
+        WHERE state = 3;
     </select>
 
     <resultMap id="orderDTOMap" type="orderDTO">
@@ -314,4 +319,11 @@
     <update id="setStateFinished" parameterType="Integer">
         UPDATE order1 set state = 3 WHERE id = #{id} AND state = 2 LIMIT 1;
     </update>
+    <update id="setStateSent" parameterType="Integer">
+        UPDATE order1 set state = 4 WHERE id = #{orderId} AND state = 3 LIMIT 1;
+    </update>
+    <insert id="addExpressMessage" parameterType="ExpressMessage">
+        INSERT INTO express_message VALUES(null, #{orderId}, #{name}, #{number});
+    </insert>
+
 </mapper>

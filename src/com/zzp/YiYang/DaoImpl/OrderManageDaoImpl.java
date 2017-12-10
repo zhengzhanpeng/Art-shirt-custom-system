@@ -66,11 +66,11 @@ public class OrderManageDaoImpl implements OrderManageDao {
         if (result == 0) {
             return MessageUtil.SYSTEM_ERROR;
         }
-        UserDTO userDTO = userMapper.getUserInfo(MainUtil.getUserName());
+        UserDTO userDTO = userMapper.getUserInfo(MainUtil.getUserName());  //在外部是因为否则无法获取username
         executorService.execute(() -> {
             float realityPrice = orderMapper.getPrice(id);
-            String logStr = "修改订单价格：订单编号为" + id + "，原价" + realityPrice + "元，修改为"
-                    + price + "元。原因：" + reason;
+            String logStr = "<span style='color:#FF5722;'>修改价格</span> &nbsp;&nbsp;订单编号:" + id + "; 原价:" + realityPrice + "元; 修改后:"
+                    + price + "元<br>原因:" + reason;
             OrderLog orderLog = new OrderLog();
             orderLog.setContent(logStr);
             orderLog.setLogTime(new Date());

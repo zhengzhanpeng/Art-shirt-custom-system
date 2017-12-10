@@ -5,4 +5,8 @@
     <insert id="insert" parameterType="OrderLog">
         INSERT INTO order_log VALUES(null, #{content}, #{name}, #{phone}, #{logTime});
     </insert>
+    <select id="gets" resultType="OrderLog">
+        SELECT id, content, name, phone, log_time AS logTime
+        FROM order_log ORDER BY log_time DESC LIMIT 1000;
+    </select>
 </mapper>

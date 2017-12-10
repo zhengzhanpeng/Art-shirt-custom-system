@@ -5,7 +5,7 @@ var navs = [{
 	"children": [ {
 		"title": "待发货",
 		"icon": "&#xe606;",
-		"href": "sender/wait_send"
+		"href": "sender/send"
 	}, {
 		"title": "已发货信息",
 		"icon": "&#xe61d;",

@@ -9,4 +9,13 @@
     <delete id="delete" >
         DELETE FROM send_address WHERE id = #{id} AND username = #{userName} LIMIT 1;
     </delete>
+    <select id="get" parameterType="Integer" resultType="SendAddress">
+        SELECT
+        s.receive_name AS receiveName,
+        s.phone,
+        s.address
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.send_address_id = s.id
+        WHERE o.id = #{orderId};
+    </select>
 </mapper>

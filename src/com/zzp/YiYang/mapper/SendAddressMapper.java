@@ -10,4 +10,6 @@ import org.apache.ibatis.annotations.Param;
 public interface SendAddressMapper {
     int insert(SendAddress sendAddress);
     int delete(@Param("id") int id, @Param("userName") String userName);
+
+    SendAddress get(int orderId);
 }

@@ -17,6 +17,8 @@ public class MyOrderDTO {
     private int state;
     private Date sendTime;
     private String postNumber;
+    private String eName;
+    private String eNumber;
     private int sendType;
     private List<ItemDTO> itemDTOs;
 
@@ -78,6 +80,22 @@ public class MyOrderDTO {
 
     public List<ItemDTO> getItemDTOs() {
         return itemDTOs;
+    }
+
+    public String geteName() {
+        return eName;
+    }
+
+    public void seteName(String eName) {
+        this.eName = eName;
+    }
+
+    public String geteNumber() {
+        return eNumber;
+    }
+
+    public void seteNumber(String eNumber) {
+        this.eNumber = eNumber;
     }
 
     public void setItemDTOs(List<ItemDTO> itemDTOs) {

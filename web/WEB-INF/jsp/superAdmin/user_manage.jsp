@@ -217,6 +217,7 @@
         layer.open({
             type: 1
             ,
+            offset: "t",
             title: ['重置密码', 'padding:none !important ;text-align:center'] //不显示标题栏
             ,
             closeBtn: false
@@ -274,6 +275,7 @@
             , closeBtn: false
             , area: ['500px', '450px']
             , shade: 0.8
+            , offset: "t"
             , id: 'LAY_layuipro' //设定一个id，防止重复弹出
             , btn: ['确定', '取消']
             , moveType: 1 //拖拽模式，0或者1

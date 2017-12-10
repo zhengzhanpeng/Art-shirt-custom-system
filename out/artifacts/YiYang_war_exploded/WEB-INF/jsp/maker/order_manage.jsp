@@ -37,7 +37,7 @@
                     <col>
                     <col>
                     <col>
-                    <col>
+                    <col width="80px">
                     <col>
                     <col>
                     <col>
@@ -94,31 +94,7 @@
                 }
             ],
             "fnInitComplete": function (oSettings, json) {
-                $("tbody tr").dblclick(function () {
-                    var data = table.row($(this)).data();
-                    var rowD = $(this)[0]
-                    layer.confirm(data.receiveName + '的订单已经做好了吗?', {icon: 6, anim: 6, title:'订单确认'}, function(index){
-                        $.ajax({
-                            url: "maker/finish"
-                            ,type: "post"
-                            ,data: {"id": data.id}
-                            ,success: function (data) {
-                                if (data == "1") {
-                                    layer.msg("已提交", {icon: 6, time: 700});
-                                    layer.close(index);
-                                    table.row(rowD).remove().draw(false);
-                                    return;
-                                }
-                                layer.msg(data, {icon: 5, anim: 0});
-                            }
-                            ,error: function () {
-                                layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});
-                            }
-                        });
-
-                        layer.close(index);
-                    });
-                })
+                changeTable();
             },
             "language": {
                 "sProcessing": "处理中...",
@@ -145,6 +121,46 @@
                 }
             }
         });
+
+        $("#layui-table").DataTable().on("page", function () {
+            setTimeout("changeTable()", 100);
+        });
+        function changeTable() {
+            $("tbody tr").dblclick(function () {
+                var data = table.row($(this)).data();
+                var rowD = $(this)[0]
+                layer.confirm(data.receiveName + '的订单已经做好了吗?', {icon: 6, anim: 6, title:'订单确认'}, function(index){
+                    $.ajax({
+                        url: "maker/finish"
+                        ,type: "post"
+                        ,data: {"id": data.id}
+                        ,success: function (data) {
+                            if (data == "1") {
+                                layer.msg("已提交", {icon: 6, time: 700});
+                                layer.close(index);
+                                table.row(rowD).remove().draw(false);
+                                return;
+                            }
+                            layer.msg(data, {icon: 5, anim: 0});
+                        }
+                        ,error: function () {
+                            layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0});
+                        }
+                    });
+
+                    layer.close(index);
+                });
+            })
+        }
+        setTimeout("changeInput()", 1000);
+        function changeInput() {
+            $("input").change(function () {
+                changeTable();
+            });
+            $("select").change(function () {
+                changeTable();
+            });
+        }
 
         //修改价格按钮
         $("#layui-table tbody").on("click", ".set-price", function () {

@@ -244,7 +244,7 @@
                                 <c:if test="${o.state == 1}">待付款</c:if>
                                 <c:if test="${o.state == 2}">已付款，正在急速制作中</c:if>
                                 <c:if test="${o.state == 3}">已制作完成，待发货</c:if>
-                                <c:if test="${o.state == 4}">已发货</c:if>
+                                <c:if test="${o.state == 4}">已发货<br>${o.eName} &nbsp;&nbsp;${o.eNumber}</c:if>
                             </span>
                         </td>
                         <td class="hidden-xs">

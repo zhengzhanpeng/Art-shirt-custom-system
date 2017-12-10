@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/query.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.edittable.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="padding: 20px; line-height: 15px; background-color: #393D49; color: #fff; font-weight: 300;">
+    <form class="add-express-message" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">快递名称</label>
+            <div class="layui-input-block">
+                <select id="name" name="modules" lay-verify="required" lay-search="">
+                    <option value="顺丰快递">顺丰快递</option>
+                    <option value="韵达快递">韵达快递</option>
+                    <option value="圆通快递">圆通快递</option>
+                    <option value="中通快递">中通快递</option>
+                    <option value="天天快递">天天快递</option>
+                    <option value="汇通快递">汇通快递</option>
+                    <option value="申通快递">申通快递</option>
+                    <option value="EMS快递">EMS快递</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">快递编号</label>
+            <div class="layui-input-block">
+                <input id="number" type="text" name="title" value="" class="layui-input"
+                       placeholder="请输入快递编号">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="js/jquery-1.12.3.min.js"></script>
+
+<!-- DataTables -->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
+</html>

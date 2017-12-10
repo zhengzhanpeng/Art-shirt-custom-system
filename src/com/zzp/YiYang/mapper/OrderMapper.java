@@ -4,6 +4,7 @@ import com.zzp.YiYang.DTO.AnOrderDTO;
 import com.zzp.YiYang.DTO.MyOrderDTO;
 import com.zzp.YiYang.DTO.OrderDTO;
 import com.zzp.YiYang.DTO.OrderManageDTO;
+import com.zzp.YiYang.pojo.ExpressMessage;
 import com.zzp.YiYang.pojo.Order;
 import org.apache.ibatis.annotations.Param;
 
@@ -44,4 +45,8 @@ public interface OrderMapper {
     AnOrderDTO getAnOrderDTO(int id);
 
     float getPrice(int id);
+
+    int addExpressMessage(ExpressMessage expressMessage);
+
+    int setStateSent(int orderId);
 }
