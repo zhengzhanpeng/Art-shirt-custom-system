@@ -9,9 +9,7 @@ import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.OrderLog;
-import com.zzp.YiYang.util.ExecutorUtil;
-import com.zzp.YiYang.util.MainUtil;
-import com.zzp.YiYang.util.MessageUtil;
+import com.zzp.YiYang.util.*;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -54,6 +52,11 @@ public class OrderManageDaoImpl implements OrderManageDao {
         if (result == 0) {
             return MessageUtil.FINISH_DEFAULT;
         }
+        String userMail = userMapper.getMail(MainUtil.getUserName());
+        executorService.execute(() -> {
+            String content = ModelMail.getContent(MessageUtil.MAKE_FINISHED_EMAIL_CONTENT);
+            EmailHelper.sendEmail(userMail, MessageUtil.MAKE_FINISHED_TITLE, content);
+        });
         return "1";
     }
 
@@ -77,6 +80,11 @@ public class OrderManageDaoImpl implements OrderManageDao {
             orderLog.setName(userDTO.getName());
             orderLog.setPhone(userDTO.getPhone());
             orderLogMapper.insert(orderLog);
+        });
+        String userMail = userMapper.getMail(MainUtil.getUserName());
+        executorService.execute(() -> {
+            String content = ModelMail.getContent(MessageUtil.PRICE_EMAIL_CONTENT);
+            EmailHelper.sendEmail(userMail, MessageUtil.PRICE_TITLE, content);
         });
         return "1";
     }

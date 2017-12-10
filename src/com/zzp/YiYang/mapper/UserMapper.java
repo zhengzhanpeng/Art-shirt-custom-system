@@ -30,4 +30,8 @@ public interface UserMapper {
 
     String getPassword(String userName);
     UserDTO getUserAll(String userName);
+
+    String getMail(String userName);
+
+    List<String> getMails();
 }

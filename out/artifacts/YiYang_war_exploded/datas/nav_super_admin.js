@@ -11,6 +11,10 @@ var navs = [{
 		"icon": "&#xe606;",
 		"href": "admin/departmentManage"
 	}, {
+		"title": "已完成订单",
+		"icon": "&#xe63c;",
+		"href": "manager/orderMessage"
+	}, {
 		"title": "操作日志",
 		"icon": "&#xe63c;",
 		"href": "manager/orderLog"

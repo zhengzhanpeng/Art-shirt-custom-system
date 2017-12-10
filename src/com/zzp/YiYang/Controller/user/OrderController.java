@@ -9,6 +9,7 @@ import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
 import com.zzp.YiYang.util.MainUtil;
+import com.zzp.YiYang.util.MessageUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -69,6 +70,8 @@ public class OrderController {
             AnOrderDTO order = orderMapper.getAnOrderDTO(orderId);
             model.addAttribute("order", order);
             return "/user/pay";
+        } else if (state == 2 || state == 3 || state == 4) {
+            return "/user/pay_finished";
         }
         return "/login";  //如果state不为上述情况，则可能为null或其他情况，则返回登录
     }
@@ -82,6 +85,18 @@ public class OrderController {
     @RequestMapping("/pay")
     public String pay() {
         return "/user/pay";
+    }
+
+    @RequestMapping(value = "/payFinished", method = RequestMethod.GET)
+    public String payFinished() {
+        return "/user/pay_finished";
+    }
+
+    @RequestMapping(value = "/payFinished", method = RequestMethod.POST)
+    @ResponseBody
+    public String payFinishedPost(int id) {
+        String result = orderDao.payFinished(id);
+       return result;
     }
 
     @RequestMapping(value = "/addSendAddress", method = RequestMethod.POST)

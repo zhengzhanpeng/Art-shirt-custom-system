@@ -25,6 +25,8 @@ public interface OrderMapper {
 
     List<OrderManageDTO> getOrdersBySender();
 
+    List<OrderManageDTO> getOrdersByMessage();
+
     int addOrder(Order order);
 
     int setRealityPrice(@Param("id") int id, @Param("realityPrice") double realityPrice);
@@ -49,4 +51,8 @@ public interface OrderMapper {
     int addExpressMessage(ExpressMessage expressMessage);
 
     int setStateSent(int orderId);
+
+    int setStatePayFinished(@Param("id") int id, @Param("userName") String userName, @Param("state") int state);
+
+    boolean isFinished(int id);
 }

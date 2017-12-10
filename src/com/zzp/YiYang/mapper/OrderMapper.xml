@@ -118,6 +118,62 @@
     <!--发货员获取相应的订单信息-->
     <resultMap id="getOrdersBySenderMap" type="OrderManageDTO">
         <id column="order_id" property="id"/>
+        <!--<result column="price" property="realityPrice"/>-->
+        <result column="send_type" property="sendType"/>
+        <result column="desc1" property="desc1"/>
+        <result column="state" property="state"/>
+        <result column="receive_name" property="receiveName"/>
+        <result column="phone" property="phone"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="district" property="district"/>
+        <result column="address" property="address"/>
+        <collection property="itemDTOs" ofType="ItemDTO">
+            <id column="bought_item_id" property="id"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="back_img_address" property="backImgAddress"/>
+            <result column="number" property="number"/>
+            <result column="size" property="size"/>
+            <result column="name" property="name"/>
+            <result column="is_finished" property="isFinished"/>
+            <result column="type" property="type"/>
+            <result column="reality_price" property="realityPrice"/>
+        </collection>
+    </resultMap>
+
+    <select id="getOrdersBySender" resultMap="getOrdersBySenderMap">
+        SELECT
+        o.id AS order_id,
+        o.send_time,
+        o.send_type,
+        o.state,
+        o.desc1,
+        <!--o.reality_price AS price,-->
+        s.receive_name,
+        s.phone,
+        s.province,
+        s.city,
+        s.district,
+        s.address,
+        b.id AS bought_item_id,
+        <!--b.img_address,-->
+        <!--b.back_img_address,-->
+        b.number,
+        <!--b.reality_price,-->
+        c.name,
+        c.is_finished,
+        g.size
+        FROM order1 o
+        LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
+        LEFT OUTER JOIN bought_item b ON b.order_id = o.id
+        LEFT OUTER JOIN goods g ON g.id = b.goods_id
+        LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
+        WHERE state = 3;
+    </select>
+
+    <!--发货员获取相应的订单信息-->
+    <resultMap id="getOrdersByMessageMap" type="OrderManageDTO">
+        <id column="order_id" property="id"/>
         <result column="price" property="realityPrice"/>
         <result column="send_type" property="sendType"/>
         <result column="desc1" property="desc1"/>
@@ -135,12 +191,13 @@
             <result column="number" property="number"/>
             <result column="size" property="size"/>
             <result column="name" property="name"/>
+            <result column="is_finished" property="isFinished"/>
             <result column="type" property="type"/>
             <result column="reality_price" property="realityPrice"/>
         </collection>
     </resultMap>
 
-    <select id="getOrdersBySender" resultMap="getOrdersBySenderMap">
+    <select id="getOrdersByMessage" resultMap="getOrdersByMessageMap">
         SELECT
         o.id AS order_id,
         o.send_time,
@@ -160,13 +217,14 @@
         b.number,
         <!--b.reality_price,-->
         c.name,
+        c.is_finished,
         g.size
         FROM order1 o
         LEFT OUTER JOIN send_address s ON o.username = s.username AND o.send_address_id = s.id
         LEFT OUTER JOIN bought_item b ON b.order_id = o.id
         LEFT OUTER JOIN goods g ON g.id = b.goods_id
         LEFT OUTER JOIN clothes c ON c.id = g.clothes_id
-        WHERE state = 3;
+        WHERE state = 4;
     </select>
 
     <resultMap id="orderDTOMap" type="orderDTO">
@@ -325,5 +383,15 @@
     <insert id="addExpressMessage" parameterType="ExpressMessage">
         INSERT INTO express_message VALUES(null, #{orderId}, #{name}, #{number});
     </insert>
-
+    <update id="setStatePayFinished" >
+        UPDATE order1 set state = #{state}
+        WHERE id = #{id} AND username = #{userName} AND state = 1 LIMIT 1;
+    </update>
+    <select id="isFinished" parameterType="Integer" resultType="Boolean">
+        SELECT c.is_finished FROM order1 o
+        LEFT OUTER JOIN bought_item b ON o.id = b.order_id
+        LEFT OUTER JOIN goods g ON b.goods_id = g.id
+        LEFT OUTER JOIN clothes c ON g.clothes_id = c.id
+        WHERE o.id = #{id} LIMIT 1;
+    </select>
 </mapper>

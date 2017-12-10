@@ -11,8 +11,10 @@ import com.zzp.YiYang.Dao.SendDao;
 import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.pojo.OrderLog;
 import com.zzp.YiYang.pojo.SendAddress;
+import com.zzp.YiYang.util.EmailHelper;
 import com.zzp.YiYang.util.MainUtil;
 import com.zzp.YiYang.util.MessageUtil;
+import com.zzp.YiYang.util.ModelMail;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -56,6 +58,38 @@ public class SendDaoImpl implements SendDao {
     }
 
     @Override
+    public String getOrderMessage() {
+        List<OrderManageDTO> list = orderMapper.getOrdersByMessage();
+        list.stream().forEach(e -> {  //修改返回信息
+            String str = "";
+            ItemDTO item;
+            List<ItemDTO> itemDTOs = e.getItemDTOs();
+            for(int i = 0; i < itemDTOs.size(); i++) {
+                item = itemDTOs.get(i);
+                str += item.getName() + " " + item.getSize() + " " + item.getNumber() + "件";
+                if (item.isFinished()) {
+                    str += " <span style='color:#FFB800;'>成品</span>";
+                } else {
+                    str += " <span style='color:#01AAED;'>非成品</span>";
+                }
+                if (i != itemDTOs.size() - 1) {
+                    str += "<br>";
+                }
+            }
+            e.setDetails(str);
+            if (e.getSendType() == 1) {
+                e.setSendTypeStr("不限送货时间");
+            } else if (e.getSendType() == 2) {
+                e.setSendTypeStr("工作日送货");
+            } else {
+                e.setSendTypeStr("双休日、假日送货");
+            }
+        });
+        String result = MainUtil.getJsonToTable(list);
+        return result;
+    }
+
+    @Override
     public String addExpressMessage(ExpressMessage expressMessage) {
         int result = orderMapper.setStateSent(expressMessage.getOrderId());
         int id = expressMessage.getOrderId();
@@ -79,6 +113,11 @@ public class SendDaoImpl implements SendDao {
             orderLog.setPhone(userDTO.getPhone());
             orderLogMapper.insert(orderLog);
         });
+        String userMail = userMapper.getMail(MainUtil.getUserName());
+        executorService.execute(() -> {
+            String content = ModelMail.getContent(MessageUtil.SEND_FINISHED_EMAIL_CONTENT);
+            EmailHelper.sendEmail(userMail, MessageUtil.SEND_FINISHED_TITLE, content);
+        });
         return "1";
     }
 
@@ -92,6 +131,11 @@ public class SendDaoImpl implements SendDao {
             for(int i = 0; i < itemDTOs.size(); i++) {
                 item = itemDTOs.get(i);
                 str += item.getName() + " " + item.getSize() + " " + item.getNumber() + "件";
+                if (item.isFinished()) {
+                    str += " <span style='color:#FFB800;'>成品</span>";
+                } else {
+                    str += " <span style='color:#01AAED;'>非成品</span>";
+                }
                 if (i != itemDTOs.size() - 1) {
                     str += "<br>";
                 }

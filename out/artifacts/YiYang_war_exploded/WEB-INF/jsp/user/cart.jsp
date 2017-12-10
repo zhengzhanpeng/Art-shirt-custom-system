@@ -132,8 +132,8 @@
                         <div class="clearfix"></div>
                         <nav id="tiny-menu" class="clearfix">
                             <ul class="user-menu">
-                                <li><a href="#">我的账户</a></li>
-                                <li><a href="cart.html">购物车</a></li>
+                                <li><a href="user/order">我的账户</a></li>
+                                <li><a href="user/setPassword">修改密码</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
                                 <li><a href="j_spring_security_logout ">退出</a></li>
@@ -560,6 +560,7 @@
             layer.msg("当前购物车为空！", {icon: 5, anim: 0, offset: '10px'});
             return;
         }
+        var indexLoad = layer.load({time: 5*1000, offset: "50px"});
         var str = JSON.stringify(array);
         $.ajax({
             url: "user/createOrder"
@@ -567,6 +568,7 @@
             ,data: JSON.stringify(array)
             ,contentType : 'application/json;charset=utf-8'
             ,success: function (data) {
+                layer.close(indexLoad);
                 if (!isNaN(data)) {
                     window.location.href="user/order/" + data;
                     return;
@@ -574,6 +576,7 @@
                 layer.alert(data, {icon: 5, anim: 1, offset: '10px'});
             }
             ,error: function () {
+                layer.close(indexLoad);
                 layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: '10px'});
             }
         });

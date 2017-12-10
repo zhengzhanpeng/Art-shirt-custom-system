@@ -50,4 +50,10 @@
         LEFT OUTER JOIN user_info i ON u.username = i.username
         WHERE u.username = #{userName} ;
     </select>
+    <select id="getMail" parameterType="String" resultType="String">
+        SELECT email FROM user_info WHERE username = #{userName} LIMIT 1;
+    </select>
+    <select id="getMails" resultType="String">
+        SELECT email FROM user_info;
+    </select>
 </mapper>

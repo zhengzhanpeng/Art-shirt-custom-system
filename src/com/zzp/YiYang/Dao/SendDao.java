@@ -10,4 +10,7 @@ public interface SendDao {
     String getOrders();
 
     String addExpressMessage(ExpressMessage expressMessage);
+
+    String getOrderMessage();
+
 }

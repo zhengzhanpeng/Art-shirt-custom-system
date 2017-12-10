@@ -7,9 +7,9 @@ var navs = [{
 		"icon": "&#xe606;",
 		"href": "sender/send"
 	}, {
-		"title": "已发货信息",
-		"icon": "&#xe61d;",
-		"href": "sender/sent"
+		"title": "已完成订单",
+		"icon": "&#xe63c;",
+		"href": "manager/orderMessage"
 	}, {
 		"title": "操作日志",
 		"icon": "&#xe63c;",

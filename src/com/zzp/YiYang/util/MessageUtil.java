@@ -37,4 +37,12 @@ public class MessageUtil {
     public static final String NUMBER_NOT_NULL = "购买数量不能为空";
     public static final String FINISH_DEFAULT = "修改失败，该订单可能未付款，请检查";
     public static final String SYSTEM_BUSY = "当前系统繁忙，很抱歉给您造成的不便，请您稍后再试";
+    public static final String PAY_FINISHED_EMAIL_CONTENT = "我们已收到您的订单，之后订单的动态我们将以邮件的方式通知您，请您留意。";
+    public static final String PRICE_EMAIL_CONTENT = "经过我们仔细考虑之后，我们决定对您的价格作出修改，详情请登录我们的官网查看。谢谢您的查收";
+    public static final String MAKE_FINISHED_EMAIL_CONTENT = "您的衣服已制作完毕，我们将火速为您发货，之后订单的动态我们将以邮件的方式通知您，请您留意。";
+    public static final String SEND_FINISHED_EMAIL_CONTENT = "您的订单已发货，您可以登录我们的官网查看订单的详细信息，感谢您对我们的信任与支持。";
+    public static final String PAY_FINISHED_TITLE = "付款通知";
+    public static final String PRICE_TITLE = "价格变动通知";
+    public static final String MAKE_FINISHED_TITLE = "您的订单有新的进度";
+    public static final String SEND_FINISHED_TITLE = "您的订单有新的进度";
 }

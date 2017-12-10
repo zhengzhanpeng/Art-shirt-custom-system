@@ -184,8 +184,8 @@
                         <div class="clearfix"></div>
                         <nav id="tiny-menu" class="clearfix">
                             <ul class="user-menu">
-                                <li><a href="#">我的账户</a></li>
-                                <li><a href="cart.html">购物车</a></li>
+                                <li><a href="user/order">我的账户</a></li>
+                                <li><a href="user/setPassword">修改密码</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
                                 <li><a href="j_spring_security_logout ">退出</a></li>
@@ -307,7 +307,7 @@
                                             <fieldset id="test4-input-input_tab1-input_tab2" style=" border:none;">
                                                 <ul class="payment-list clearfix" >
                                                     <%--<li> <input class="input_tab1" name="myradio" id="r1" type="radio" checked="checked"/><label for="r1" ><img src="plugins/buy/images/xhw.png" alt=""/></label></label></li>--%>
-                                                    <li><input class="input_tab2" name="myradio" id="r2" type="radio" /><label for="r2" ><img src="plugins/buy/images/zfb.png" alt=""/></label></li>
+                                                    <li><input class="input_tab2" name="myradio" value="1" id="r2" type="radio" /><label for="r2" ><img src="plugins/buy/images/zfb.png" alt=""/></label></li>
                                                     <%--<li> <input class="input_tab2" name="myradio" id="r3" type="radio" /><label for="r2" ><img src="plugins/buy/images/yck.png" alt=""/></label></li>--%>
                                                     <%--<li>  <input class="input_tab2" name="myradio" id="r4" type="radio" /><label for="r2" ><img src="plugins/buy/images/zxzf.png" alt=""/></label></li>--%>
                                                 </ul>
@@ -343,7 +343,7 @@
                             </div>
                         </div>
                         <div class="box-ft clearfix">
-                            <input type="submit" class="btn btn-primary" value="下一步" id="payBtn">
+                            <input type="button" class="btn btn-primary" value="下一步" id="payBtn2">
                             <%--<a href="#" class="btn btn-lineDakeLight">修改订单</a>--%>
                             <span class="tip"></span>
                         </div>
@@ -574,9 +574,37 @@
         var pStr = ${order.sendAddress.province};
         var cStr = ${order.sendAddress.city};
         var dStr = ${order.sendAddress.district};
+        var id = ${order.id};
         var msgId = {"province": pStr, "city": cStr, "district": dStr}
         var msg = getMessage(msgId);
         $("#address").text(msg.province + "," + msg.city + "," + msg.district + " ");
+
+        $("#payBtn2").click(function () {
+            var val = $("input[name='myradio']:checked").val();
+            if(isNaN(val)) {
+                layer.msg("请先选择支付方式", {icon: 5, anim: 6, offset: "10px"});
+                return;
+            }
+            var indexLoad = layer.load({time: 5 * 1000, offset: "50px"});
+            $.ajax({
+                url: "user/payFinished"
+                ,type: "post"
+                ,data: {"id": id}
+                ,success: function (data) {
+                    layer.close(indexLoad);
+                    if (data == "1") {
+                        layer.msg("付款成功！", {icon: 6, time: 700, offset: "10px"});
+                        window.location.href='user/payFinished';
+                        return;
+                    }
+                    layer.msg(data, {icon: 5, anim: 0, offset: "10px"});
+                }
+                ,error: function () {
+                    layer.close(indexLoad);
+                    layer.msg("当前系统繁忙，请稍后再试！", {icon: 5, anim: 0, offset: "10px"});
+                }
+            });
+        })
     })
 </script>
 </body>

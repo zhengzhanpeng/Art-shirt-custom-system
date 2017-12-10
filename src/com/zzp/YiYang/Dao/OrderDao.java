@@ -19,4 +19,6 @@ public interface OrderDao {
     String deleteAddress(int id);
 
     boolean toPay(ToPayDTO toPayDTO);
+
+    String payFinished(int id);
 }

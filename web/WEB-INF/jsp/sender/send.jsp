@@ -30,10 +30,7 @@
     </blockquote>
 
 
-    <button id="addRow" class="layui-btn">添加属性</button>
-    <button id="batch-edit-btn" class="layui-btn">全部编辑</button>
-    <button id="batch-save-btn" class="layui-btn">全部保存</button>
-    <hr>
+
     <fieldset class="layui-elem-field">
         <legend>数据列表</legend>
         <div class="layui-field-box">
@@ -85,7 +82,7 @@
                 { "data": "id", "title":"订单编号","defaultContent":""},
                 { "data": "details", "title":"订单详情","defaultContent":""},
                 { "data": "desc1", "title":"会员留言","defaultContent":""},
-//                { "data": "realityPrice", "title":"合计","defaultContent":""},
+//                { "data": "isFinishedStr", "title":"是否成品","defaultContent":""},
                 { "data": "receiveName", "title":"姓名","defaultContent":""},
                 { "data": "phone", "title":"联系电话","defaultContent":""},
                 { "data": null, "title":"收货地址","defaultContent":"<div class='date'></div>"},

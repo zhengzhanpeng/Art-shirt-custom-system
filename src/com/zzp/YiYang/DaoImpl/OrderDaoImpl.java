@@ -6,25 +6,38 @@ import com.zzp.YiYang.DTO.ToPayDTO;
 import com.zzp.YiYang.Dao.OrderDao;
 import com.zzp.YiYang.mapper.OrderMapper;
 import com.zzp.YiYang.mapper.SendAddressMapper;
+import com.zzp.YiYang.mapper.UserMapper;
 import com.zzp.YiYang.pojo.Order;
 import com.zzp.YiYang.pojo.SendAddress;
-import com.zzp.YiYang.util.CloseOrderDelayed;
-import com.zzp.YiYang.util.CloseOrderThread;
-import com.zzp.YiYang.util.MainUtil;
-import com.zzp.YiYang.util.MessageUtil;
+import com.zzp.YiYang.util.*;
 
 import javax.annotation.Resource;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author ho
  * @create 2017-10-01 16:21
  */
 public class OrderDaoImpl implements OrderDao {
+    private final int HOUR = 1000 * 60 * 60;
+    private final int MINUTE = 1000 * 60;
 
     private OrderMapper orderMapper;
     private SendAddressMapper sendAddressMapper;
     private CloseOrderThread closeOrderThread;
+    private ExecutorService executorService;
+    private UserMapper userMapper;
+
+    @Resource
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+    @Resource
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Resource
     public void setCloseOrderThread(CloseOrderThread closeOrderThread) {
@@ -57,6 +70,28 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public String payFinished(int id) {
+        String userName = MainUtil.getUserName();
+        boolean isFinished = orderMapper.isFinished(id);
+        int state;
+        if (isFinished) {
+            state = 3;
+        } else {
+            state = 2;
+        }
+        int result = orderMapper.setStatePayFinished(id, userName, state);
+        if (result == 0) {
+            return MessageUtil.SYSTEM_ERROR;
+        }
+        String userMail = userMapper.getMail(MainUtil.getUserName());
+        executorService.execute(() -> {
+            String content = ModelMail.getContent(MessageUtil.PAY_FINISHED_EMAIL_CONTENT);
+            EmailHelper.sendEmail(userMail, MessageUtil.PAY_FINISHED_TITLE, content);
+        });
+        return "1";
+    }
+
+    @Override
     public boolean toPay(ToPayDTO toPayDTO) {
         Order order = new Order(); //根据用户名和orderId修改对应的订单
         order.setId(toPayDTO.getId());
@@ -67,7 +102,7 @@ public class OrderDaoImpl implements OrderDao {
         order.setState(1);
         int result = orderMapper.set(order);
         if(result == 0) return false;
-        CloseOrderDelayed c = new CloseOrderDelayed(order.getId(), 30000);
+        CloseOrderDelayed c = new CloseOrderDelayed(order.getId(), 1 * HOUR);
         closeOrderThread.offer(c);
         return true;
     }

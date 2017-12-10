@@ -15,6 +15,7 @@ public class ItemDTO {
     private String name;
     private String type;
     private float realityPrice;
+    private boolean isFinished;
 
     public int getId() {
         return id;
@@ -78,5 +79,13 @@ public class ItemDTO {
 
     public void setRealityPrice(float realityPrice) {
         this.realityPrice = realityPrice;
+    }
+
+    public boolean isFinished() {
+        return isFinished;
+    }
+
+    public void setFinished(boolean finished) {
+        isFinished = finished;
     }
 }

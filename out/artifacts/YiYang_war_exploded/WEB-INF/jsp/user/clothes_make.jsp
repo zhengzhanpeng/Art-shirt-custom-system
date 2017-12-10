@@ -168,8 +168,8 @@
                         <div class="clearfix"></div>
                         <nav id="tiny-menu" class="clearfix">
                             <ul class="user-menu">
-                                <li><a href="#">我的账户</a></li>
-                                <li><a href="cart.html">购物车</a></li>
+                                <li><a href="user/order">我的账户</a></li>
+                                <li><a href="user/setPassword">修改密码</a></li>
                                 <li><a href="login">登录/注册</a></li>
                                 <%--<li><a href="#">注册</a></li>--%>
                                 <li><a href="j_spring_security_logout ">退出</a></li>
