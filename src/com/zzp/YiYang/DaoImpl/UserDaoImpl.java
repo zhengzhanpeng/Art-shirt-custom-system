@@ -98,6 +98,7 @@ public class UserDaoImpl implements UserDao {
             synchronized (userMapper) {
                 user = userMapper.getUser(userDTO.getUserName());
                 if (user == null) {
+                    userDTO.setPhone(0);
                     result = userMapper.addUser(userDTO);
                 }
             }

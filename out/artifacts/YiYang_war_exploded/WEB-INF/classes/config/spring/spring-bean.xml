@@ -35,7 +35,6 @@
 
     <bean id="iconDao" class="com.zzp.YiYang.DaoImpl.IconDaoImpl"/>
     <bean id="clothesDao" class="com.zzp.YiYang.DaoImpl.ClothesDaoImpl"/>
-    <bean id="myOrderDao" class="com.zzp.YiYang.DaoImpl.MyOrderDaoImpl"/>
     <bean id="operationDao" class="com.zzp.YiYang.DaoImpl.OperationDaoImpl"/>
     <bean id="orderDao" class="com.zzp.YiYang.DaoImpl.OrderDaoImpl"/>
     <bean id="userDao" class="com.zzp.YiYang.DaoImpl.UserDaoImpl"/>

@@ -550,8 +550,8 @@
             array.push({
                 "id": numbers.eq(i).attr("data")
                 ,"clothesId": numbers.eq(i).attr("data-clothes")
-                ,"imgAddress": $(".img-address").attr("href")
-                ,"backImgAddress": $(".back-img-address").attr("href")
+                ,"imgAddress": $(".img-address").eq(i).attr("href")
+                ,"backImgAddress": $(".back-img-address").eq(i).attr("href")
                 ,"number": numbers.eq(i).val()
                 ,"size": sizes.eq(i).val()
             })

@@ -396,7 +396,7 @@
             , offset: '50px'
             , maxmin: true
             , anim: 1
-            , content: ['/html/goods_message.html']
+            , content: ['html/goods_message.html']
             , success: function (layero) {
                 var btn = layero.find('.layui-layer-btn');
                 btn.css('text-align', 'center');

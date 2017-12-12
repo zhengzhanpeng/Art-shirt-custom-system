@@ -20,7 +20,7 @@
 <body>
 
 <div class="register-container">
-    <h1>ShareLink</h1>
+    <h1>艺扬服饰商城</h1>
 
     <div class="connect">
         <p>您距离注册完成仅需最后一步啦，快去邮箱完成认证吧</p>

@@ -515,7 +515,12 @@
 <script src="js/owl.carousel.js"></script>
 <script src="js/layer.js"></script>
 <script>
-
+    $(function () {
+        var x = ${orderList.size()};
+        if(x == 0) {
+            $(".empty-cart").attr("class", "empty-cart");
+        }
+    })
 </script>
 
 </body>

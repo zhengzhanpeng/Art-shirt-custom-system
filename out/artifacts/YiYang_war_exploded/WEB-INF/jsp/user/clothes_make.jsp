@@ -816,6 +816,9 @@
         var data = result.data;
         var icon;
         $(idCss).children().remove();
+        if(data.length == 0) {
+            $(idCss).text("您暂无收藏图标");
+        }
         for (var i = 0; i < data.length; i++) {
             icon = data[i];
             var $div = $("<div class='item viwe' onclick='javascript: editImg(this);' style='data-w='300' data-h='200'></div>");
@@ -935,7 +938,7 @@
 //                layer.getChildFrame("#backImg").css("background", "url(" + str2 + ")").css("background-size", "480px 480px");
                     layer.getChildFrame("#imgOriginal").attr("src", str1);
                     layer.getChildFrame("#backImgOriginal").attr("src", str2);
-                    layer.getChildFrame("#data").attr("src", "../" + $(".dropify-render > img").attr("src"))
+                    layer.getChildFrame("#data").attr("src", $(".dropify-render > img").attr("src"))
                 }
             })
         });
