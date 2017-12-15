@@ -42,7 +42,7 @@
         <button type="button" id="check" class="register-tis">邮箱未验证成功？</button>
     </a>
     <br>
-    <h2 align="center">${msg}</h2>
+    <h2 align="center" id="msg" hidden>${msg}</h2>
 </div>
 
 </body>
@@ -53,4 +53,13 @@
 <script src="plugins/login/js/supersized-init.js"></script>
 <!--表单验证-->
 <script src="plugins/login/js/jquery.validate.min.js?var1.14.0"></script>
+<script src="js/layer.js"></script>
+<script>
+    $(function () {
+        var msg = $("#msg").text();
+        if(msg != '') {
+            layer.msg(msg, {anim: 6, offset: "10px"});
+        }
+    })
+</script>
 </html>

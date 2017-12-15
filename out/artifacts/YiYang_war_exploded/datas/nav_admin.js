@@ -19,10 +19,6 @@ var navs = [{
 		"icon": "&#xe61d;",
 		"href": "admin/sendEmail"
 	}, {
-		"title": "订单管理",
-		"icon": "&#xe614;",
-		"href": "admin/orderManage"
-	}, {
 		"title": "已完成订单",
 		"icon": "&#xe63c;",
 		"href": "manager/orderMessage"

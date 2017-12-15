@@ -28,6 +28,8 @@
             <i class="layui-icon" style="font-size: 30px">&#xe629;</i> 用户信息</h2>
     </blockquote>
     <button id="addRow" class="layui-btn">添加用户</button>
+    <button class="layui-btn layui-btn-normal">添加图标</button>
+    <button class="layui-btn layui-btn-normal">移除图标</button>
     <fieldset class="layui-elem-field">
         <legend>数据列表</legend>
         <div class="layui-field-box">

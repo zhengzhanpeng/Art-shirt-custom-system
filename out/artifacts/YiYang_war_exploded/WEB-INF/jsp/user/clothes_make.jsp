@@ -42,6 +42,7 @@
     <link rel="stylesheet" type="text/css" href="js/dist/css/demo.css">
     <link rel="stylesheet" type="text/css" href="js/dist/css/dropify.min.css">
     <link rel="stylesheet" type="text/css" href="css/imgHover.css">
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
     <style type="text/css">
         .girl-clothes {
             height: 260px;
@@ -178,7 +179,7 @@
                     </div>
                     <div class="logo-wrapper">
                         <a href="index.html" class="logo">
-                            <h1>艺扬
+                            <h1 style="font-size: xx-large">艺扬
                                 <small>服饰商城</small>
                             </h1>
                         </a>
@@ -201,20 +202,30 @@
                                 <a href="user/order">我的订单</a>
                             </li>
                             <li>
-                                <a href="new/index.html">即将上线</a>
+                                <a href="javascript:void(0);">即将上线</a>
                             </li>
                         </ul>
 
                         <div id="mobile-menu" class="dl-menuwrapper visible-xs visible-sm">
                             <button class="dl-trigger"><i class="iconfont-reorder round-icon"></i></button>
                             <ul class="dl-menu">
-                                <li class="active">
-                                    <a href="javsacript:void(0);">首页</a>
+                                <li>
+                                    <a href="index">首页</a>
                                 </li>
                                 <li>
-                                    <a href="javsacript:void(0);">服装</a>
-
-
+                                    <a href="icons">图标</a>
+                                </li>
+                                <li class="active">
+                                    <a href="user/clothes_make">衬衫定制</a>
+                                </li>
+                                <li>
+                                    <a href="user/cart">购物车</a>
+                                </li>
+                                <li>
+                                    <a href="user/order">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">即将上线</a>
                                 </li>
                             </ul>
                         </div>
@@ -369,6 +380,7 @@
                         </section>
                     </div>
                 </div>
+                <blockquote class="layui-elem-quote"><b style="font-size: 20px">您可以点击下方的图标来制作自己喜欢的衣服款式（也可以自主上传嗷）</b></blockquote>
                 <div id="canvas"></div>
                 <div class="m-t-lg" style="margin: 0;">
                     <ul class="nav nav-tabs">
@@ -758,7 +770,7 @@
         layer.open({
             type: 2
             , content: "html/img_edit.html"
-            , area: ['1120px', '565px']
+            , area: ['1150px', '578px']
             , offset: '10px'
             , closeBtn: 2
             , title: false
@@ -840,7 +852,7 @@
         // dataURL 的格式为 “data:image/png;base64,****”,逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
         data = data.split(',')[1];
         if (data == null) {
-            layer.msg("请选择已制作好的衣服上传！", {icon: 5, anim: 6, offset: '10px'});
+            layer.msg("请先根据下方的图标制作好衣服后再添加！", {icon: 5, anim: 6, offset: '10px'});
             return;
         }
         data = window.atob(data);
@@ -889,7 +901,7 @@
             layer.open({
                 type: 2
                 , content: "html/img_edit.html"
-                , area: ['1120px', '565px']
+                , area: ['1150px', '578px']
                 , offset: '10px'
                 , closeBtn: 2
                 , title: false
