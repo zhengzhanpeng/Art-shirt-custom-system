@@ -52,8 +52,8 @@ public class OrderManageDaoImpl implements OrderManageDao {
         if (result == 0) {
             return MessageUtil.FINISH_DEFAULT;
         }
-        String userMail = userMapper.getMail(MainUtil.getUserName());
         executorService.execute(() -> {
+            String userMail = userMapper.getMailByOrderId(id);
             String content = ModelMail.getContent(MessageUtil.MAKE_FINISHED_EMAIL_CONTENT);
             EmailHelper.sendEmail(userMail, MessageUtil.MAKE_FINISHED_TITLE, content);
         });
@@ -81,8 +81,8 @@ public class OrderManageDaoImpl implements OrderManageDao {
             orderLog.setPhone(userDTO.getPhone());
             orderLogMapper.insert(orderLog);
         });
-        String userMail = userMapper.getMail(MainUtil.getUserName());
         executorService.execute(() -> {
+            String userMail = userMapper.getMailByOrderId(id);
             String content = ModelMail.getContent(MessageUtil.PRICE_EMAIL_CONTENT);
             EmailHelper.sendEmail(userMail, MessageUtil.PRICE_TITLE, content);
         });

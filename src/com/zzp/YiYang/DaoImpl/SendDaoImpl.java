@@ -113,8 +113,8 @@ public class SendDaoImpl implements SendDao {
             orderLog.setPhone(userDTO.getPhone());
             orderLogMapper.insert(orderLog);
         });
-        String userMail = userMapper.getMail(MainUtil.getUserName());
         executorService.execute(() -> {
+            String userMail = userMapper.getMailByOrderId(id);
             String content = ModelMail.getContent(MessageUtil.SEND_FINISHED_EMAIL_CONTENT);
             EmailHelper.sendEmail(userMail, MessageUtil.SEND_FINISHED_TITLE, content);
         });

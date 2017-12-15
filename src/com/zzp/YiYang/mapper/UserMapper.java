@@ -33,5 +33,7 @@ public interface UserMapper {
 
     String getMail(String userName);
 
+    String getMailByOrderId(int orderId);
+
     List<String> getMails();
 }

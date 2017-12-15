@@ -20,7 +20,7 @@
 <body>
 
 <div class="register-container">
-    <h1>ShareLink</h1>
+    <h1>艺扬服饰商城</h1>
 
     <div class="connect">
         <p>${msg}</p>

@@ -20,10 +20,10 @@
 <body>
 
 <div class="register-container">
-    <h1>ShareLink</h1>
+    <h1>艺扬服饰商城</h1>
 
     <div class="connect">
-        <p>Link the world. Share to world.</p>
+        <p>在这里，订做属于你的个性服装.</p>
     </div>
     <form action="checkEmail" method="post" id="registerForm">
         <div>

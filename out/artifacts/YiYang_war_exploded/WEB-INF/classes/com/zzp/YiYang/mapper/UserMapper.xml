@@ -53,6 +53,10 @@
     <select id="getMail" parameterType="String" resultType="String">
         SELECT email FROM user_info WHERE username = #{userName} LIMIT 1;
     </select>
+    <select id="getMailByOrderId" parameterType="Integer" resultType="String">
+        SELECT email FROM order1 o
+        LEFT OUTER JOIN user_info u ON u.username = o.username WHERE o.id = #{orderId} LIMIT 1;
+    </select>
     <select id="getMails" resultType="String">
         SELECT email FROM user_info;
     </select>
