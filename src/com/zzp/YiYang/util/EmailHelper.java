@@ -19,6 +19,7 @@ public class EmailHelper {
         Properties props = new Properties();
         Session session;
         props.setProperty("mail.host", host);
+        props.put("mail.smtp.ssl.enable", "true");
         props.setProperty("mail.smtp.auth", "true");
         props.setProperty("mail.smtp.starttls.enable", "true");
 //        props.setProperty("mail.smtp.password", password);

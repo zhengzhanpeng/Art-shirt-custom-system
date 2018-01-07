@@ -78,6 +78,7 @@
             "fnInitComplete": function (oSettings, json) {
                 changeTable();
             },
+            "order": [[ 0, "desc" ]],
             "columns": [
                 { "data": "id", "title":"订单编号","defaultContent":""},
                 { "data": "details", "title":"订单详情","defaultContent":""},

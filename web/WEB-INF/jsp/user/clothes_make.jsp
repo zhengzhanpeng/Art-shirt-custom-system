@@ -1049,6 +1049,10 @@
                 layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
                 return;
             }
+            if(number <= 0) {
+                layer.msg("请选择正确的购买数量", {icon: 5, anim: 6, offset: '10px'});
+                return;
+            }
             var imgAddress = uploadImg("#turn1 img");
             var backImgAddress = uploadImg("#turn2 img");
             if (imgAddress == null || backImgAddress == null) {
@@ -1083,6 +1087,10 @@
             var number = $("#number").val();
             if (clothesSize == '-- 请选择 --') {
                 layer.msg("请选择要购买的衣服的尺寸", {icon: 5, anim: 6, offset: '10px'});
+                return;
+            }
+            if(number <= 0) {
+                layer.msg("请选择正确的购买数量", {icon: 5, anim: 6, offset: '10px'});
                 return;
             }
             var imgAddress = uploadImg("#turn1 img");

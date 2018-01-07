@@ -109,9 +109,9 @@ public class OrderManageDaoImpl implements OrderManageDao {
             } else if (e.getState() == 0) {
                 e.setStateStr("待填写收货信息");
             } else if (e.getState() == 1) {
-                e.setStateStr("待付款");
+                e.setStateStr("<span style='color:#FFB800;'>未付款</span>");
             } else if (e.getState() == 2) {
-                e.setStateStr("已付款");
+                e.setStateStr("<span style='color:#01AAED;'>已付款</span>");
             } else if (e.getState() == 3) {
                 e.setStateStr("已制作完成");
             }
