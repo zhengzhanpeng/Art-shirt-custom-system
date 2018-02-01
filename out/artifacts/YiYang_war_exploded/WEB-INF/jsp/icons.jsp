@@ -153,13 +153,20 @@
                         <div id="mobile-menu" class="dl-menuwrapper visible-xs visible-sm">
                             <button class="dl-trigger"><i class="iconfont-reorder round-icon"></i></button>
                             <ul class="dl-menu">
+                                <li>
+                                    <a href="index">首页</a>
+                                </li>
                                 <li class="active">
-                                    <a href="javsacript:void(0);">首页</a>
+                                    <a href="icons">图标</a>
                                 </li>
                                 <li>
-                                    <a href="javsacript:void(0);">服装</a>
-
-
+                                    <a href="user/clothes_make">衬衫定制</a>
+                                </li>
+                                <li>
+                                    <a href="user/cart">购物车</a>
+                                </li>
+                                <li>
+                                    <a href="user/order">我的订单</a>
                                 </li>
                             </ul>
                         </div>

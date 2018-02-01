@@ -91,7 +91,7 @@
                                           aria-hidden="true"></i> <cite>面板主页</cite></li>
             </ul>
             <div class="layui-tab-content"
-                 style="min-height: 150px; padding: 5px 0 0 0;">
+                 style="min-height: 510px; padding: 5px 0 0 0;">
                 <div class="layui-tab-item layui-show">
                     <iframe src="main.jsp"></iframe>
                 </div>
