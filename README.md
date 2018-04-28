@@ -1,2 +1,2 @@
-# YiYang
-This project was written during my college, It's not perfect, So don't care.
+# 艺扬艺术衫自主定制系统
+
